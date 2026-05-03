@@ -1,58 +1,16 @@
 import { useState } from "react";
 import { _GL } from "../globals/global";
 
-const MainNav = () => {
+const MainNav = ({displayExercize, data}) => {
   const [activeLinkId, setActiveLinkId] = useState()
 
-  const data = [
-    {
-      id: '9012310293812903810',
-      title: 'Variables',
-      questions: [
-        {
-          id: '98102830219839021',
-          title: 'Variable hoisting',
-          questions: "console.log(myVar);\nvar myVar = 5;\nconsole.log(myVar);",
-          options: [
-            { id: 'a', text: 'undefined then 5' },
-            { id: 'b', text: 'undefined then 5' },
-            { id: 'c', text: 'undefined then 5' },
-            { id: 'd', text: 'undefined then 5' },
-          ]
-        }
-      ],
-      tasks: [
-
-      ]
-    },
-    {
-      id: '9012311233812903810',
-      title: 'Strings',
-      questions: [
-        {
-          id: '98102830219839021',
-          title: 'Variable hoisting',
-          questions: "console.log(myVar);\nvar myVar = 5;\nconsole.log(myVar);",
-          options: [
-            { id: 'a', text: 'undefined then 5' },
-            { id: 'b', text: 'undefined then 5' },
-            { id: 'c', text: 'undefined then 5' },
-            { id: 'd', text: 'undefined then 5' },
-          ]
-        }
-      ],
-      tasks: [
-
-      ]
-    },
-  ]
+ 
 
 
 
   const displayQuestions = (listItem) => {
     setActiveLinkId(listItem.id)
-  
-
+    displayExercize(listItem)
   }
 
   return (
@@ -64,13 +22,13 @@ const MainNav = () => {
           <a href="https://example.com/js-course" target="_blank" rel="noopener">🎓 Go to JS Course</a>
         </div>
         <ul className="exercise-list" >
-          <h2 className="pl-2 font-bold">Section 1</h2>
+          <h2 className="pl-2 font-bold">Udemy Video Numbers</h2>
           {data?.map((listItem, index) => (
             <li 
               className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 
               key={listItem.id} 
               onClick={() => displayQuestions(listItem)}>
-              <a href="#ex1"><i>{_GL.UTIL.formatNum(index)}</i> {listItem.title} 
+              <a href="#"><i>{_GL.UTIL.formatNum(index)}</i> {listItem.title} 
               {/* <span className="status-dot" ></span> */}
               </a>
             </li>

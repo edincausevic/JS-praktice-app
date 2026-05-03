@@ -1,11 +1,68 @@
+import { useState } from "react"
 import Header from "./components/Header"
 import MainNav from "./components/MainNav"
 
 function App() {
+  const [exercizes, setExercizes] = useState(null)
+
+  const data = [
+    {
+      id: '9012310293812903810',
+      title: 'Variables',
+      questions: [
+        {
+          id: '98102830219839021',
+          title: 'Variable hoisting',
+          questions: "console.log(myVar);\nvar myVar = 5;\nconsole.log(myVar);",
+          options: [
+            { id: 'a', text: 'undefined then 5', correct: true, selected: false },
+            { id: 'b', text: 'undefined then 5', correct: false, selected: false },
+            { id: 'c', text: 'undefined then 5', correct: false, selected: false },
+            { id: 'd', text: 'undefined then 5', correct: false, selected: false },
+          ]
+        },
+        {
+          id: '98102830229839221',
+          title: 'Temporal dead zone',
+          questions: "console.log(a);\nlet a = 10;",
+          options: [
+            { id: 'a', text: 'undefined then 5', correct: false, selected: false },
+            { id: 'b', text: 'undefined then 5', correct: false, selected: false },
+            { id: 'c', text: 'undefined then 5', correct: true, selected: false },
+            { id: 'd', text: 'undefined then 5', correct: false, selected: false },
+          ]
+        },
+      ],
+      tasks: [
+        {
+          id: '901482f0aj921901290h',
+          title: "Reverse a string",
+          description: "Write a function {{reverseString(str)}} that takes a string and returns it reversed.",
+          example: '{{reverseString("hello")}} → {{"olleh"}}',
+          note: "implement in your editor / console",
+          solution: "const reverseString = str => str.split('').reverse().join('');"
+        },
+        {
+          id: '901122f0aj921901290h',
+          title: "Filter even numbers",
+          description: "Write a function {{filterEvens(arr)}} that returns a new array containing only the even numbers.",
+          example: '{{filterEvens([1, 2, 3, 4, 5, 6])}} → {{[2, 4, 6]}}',
+          note: "implement in your editor / console",
+          solution: "const filterEvens = arr => arr.filter(num => num % 2 === 0);"
+        },
+      ]
+    },
+  ]
+
+  const displayQuestions = (exercizeData) => {
+  console.log('exercizeData: ', exercizeData);
+  
+
+  }
 
   return (
     <>
-      <MainNav/>
+      <MainNav data={data} displayExercize={displayQuestions}/>
 
       <div className="main-panel">
         <Header/>
