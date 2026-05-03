@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 JavaScript · practice board</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            background: #f1f5f9;
+            min-height: 100vh;
+            display: flex;
+        }
+        /* ========== FIXED LEFT MENU ========== */
+        .left-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100vh;
+            background: #0b1120;
+            color: #e2e8f0;
+            padding: 2rem 0.75rem;
+            overflow-y: auto;
+            box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0 1rem 1.5rem;
+            border-bottom: 1px solid #1e293b;
+            margin-bottom: 1.5rem;
+            color: #a5f3fc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .menu-header h2 span {
+            background: #1e293b;
+            font-size: 0.85rem;
+            padding: 2px 10px;
+            border-radius: 30px;
+            color: #bae6fd;
+            font-weight: 400;
+            margin-left: auto;
+        }
+        .course-link {
+            margin: -0.5rem 0 1.8rem 1rem;
+        }
+        .course-link a {
+            color: #7dd3fc;
+            background: #1e2a3a;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #2d3a4e;
+            transition: 0.2s;
+        }
+        .course-link a:hover {
+            background: #264a6e;
+            color: white;
+            border-color: #0ea5e9;
+        }
+        .exercise-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+        }
+        .exercise-list li {
+            border-radius: 12px;
+            transition: all 0.1s ease;
+        }
+        .exercise-list li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.85rem 1rem;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 450;
+            border-radius: 12px;
+            transition: 0.15s;
+            border: 1px solid transparent;
+        }
+        .exercise-list li a i { 
+            width: 24px; 
+            font-style: normal; 
+            color: #38bdf8; 
+            font-weight: 600;
+            text-align: center;
+        }
+        .exercise-list li a:hover {
+            background: #1e293b;
+            color: white;
+            border-color: #334155;
+        }
+        .exercise-list .active-exercise a {
+            background: #1e2b3f;
+            color: white;
+            border-left: 4px solid #0ea5e9;
+            font-weight: 500;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 20px;
+            background: #334155;
+            margin-left: auto;
+            transition: 0.15s;
+        }
+        .status-dot.done {
+            background: #22c55e;
+            box-shadow: 0 0 6px #22c55e;
+        }
+
+        /* ========== MAIN PANEL ========== */
+        .main-panel {
+            flex: 1;
+            margin-left: 260px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background: #ffffffd9;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 0.9rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 4px 10px -2px rgba(0,0,0,0.05);
+            z-index: 15;
+        }
+        .progress-indicator {
+            background: #f8fafc;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            border: 1px solid #cbd5e1;
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #0f172a;
+        }
+        .progress-badge {
+            background: #0f172a;
+            color: white;
+            border-radius: 30px;
+            padding: 0.2rem 1rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+        .reset-btn {
+            background: none;
+            border: 1px solid #cbd5e1;
+            background-color: white;
+            padding: 0.5rem 1.4rem;
+            border-radius: 40px;
+            font-weight: 550;
+            font-size: 0.9rem;
+            color: #334155;
+            cursor: pointer;
+            transition: 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .reset-btn:hover {
+            background: #fee2e2;
+            border-color: #f87171;
+            color: #b91c1c;
+        }
+
+        /* ----- MAIN CONTENT ----- */
+        .content-area {
+            padding: 2rem 2.5rem;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .content-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .content-header .page-title {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(145deg, #0f172a, #1e293b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        .left-reset-btn {
+            background: #f1f5f9;
+            border: 2px solid #cbd5e1;
+            background-color: white;
+            padding: 0.5rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1e293b;
+            cursor: pointer;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .left-reset-btn:hover {
+            background: #fee2e2;
+            border-color: #f87171;
+            color: #b91c1c;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: 0 12px 30px -10px rgba(0,0,0,0.1);
+            border: 1px solid #e9eef3;
+            margin-bottom: 2rem;
+        }
+        .question-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .question-title .q-icon {
+            background: #dbeafe;
+            color: #1e40af;
+            font-weight: 700;
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1rem;
+        }
+        .code-block {
+            background: #0b1120;
+            color: #cbd5e1;
+            padding: 1.5rem;
+            border-radius: 18px;
+            font-family: 'Fira Code', 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 1.5rem 0 1.8rem;
+            border: 1px solid #1e293b;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .options-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 1.5rem 0 1rem;
+        }
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #f8fafc;
+            border: 1.5px solid #dee6ed;
+            border-radius: 60px;
+            padding: 0.8rem 1.8rem;
+            cursor: pointer;
+            transition: 0.1s ease;
+            font-size: 1.05rem;
+        }
+        .option-prefix {
+            font-weight: 700;
+            background: white;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #b9c7da;
+            color: #0f172a;
+        }
+        .option-item.correct-guess {
+            background: #22c55e20;
+            border-color: #22c55e;
+        }
+        .option-item.correct-guess .option-prefix {
+            background: #22c55e;
+            border-color: #22c55e;
+            color: white;
+        }
+        .option-item.wrong-guess {
+            background: #fee2e2;
+            border-color: #ef4444;
+        }
+        .option-item.wrong-guess .option-prefix {
+            background: #ef4444;
+            border-color: #ef4444;
+            color: white;
+        }
+        .feedback-msg {
+            margin-top: 18px;
+            font-weight: 500;
+            padding: 0.7rem 1.4rem;
+            border-radius: 60px;
+            display: inline-block;
+            background: #f1f5f9;
+            min-width: 140px;
+        }
+        .feedback-msg.correct {
+            background: #22c55e20;
+            color: #166534;
+            border-left: 5px solid #22c55e;
+        }
+        .feedback-msg.incorrect {
+            background: #fee2e220;
+            color: #991b1b;
+            border-left: 5px solid #ef4444;
+        }
+        .reveal-btn {
+            background: #e9eef3;
+            border: 1.5px solid #94a3b8;
+            color: #1e293b;
+            padding: 0.5rem 1.4rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.1s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .reveal-btn:hover {
+            background: #cbd5e1;
+            border-color: #475569;
+        }
+        .solution-badge {
+            background: #1e293b;
+            color: #facc15;
+            font-family: monospace;
+            font-weight: 600;
+            padding: 0.35rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            border: 1px solid #facc15;
+            display: inline-block;
+            margin-top: 0.8rem;
+        }
+        .action-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* ----- Coding Challenge Styles ----- */
+        .challenge-card {
+            background: #f0f4fa;
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px -8px rgba(0,0,0,0.1);
+            border: 1px solid #cbd5e1;
+            margin-bottom: 2rem;
+            border-left: 8px solid #f97316;
+        }
+        .challenge-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .challenge-title .ch-icon {
+            background: #fed7aa;
+            color: #9a3412;
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 700;
+        }
+        .challenge-desc {
+            background: #fef9c3;
+            border-radius: 20px;
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            border: 1px solid #facc15;
+            color: #1e293b;
+            margin: 1rem 0 0.5rem;
+        }
+        .challenge-desc code {
+            background: #1e293b;
+            color: #fde047;
+            padding: 0.2rem 0.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        .challenge-note {
+            margin-top: 1.2rem;
+            color: #334155;
+            font-style: italic;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .challenge-solution {
+            margin-top: 1.5rem;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+    <!-- FIXED LEFT MENU -->
+    <nav class="left-menu">
+        <div class="menu-header">
+            <h2>📘 JS drills <span>6 + 3</span></h2>
+        </div>
+        <div class="course-link">
+            <a href="https://example.com/js-course" target="_blank" rel="noopener">🎓 Go to JS Course</a>
+        </div>
+        <ul class="exercise-list" id="exerciseList">
+            <li class="exercise-item" data-ex-id="1"><a href="#ex1"><i>01</i> Variables & scope <span class="status-dot" id="statusDot1"></span></a></li>
+            <li class="exercise-item" data-ex-id="2"><a href="#ex2"><i>02</i> Closures <span class="status-dot" id="statusDot2"></span></a></li>
+            <li class="exercise-item" data-ex-id="3"><a href="#ex3"><i>03</i> Hoisting <span class="status-dot" id="statusDot3"></span></a></li>
+            <li class="exercise-item" data-ex-id="4"><a href="#ex4"><i>04</i> Promises <span class="status-dot" id="statusDot4"></span></a></li>
+            <li class="exercise-item" data-ex-id="5"><a href="#ex5"><i>05</i> this keyword <span class="status-dot" id="statusDot5"></span></a></li>
+            <li class="exercise-item" data-ex-id="6"><a href="#ex6"><i>06</i> Array methods <span class="status-dot" id="statusDot6"></span></a></li>
+            <li class="exercise-item" style="margin-top: 12px; border-top: 1px solid #1e2b3f; padding-top: 8px;"><a href="#challenge1"><i>⚡</i> Reverse string</a></li>
+            <li class="exercise-item"><a href="#challenge2"><i>⚡</i> Filter even</a></li>
+            <li class="exercise-item"><a href="#challenge3"><i>⚡</i> Delay log</a></li>
+        </ul>
+        <div style="margin-top: auto; font-size: 0.8rem; color: #5f6c80; padding: 1rem; border-top: 1px solid #1e2b3f;">
+            ⚡ green = correct · red = wrong
+        </div>
+    </nav>
+
+    <main class="main-panel">
+        <div class="top-bar">
+            <div class="progress-indicator">
+                <span>✅ done</span>
+                <span class="progress-badge" id="progressDisplay">0 / 6</span>
+            </div>
+            <button class="reset-btn" id="resetAllBtn"><span>↻</span> reset all exercises</button>
+        </div>
+
+        <div class="content-area" id="mainContent">
+            <div class="content-header">
+                <h1 class="page-title">🧠 JavaScript Drills</h1>
+                <button class="left-reset-btn" id="leftSideResetBtn"><span>↻</span> reset all</button>
+            </div>
+
+            <!-- EXERCISES 1-6 remain unchanged in structure -->
+            <div class="question-card" id="ex1" data-ex-id="1" data-correct="a">
+                <div class="question-title"><span class="q-icon">1</span> Variable hoisting</div>
+                <div class="code-block">console.log(myVar);\nvar myVar = 5;\nconsole.log(myVar);</div>
+                <div class="options-grid">
+                    <label class="option-item" data-opt="a"><span class="option-prefix">A</span> undefined then 5</label>
+                    <label class="option-item" data-opt="b"><span class="option-prefix">B</span> ReferenceError</label>
+                    <label class="option-item" data-opt="c"><span class="option-prefix">C</span> 5 then 5</label>
+                    <label class="option-item" data-opt="d"><span class="option-prefix">D</span> null then 5</label>
+                </div>
+                <div class="action-row">
+                    <div class="feedback-msg" id="fb1"></div>
+                    <button class="reveal-btn" data-reveal="1">🔍 Reveal solution</button>
+                </div>
+                <div id="solution1" style="display: none;"><span class="solution-badge">✓ correct answer: A</span></div>
+            </div>
+
+            <!-- ... (Keeping ex 2-6 content here for full file functionality) ... -->
+            <div class="question-card" id="ex2" data-ex-id="2" data-correct="b">
+                <div class="question-title"><span class="q-icon">2</span> Closure value</div>
+                <div class="code-block">for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}</div>
+                <div class="options-grid">
+                    <label class="option-item" data-opt="a"><span class="option-prefix">A</span> 0,1,2</label>
+                    <label class="option-item" data-opt="b"><span class="option-prefix">B</span> 3,3,3</label>
+                    <label class="option-item" data-opt="c"><span class="option-prefix">C</span> 2,2,2</label>
+                    <label class="option-item" data-opt="d"><span class="option-prefix">D</span> undefined x3</label>
+                </div>
+                <div class="action-row">
+                    <div class="feedback-msg" id="fb2"></div>
+                    <button class="reveal-btn" data-reveal="2">🔍 Reveal solution</button>
+                </div>
+                <div id="solution2" style="display: none;"><span class="solution-badge">✓ correct answer: B</span></div>
+            </div>
+
+            <div class="question-card" id="ex3" data-ex-id="3" data-correct="c">
+                <div class="question-title"><span class="q-icon">3</span> Temporal dead zone</div>
+                <div class="code-block">console.log(a);\nlet a = 10;</div>
+                <div class="options-grid">
+                    <label class="option-item" data-opt="a"><span class="option-prefix">A</span> undefined</label>
+                    <label class="option-item" data-opt="b"><span class="option-prefix">B</span> 10</label>
+                    <label class="option-item" data-opt="c"><span class="option-prefix">C</span> ReferenceError</label>
+                    <label class="option-item" data-opt="d"><span class="option-prefix">D</span> null</label>
+                </div>
+                <div class="action-row">
+                    <div class="feedback-msg" id="fb3"></div>
+                    <button class="reveal-btn" data-reveal="3">🔍 Reveal solution</button>
+                </div>
+                <div id="solution3" style="display: none;"><span class="solution-badge">✓ correct answer: C</span></div>
+            </div>
+
+            <div class="question-card" id="ex4" data-ex-id="4" data-correct="b">
+                <div class="question-title"><span class="q-icon">4</span> Promise execution</div>
+                <div class="code-block">Promise.resolve(1)\n  .then(x => x + 1)\n  .then(console.log)</div>
+                <div class="options-grid">
+                    <label class="option-item" data-opt="a"><span class="option-prefix">A</span> 1</label>
+                    <label class="option-item" data-opt="b"><span class="option-prefix">B</span> 2</label>
+                    <label class="option-item" data-opt="c"><span class="option-prefix">C</span> undefined</label>
+                    <label class="option-item" data-opt="d"><span class="option-prefix">D</span> [object Promise]</label>
+                </div>
+                <div class="action-row">
+                    <div class="feedback-msg" id="fb4"></div>
+                    <button class="reveal-btn" data-reveal="4">🔍 Reveal solution</button>
+                </div>
+                <div id="solution4" style="display: none;"><span class="solution-badge">✓ correct answer: B</span></div>
+            </div>
+
+            <div class="question-card" id="ex5" data-ex-id="5" data-correct="b">
+                <div class="question-title"><span class="q-icon">5</span> “this” in event</div>
+                <div class="code-block">const obj = {\n  name: 'Alice',\n  greet: () => { console.log(this.name); }\n};\nobj.greet();</div>
+                <div class="options-grid">
+                    <label class="option-item" data-opt="a"><span class="option-prefix">A</span> 'Alice'</label>
+                    <label class="option-item" data-opt="b"><span class="option-prefix">B</span> undefined (global)</label>
+                    <label class="option-item" data-opt="c"><span class="option-prefix">C</span> window / global</label>
+                    <label class="option-item" data-opt="d"><span class="option-prefix">D</span> TypeError</label>
+                </div>
+                <div class="action-row">
+                    <div class="feedback-msg" id="fb5"></div>
+                    <button class="reveal-btn" data-reveal="5">🔍 Reveal solution</button>
+                </div>
+                <div id="solution5" style="display: none;"><span class="solution-badge">✓ correct answer: B</span></div>
+            </div>
+
+            <div class="question-card" id="ex6" data-ex-id="6" data-correct="a">
+                <div class="question-title"><span class="q-icon">6</span> Array map</div>
+                <div class="code-block">[1, 2, 3].map(num => {\n  if (num > 1) return num * 2;\n});</div>
+                <div class="options-grid">
+                    <label class="option-item" data-opt="a"><span class="option-prefix">A</span> [undefined, 4, 6]</label>
+                    <label class="option-item" data-opt="b"><span class="option-prefix">B</span> [2, 4, 6]</label>
+                    <label class="option-item" data-opt="c"><span class="option-prefix">C</span> [4, 6]</label>
+                    <label class="option-item" data-opt="d"><span class="option-prefix">D</span> [undefined, undefined, undefined]</label>
+                </div>
+                <div class="action-row">
+                    <div class="feedback-msg" id="fb6"></div>
+                    <button class="reveal-btn" data-reveal="6">🔍 Reveal solution</button>
+                </div>
+                <div id="solution6" style="display: none;"><span class="solution-badge">✓ correct answer: A</span></div>
+            </div>
+
+            <h2 style="margin: 2.5rem 0 1rem; display: flex; gap: 10px; align-items: center;">
+                <span style="background: #f97316; width: 8px; height: 32px; border-radius: 8px;"></span> 
+                Coding Challenges — write the function
+            </h2>
+
+            <!-- CHALLENGE 1 UPDATED -->
+            <div class="challenge-card" id="challenge1">
+                <div class="challenge-title"><span class="ch-icon">⚡1</span> Reverse a string</div>
+                <div class="challenge-desc">
+                    📝 Write a function <code>reverseString(str)</code> that takes a string and returns it reversed. <br>
+                    <strong>Example:</strong> <code>reverseString("hello")</code> → <code>"olleh"</code>
+                </div>
+                <div class="challenge-note">
+                    <span>🔧 implement in your editor / console</span>
+                    <button class="reveal-btn challenge-reveal" data-challenge="1">🔍 Show Code</button>
+                </div>
+                <div class="challenge-solution" id="ch-sol-1">
+                    <div class="code-block">const reverseString = str => str.split('').reverse().join('');</div>
+                </div>
+            </div>
+
+            <!-- CHALLENGE 2 UPDATED -->
+            <div class="challenge-card" id="challenge2">
+                <div class="challenge-title"><span class="ch-icon">⚡2</span> Filter even numbers</div>
+                <div class="challenge-desc">
+                    📝 Write a function <code>filterEvens(arr)</code> that returns a new array containing only the even numbers. <br>
+                    <strong>Example:</strong> <code>filterEvens([1, 2, 3, 4, 5, 6])</code> → <code>[2, 4, 6]</code>
+                </div>
+                <div class="challenge-note">
+                    <span>🔧 try with <code>.filter()</code></span>
+                    <button class="reveal-btn challenge-reveal" data-challenge="2">🔍 Show Code</button>
+                </div>
+                <div class="challenge-solution" id="ch-sol-2">
+                    <div class="code-block">const filterEvens = arr => arr.filter(num => num % 2 === 0);</div>
+                </div>
+            </div>
+
+            <!-- CHALLENGE 3 UPDATED -->
+            <div class="challenge-card" id="challenge3">
+                <div class="challenge-title"><span class="ch-icon">⚡3</span> Delayed console.log</div>
+                <div class="challenge-desc">
+                    📝 Write a function <code>delayedMessage(msg, delay)</code> that logs the message after <code>delay</code> milliseconds. <br>
+                    <strong>Example:</strong> <code>delayedMessage("Hello", 2000)</code> → logs “Hello” after 2 seconds.
+                </div>
+                <div class="challenge-note">
+                    <span>⏱️ use <code>setTimeout</code></span>
+                    <button class="reveal-btn challenge-reveal" data-challenge="3">🔍 Show Code</button>
+                </div>
+                <div class="challenge-solution" id="ch-sol-3">
+                    <div class="code-block">function delayedMessage(msg, delay) {\n  setTimeout(() => console.log(msg), delay);\n}</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function() {
+            const totalEx = 6;
+            const correctMap = { 1: 'a', 2: 'b', 3: 'c', 4: 'b', 5: 'b', 6: 'a' };
+            let exercisesState = Array.from({length: totalEx}, (_, i) => ({ id: i + 1, selected: null, done: false }));
+
+            // Selection Logic
+            function refreshUI() {
+                const doneCount = exercisesState.filter(ex => ex.done).length;
+                document.getElementById('progressDisplay').innerText = `${doneCount} / ${totalEx}`;
+
+                exercisesState.forEach(ex => {
+                    const card = document.querySelector(`.question-card[data-ex-id="${ex.id}"]`);
+                    const fb = document.getElementById(`fb${ex.id}`);
+                    const dot = document.getElementById(`statusDot${ex.id}`);
+                    
+                    card.querySelectorAll('.option-item').forEach(opt => {
+                        opt.classList.remove('correct-guess', 'wrong-guess');
+                        if (ex.selected === opt.dataset.opt) {
+                            opt.classList.add(ex.done ? 'correct-guess' : 'wrong-guess');
+                        }
+                    });
+
+                    if (fb) {
+                        fb.innerText = ex.selected ? (ex.done ? '✅ correct!' : '❌ try again') : '';
+                        fb.className = `feedback-msg ${ex.selected ? (ex.done ? 'correct' : 'incorrect') : ''}`;
+                    }
+                    if (dot) dot.classList.toggle('done', ex.done);
+                });
+
+                // Update Active Menu
+                const hash = window.location.hash || '#ex1';
+                document.querySelectorAll('.exercise-item').forEach(item => {
+                    item.classList.toggle('active-exercise', item.querySelector('a').getAttribute('href') === hash);
+                });
+            }
+
+            // Click Handlers
+            document.addEventListener('click', (e) => {
+                // Multiple Choice Selection
+                if (e.target.closest('.option-item')) {
+                    const opt = e.target.closest('.option-item');
+                    const exId = parseInt(opt.closest('.question-card').dataset.exId);
+                    const stateIndex = exercisesState.findIndex(ex => ex.id === exId);
+                    exercisesState[stateIndex].selected = opt.dataset.opt;
+                    exercisesState[stateIndex].done = (opt.dataset.opt === correctMap[exId]);
+                    refreshUI();
+                }
+
+                // Multiple Choice Reveal
+                if (e.target.matches('.reveal-btn[data-reveal]')) {
+                    const id = e.target.dataset.reveal;
+                    const sol = document.getElementById(`solution${id}`);
+                    sol.style.display = sol.style.display === 'none' ? 'block' : 'none';
+                }
+
+                // NEW: Coding Challenge Reveal
+                if (e.target.matches('.challenge-reveal')) {
+                    const id = e.target.dataset.challenge;
+                    const sol = document.getElementById(`ch-sol-${id}`);
+                    const isHidden = sol.style.display === 'none' || sol.style.display === '';
+                    sol.style.display = isHidden ? 'block' : 'none';
+                    e.target.innerText = isHidden ? '🙈 Hide Code' : '🔍 Show Code';
+                }
+
+                // Reset Logic
+                if (e.target.id === 'resetAllBtn' || e.target.id === 'leftSideResetBtn') {
+                    exercisesState.forEach(ex => { ex.selected = null; ex.done = false; });
+                    document.querySelectorAll('[id^="solution"]').forEach(s => s.style.display = 'none');
+                    document.querySelectorAll('.challenge-solution').forEach(s => s.style.display = 'none');
+                    document.querySelectorAll('.challenge-reveal').forEach(b => b.innerText = '🔍 Show Code');
+                    refreshUI();
+                }
+            });
+
+            window.addEventListener('hashchange', refreshUI);
+            refreshUI();
+        })();
+    </script>
+</body>
+</html>
