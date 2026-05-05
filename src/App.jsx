@@ -5,9 +5,8 @@ import QuizQuestion from "./components/QuizQuestion"
 
 function App() {
   const [exercises, setExercises] = useState(null)
-  
-
-  const data = {
+  const [selectedExercise, setSelectedExercise] = useState(null)
+  const [courseData, setCourseData] = useState({
     id: 123,
     version: '1.0',
     allExercises: [
@@ -60,7 +59,9 @@ function App() {
         ]
       },
     ]
-  }
+  })
+
+  
 
   const displayQuestions = (exerciseData) => {
     setExercises(exerciseData)
@@ -68,15 +69,41 @@ function App() {
 
   const handleChoseOption = (optionId) => {
     
-  console.log('optionId: ', optionId);
     
-    //data.allExercises.map(exercise)
+    const updatedData = {
+      ...courseData,
+      allExercises: courseData.allExercises.map(exercise => ({
+        ...exercise,
+        questions: exercise.questions.map(question => ({
+          ...question,
+          options: question.options.map(opt => {
+            if (opt.id === optionId) {
+              return { ...opt, selected: true };
+            }
+            return opt;
+          })
+        }))
+      }))
+    };
 
+    // save on the server
+
+
+    // set setExercises
+    console.log('@@', exercises.id)
+
+    updatedData.allExercises.forEach(exercise => {
+      
+    
+
+    })
+    
+    setCourseData(updatedData)
   }
 
   return (
     <>
-      <MainNav data={data.allExercises} displayExercise={displayQuestions}/>
+      <MainNav data={courseData.allExercises} displayExercise={displayQuestions}/>
 
       <div className="main-panel">
         <Header/>
