@@ -548,3 +548,36 @@ body {
     margin: 0;
     color: #fff;
   }
+
+  .welcome-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .yt-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8a99af;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+  }
+  
+  .yt-link:hover {
+    color: #ff0000; /* YouTube Red on hover */
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+  
+  .yt-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .yt-link span {
+    font-weight: 500;
+  }
