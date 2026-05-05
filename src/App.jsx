@@ -53,31 +53,24 @@ function App() {
 
   const resetAllExercises = () => {
     
-    // const updatedData = {
-    //   ...courseData,
-    //   allExercises: courseData.allExercises.map(exercise => ({
-    //     ...exercise,
-    //     questions: exercise.questions.map(question => {
-    //       if(question.id === questionID) {
-    //         return {...question, options: question.options.map(opt => {
-    //           if (opt.id === optionId) {
-    //             return { ...opt, selected: true };
-    //           }else {
-    //             return { ...opt, selected: false };
-    //           }
-    //         })}
-    //       }
-    //       return {...question}
-    //     }
-    //   )
-    //   }))
-    // };
-
-    
-    //setCourseData(updatedData)
+    const resetData = {
+      ...courseData,
+      allExercises: courseData.allExercises.map(exercise => ({
+        ...exercise,
+        questions: exercise.questions.map(q => ({
+          ...q,
+          options: q.options.map(opt => ({
+            ...opt,
+            selected: false
+          }))
+        }))
+      }))
+    };
     
     // save on the server
-    //saveDB(updatedData)
+    saveDB(resetData)
+
+    window.location.reload()
   }
 
   return (
@@ -97,7 +90,7 @@ function App() {
 
             <div className="content-header">
                 <h1 className="page-title">🧠 JavaScript Drills</h1>
-                <button className="left-reset-btn" id="leftSideResetBtn"><span>↻</span> reset all</button>
+                {/* <button className="left-reset-btn" id="leftSideResetBtn"><span>↻</span> reset all</button> */}
             </div>
 
 
@@ -112,9 +105,6 @@ function App() {
             </h2>
 
             {selectedExercise?.tasks.map(task => {
-            console.log('task: ', task);
-            
-
               return <CodeQuestion key={task.id} {...task}/>
             })}
             
