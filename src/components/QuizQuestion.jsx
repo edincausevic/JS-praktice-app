@@ -11,7 +11,7 @@ const QuizQuestion = ({question, index, choseOption}) => {
           <div className="options-grid">
             {question.options.map(option => (
               <label 
-                onClick={() => choseOption(option)} 
+                onClick={() => choseOption(option.id)} 
                 key={option.id}
                 className={`option-item ${option.correct && option.selected ? 'correct-guess' : ''} ${!option.correct && option.selected ? 'wrong-guess' : ''}`} >
                   <span className="option-prefix">{option.option.toUpperCase()}</span> {option.text}
@@ -21,7 +21,7 @@ const QuizQuestion = ({question, index, choseOption}) => {
           <div className="action-row">
               <button className="reveal-btn" onClick={() => setIsSolutionVisible(!isSolutionVisible)}>🔍 Reveal solution</button>
           </div>
-          {isSolutionVisible && <div><span className="solution-badge">✓ correct answer: {question.correctAnswer}</span></div>}
+          {isSolutionVisible && <div><span className="solution-badge">✓ correct answer: {question.correctAnswer.toUpperCase()}</span></div>}
       </div>
     )
 }

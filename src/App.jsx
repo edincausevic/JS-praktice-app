@@ -4,13 +4,13 @@ import MainNav from "./components/MainNav"
 import QuizQuestion from "./components/QuizQuestion"
 
 function App() {
-  const [exercizes, setExercizes] = useState(null)
+  const [exercises, setExercises] = useState(null)
   
 
   const data = {
     id: 123,
     version: '1.0',
-    allQuestions: [
+    allExercises: [
       {
         id: '9012310293812903810',
         title: 'Variables',
@@ -62,26 +62,28 @@ function App() {
     ]
   }
 
-  const displayQuestions = (exercizeData) => {
-    setExercizes(exercizeData)
+  const displayQuestions = (exerciseData) => {
+    setExercises(exerciseData)
   }
 
-  const handleChoseOption = (option) => {
-  console.log('option: ', option);
-  
+  const handleChoseOption = (optionId) => {
+    
+  console.log('optionId: ', optionId);
+    
+    //data.allExercises.map(exercise)
 
   }
 
   return (
     <>
-      <MainNav data={data.allQuestions} displayExercize={displayQuestions}/>
+      <MainNav data={data.allExercises} displayExercise={displayQuestions}/>
 
       <div className="main-panel">
         <Header/>
 
         <main className="content-area" id="mainContent">
 
-          {!exercizes ? (
+          {!exercises ? (
               <div>Welcome</div>
             ) : 
           (
@@ -93,7 +95,7 @@ function App() {
             </div>
 
 
-            {exercizes?.questions.map((question, index) => (
+            {exercises?.questions.map((question, index) => (
               <QuizQuestion key={question.id} index={index} question={question} choseOption={handleChoseOption}/>
             ))}
 

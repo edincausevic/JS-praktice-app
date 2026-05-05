@@ -2,7 +2,7 @@ import { useState } from "react";
 import { _GL } from "../globals/global";
 import UdemyLogo from "../assets/udemy_logo.png"
 
-const MainNav = ({displayExercize, data}) => {
+const MainNav = ({displayExercise, data}) => {
   const [activeLinkId, setActiveLinkId] = useState()
 
   return (
@@ -23,7 +23,7 @@ const MainNav = ({displayExercize, data}) => {
               key={listItem.id} 
               onClick={() => {
                 setActiveLinkId(listItem.id)
-                displayExercize(listItem)
+                displayExercise(listItem)
               }}>
               <a href="#"><i>{_GL.UTIL.formatNum(index)}</i> {listItem.title} 
               {/* <span className="status-dot" ></span> */}
