@@ -19,7 +19,7 @@ const QuizQuestion = ({question, index, choseOption}) => {
             ))}
           </div>
           <div className="action-row">
-              <button className="reveal-btn" onClick={() => setIsSolutionVisible(!isSolutionVisible)}>🔍 Reveal solution</button>
+              <button className="reveal-btn" onClick={() => setIsSolutionVisible(!isSolutionVisible)}>🔍 {isSolutionVisible ? 'Hide' : 'Reveal'} Solution</button>
           </div>
           {isSolutionVisible && <div><span className="solution-badge">✓ correct answer: {question.correctAnswer.toUpperCase()}</span></div>}
       </div>

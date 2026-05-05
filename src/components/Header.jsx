@@ -1,6 +1,6 @@
 
 
-const Header = () => {
+const Header = ({onResetBtnClick}) => {
   return (
     <header className="top-bar">
         {/* <div className="progress-indicator">
@@ -8,7 +8,7 @@ const Header = () => {
             <span className="progress-badge" id="progressDisplay">0 / 6</span>
         </div> */}
         <div></div>
-        <button className="reset-btn" id="resetAllBtn"><span>↻</span> reset all exercises</button>
+        <button onClick={onResetBtnClick}  className="reset-btn" id="resetAllBtn"><span>↻</span> reset all exercises</button>
     </header>
 )
 }

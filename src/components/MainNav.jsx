@@ -16,7 +16,7 @@ const MainNav = ({displayExercise, data}) => {
           Go to JS Course</a>
         </div>
         <ul className="exercise-list" >
-          <h2 className="pl-2 font-bold">Udemy Video Numbers</h2>
+          <h2 className="pl-2 font-bold">Udemy Videos</h2>
           {data?.map((listItem, index) => (
             <li 
               className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 

@@ -36,16 +36,16 @@ export const seedData = {
         {
           id: '901482f0aj921901290h',
           title: "Reverse a string",
-          description: "Write a function {{reverseString(str)}} that takes a string and returns it reversed.",
-          example: '{{reverseString("hello")}} → {{"olleh"}}',
+          description: "Write a function %reverseString(str)% that takes a string and returns it reversed.",
+          example: '%reverseString("hello")% → %"olleh"%',
           note: "implement in your editor / console",
           solution: "const reverseString = str => str.split('').reverse().join('');"
         },
         {
           id: '901122f0aj921901290h',
           title: "Filter even numbers",
-          description: "Write a function {{filterEvens(arr)}} that returns a new array containing only the even numbers.",
-          example: '{{filterEvens([1, 2, 3, 4, 5, 6])}} → {{[2, 4, 6]}}',
+          description: "Write a function %filterEvens(arr)% that returns a new array containing only the even numbers.",
+          example: '%filterEvens([1, 2, 3, 4, 5, 6])% → %[2, 4, 6]%',
           note: "implement in your editor / console",
           solution: "const filterEvens = arr => arr.filter(num => num % 2 === 0);"
         },
@@ -82,18 +82,18 @@ export const seedData = {
       ],
       tasks: [
         {
-          id: '901482f0aj9253214241901290h',
+          id: '901482f0aj9253214241971290h',
           title: "Reverse a string",
-          description: "Write a function {{reverseString(str)}} that takes a string and returns it reversed.",
-          example: '{{reverseString("hello")}} → {{"olleh"}}',
+          description: "Write a function %reverseString(str)% that takes a string and returns it reversed.",
+          example: '%reverseString("hello")% → %"olleh"%',
           note: "implement in your editor / console",
           solution: "const reverseString = str => str.split('').reverse().join('');"
         },
         {
           id: '901122f0aj953124221901290h',
           title: "Filter even numbers",
-          description: "Write a function {{filterEvens(arr)}} that returns a new array containing only the even numbers.",
-          example: '{{filterEvens([1, 2, 3, 4, 5, 6])}} → {{[2, 4, 6]}}',
+          description: "Write a function %filterEvens(arr)% that returns a new array containing only the even numbers.",
+          example: '%filterEvens([1, 2, 3, 4, 5, 6])% → %[2, 4, 6]%',
           note: "implement in your editor / console",
           solution: "const filterEvens = arr => arr.filter(num => num % 2 === 0);"
         },
