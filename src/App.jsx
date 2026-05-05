@@ -4,6 +4,7 @@ import MainNav from "./components/MainNav"
 import QuizQuestion from "./components/QuizQuestion"
 import { initDB, saveDB, getDB } from "./db/init"
 import CodeQuestion from "./components/CodeQuestion"
+import Welcome from "./components/Welcome"
 
 function App() {
   initDB()
@@ -80,6 +81,9 @@ function App() {
       <div className="main-panel">
         <Header onResetBtnClick={resetAllExercises}/>
 
+        {!selectedExercise ?
+        <Welcome/>
+      :  
         <main className="content-area" id="mainContent">
 
           {!selectedExercise ? (
@@ -111,7 +115,7 @@ function App() {
 
           </div>
           )}
-        </main>
+        </main> }
       </div>
     </>
   )
