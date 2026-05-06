@@ -17,7 +17,7 @@ const MainNav = ({displayExercise, data}) => {
         </div>
         <ul className="exercise-list" >
           <h2 className="pl-2 font-bold">Udemy Videos</h2>
-          {data?.map((listItem, index) => (
+          {data?.map((listItem) => (
             <li 
               className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 
               key={listItem.id} 
@@ -25,7 +25,7 @@ const MainNav = ({displayExercise, data}) => {
                 setActiveLinkId(listItem.id)
                 displayExercise(listItem)
               }}>
-              <a href="#"><i>{_GL.UTIL.formatNum(index)}</i> {listItem.title} 
+              <a href="#"><i>{listItem.videoID} </i> {listItem.title} 
               {/* <span className="status-dot" ></span> */}
               </a>
             </li>
