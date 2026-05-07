@@ -235,5 +235,106 @@ export const seedData = {
         }
       ]
     },
+    {
+      "id": "strings-section-105",
+      "title": "Strings",
+      "videoID": "09",
+      "questions": [
+        {
+          "id": "q-str-001",
+          "title": "Escaping Characters",
+          "question": "Which code correctly prints: That's ok.?",
+          "options": [
+            { "id": "opt-s1", "option": "a", "text": "console.log('That's ok.');", "correct": false, "selected": false },
+            { "id": "opt-s2", "option": "b", "text": "console.log('That\\'s ok.');", "correct": true, "selected": false },
+            { "id": "opt-s3", "option": "c", "text": "console.log('That/s ok.');", "correct": false, "selected": false },
+            { "id": "opt-s4", "option": "d", "text": "console.log(\"That\'s ok.\');", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-str-002",
+          "title": "Template Literals",
+          "question": "What is the correct syntax for injecting a variable into a template literal?",
+          "options": [
+            { "id": "opt-s5", "option": "a", "text": "'Hello, {name}'", "correct": false, "selected": false },
+            { "id": "opt-s6", "option": "b", "text": "`Hello, ${name}`", "correct": true, "selected": false },
+            { "id": "opt-s7", "option": "c", "text": "`Hello, ${'name'}`", "correct": false, "selected": false },
+            { "id": "opt-s8", "option": "d", "text": "'Hello, ' + ${name}", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-str-003",
+          "title": "String Concatenation",
+          "question": "What is the result of: 'Hello' + ' ' + 'World'?",
+          "options": [
+            { "id": "opt-s9", "option": "a", "text": "'HelloWorld'", "correct": false, "selected": false },
+            { "id": "opt-s10", "option": "b", "text": "'Hello World'", "correct": true, "selected": false },
+            { "id": "opt-s11", "option": "c", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-s12", "option": "d", "text": "Error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-str-004",
+          "title": "New Line Character",
+          "question": "Which character is used to create a new line inside a standard single-quoted string?",
+          "options": [
+            { "id": "opt-s13", "option": "a", "text": "/n", "correct": false, "selected": false },
+            { "id": "opt-s14", "option": "b", "text": "\\line", "correct": false, "selected": false },
+            { "id": "opt-s15", "option": "c", "text": "\\n", "correct": true, "selected": false },
+            { "id": "opt-s16", "option": "d", "text": "Enter key", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-str-005",
+          "title": "Backticks vs Quotes",
+          "question": "Which quote type allows you to create multi-line strings naturally by pressing Enter?",
+          "options": [
+            { "id": "opt-s17", "option": "a", "text": "Single quotes ('')", "correct": false, "selected": false },
+            { "id": "opt-s18", "option": "b", "text": "Double quotes (\"\")", "correct": false, "selected": false },
+            { "id": "opt-s19", "option": "c", "text": "Backticks (``)", "correct": true, "selected": false },
+            { "id": "opt-s20", "option": "d", "text": "None of the above", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-str-001",
+          "title": "The Escape Task",
+          "description": "Use single quotes to log the following sentence: %I'm learning JS%. Ensure you escape the single quote correctly.",
+          "example": "%'I\\'m learning JS'%",
+          "note": "Use the backslash character",
+          "solution": "console.log('I\\'m learning JS');"
+        },
+        {
+          "id": "task-str-002",
+          "title": "Variable Injection",
+          "description": "Declare a const %city = 'Paris'%. Use a template literal (backticks) to log: %I want to visit Paris%.",
+          "example": "%`I want to visit ${city}`%",
+          "note": "Use backticks and ${}",
+          "solution": "const city = 'Paris';\nconsole.log(`I want to visit ${city}`);"
+        },
+        {
+          "id": "task-str-003",
+          "title": "Old School Concatenation",
+          "description": "Declare two variables, %firstName% and %lastName%. Use the %+% operator to join them with a space in between.",
+          "example": "%firstName + ' ' + lastName%",
+          "note": "Don't forget the empty string for the space",
+          "solution": "console.log(firstName + ' ' + lastName);"
+        },
+        {
+          "id": "task-str-004",
+          "title": "Multi-line Challenge",
+          "description": "Log a two-line message using backticks. The first line should say %Line one% and the second line %Line two%.",
+          "example": "%`Line one\nLine two`%",
+          "note": "Just press enter inside the backticks",
+          "solution": "console.log(`Line one\nLine two`);"
+        }
+      ]
+    },
   ]
 }
