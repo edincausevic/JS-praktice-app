@@ -335,5 +335,86 @@ export const seedData = {
         }
       ]
     },
+    {
+      "id": "numbers-section-106",
+      "title": "Numbers",
+      "videoID": "10",
+      "questions": [
+        {
+          "id": "q-num-001",
+          "title": "Mathematical Operations",
+          "question": "What does console.log('Pizza' * 10) output?",
+          "options": [
+            { "id": "opt-n5", "option": "a", "text": "0", "correct": false, "selected": false },
+            { "id": "opt-n6", "option": "b", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-n7", "option": "c", "text": "NaN", "correct": true, "selected": false },
+            { "id": "opt-n8", "option": "d", "text": "Error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-num-002",
+          "title": "Checking Data Types",
+          "question": "What is the result of typeof NaN?",
+          "options": [
+            { "id": "opt-n9", "option": "a", "text": "number", "correct": true, "selected": false },
+            { "id": "opt-n10", "option": "b", "text": "NaN", "correct": false, "selected": false },
+            { "id": "opt-n11", "option": "c", "text": "string", "correct": false, "selected": false },
+            { "id": "opt-n12", "option": "d", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-num-003",
+          "title": "Working with Mixed Types",
+          "question": "What is the output of console.log('80' + 20)?",
+          "options": [
+            { "id": "opt-n13", "option": "a", "text": "100", "correct": false, "selected": false },
+            { "id": "opt-n14", "option": "b", "text": "8020", "correct": true, "selected": false },
+            { "id": "opt-n15", "option": "c", "text": "NaN", "correct": false, "selected": false },
+            { "id": "opt-n16", "option": "d", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-num-004",
+          "title": "Implicit Conversion",
+          "question": "What is the result of console.log('200' / 2)?",
+          "options": [
+            { "id": "opt-n17", "option": "a", "text": "100", "correct": true, "selected": false },
+            { "id": "opt-n18", "option": "b", "text": "200/2", "correct": false, "selected": false },
+            { "id": "opt-n19", "option": "c", "text": "NaN", "correct": false, "selected": false },
+            { "id": "opt-n20", "option": "d", "text": "2002", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-num-001",
+          "title": "Basic Calculation",
+          "description": "Declare a variable %points% and assign it %100%. On the next line, log the result of %points% divided by %4%.",
+          "result": "%25%",
+          "note": "Use the / operator",
+          "solution": "let points = 100;\nconsole.log(points / 4);"
+        },
+        {
+          "id": "task-num-002",
+          "title": "Template Literal Math (Review)",
+          "description": "Create two constants: %boys = 12% and %girls = 13%. Log a message using backticks that says: %Total students: 25%.",
+          "result": "%Total students: 25%",
+          "note": "Perform the math inside the ${} curly braces",
+          "solution": "const boys = 12;\nconst girls = 13;\nconsole.log(`Total students: ${boys + girls}`);"
+        },
+        {
+          "id": "task-num-003",
+          "title": "Implicit Conversion",
+          "description": "Declare a variable %level = '5'%. Log the result of %level - 1%.",
+          "result": "%4%",
+          "note": "Observe how subtraction forces the string to become a number",
+          "solution": "let level = '5';\nconsole.log(level - 1);"
+        }
+      ]
+    },
   ]
 }
