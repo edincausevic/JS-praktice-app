@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { _GL } from "../globals/global";
 
-const CodeQuestion = ({title, description, example, solution}) => {
+const CodeQuestion = ({title, description, result, solution}) => {
   const [isSolutionVisible, setIsSolutionVisible] = useState(false)
 
   return (
@@ -9,9 +9,9 @@ const CodeQuestion = ({title, description, example, solution}) => {
         <div className="challenge-title"><span className="ch-icon">⚡</span> {title}</div>
         <div className="challenge-desc">
             📝 <span dangerouslySetInnerHTML={{ __html: _GL.UTIL.formatCodeMarkup(description) }}></span> <br/>
-            <strong>Example:</strong> 
+            <strong>Result:</strong> 
             <span 
-              dangerouslySetInnerHTML={{ __html: _GL.UTIL.formatCodeMarkup(example) }}
+              dangerouslySetInnerHTML={{ __html: _GL.UTIL.formatCodeMarkup(result) }}
               ></span>
         </div>
         <div className="challenge-note">

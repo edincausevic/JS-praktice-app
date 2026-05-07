@@ -1,4 +1,3 @@
-
 export const seedData = {
   id: 123,
   version: '1.0',
@@ -38,7 +37,7 @@ export const seedData = {
           "id": "task-let-001",
           "title": "Declare and Initialize",
           "description": "Create a variable named %message% using %let% and assign it the value %'Hello'%. On the next line, change its value to %'Bye'%.",
-          "example": "%console.log(message)% → %Bye%",
+          "result": "%Bye%",
           "note": "implement in your editor / console",
           "solution": "let message = 'Hello';\nmessage = 'Bye';"
         },
@@ -46,7 +45,7 @@ export const seedData = {
           "id": "task-let-002",
           "title": "Late Assignment",
           "description": "Declare a variable named %price% using %let% without assigning it a value. Then, on a new line, assign it the number %100%.",
-          "example": "%console.log(price)% → %100%",
+          "result": "%100%",
           "note": "implement in your editor / console",
           "solution": "let price;\nprice = 100;"
         }
@@ -99,7 +98,7 @@ export const seedData = {
           "id": "task-const-001",
           "title": "Constant Declaration",
           "description": "Create a constant named %PI% and assign it the value %3.14%.",
-          "example": "%console.log(PI)% → %3.14%",
+          "result": "%3.14%",
           "note": "implement in your editor / console",
           "solution": "const PI = 3.14;"
         },
@@ -107,7 +106,7 @@ export const seedData = {
           "id": "task-const-002",
           "title": "Identifying Errors",
           "description": "Try to declare a %const% named %taxRate% without a value. Note the error you get in the console.",
-          "example": "%const taxRate;% → %SyntaxError%",
+          "result": "%SyntaxError%",
           "note": "This task is to observe the error behavior",
           "solution": "const taxRate = 0.2; // Correct way: must have a value"
         }
@@ -160,7 +159,7 @@ export const seedData = {
           "id": "task-name-001",
           "title": "Chaining Words",
           "description": "Declare a variable that contains two words (my score). Assign it a value and ensure there are no spaces or dashes.",
-          "example": "%let myName = Mike;%",
+          "result": "%Mike%",
           "note": "Don't use spaces or illegal characters",
           "solution": "let myScore = 100;"
         },
@@ -168,7 +167,7 @@ export const seedData = {
           "id": "task-name-002",
           "title": "Verify Case Sensitivity",
           "description": "Create two variables: %let color = 'red'% and %let Color = 'blue'%. Log both to see that they are separate variables.",
-          "example": "%color% is different from %Color%",
+          "result": "%true%",
           "note": "JS sees capital and lowercase letters as different",
           "solution": "let color = 'red';\nlet Color = 'blue';"
         }
@@ -221,7 +220,7 @@ export const seedData = {
           "id": "task-comm-001",
           "title": "Comment Out Code",
           "description": "Take the line %let hiddenValue = 10;% and use a single-line comment so that the JavaScript engine ignores it.",
-          "example": "%// let hiddenValue = 10;%",
+          "result": "%ignored%",
           "note": "Use the double forward slash",
           "solution": "// let hiddenValue = 10;"
         },
@@ -229,7 +228,7 @@ export const seedData = {
           "id": "task-comm-002",
           "title": "Write a Note",
           "description": "Use a multi-line comment to write a two-line note about your code.",
-          "example": "%/* This is a \n two line note */%",
+          "result": "%ignored%",
           "note": "Ensure you close the comment block",
           "solution": "/* This is a \n note */"
         }
@@ -248,7 +247,7 @@ export const seedData = {
             { "id": "opt-s1", "option": "a", "text": "console.log('That's ok.');", "correct": false, "selected": false },
             { "id": "opt-s2", "option": "b", "text": "console.log('That\\'s ok.');", "correct": true, "selected": false },
             { "id": "opt-s3", "option": "c", "text": "console.log('That/s ok.');", "correct": false, "selected": false },
-            { "id": "opt-s4", "option": "d", "text": "console.log(\"That\'s ok.\');", "correct": false, "selected": false }
+            { "id": "opt-s4", "option": "d", "text": "console.log(\"That's ok.');", "correct": false, "selected": false }
           ],
           "correctAnswer": "b"
         },
@@ -306,7 +305,7 @@ export const seedData = {
           "id": "task-str-001",
           "title": "The Escape Task",
           "description": "Use single quotes to log the following sentence: %I'm learning JS%. Ensure you escape the single quote correctly.",
-          "example": "%'I\\'m learning JS'%",
+          "result": "%I'm learning JS%",
           "note": "Use the backslash character",
           "solution": "console.log('I\\'m learning JS');"
         },
@@ -314,7 +313,7 @@ export const seedData = {
           "id": "task-str-002",
           "title": "Variable Injection",
           "description": "Declare a const %city = 'Paris'%. Use a template literal (backticks) to log: %I want to visit Paris%.",
-          "example": "%`I want to visit ${city}`%",
+          "result": "%I want to visit Paris%",
           "note": "Use backticks and ${}",
           "solution": "const city = 'Paris';\nconsole.log(`I want to visit ${city}`);"
         },
@@ -322,7 +321,7 @@ export const seedData = {
           "id": "task-str-003",
           "title": "Old School Concatenation",
           "description": "Declare two variables, %firstName% and %lastName%. Use the %+% operator to join them with a space in between.",
-          "example": "%firstName + ' ' + lastName%",
+          "result": "%John Doe%",
           "note": "Don't forget the empty string for the space",
           "solution": "console.log(firstName + ' ' + lastName);"
         },
@@ -330,7 +329,7 @@ export const seedData = {
           "id": "task-str-004",
           "title": "Multi-line Challenge",
           "description": "Log a two-line message using backticks. The first line should say %Line one% and the second line %Line two%.",
-          "example": "%`Line one\nLine two`%",
+          "result": "%Line one\nLine two%",
           "note": "Just press enter inside the backticks",
           "solution": "console.log(`Line one\nLine two`);"
         }
