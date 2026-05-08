@@ -416,5 +416,326 @@ export const seedData = {
         }
       ]
     },
+    {
+      "id": "null-section-107",
+      "title": "Null",
+      "videoID": "11",
+      "questions": [
+        {
+          "id": "q-null-001",
+          "title": "Intentional Empty Values",
+          "question": "Which value is used to represent an intentional absence of any object value?",
+          "options": [
+            { "id": "opt-nu1", "option": "a", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-nu2", "option": "b", "text": "null", "correct": true, "selected": false },
+            { "id": "opt-nu3", "option": "c", "text": "0", "correct": false, "selected": false },
+            { "id": "opt-nu4", "option": "d", "text": "NaN", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-null-002",
+          "title": "Checking Null Type",
+          "question": "What is the result of typeof null?",
+          "options": [
+            { "id": "opt-nu5", "option": "a", "text": "null", "correct": false, "selected": false },
+            { "id": "opt-nu6", "option": "b", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-nu7", "option": "c", "text": "object", "correct": true, "selected": false },
+            { "id": "opt-nu8", "option": "d", "text": "number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-null-003",
+          "title": "Null vs Undefined",
+          "question": "If you declare a variable with 'let' but do not assign it a value, what is its default value?",
+          "options": [
+            { "id": "opt-nu9", "option": "a", "text": "null", "correct": false, "selected": false },
+            { "id": "opt-nu10", "option": "b", "text": "undefined", "correct": true, "selected": false },
+            { "id": "opt-nu11", "option": "c", "text": "NaN", "correct": false, "selected": false },
+            { "id": "opt-nu12", "option": "d", "text": "0", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-null-001",
+          "title": "Assigning Null",
+          "description": "Declare a variable %userProfile% using %let% and intentionally assign it the value %null%.",
+          "result": "%null%",
+          "note": "Use this when you want to explicitly say 'nothing' is there",
+          "solution": "let userProfile = null;"
+        },
+        {
+          "id": "task-null-002",
+          "title": "The Typeof Quirk",
+          "description": "Log the %typeof% the value %null% to the console.",
+          "result": "%object%",
+          "note": "This is a well-known behavior in JavaScript",
+          "solution": "console.log(typeof null);"
+        },
+        {
+          "id": "task-null-003",
+          "title": "Review: String & Null",
+          "description": "Declare a const %username = null%. Use a template literal to log: %Current user is null%.",
+          "result": "%Current user is null%",
+          "note": "Reviewing template literals from the Strings section",
+          "solution": "const username = null;\nconsole.log(`Current user is ${username}`);"
+        }
+      ]
+    },
+    {
+      "id": "boolean-section-108",
+      "title": "Booleans",
+      "videoID": "12",
+      "questions": [
+        {
+          "id": "q-bool-001",
+          "title": "Logical NOT Operator",
+          "question": "let isAdmin = true;\nconsole.log(!isAdmin);",
+          "options": [
+            { "id": "opt-b1", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-b2", "option": "b", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-b3", "option": "c", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-b4", "option": "d", "text": "null", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-bool-002",
+          "title": "Data Types",
+          "question": "What is the result of typeof true?",
+          "options": [
+            { "id": "opt-b5", "option": "a", "text": "string", "correct": false, "selected": false },
+            { "id": "opt-b6", "option": "b", "text": "boolean", "correct": true, "selected": false },
+            { "id": "opt-b7", "option": "c", "text": "object", "correct": false, "selected": false },
+            { "id": "opt-b8", "option": "d", "text": "number", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-bool-003",
+          "title": "The Double NOT Operator",
+          "question": "If let data = null;, what is the result of console.log(!!data)?",
+          "options": [
+            { "id": "opt-b9", "option": "a", "text": "null", "correct": false, "selected": false },
+            { "id": "opt-b10", "option": "b", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-b11", "option": "c", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-b12", "option": "d", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-bool-001",
+          "title": "Toggling State",
+          "description": "Declare a variable %isDark% using %let% and set it to %false%. On the next line, reassign it to the opposite of its current value using the %!% operator.",
+          "result": "%true%",
+          "note": "Think of it like a light switch",
+          "solution": "let isDark = false;\nisDark = !isDark;"
+        },
+        {
+          "id": "task-bool-002",
+          "title": "Truthiness Check (Review)",
+          "description": "Declare a constant %phoneNumber = null%. Use the %!!% operator to log whether this value exists as a boolean.",
+          "result": "%false%",
+          "note": "Reviewing null while learning truthiness",
+          "solution": "const phoneNumber = null;\nconsole.log(!!phoneNumber);"
+        },
+        {
+          "id": "task-bool-003",
+          "title": "Dynamic Boolean Message",
+          "description": "Create a variable %isSubscribed = true%. Use a template literal to log: %Subscription status is: true%.",
+          "result": "%Subscription status is: true%",
+          "note": "Reviewing template strings from section 105",
+          "solution": "let isSubscribed = true;\nconsole.log(`Subscription status is: ${isSubscribed}`);"
+        },
+        {
+          "id": "task-bool-004",
+          "title": "Logical Reversal",
+          "description": "Declare a constant %hasError = false%. Log the value of %!hasError%.",
+          "result": "%true%",
+          "note": "The ! operator flips the boolean value",
+          "solution": "const hasError = false;\nconsole.log(!hasError);"
+        }
+      ]
+    },
+    {
+      "id": "truthy-falsy-section-109",
+      "title": "Truthy vs. Falsy Values",
+      "videoID": "13",
+      "questions": [
+        {
+          "id": "q-tf-001",
+          "title": "The Number Zero",
+          "question": "What is the boolean result of !!0?",
+          "options": [
+            { "id": "opt-tf1", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-tf2", "option": "b", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-tf3", "option": "c", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-tf4", "option": "d", "text": "NaN", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-002",
+          "title": "Empty Strings",
+          "question": "Which of the following is a Falsy value?",
+          "options": [
+            { "id": "opt-tf5", "option": "a", "text": "' ' (string with a space)", "correct": false, "selected": false },
+            { "id": "opt-tf6", "option": "b", "text": "'0'", "correct": false, "selected": false },
+            { "id": "opt-tf7", "option": "c", "text": "'' (empty string)", "correct": true, "selected": false },
+            { "id": "opt-tf8", "option": "d", "text": "'false'", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-tf-003",
+          "title": "Evaluating NaN",
+          "question": "What is the result of Boolean(NaN)?",
+          "options": [
+            { "id": "opt-tf9", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-tf10", "option": "b", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-tf11", "option": "c", "text": "null", "correct": false, "selected": false },
+            { "id": "opt-tf12", "option": "d", "text": "TypeError", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-004",
+          "title": "Truthiness of Numbers",
+          "question": "Which of these will evaluate to true?",
+          "options": [
+            { "id": "opt-tf13", "option": "a", "text": "!!-1", "correct": true, "selected": false },
+            { "id": "opt-tf14", "option": "b", "text": "!!0", "correct": false, "selected": false },
+            { "id": "opt-tf15", "option": "c", "text": "!!null", "correct": false, "selected": false },
+            { "id": "opt-tf16", "option": "d", "text": "!!undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-tf-005",
+          "title": "Strings with Content",
+          "question": "Is the string 'false' truthy or falsy?",
+          "options": [
+            { "id": "opt-tf17", "option": "a", "text": "Truthy", "correct": true, "selected": false },
+            { "id": "opt-tf18", "option": "b", "text": "Falsy", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-tf-006",
+          "title": "Undefined Status",
+          "question": "let x;\nconsole.log(!!x);",
+          "options": [
+            { "id": "opt-tf19", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-tf20", "option": "b", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-tf21", "option": "c", "text": "ReferenceError", "correct": false, "selected": false },
+            { "id": "opt-tf22", "option": "d", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-007",
+          "title": "Logical NOT on Truthy",
+          "question": "What is the result of !'Hello'?",
+          "options": [
+            { "id": "opt-tf23", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-tf24", "option": "b", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-tf25", "option": "c", "text": "'Hello'", "correct": false, "selected": false },
+            { "id": "opt-tf26", "option": "d", "text": "''", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-008",
+          "title": "Null Check",
+          "question": "What does !!null return?",
+          "options": [
+            { "id": "opt-tf27", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-tf28", "option": "b", "text": "false", "correct": true, "selected": false },
+            { "id": "opt-tf29", "option": "c", "text": "null", "correct": false, "selected": false },
+            { "id": "opt-tf30", "option": "d", "text": "object", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-009",
+          "title": "Numbers as Strings",
+          "question": "What is the result of Boolean('0')?",
+          "options": [
+            { "id": "opt-tf31", "option": "a", "text": "true", "correct": true, "selected": false },
+            { "id": "opt-tf32", "option": "b", "text": "false", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-tf-010",
+          "title": "The Negative Zero",
+          "question": "What is the truthiness of the value -0?",
+          "options": [
+            { "id": "opt-tf33", "option": "a", "text": "Truthy", "correct": false, "selected": false },
+            { "id": "opt-tf34", "option": "b", "text": "Falsy", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-011",
+          "title": "Double NOT on String",
+          "question": "What does !!' ' (a string with one space) return?",
+          "options": [
+            { "id": "opt-tf35", "option": "a", "text": "true", "correct": true, "selected": false },
+            { "id": "opt-tf36", "option": "b", "text": "false", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-tf-012",
+          "title": "Mixed Types Review",
+          "question": "If let val = '10' - 10;, what is !!val?",
+          "options": [
+            { "id": "opt-tf37", "option": "a", "text": "true", "correct": false, "selected": false },
+            { "id": "opt-tf38", "option": "b", "text": "false", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-tf-013",
+          "title": "Template Literal Truthiness",
+          "question": "What is the truthiness of a template literal: !!`${null}`?",
+          "options": [
+            { "id": "opt-tf39", "option": "a", "text": "true (it becomes the string 'null')", "correct": true, "selected": false },
+            { "id": "opt-tf40", "option": "b", "text": "false (it stays as null)", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-tf-014",
+          "title": "Logical NOT on NaN",
+          "question": "What is the result of !NaN?",
+          "options": [
+            { "id": "opt-tf41", "option": "a", "text": "true", "correct": true, "selected": false },
+            { "id": "opt-tf42", "option": "b", "text": "false", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-tf-015",
+          "title": "Falsy Summary",
+          "question": "Which of these is NOT a falsy value?",
+          "options": [
+            { "id": "opt-tf43", "option": "a", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-tf44", "option": "b", "text": "0", "correct": false, "selected": false },
+            { "id": "opt-tf45", "option": "c", "text": "1", "correct": true, "selected": false },
+            { "id": "opt-tf46", "option": "d", "text": "null", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": []
+    },
+    
   ]
 }
