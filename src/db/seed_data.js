@@ -1238,6 +1238,500 @@ export const seedData = {
           "solution": "const movie = { 'release-year': 2024 };\nconsole.log(movie['release-year']);"
         }
       ]
+    },
+    {
+      "id": "function-foundations-120",
+      "title": "Functions",
+      "videoID": "20",
+      "questions": [
+        {
+          "id": "q-func-401",
+          "title": "Execution vs Declaration",
+          "question": "function showMessage() {\n  console.log('Active');\n}\n// What happens if we don't add showMessage(); after this?",
+          "options": [
+            { "id": "opt-f1", "option": "a", "text": "It logs 'Active' automatically", "correct": false, "selected": false },
+            { "id": "opt-f2", "option": "b", "text": "Nothing is logged to the console", "correct": true, "selected": false },
+            { "id": "opt-f3", "option": "c", "text": "The code throws an error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-func-402",
+          "title": "Default Parameters",
+          "question": "const setVolume = (level = 50) => {\n  console.log(level);\n};\nsetVolume();",
+          "options": [
+            { "id": "opt-f4", "option": "a", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-f5", "option": "b", "text": "NaN", "correct": false, "selected": false },
+            { "id": "opt-f6", "option": "c", "text": "50", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-func-403",
+          "title": "Arrow Function Syntax",
+          "question": "Which of these is a valid arrow function?",
+          "options": [
+            { "id": "opt-f7", "option": "a", "text": "const play = () => { }", "correct": true, "selected": false },
+            { "id": "opt-f8", "option": "b", "text": "function play = () => { }", "correct": false, "selected": false },
+            { "id": "opt-f9", "option": "c", "text": "const play => () { }", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-func-404",
+          "title": "Object Arguments",
+          "question": "const logScore = (data) => {\n  console.log(data.points);\n};\nlogScore({ points: 100 });",
+          "options": [
+            { "id": "opt-f10", "option": "a", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-f11", "option": "b", "text": "points", "correct": false, "selected": false },
+            { "id": "opt-f12", "option": "c", "text": "100", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-func-401",
+          "title": "The Login Notifier",
+          "description": "Create an arrow function %notify% that takes a %username% parameter. It should log %`User ${username} just logged in`%. Call it once with %'Admin'%.",
+          "result": "%User Admin just logged in%",
+          "note": "Parameters allow you to reuse the same logic with different data.",
+          "solution": "const notify = (username) => {\n  console.log(`User ${username} just logged in`);\n};\nnotify('Admin');"
+        },
+        {
+          "id": "task-func-402",
+          "title": "Weather Assistant",
+          "description": "Write a function %checkWeather% with two parameters: %temp% and %scale%. Set the default value of %scale% to %'Celsius'%. Log %`It is ${temp} degrees ${scale}`%.",
+          "result": "%It is 25 degrees Celsius%",
+          "note": "Default parameters act as a safety net when an argument is missing.",
+          "solution": "const checkWeather = (temp, scale = 'Celsius') => {\n  console.log(`It is ${temp} degrees ${scale}`);\n};\ncheckWeather(25);"
+        },
+        {
+          "id": "task-func-403",
+          "title": "Pet Info System",
+          "description": "Create a function %showPet% that receives an object with keys %type% and %breed%. Log a message like %'This is a Dog of breed Husky'%.",
+          "result": "%This is a Dog of breed Husky%",
+          "note": "Passing an object into a function is a great way to handle multiple related pieces of data.",
+          "solution": "const showPet = (pet) => {\n  console.log(`This is a ${pet.type} of breed ${pet.breed}`);\n};\nshowPet({ type: 'Dog', breed: 'Husky' });"
+        }
+      ]
+    },
+    {
+      "id": "scope-mastery-121",
+      "title": "Function Scope",
+      "videoID": "21",
+      "questions": [
+        {
+          "id": "q-sco-501",
+          "title": "Global Access",
+          "question": "let status = 'Active';\n\nfunction check() {\n  console.log(status);\n}\ncheck();",
+          "options": [
+            { "id": "opt-s1", "option": "a", "text": "Active", "correct": true, "selected": false },
+            { "id": "opt-s2", "option": "b", "text": "ReferenceError", "correct": false, "selected": false },
+            { "id": "opt-s3", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-sco-502",
+          "title": "Block Scope Wall",
+          "question": "if (true) {\n  const secret = '1234';\n}\nconsole.log(secret);",
+          "options": [
+            { "id": "opt-s4", "option": "a", "text": "1234", "correct": false, "selected": false },
+            { "id": "opt-s5", "option": "b", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-s6", "option": "c", "text": "ReferenceError", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-sco-503",
+          "title": "Function Isolation",
+          "question": "function start() {\n  let count = 10;\n}\nstart();\nconsole.log(count);",
+          "options": [
+            { "id": "opt-s7", "option": "a", "text": "10", "correct": false, "selected": false },
+            { "id": "opt-s8", "option": "b", "text": "ReferenceError", "correct": true, "selected": false },
+            { "id": "opt-s9", "option": "c", "text": "null", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-sco-504",
+          "title": "Scope Shadowing",
+          "question": "let x = 5;\nif (true) {\n  let x = 10;\n}\nconsole.log(x);",
+          "options": [
+            { "id": "opt-s10", "option": "a", "text": "10", "correct": false, "selected": false },
+            { "id": "opt-s11", "option": "b", "text": "5", "correct": true, "selected": false },
+            { "id": "opt-s12", "option": "c", "text": "ReferenceError", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-sco-505",
+          "title": "Parameter Scope",
+          "question": "const greet = (name) => {\n  console.log(name);\n};\ngreet('Bob');\nconsole.log(name);",
+          "options": [
+            { "id": "opt-s13", "option": "a", "text": "Bob then Bob", "correct": false, "selected": false },
+            { "id": "opt-s14", "option": "b", "text": "Bob then ReferenceError", "correct": true, "selected": false },
+            { "id": "opt-s15", "option": "c", "text": "Bob then undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-sco-506",
+          "title": "Nested Block Access",
+          "question": "let a = 1;\nif (true) {\n  if (true) {\n    console.log(a);\n  }\n}",
+          "options": [
+            { "id": "opt-s16", "option": "a", "text": "1", "correct": true, "selected": false },
+            { "id": "opt-s17", "option": "b", "text": "ReferenceError", "correct": false, "selected": false },
+            { "id": "opt-s18", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-sco-501",
+          "title": "The Global Shield",
+          "description": "Declare a global variable %appMode = 'Dark'%. Create an arrow function %getMode% that logs the %appMode%. Call the function.",
+          "result": "%Dark%",
+          "note": "Variables declared outside of any block are accessible anywhere in your script.",
+          "solution": "const appMode = 'Dark';\nconst getMode = () => {\n  console.log(appMode);\n};\ngetMode();"
+        },
+        {
+          "id": "task-sco-502",
+          "title": "Locked in the Block",
+          "description": "Inside an %if (true)% block, declare %const temp = 98.6%. Try to %console.log(temp)% outside the block and observe the error.",
+          "result": "%ReferenceError%",
+          "note": "Using 'const' or 'let' locks the variable inside the nearest curly braces {}.",
+          "solution": "if (true) {\n  const temp = 98.6;\n}\n// console.log(temp); // This will cause the error"
+        },
+        {
+          "id": "task-sco-503",
+          "title": "The Function Vault",
+          "description": "Create a function called %saveData%. Inside, declare %let apiKey = 'abc-123'%. Outside the function, declare another %let apiKey = 'xyz-789'%. Log the one outside the function.",
+          "result": "%xyz-789%",
+          "note": "Functions create their own scope; variables inside don't 'leak' out to the global space.",
+          "solution": "function saveData() {\n  let apiKey = 'abc-123';\n}\nlet apiKey = 'xyz-789';\nconsole.log(apiKey);"
+        },
+        {
+          "id": "task-sco-504",
+          "title": "Shadowing Practice",
+          "description": "Declare a global %points = 0%. Create a function %addPoints% that declares its own local %let points = 50% and logs it. Then log the global %points% outside.",
+          "result": "%50 then 0%",
+          "note": "Local variables with the same name as global ones take priority inside the function.",
+          "solution": "let points = 0;\nconst addPoints = () => {\n  let points = 50;\n  console.log(points);\n};\naddPoints();\nconsole.log(points);"
+        }
+      ]
+    },
+    {
+      "id": "hoisting-essentials-122",
+      "title": "Hoisting",
+      "videoID": "22",
+      "questions": [
+        {
+          "id": "q-hoi-601",
+          "title": "Function Declaration Hoisting",
+          "question": "show();\n\nfunction show() {\n  console.log('Displaying...');\n}",
+          "options": [
+            { "id": "opt-h1", "option": "a", "text": "Displaying...", "correct": true, "selected": false },
+            { "id": "opt-h2", "option": "b", "text": "ReferenceError", "correct": false, "selected": false },
+            { "id": "opt-h3", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-hoi-602",
+          "title": "Arrow Function Hoisting",
+          "question": "start();\n\nconst start = () => {\n  console.log('Starting...');\n};",
+          "options": [
+            { "id": "opt-h4", "option": "a", "text": "Starting...", "correct": false, "selected": false },
+            { "id": "opt-h5", "option": "b", "text": "ReferenceError", "correct": true, "selected": false },
+            { "id": "opt-h6", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-hoi-603",
+          "title": "Nested Hoisting",
+          "question": "function parent() {\n  child();\n  function child() {\n    console.log('Inner');\n  }\n}\nparent();",
+          "options": [
+            { "id": "opt-h7", "option": "a", "text": "Inner", "correct": true, "selected": false },
+            { "id": "opt-h8", "option": "b", "text": "ReferenceError", "correct": false, "selected": false },
+            { "id": "opt-h9", "option": "c", "text": "Nothing logs", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-hoi-605",
+          "title": "Hoisting Boundaries",
+          "question": "function main() {\n  sub();\n}\nmain();\nfunction sub() {\n  console.log('Sub');\n}",
+          "options": [
+            { "id": "opt-h13", "option": "a", "text": "Sub", "correct": true, "selected": false },
+            { "id": "opt-h14", "option": "b", "text": "Error: sub is not defined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-hoi-606",
+          "title": "Const/Let TDZ",
+          "question": "console.log(val);\nlet val = 10;",
+          "options": [
+            { "id": "opt-h15", "option": "a", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-h16", "option": "b", "text": "ReferenceError", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-hoi-601",
+          "title": "The Early Caller",
+          "description": "Write a function declaration called %boot% that logs %'System Booting'%. Call this function *before* you actually write its definition in the code.",
+          "result": "%System Booting%",
+          "note": "Function declarations are moved to the top of their scope by the JS engine.",
+          "solution": "boot();\nfunction boot() {\n  console.log('System Booting');\n}"
+        },
+        {
+          "id": "task-hoi-602",
+          "title": "Nested Logic Hoisting",
+          "description": "Create a function %initApp%. Inside it, call a function %loadConfig% before defining it. Inside %loadConfig%, log %'Config Loaded'%.",
+          "result": "%Config Loaded%",
+          "note": "Hoisting also works for functions nested inside other functions.",
+          "solution": "function initApp() {\n  loadConfig();\n  function loadConfig() {\n    console.log('Config Loaded');\n  }\n}\ninitApp();"
+        },
+        {
+          "id": "task-hoi-603",
+          "title": "Expression vs Declaration",
+          "description": "Declare a constant %run% and assign it an arrow function that logs %'Running'%. Try to call %run()% before the declaration and comment out why it fails.",
+          "result": "%ReferenceError%",
+          "note": "Arrow functions assigned to variables (const/let) are NOT hoisted like function declarations.",
+          "solution": "// run(); // This would cause a ReferenceError\nconst run = () => {\n  console.log('Running');\n};"
+        }
+      ]
+    },
+    {
+      "id": "return-statement-123",
+      "title": "The Return Statement",
+      "videoID": "23",
+      "questions": [
+        {
+          "id": "q-ret-701",
+          "title": "Return vs Log",
+          "question": "function getScore() {\n  return 100;\n}\nconst result = getScore();\nconsole.log(result);",
+          "options": [
+            { "id": "opt-r1", "option": "a", "text": "100", "correct": true, "selected": false },
+            { "id": "opt-r2", "option": "b", "text": "undefined", "correct": false, "selected": false },
+            { "id": "opt-r3", "option": "c", "text": "Nothing logs", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-ret-702",
+          "title": "Code After Return",
+          "question": "function test() {\n  return 'Done';\n  console.log('Hello');\n}\ntest();",
+          "options": [
+            { "id": "opt-r4", "option": "a", "text": "Done then Hello", "correct": false, "selected": false },
+            { "id": "opt-r5", "option": "b", "text": "Only Hello", "correct": false, "selected": false },
+            { "id": "opt-r6", "option": "c", "text": "Nothing is logged", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-ret-703",
+          "title": "Implicit Return Check",
+          "question": "function noReturn() {\n  const x = 10;\n}\nconsole.log(noReturn());",
+          "options": [
+            { "id": "opt-r7", "option": "a", "text": "10", "correct": false, "selected": false },
+            { "id": "opt-r8", "option": "b", "text": "undefined", "correct": true, "selected": false },
+            { "id": "opt-r9", "option": "c", "text": "Error", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-ret-704",
+          "title": "Mathematical Return",
+          "question": "const double = (n) => n * 2;\n// If an arrow function has no braces, it returns automatically.",
+          "options": [
+            { "id": "opt-r10", "option": "a", "text": "True", "correct": true, "selected": false },
+            { "id": "opt-r11", "option": "b", "text": "False", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-ret-705",
+          "title": "Returning Objects",
+          "question": "function createPoint(x, y) {\n  return { x: x, y: y };\n}\nconsole.log(typeof createPoint(1, 2));",
+          "options": [
+            { "id": "opt-r12", "option": "a", "text": "number", "correct": false, "selected": false },
+            { "id": "opt-r13", "option": "b", "text": "object", "correct": true, "selected": false },
+            { "id": "opt-r14", "option": "c", "text": "string", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-ret-701",
+          "title": "The Adder",
+          "description": "Create a function %add% that takes two parameters and %returns% their sum. Store the result in a variable and log that variable.",
+          "result": "%(The sum)%",
+          "note": "Returning values allows you to 'capture' the result of a calculation for later use.",
+          "solution": "function add(a, b) {\n  return a + b;\n}\nconst total = add(5, 10);\nconsole.log(total);"
+        },
+        {
+          "id": "task-ret-702",
+          "title": "Early Exit Pattern",
+          "description": "Write a function %checkAge% that takes a %number%. If the number is less than 18, %return 'Too young'%. Otherwise, %return 'Welcome'%.",
+          "result": "%'Too young' or 'Welcome'%",
+          "note": "Using return inside an 'if' statement is a great way to stop a function as soon as you have your answer.",
+          "solution": "const checkAge = (age) => {\n  if (age < 18) return 'Too young to drive.';\n  return 'Welcome';\n};"
+        },
+        {
+          "id": "task-ret-703",
+          "title": "The Formatter",
+          "description": "Create a function %formatUser% that takes %name% and %role%. It should return an object like %{ displayName: name, access: role }%.",
+          "result": "%{ displayName: '...', access: '...' }%",
+          "note": "Functions often act as 'factories' that build and return objects.",
+          "solution": "const formatUser = (name, role) => {\n  return {\n    displayName: name,\n    access: role\n  };\n};"
+        }
+      ]
+    },
+    {
+      "id": "primitives-vs-reference-124",
+      "title": "Primitives vs Objects",
+      "videoID": "24",
+      "questions": [
+        {
+          "id": "q-pri-801",
+          "title": "Primitive Assignment",
+          "question": "let a = 'Hello';\nlet b = a;\nb = 'Hi';\nconsole.log(a);",
+          "options": [
+            { "id": "opt-p1", "option": "a", "text": "Hello", "correct": true, "selected": false },
+            { "id": "opt-p2", "option": "b", "text": "Hi", "correct": false, "selected": false },
+            { "id": "opt-p3", "option": "c", "text": "undefined", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-pri-802",
+          "title": "The Reference Link",
+          "question": "const original = { price: 10 };\nconst copy = original;\ncopy.price = 20;\nconsole.log(original.price);",
+          "options": [
+            { "id": "opt-p4", "option": "a", "text": "10", "correct": false, "selected": false },
+            { "id": "opt-p5", "option": "b", "text": "20", "correct": true, "selected": false },
+            { "id": "opt-p6", "option": "c", "text": "ReferenceError", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-pri-804",
+          "title": "Memory Logic",
+          "question": "let x = 10;\nlet y = 10;\nconsole.log(x === y);\n\nlet obj1 = {};\nlet obj2 = {};\nconsole.log(obj1 === obj2);",
+          "options": [
+            { "id": "opt-p9", "option": "a", "text": "true then true", "correct": false, "selected": false },
+            { "id": "opt-p10", "option": "b", "text": "true then false", "correct": true, "selected": false },
+            { "id": "opt-p11", "option": "c", "text": "false then false", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "b"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-pri-802",
+          "title": "Shared Profile",
+          "description": "Create an object %admin = { power: 'All' }%. Declare a second variable %manager% and set it to %admin%. Change the %power% property of %manager% to %'Limited'%. Log %admin.power%.",
+          "result": "%Limited%",
+          "note": "Both variables point to the same space in memory. Changing one changes the 'source'.",
+          "solution": "const admin = { power: 'All' };\nconst manager = admin;\nmanager.power = 'Limited';\nconsole.log(admin.power);"
+        },
+        {
+          "id": "task-pri-803",
+          "title": "The Constant Object",
+          "description": "Declare %const phone = { brand: 'Apple' }%. Change the brand to %'Samsung'%. Log the object.",
+          "result": "%{ brand: 'Samsung' }%",
+          "note": "Even with 'const', you can change properties inside an object, because the reference (the 'address') hasn't changed.",
+          "solution": "const phone = { brand: 'Apple' };\nphone.brand = 'Samsung';\nconsole.log(phone);"
+        }
+      ]
+    },
+    {
+      "id": "milestone-logic-functions-02",
+      "title": "- MILESTONE EXERCISES 2 -",
+      "videoID": "25",
+      "questions": [
+        { "id": "mq2-01", "title": "Identifying Arrays", "question": "const favoriteColors = ['red', 'blue'];\nconsole.log(typeof favoriteColors);", "options": [{ "id": "o1", "option": "a", "text": "'array'", "correct": false }, { "id": "o2", "option": "b", "text": "'object'", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-02", "title": "Empty Array Truthiness", "question": "const shoppingCart = [];\nif (shoppingCart) {\n  console.log('Cart exists');\n}", "options": [{ "id": "o3", "option": "a", "text": "It logs 'Cart exists'", "correct": true }, { "id": "o4", "option": "b", "text": "Nothing happens", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-03", "title": "Accessing First Item", "question": "const projectDeadlines = [10, 20, 30];\nconsole.log(projectDeadlines[0]);", "options": [{ "id": "o5", "option": "a", "text": "10", "correct": true }, { "id": "o6", "option": "b", "text": "20", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-04", "title": "String Length", "question": "const userStatus = 'Online';\nconsole.log(userStatus.length);", "options": [{ "id": "o7", "option": "a", "text": "5", "correct": false }, { "id": "o8", "option": "b", "text": "6", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-05", "title": "Out of Bounds Index", "question": "const teamMembers = ['Alisa', 'Max'];\nconsole.log(teamMembers[2]);", "options": [{ "id": "o9", "option": "a", "text": "undefined", "correct": true }, { "id": "o10", "option": "b", "text": "Error", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-06", "title": "Space in Strings", "question": "const emptySpace = ' ';\nconsole.log(emptySpace.length);", "options": [{ "id": "o11", "option": "a", "text": "0", "correct": false }, { "id": "o12", "option": "b", "text": "1", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-07", "title": "Missing Object Key", "question": "const employee = { name: 'Alisa' };\nconsole.log(employee.salary);", "options": [{ "id": "o13", "option": "a", "text": "undefined", "correct": true }, { "id": "o14", "option": "b", "text": "null", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-08", "title": "Bracket Notation Need", "question": "const laptop = { 'disk-space': '500GB' };\n// How do we access disk-space?", "options": [{ "id": "o15", "option": "a", "text": "laptop.disk-space", "correct": false }, { "id": "o16", "option": "b", "text": "laptop['disk-space']", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-09", "title": "Running a Function", "question": "function sendEmail() {\n  return 'Sent';\n}\n// Which one actually runs the function?", "options": [{ "id": "o17", "option": "a", "text": "sendEmail()", "correct": true }, { "id": "o18", "option": "b", "text": "sendEmail", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-10", "title": "Default Parameters", "question": "function setVolume(level = 50) {\n  return level;\n}\nconsole.log(setVolume());", "options": [{ "id": "o19", "option": "a", "text": "50", "correct": true }, { "id": "o20", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-11", "title": "Global Scope Access", "question": "const globalScore = 100;\nfunction showScore() {\n  console.log(globalScore);\n}\nshowScore();", "options": [{ "id": "o21", "option": "a", "text": "It logs 100", "correct": true }, { "id": "o22", "option": "b", "text": "ReferenceError", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-12", "title": "Block Scope Const", "question": "if (true) {\n  const internalCode = 999;\n}\nconsole.log(internalCode);", "options": [{ "id": "o23", "option": "a", "text": "999", "correct": false }, { "id": "o24", "option": "b", "text": "ReferenceError", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-13", "title": "Function Hoisting", "question": "greetUser();\nfunction greetUser() {\n  console.log('Welcome!');\n}", "options": [{ "id": "o25", "option": "a", "text": "Works (logs 'Welcome!')", "correct": true }, { "id": "o26", "option": "b", "text": "Fails (Error)", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-14", "title": "Arrow Function Hoisting", "question": "launch();\nconst launch = () => {\n  console.log('Liftoff');\n};", "options": [{ "id": "o27", "option": "a", "text": "Works", "correct": false }, { "id": "o28", "option": "b", "text": "Fails (ReferenceError)", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-15", "title": "The Return Wall", "question": "function processOrder() {\n  return 'Success';\n  console.log('Sending Notification...');\n}\nprocessOrder();", "options": [{ "id": "o29", "option": "a", "text": "Logs 'Sending Notification...'", "correct": false }, { "id": "o30", "option": "b", "text": "Nothing logs", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-16", "title": "Arrow Implicit Return", "question": "const multiplyByTwo = (number) => number * 2;\nconsole.log(multiplyByTwo(5));", "options": [{ "id": "o31", "option": "a", "text": "10", "correct": true }, { "id": "o32", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-17", "title": "Primitive Value Copy", "question": "let originalPrice = 100;\nlet salePrice = originalPrice;\nsalePrice = 80;\nconsole.log(originalPrice);", "options": [{ "id": "o33", "option": "a", "text": "100", "correct": true }, { "id": "o34", "option": "b", "text": "80", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-18", "title": "Object Reference Copy", "question": "const userProfile = { age: 25 };\nconst updatedProfile = userProfile;\nupdatedProfile.age = 30;\nconsole.log(userProfile.age);", "options": [{ "id": "o35", "option": "a", "text": "30", "correct": true }, { "id": "o36", "option": "b", "text": "25", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-19", "title": "Local Scope Privacy", "question": "function setPrice() {\n  let discount = 0.1;\n}\nconsole.log(discount);", "options": [{ "id": "o37", "option": "a", "text": "ReferenceError", "correct": true }, { "id": "o38", "option": "b", "text": "0.1", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-20", "title": "Implicit Return Array", "question": "const getScores = () => [90, 85, 70];\nconst currentScores = getScores();\nconsole.log(currentScores[1]);", "options": [{ "id": "o39", "option": "a", "text": "85", "correct": true }, { "id": "o40", "option": "b", "text": "90", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-21", "title": "Array Length Property", "question": "const taskList = ['Task 1', 'Task 2'];\nconsole.log(taskList.length);", "options": [{ "id": "o41", "option": "a", "text": "2", "correct": true }, { "id": "o42", "option": "b", "text": "1", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-22", "title": "Property Update", "question": "const vehicle = { type: 'Car' };\nvehicle.type = 'Truck';\nconsole.log(vehicle.type);", "options": [{ "id": "o43", "option": "a", "text": "'Truck'", "correct": true }, { "id": "o44", "option": "b", "text": "Error (it is const)", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-23", "title": "Last Index Logic", "question": "If an array has a length of 5 items, what index is the last item located at?", "options": [{ "id": "o45", "option": "a", "text": "5", "correct": false }, { "id": "o46", "option": "b", "text": "4", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-24", "title": "Function with No Return", "question": "function logMessage() {\n  console.log('Action performed');\n}\nconst result = logMessage();\nconsole.log(result);", "options": [{ "id": "o47", "option": "a", "text": "undefined", "correct": true }, { "id": "o48", "option": "b", "text": "null", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-25", "title": "Const Object Mutation", "question": "Can you add a NEW property to an object declared with 'const'?", "options": [{ "id": "o49", "option": "a", "text": "Yes", "correct": true }, { "id": "o50", "option": "b", "text": "No", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-26", "title": "Array Indexing", "question": "const ages = [21, 25, 30];\nconsole.log(ages[1]);", "options": [{ "id": "o51", "option": "a", "text": "25", "correct": true }, { "id": "o52", "option": "b", "text": "21", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-27", "title": "Length calculation", "question": "const language = 'JavaScript';\nconsole.log(language.length - 1);", "options": [{ "id": "o53", "option": "a", "text": "9", "correct": true }, { "id": "o54", "option": "b", "text": "10", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-28", "title": "Variable keys", "question": "const userProperty = 'username';\nconst account = { username: 'Admin' };\nconsole.log(account[userProperty]);", "options": [{ "id": "o55", "option": "a", "text": "'Admin'", "correct": true }, { "id": "o56", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-29", "title": "Shadowing Variables", "question": "let totalAmount = 50;\nfunction updateAmount() {\n  let totalAmount = 100;\n  console.log(totalAmount);\n}\nupdateAmount();", "options": [{ "id": "o57", "option": "a", "text": "100", "correct": true }, { "id": "o58", "option": "b", "text": "50", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-30", "title": "Multiple Returns", "question": "function validate(val) {\n  if (val > 0) return 'Valid';\n  return 'Invalid';\n}\nconsole.log(validate(10));", "options": [{ "id": "o59", "option": "a", "text": "'Valid'", "correct": true }, { "id": "o60", "option": "b", "text": "'Invalid'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-31", "title": "Extra Arguments", "question": "function addNumbers(a, b) {\n  return a + b;\n}\nconsole.log(addNumbers(5, 5, 100));", "options": [{ "id": "o61", "option": "a", "text": "10", "correct": true }, { "id": "o62", "option": "b", "text": "110", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-32", "title": "Object Falsiness", "question": "Is an empty object {} considered 'falsy' in an if-statement?", "options": [{ "id": "o63", "option": "a", "text": "No, it is truthy", "correct": true }, { "id": "o64", "option": "b", "text": "Yes, it is falsy", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-33", "title": "Implicit Return Object", "question": "const createPlayer = (playerName) => ({ name: playerName });\n// What does this function return?", "options": [{ "id": "o65", "option": "a", "text": "An object with a name property", "correct": true }, { "id": "o66", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-34", "title": "String Reference", "question": "let cityOne = 'London';\nlet cityTwo = cityOne;\ncityTwo = 'Paris';\n// Does cityOne change?", "options": [{ "id": "o67", "option": "a", "text": "No", "correct": true }, { "id": "o68", "option": "b", "text": "Yes", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-35", "title": "Arrow Body No Return", "question": "const getNumber = () => { 10 };\nconsole.log(getNumber());", "options": [{ "id": "o69", "option": "a", "text": "undefined", "correct": true }, { "id": "o70", "option": "b", "text": "10", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-36", "title": "Implicit Return Logic", "question": "const isEven = (n) => n % 2 === 0;\nconsole.log(isEven(4));", "options": [{ "id": "o71", "option": "a", "text": "true", "correct": true }, { "id": "o72", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-37", "title": "Typeof Null", "question": "console.log(typeof null);", "options": [{ "id": "o73", "option": "a", "text": "'object'", "correct": true }, { "id": "o74", "option": "b", "text": "'null'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-38", "title": "Scope Isolation", "question": "function taskA() { let status = 'done'; }\nfunction taskB() { let status = 'pending'; }\n// Do these variables cause an error?", "options": [{ "id": "o75", "option": "a", "text": "No, they are isolated in their functions", "correct": true }, { "id": "o76", "option": "b", "text": "Yes, name conflict", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-39", "title": "Template Literal return", "question": "const currentYear = 2026;\nconst getYear = () => `Year: ${currentYear}`;\nconsole.log(getYear());", "options": [{ "id": "o77", "option": "a", "text": "'Year: 2026'", "correct": true }, { "id": "o78", "option": "b", "text": "Year: 2026 (no quotes)", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-40", "title": "Object value access", "question": "const userSettings = { volume: 80 };\nconsole.log(userSettings['volume']);", "options": [{ "id": "o79", "option": "a", "text": "80", "correct": true }, { "id": "o80", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-41", "title": "Variable for object property", "question": "const dataKey = 'email';\nconst userAccount = { email: 'test@test.com' };\nconsole.log(userAccount.dataKey);", "options": [{ "id": "o81", "option": "a", "text": "undefined", "correct": true }, { "id": "o82", "option": "b", "text": "'test@test.com'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-42", "title": "Implicit Return vs Braces", "question": "const result = () => 5 + 5;\nconsole.log(result());", "options": [{ "id": "o83", "option": "a", "text": "10", "correct": true }, { "id": "o84", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-43", "title": "Boolean Conversion", "question": "Boolean(0)", "options": [{ "id": "o85", "option": "a", "text": "false", "correct": true }, { "id": "o86", "option": "b", "text": "true", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-44", "title": "Negative Index", "question": "const pointValues = [1, 2];\nconsole.log(pointValues[-1]);", "options": [{ "id": "o87", "option": "a", "text": "undefined", "correct": true }, { "id": "o88", "option": "b", "text": "Error", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-45", "title": "Redeclaring in Scope", "question": "let username = 'Alisa';\nlet username = 'Max'; // (Same scope)", "options": [{ "id": "o89", "option": "a", "text": "Error", "correct": true }, { "id": "o90", "option": "b", "text": "Name changes", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-46", "title": "Logic in Return", "question": "const isAdult = (age) => age >= 18;\nconsole.log(isAdult(20));", "options": [{ "id": "o91", "option": "a", "text": "true", "correct": true }, { "id": "o92", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-47", "title": "Double space length", "question": "const fillerText = '  ';\nconsole.log(fillerText.length);", "options": [{ "id": "o93", "option": "a", "text": "2", "correct": true }, { "id": "o94", "option": "b", "text": "0", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-48", "title": "Undefined type", "question": "console.log(typeof undefined);", "options": [{ "id": "o95", "option": "a", "text": "'undefined'", "correct": true }, { "id": "o96", "option": "b", "text": "'object'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-49", "title": "Implicit Return Config", "question": "const getConfig = (type) => ({ theme: type });\nconst myConfig = getConfig('Dark');\nconsole.log(myConfig.theme);", "options": [{ "id": "o97", "option": "a", "text": "'Dark'", "correct": true }, { "id": "o98", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-50", "title": "Parameters as Variables", "question": "function update(data) {\n  return data;\n}\n// Is 'data' accessible outside the function?", "options": [{ "id": "o99", "option": "a", "text": "No", "correct": true }, { "id": "o100", "option": "b", "text": "Yes", "correct": false }], "correctAnswer": "a" }
+      ],
+      "tasks": [
+        { "id": "mt2-01", "title": "Inventory Check", "description": "Declare %const stockItems = [10, 'In Stock', true]%. Log the %typeof% the middle element.", "result": "%string%", "solution": "const stockItems = [10, 'In Stock', true];\nconsole.log(typeof stockItems[1]);" },
+        { "id": "mt2-02", "title": "Security Check", "description": "Declare %let password = 'abc'%. If the %length% is less than 5, log %'Weak Password'%.", "result": "%Weak Password%", "solution": "let password = 'abc';\nif (password.length < 5) {\n  console.log('Weak Password');\n}" },
+        { "id": "mt2-03", "title": "Dynamic Profile", "description": "Create an empty object %const userAccount = {}%. After it is created, add a property %email% with a string value.", "result": "%{email: '...'}%", "solution": "const userAccount = {};\nuserAccount.email = 'alisa@example.com';" },
+        { "id": "mt2-04", "title": "Price Calculator", "description": "Create an arrow function %getDiscountedPrice% that takes %price% and %discount% as parameters and returns the %price - discount%. Log the result of %getDiscountedPrice(100, 20)%.", "result": "%80%", "solution": "const getDiscountedPrice = (price, discount) => {\n  return price - discount;\n};\nconsole.log(getDiscountedPrice(100, 20));" },
+        { "id": "mt2-05", "title": "Global Settings", "description": "Declare a global variable %const appTheme = 'Dark'%. Create a function %showTheme% that logs this global variable.", "result": "%Dark%", "solution": "const appTheme = 'Dark';\nconst showTheme = () => {\n  console.log(appTheme);\n};\nshowTheme();" },
+        { "id": "mt2-06", "title": "Function Order", "description": "Write a function declaration %displayAlert()% that logs %'System Ready'%. Call it on the line ABOVE where you wrote the function.", "result": "%System Ready%", "solution": "displayAlert();\nfunction displayAlert() {\n  console.log('System Ready');\n}" },
+        { "id": "mt2-07", "title": "Shared Database", "description": "Create an object %const database = { status: 'Online' }%. Declare a second variable %localCopy% and set it equal to %database%. Change %localCopy.status% to %'Offline'%. Log %database.status%.", "result": "%Offline%", "solution": "const database = { status: 'Online' };\nconst localCopy = database;\nlocalCopy.status = 'Offline';\nconsole.log(database.status);" },
+        { "id": "mt2-08", "title": "Label Length", "description": "Declare %const productLabel = 'Premium Coffee'%. Log the length of this string.", "result": "%14%", "solution": "const productLabel = 'Premium Coffee';\nconsole.log(productLabel.length);" },
+        { "id": "mt2-09", "title": "Smart Greeting", "description": "Create a function %greetMember% that takes a %name% parameter with a default value of %'Guest'%. It should return a template literal: %`Welcome, ${name}`%.", "result": "%Welcome, Guest%", "solution": "const greetMember = (name = 'Guest') => {\n  return `Welcome, ${name}`;\n};\nconsole.log(greetMember());" },
+        { "id": "mt2-10", "title": "Special Key Access", "description": "Create an object %const serverData = { 'response-time': 150 }%. Use bracket notation to log this property.", "result": "%150%", "solution": "const serverData = { 'response-time': 150 };\nconsole.log(serverData['response-time']);" },
+        { "id": "mt2-11", "title": "Last Queue Item", "description": "Create an array %const waitingQueue = ['User1', 'User2', 'User3']%. Use the %length% property to log the very last item in the array.", "result": "%User3%", "solution": "const waitingQueue = ['User1', 'User2', 'User3'];\nconsole.log(waitingQueue[waitingQueue.length - 1]);" },
+        { "id": "mt2-12", "title": "Validation Logic", "description": "Create a function %checkAge% that takes a %userAge% parameter. If %userAge% is 18 or more, return %'Access Granted'%. Otherwise, return %'Access Denied'%.", "result": "%...%", "solution": "const checkAge = (userAge) => {\n  if (userAge >= 18) {\n    return 'Access Granted';\n  }\n  return 'Access Denied';\n};" },
+        { "id": "mt2-13", "title": "Variable Privacy", "description": "Create a function %saveData%. Inside it, declare %let secretKey = '12345'%. Try to log %secretKey% OUTSIDE the function and explain why it fails.", "result": "%Error%", "solution": "function saveData() {\n  let secretKey = '12345';\n}\n// console.log(secretKey); // Fails because of function scope" },
+        { "id": "mt2-14", "title": "Complex Data Array", "description": "Declare an array %const userDashboard% that contains: a string (name), a number (id), and an object (settings).", "result": "%[...]%", "solution": "const userDashboard = [\n  'Alisa',\n  101,\n  { theme: 'Light' }\n];" },
+        { "id": "mt2-15", "title": "Total Score Arrow", "description": "Create an arrow function %calculateTotal% that takes three parameters (%round1%, %round2%, %round3%) and returns their sum using an implicit return.", "result": "%Sum%", "solution": "const calculateTotal = (round1, round2, round3) => round1 + round2 + round3;" },
+        { "id": "mt2-16", "title": "Object Factory", "description": "Create an arrow function %buildUser% that takes a %username% and returns an object %{ name: username, active: true }% using an implicit return.", "result": "%{name, active}%", "solution": "const buildUser = (username) => ({ name: username, active: true });" },
+        { "id": "mt2-17", "title": "Type Inspector", "description": "Create a function %inspectValue% that takes one parameter and returns its %typeof% as a string.", "result": "%...%", "solution": "const inspectValue = (input) => {\n  return typeof input;\n};" },
+        { "id": "mt2-18", "title": "Template Task", "description": "Create an arrow function %formatPrice% that takes a %value% and returns %`$${value}`% using an implicit return.", "result": "%$...%", "solution": "const formatPrice = (value) => `$${value}`;" },
+        { "id": "mt2-19", "title": "Copy Protection", "description": "Declare %let originalName = 'Max'%. Set %let backupName = originalName%. Change %backupName% to %'Joe'%. Log both to show the original didn't change.", "result": "%Max Joe%", "solution": "let originalName = 'Max';\nlet backupName = originalName;\nbackupName = 'Joe';\nconsole.log(originalName, backupName);" },
+        { "id": "mt2-20", "title": "Block Security", "description": "Inside an %if (true)% block, declare %const sessionToken = 'XYZ'%. Try to log it outside and see the error.", "result": "%Error%", "solution": "if (true) {\n  const sessionToken = 'XYZ';\n}\n// console.log(sessionToken); // ReferenceError" }
+      ]
     }
   ]
 }
