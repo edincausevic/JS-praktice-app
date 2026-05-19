@@ -265,13 +265,14 @@ body {
     font-size: 1rem;
 }
 .code-block {
+    
     background: #0b1120;
     color: #cbd5e1;
     padding: 1.5rem;
     border-radius: 18px;
     font-family: 'Fira Code', 'JetBrains Mono', monospace;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 28px;
     margin: 1.5rem 0 1.8rem;
     border: 1px solid #1e293b;
     overflow-x: auto;
@@ -421,6 +422,7 @@ body {
     border: 1px solid #facc15;
     color: #1e293b;
     margin: 1rem 0 0.5rem;
+    line-height: 33px;
 }
 .challenge-desc code {
     background: #1e293b;

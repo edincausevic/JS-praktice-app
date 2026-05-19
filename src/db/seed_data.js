@@ -1759,5 +1759,845 @@ export const seedData = {
         { "id": "smt-07", "title": "Domain Finder", "description": "Declare %const customerEmail = 'john.doe@gmail.com'%. Use the %includes()% method to check if the email belongs to a gmail domain (%'gmail.com'%). Log the true/false result.", "result": "%true%", "solution": "const customerEmail = 'john.doe@gmail.com';\nconst isGmail = customerEmail.includes('gmail.com');\nconsole.log(isGmail);" }
       ]
     },
+    {
+      "id": "string-methods-02",
+      "title": "String Methods 2",
+      "videoID": "27",
+      "questions": [
+        {
+          "id": "smq2-01",
+          "title": "Changing to Uppercase",
+          "question": "const discountCode = 'save20';\nconst updatedCode = discountCode.toUpperCase();\nconsole.log(updatedCode);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "'SAVE20'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'save20'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-02",
+          "title": "Changing to Lowercase",
+          "question": "const userEmailInput = 'MAX@Example.com';\nconst lowerCaseEmail = userEmailInput.toLowerCase();\nconsole.log(lowerCaseEmail);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "'max@example.com'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'MAX@EXAMPLE.COM'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-03",
+          "title": "Removing Outer Spaces",
+          "question": "const usernameInput = '   alisa_developer   ';\nconst cleanUsername = usernameInput.trim();\nconsole.log(cleanUsername);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "'alisa_developer'", "correct": true },
+            { "id": "o6", "option": "b", "text": "'   alisa_developer   '", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-04",
+          "title": "Replacing Text Content",
+          "question": "const systemStatus = 'System: Error detected';\nconst updatedStatus = systemStatus.replace('Error', 'Success');\nconsole.log(updatedStatus);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "'System: Success detected'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'System: Error detected'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-05",
+          "title": "Splitting at Commas",
+          "question": "const itemsList = 'shoes,shirts,hats';\nconst itemsArray = itemsList.split(',');\nconsole.log(itemsArray[0]);",
+          "options": [
+            { "id": "o9", "option": "a", "text": "'shoes'", "correct": true },
+            { "id": "o10", "option": "b", "text": "'shirts'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-06",
+          "title": "Joining with Hyphens",
+          "question": "const dateParts = ['2026', '05', '18'];\nconst formattedDate = dateParts.join('-');\nconsole.log(formattedDate);",
+          "options": [
+            { "id": "o11", "option": "a", "text": "'2026-05-18'", "correct": true },
+            { "id": "o12", "option": "b", "text": "'20260518'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-07",
+          "title": "Splitting Spaces into Words",
+          "question": "const shortNotice = 'Welcome Back Admin';\nconst wordsArray = shortNotice.split(' ');\nconsole.log(wordsArray.length);",
+          "options": [
+            { "id": "o13", "option": "a", "text": "3", "correct": true },
+            { "id": "o14", "option": "b", "text": "1", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-08",
+          "title": "Case Sensitive Replacement",
+          "question": "const chatMessage = 'Please do not Spam here';\nconst cleanMessage = chatMessage.replace('spam', 'post');\nconsole.log(cleanMessage);",
+          "options": [
+            { "id": "o15", "option": "a", "text": "'Please do not Spam here'", "correct": true },
+            { "id": "o16", "option": "b", "text": "'Please do not post here'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-09",
+          "title": "Joining Without Spaces",
+          "question": "const singleLetters = ['R', 'e', 'a', 'c', 't'];\nconst completeWord = singleLetters.join('');\nconsole.log(completeWord);",
+          "options": [
+            { "id": "o17", "option": "a", "text": "'React'", "correct": true },
+            { "id": "o18", "option": "b", "text": "'R e a c t'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-12",
+          "title": "Method Chaining Order",
+          "question": "const rawInputText = '  hello  ';\nconst finalOutput = rawInputText.trim().toUpperCase();\nconsole.log(finalOutput);",
+          "options": [
+            { "id": "o23", "option": "a", "text": "'HELLO'", "correct": true },
+            { "id": "o24", "option": "b", "text": "'  HELLO  '", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq2-14",
+          "title": "Join with Space Delimiter",
+          "question": "const namesArray = ['John', 'Smith'];\nconst introduction = namesArray.join(' ');\nconsole.log(introduction);",
+          "options": [
+            { "id": "o27", "option": "a", "text": "'John Smith'", "correct": true },
+            { "id": "o28", "option": "b", "text": "'JohnSmith'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "smt2-01",
+          "title": "Search Query Normalizer",
+          "description": "Declare %const userSearchInput = '   PrOdUcT   '%. Create a new variable that removes the white spaces around it and completely converts it to lowercase. Log the clean result.",
+          "result": "%product%",
+          "solution": "const userSearchInput = '   PrOdUcT   ';\nconst cleanInput = userSearchInput.trim().toLowerCase();\nconsole.log(cleanInput);"
+        },
+        {
+          "id": "smt2-02",
+          "title": "Comma Separated Values Data Converter",
+          "description": "Declare %const csvLineData = 'Laptop,Electronics,1200,InStock'%. Convert this string text into an array wherever a comma character appears. Log the newly created array structure.",
+          "result": "%[...]%",
+          "solution": "const csvLineData = 'Laptop,Electronics,1200,InStock';\nconst datasetArray = csvLineData.split(',');\nconsole.log(datasetArray);"
+        },
+        {
+          "id": "smt2-03",
+          "title": "Website Address Link Generator",
+          "description": "Declare %const phraseSegments = ['building', 'modern', 'websites']%. Join these words together using a single hyphen character (%'-'%) to make a web address link. Log the combined text string.",
+          "result": "%building-modern-websites%",
+          "solution": "const phraseSegments = ['building', 'modern', 'websites'];\nconst webLinkSlug = phraseSegments.join('-');\nconsole.log(webLinkSlug);"
+        },
+        {
+          "id": "smt2-04",
+          "title": "Sensitive Log Scrubbing",
+          "description": "Declare %const dangerousSystemLog = 'Database failure caused by password123 error'%. Target the string %'password123'% inside this sentence text and switch it to %'REDACTED'%. Log the updated message content.",
+          "result": "%Database failure caused by REDACTED error%",
+          "solution": "const dangerousSystemLog = 'Database failure caused by password123 error';\nconst safeSystemLog = dangerousSystemLog.replace('password123', 'REDACTED');\nconsole.log(safeSystemLog);"
+        },
+        {
+          "id": "smt2-05",
+          "title": "Input Spacing Verification",
+          "description": "Declare %const customerEmailAddress = '  contact@agency.com '%. Create an %if% statement checking if the email has starting spaces using %startsWith(' ')%. If it does, use a string method to safely strip the blank spaces and log %'Email Sanitized'%.",
+          "result": "%Email Sanitized%",
+          "solution": "const customerEmailAddress = '  contact@agency.com ';\nif (customerEmailAddress.startsWith(' ')) {\n  const sanitizedEmail = customerEmailAddress.trim();\n  console.log('Email Sanitized');\n}"
+        },
+        {
+          "id": "smt2-06",
+          "title": "High Visibility Banner Text Converter",
+          "description": "Declare %const regularAlertMessage = 'warning: low server storage space remaining'%. Translate this alert line fully into capital letters so it catches eyes in logs. Log the transformed capital sentence string.",
+          "result": "%WARNING: LOW SERVER STORAGE SPACE REMAINING%",
+          "solution": "const regularAlertMessage = 'warning: low server storage space remaining';\nconst highVisibilityAlert = regularAlertMessage.toUpperCase();\nconsole.log(highVisibilityAlert);"
+        },
+        {
+          "id": "smt2-07",
+          "title": "Sentence Word Counter",
+          "description": "Declare %const shortArticleTeaser = 'Learning programming opens many career opportunities'%. Break up this entire line into an array of isolated single words separated by space inputs. Log the numerical count of how many single words are located inside that resulting list array.",
+          "result": "%7%",
+          "solution": "const shortArticleTeaser = 'Learning programming opens many career opportunities';\nconst wordsCollection = shortArticleTeaser.split(' ');\nconsole.log(wordsCollection.length);"
+        },
+        {
+          "id": "smt2-08",
+          "title": "Title Case Normalization",
+          "description": "Declare %const rawTitleInput = '  welcome to our portal'%. Trim any starting spaces, then replace the lowercase word %'welcome'% with an uppercase %'Welcome'%. Log the completed title string.",
+          "result": "%Welcome to our portal%",
+          "solution": "const rawTitleInput = '  welcome to our portal';\nconst trimmedTitle = rawTitleInput.trim();\nconst correctedTitle = trimmedTitle.replace('welcome', 'Welcome');\nconsole.log(correctedTitle);"
+        },
+        {
+          "id": "smt2-09",
+          "title": "File Format Path Splitter",
+          "description": "Declare %const fullImageFileName = 'user_avatar.png'%. Split this filename into two parts using the dot (%'.'%) symbol. Access the array index for the file format extension and log it.",
+          "result": "%png%",
+          "solution": "const fullImageFileName = 'user_avatar.png';\nconst segmentedFileName = fullImageFileName.split('.');\nconsole.log(segmentedFileName[1]);"
+        }
+      ]
+    },
+    {
+      "id": "string-methods-03",
+      "title": "String Methods 3",
+      "videoID": "28",
+      "questions": [
+        {
+          "id": "smq3-01",
+          "title": "Checking String Length",
+          "question": "const password = 'secure123';\nconsole.log(password.length);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "9", "correct": true },
+            { "id": "o2", "option": "b", "text": "10", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-02",
+          "title": "Substrings with Includes",
+          "question": "const email = 'admin@domain.com';\nconst hasAdmin = email.includes('admin');\nconsole.log(hasAdmin);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "true", "correct": true },
+            { "id": "o4", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-03",
+          "title": "Extracting with Slice",
+          "question": "const code = 'JS-2026';\nconst year = code.slice(3);\nconsole.log(year);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "'2026'", "correct": true },
+            { "id": "o6", "option": "b", "text": "'-2026'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-04",
+          "title": "Replacing All Occurrences",
+          "question": "const phrase = 'cats and cats';\nconst updated = phrase.replaceAll('cats', 'dogs');\nconsole.log(updated);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "'dogs and dogs'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'dogs and cats'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-05",
+          "title": "Checking the Beginning",
+          "question": "const url = 'https://example.com';\nconsole.log(url.startsWith('https'));",
+          "options": [
+            { "id": "o9", "option": "a", "text": "true", "correct": true },
+            { "id": "o10", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-06",
+          "title": "Checking the End",
+          "question": "const file = 'document.pdf';\nconsole.log(file.endsWith('.pdf'));",
+          "options": [
+            { "id": "o11", "option": "a", "text": "true", "correct": true },
+            { "id": "o12", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-07",
+          "title": "Negative Slice Indexing",
+          "question": "const text = 'JavaScript';\nconst endPart = text.slice(-2);\nconsole.log(endPart);",
+          "options": [
+            { "id": "o13", "option": "a", "text": "'pt'", "correct": true },
+            { "id": "o14", "option": "b", "text": "'ip'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-08",
+          "title": "Includes Case Sensitivity",
+          "question": "const message = 'Hello World';\nconsole.log(message.includes('hello'));",
+          "options": [
+            { "id": "o15", "option": "a", "text": "false", "correct": true },
+            { "id": "o16", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-09",
+          "title": "Slice with Two Parameters",
+          "question": "const phrase = 'ReduxToolkit';\nconst sub = phrase.slice(0, 5);\nconsole.log(sub);",
+          "options": [
+            { "id": "o17", "option": "a", "text": "'Redux'", "correct": true },
+            { "id": "o18", "option": "b", "text": "'ReduxT'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "smq3-10",
+          "title": "Empty Split Delimiter",
+          "question": "const word = 'UI';\nconst letters = word.split('');\nconsole.log(letters[0]);",
+          "options": [
+            { "id": "o19", "option": "a", "text": "'U'", "correct": true },
+            { "id": "o20", "option": "b", "text": "'I'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "smt3-01",
+          "title": "Password Length Validator Function",
+          "description": "Create a function named %validatePassword(pass)% that checks if the incoming string parameter has fewer than 8 characters. If it is too short, return %'Too Short'%, otherwise return %'Valid'%.",
+          "result": "%Too Short%",
+          "solution": "function validatePassword(pass) {\n  if (pass.length < 8) {\n    return 'Too Short';\n  }\n  return 'Valid';\n}\nconsole.log(validatePassword('12345'));"
+        },
+        {
+          "id": "smt3-02",
+          "title": "Email Domain Guard Function",
+          "description": "Create a function named %checkCorporateEmail(email)% that looks inside an email address string to verify whether it belongs to the corporate domain %'@company.com'%. Return %true% if it does, and %false% if it does not.",
+          "result": "%true%",
+          "solution": "function checkCorporateEmail(email) {\n  if (email.includes('@company.com')) {\n    return true;\n  }\n  return false;\n}\nconsole.log(checkCorporateEmail('alex@company.com'));"
+        },
+        {
+          "id": "smt3-03",
+          "title": "URL Protocol Secure Fixer Function",
+          "description": "Create a function named %enforceHttps(url)% that checks if a link starts with unsecured web layout text %'http://'%. If it matches, fix the link by changing that specific part to %'https://'% and return the updated secure string. Otherwise, return the original url.",
+          "result": "%https://myweb.com%",
+          "solution": "function enforceHttps(url) {\n  if (url.startsWith('http://')) {\n    return url.replace('http://', 'https://');\n  }\n  return url;\n}\nconsole.log(enforceHttps('http://myweb.com'));"
+        },
+        {
+          "id": "smt3-04",
+          "title": "E-Commerce Slug Generator Function",
+          "description": "Create a function named %generateProductSlug(title)% that takes a raw title string like %'   Blue Nike Shoes   '%. The function should remove any trailing or leading empty spaces, convert all text to lowercase, and switch every internal space into a single hyphen character (%'-'%). Return the formatted text.",
+          "result": "%blue-nike-shoes%",
+          "solution": "function generateProductSlug(title) {\n  const cleanTitle = title.trim().toLowerCase();\n  return cleanTitle.replaceAll(' ', '-');\n}\nconsole.log(generateProductSlug('   Blue Nike Shoes   '));"
+        },
+        {
+          "id": "smt3-05",
+          "title": "Image File Validator Function",
+          "description": "Create a function named %isPngFile(filename)% that checks an uploaded file name. Verify if the file string terminates with the image format extension %'.png'%. Return %'Approved Image'% if it matches, and %'Unsupported File'% if it doesn't.",
+          "result": "%Approved Image%",
+          "solution": "function isPngFile(filename) {\n  if (filename.endsWith('.png')) {\n    return 'Approved Image';\n  }\n  return 'Unsupported File';\n}\nconsole.log(isPngFile('avatar.png'));"
+        },
+        {
+          "id": "smt3-06",
+          "title": "Text Preview Snippet Function",
+          "description": "Create a function named %getArticlePreview(text)% that takes a long content string. Extract precisely the first 10 characters from that text sequence, combine it with a trailing ellipsis %'...'% symbol, and return the final condensed preview snippet.",
+          "result": "%Read more ...%",
+          "solution": "function getArticlePreview(text) {\n  const cutText = text.slice(0, 10);\n  return cutText + '...';\n}\nconsole.log(getArticlePreview('Read more about JavaScript string methods'));"
+        },
+        {
+          "id": "smt3-07",
+          "title": "CSV First Column Extractor Function",
+          "description": "Create a function named %getUserIdFromCsv(csvRow)% that handles comma-separated values like %'USR99,John,Active'%. Separate the record values out into an isolated collection, and return only the first element located at the start of that sequence.",
+          "result": "%USR99%",
+          "solution": "function getUserIdFromCsv(csvRow) {\n  const parsedData = csvRow.split(',');\n  return parsedData[0];\n}\nconsole.log(getUserIdFromCsv('USR99,John,Active'));"
+        },
+        {
+          "id": "smt3-08",
+          "title": "Tag Collection Compiler Function",
+          "description": "Create a function named %compileTagsString(tagsArray)% that takes an array list of string indicators like %['react', 'js', 'html']%. Compile all elements together into a single cohesive string where each word is separated exclusively by a blank space. Return the compiled string text.",
+          "result": "%react js html%",
+          "solution": "function compileTagsString(tagsArray) {\n  return tagsArray.join(' ');\n}\nconsole.log(compileTagsString(['react', 'js', 'html']));"
+        }
+      ]
+    },
+    {
+      "id": "number-methods-01",
+      "title": "Number Methods",
+      "videoID": "29",
+      "questions": [
+        {
+          "id": "nmq1-01",
+          "title": "Converting Number to String",
+          "question": "const score = 45;\nconst result = score.toString();\nconsole.log(typeof result);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "'string'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'number'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "nmq1-02",
+          "title": "Parsing String to Number",
+          "question": "const entry = '29.99';\nconst price = Number(entry);\nconsole.log(typeof price);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "'number'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'string'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "nmq1-03",
+          "title": "Formatting Decimal Places",
+          "question": "const pi = 3.14159;\nconst formatted = pi.toFixed(2);\nconsole.log(formatted);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "'3.14'", "correct": true },
+            { "id": "o6", "option": "b", "text": "3.14", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "nmq1-04",
+          "title": "Checking Finite Numbers",
+          "question": "const value = 100;\nconsole.log(isFinite(value));",
+          "options": [
+            { "id": "o7", "option": "a", "text": "true", "correct": true },
+            { "id": "o8", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "nmq1-05",
+          "title": "Checking Global Infinity",
+          "question": "console.log(isFinite(Infinity));",
+          "options": [
+            { "id": "o9", "option": "a", "text": "false", "correct": true },
+            { "id": "o10", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "nmq1-06",
+          "title": "Invalid Number Conversion",
+          "question": "const dynamicValue = Number('abc');\nconsole.log(isFinite(dynamicValue));",
+          "options": [
+            { "id": "o11", "option": "a", "text": "false", "correct": true },
+            { "id": "o12", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "nmt1-01",
+          "title": "Checkout Currency Formatter Function",
+          "description": "Create a function named %formatPrice(amount)% that takes a number decimal value (like %19.9862%). The function should round and limit the value to exactly 2 decimal places and return the result as a string (like %'19.99'%).",
+          "result": "%19.99%",
+          "solution": "function formatPrice(amount) {\n  return amount.toFixed(2);\n}\nconsole.log(formatPrice(19.9862));"
+        },
+        {
+          "id": "nmt1-02",
+          "title": "Form Input Parser Function",
+          "description": "Create a function named %processAgeInput(inputString)% that receives a string representing an age (like %'25'%). Convert that text input into a real number and return it (like %25%).",
+          "result": "%25%",
+          "solution": "function processAgeInput(inputString) {\n  return Number(inputString);\n}\nconsole.log(processAgeInput('25'));"
+        },
+        {
+          "id": "nmt1-03",
+          "title": "API Code ID Normalizer Function",
+          "description": "Create a function named %stringifyId(numericId)% that accepts a number type ID (like %1024%). Transform this number into a string and return it (like %'1024'%).",
+          "result": "%1024%",
+          "solution": "function stringifyId(numericId) {\n  return numericId.toString();\n}\nconsole.log(stringifyId(1024));"
+        },
+        {
+          "id": "nmt1-04",
+          "title": "Division Safety Guard Function",
+          "description": "Create a function named %validateResult(total, parts)% that divides the %total% parameter by %parts%. Check if the result of this division is a valid, finite number. Return %true% if it is a valid finite number, and %false% if it is not (such as when dividing %10% by %0%).",
+          "result": "%false%",
+          "solution": "function validateResult(total, parts) {\n  const outcome = total / parts;\n  if (isFinite(outcome)) {\n    return true;\n  }\n  return false;\n}\nconsole.log(validateResult(10, 0));"
+        },
+        {
+          "id": "nmt1-05",
+          "title": "E-Commerce Discount Display Function",
+          "description": "Create a function named %getIntegerDiscount(percentage)% that takes a decimal discount number (like %14.85%). Format the value down to show exactly 0 decimal locations and return the result as a string (like %'15'%).",
+          "result": "%15%",
+          "solution": "function getIntegerDiscount(percentage) {\n  return percentage.toFixed();\n}\nconsole.log(getIntegerDiscount(14.85));"
+        }
+      ]
+    },
+    {
+      "id": "destructuring-01",
+      "title": "Array and Object Destructuring",
+      "videoID": "30",
+      "questions": [
+        {
+          "id": "dq1-01",
+          "title": "Basic Array Destructuring",
+          "question": "const colors = ['red', 'green', 'blue'];\nconst [firstColor, secondColor] = colors;\nconsole.log(secondColor);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "'green'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'red'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "dq1-02",
+          "title": "Skipping Items in Array",
+          "question": "const settings = ['light', 'en', 'v1.0'];\nconst [theme, , version] = settings;\nconsole.log(version);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "'v1.0'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'en'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "dq1-03",
+          "title": "Basic Object Destructuring",
+          "question": "const user = { username: 'alex99', role: 'admin' };\nconst { username } = user;\nconsole.log(username);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "'alex99'", "correct": true },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "dq1-04",
+          "title": "Destructuring with Variable Renaming",
+          "question": "const product = { id: 101, title: 'Phone' };\nconst { title: productName } = product;\nconsole.log(productName);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "'Phone'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'title'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "dq1-05",
+          "title": "Destructuring Default Values",
+          "question": "const config = { host: 'localhost' };\nconst { host, port = 8080 } = config;\nconsole.log(port);",
+          "options": [
+            { "id": "o9", "option": "a", "text": "8080", "correct": true },
+            { "id": "o10", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "dq1-06",
+          "title": "Nested Object Destructuring",
+          "question": "const profile = { id: 1, info: { email: 'test@test.com' } };\nconst { info: { email } } = profile;\nconsole.log(email);",
+          "options": [
+            { "id": "o11", "option": "a", "text": "'test@test.com'", "correct": true },
+            { "id": "o12", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "dt1-01",
+          "title": "GPS Coordinate Unpacker Function",
+          "description": "Create a function named %getLatitude(coordinates)% that receives an array containing two numbers representing a location. Input example: %[48.208, 16.373]%. Use array destructuring to unpack the coordinates and return only the first coordinate value. Output example: %48.208%.",
+          "result": "%48.208%",
+          "solution": "function getLatitude(coordinates) {\n  const [latitude, longitude] = coordinates;\n  return latitude;\n}\nconsole.log(getLatitude([48.208, 16.373]));"
+        },
+        {
+          "id": "dt1-02",
+          "title": "User Destructuring Welcome Function",
+          "description": "Create a function named %greetUser(userObj)% that accepts an object representing a registered member. Input example: %{ firstName: 'Anna', age: 28 }%. Use object destructuring to extract the %firstName% property from the parameter and return a welcome greeting message. Output example: %'Welcome Anna'%.",
+          "result": "%Welcome Anna%",
+          "solution": "function greetUser(userObj) {\n  const { firstName } = userObj;\n  return 'Welcome ' + firstName;\n}\nconsole.log(greetUser({ firstName: 'Anna', age: 28 }));"
+        },
+        {
+          "id": "dt1-03",
+          "title": "E-Commerce Alias Price Reducer Function",
+          "description": "Create a function named %getDiscountedPrice(productObj)% that accepts an item object containing pricing details. Input example: %{ itemId: 'B12', price: 100 }%. Use object destructuring to extract the %price% property but rename it to a variable called %originalPrice%. Subtract 20 from %originalPrice% and return that calculated value as a number. Output example: %80%.",
+          "result": "%80%",
+          "solution": "function getDiscountedPrice(productObj) {\n  const { price: originalPrice } = productObj;\n  return originalPrice - 20;\n}\nconsole.log(getDiscountedPrice({ itemId: 'B12', price: 100 }));"
+        },
+        {
+          "id": "dt1-04",
+          "title": "Server Safe Fallback Config Function",
+          "description": "Create a function named %getServerMode(config)% that accepts an option object. Input example: %{ timeout: 5000 }%. Use object destructuring to unpack a property named %mode%. Provide a fallback default assignment value of %'production'% to that extracted variable during the destructuring process if it does not exist on the object, and return its final value. Output example: %'production'%.",
+          "result": "%production%",
+          "solution": "function getServerMode(config) {\n  const { mode = 'production' } = config;\n  return mode;\n}\nconsole.log(getServerMode({ timeout: 5000 }));"
+        },
+        {
+          "id": "dt1-05",
+          "title": "RGB Color Value Extractor Function",
+          "description": "Create a function named %getBlueValue(rgbColors)% that receives an array displaying primary coloring metrics. Input example: %['255', '120', '40']%. Use array destructuring to completely skip over the first two indices and capture only the third index sequence, returning that string value. Output example: %'40'%.",
+          "result": "%40%",
+          "solution": "function getBlueValue(rgbColors) {\n  const [, , blue] = rgbColors;\n  return blue;\n}\nconsole.log(getBlueValue(['255', '120', '40']));"
+        },
+        {
+          "id": "dt1-06",
+          "title": "Nested Order City Extractor Function",
+          "description": "Create a function named %getOrderCity(orderData)% that receives a complex transaction summary containing nested information. Input example: %{ id: 951, shipping: { city: 'Vienna', zip: '1010' } }%. Use nested object destructuring to drill straight down into the %shipping% structure, extract the internal %city% property in a single operational line, and return it. Output example: %'Vienna'%.",
+          "result": "%Vienna%",
+          "solution": "function getOrderCity(orderData) {\n  const { shipping: { city } } = orderData;\n  return city;\n}\nconsole.log(getOrderCity({ id: 951, shipping: { city: 'Vienna', zip: '1010' } }));"
+        }
+      ]
+    },
+    {
+      "id": "function-destructuring-01",
+      "title": "Function Argument Destructuring",
+      "videoID": "31",
+      "questions": [
+        {
+          "id": "fdq1-01",
+          "title": "Basic Object Argument Destructuring",
+          "question": "function displayUser({ name }) {\n  console.log(name);\n}\ndisplayUser({ name: 'Sarah', age: 31 });",
+          "options": [
+            { "id": "o1", "option": "a", "text": "'Sarah'", "correct": true },
+            { "id": "o2", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "fdq1-02",
+          "title": "Renaming Object Parameters",
+          "question": "function logId({ id: userId }) {\n  console.log(userId);\n}\nlogId({ id: 505 });",
+          "options": [
+            { "id": "o3", "option": "a", "text": "505", "correct": true },
+            { "id": "o4", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "fdq1-03",
+          "title": "Default Parameter Values",
+          "question": "function setVolume({ level = 50 }) {\n  console.log(level);\n}\nsetVolume({});",
+          "options": [
+            { "id": "o5", "option": "a", "text": "50", "correct": true },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "fdq1-04",
+          "title": "Basic Array Argument Destructuring",
+          "question": "function handleCoordinates([x, y]) {\n  console.log(y);\n}\nhandleCoordinates([10, 20]);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "20", "correct": true },
+            { "id": "o8", "option": "b", "text": "10", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "fdq1-05",
+          "title": "Skipping Array Parameters",
+          "question": "function processItems([, second]) {\n  console.log(second);\n}\nprocessItems(['apple', 'banana', 'orange']);",
+          "options": [
+            { "id": "o9", "option": "a", "text": "'banana'", "correct": true },
+            { "id": "o10", "option": "b", "text": "'apple'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "fdq1-06",
+          "title": "Nested Destructuring in Arguments",
+          "question": "function printCity({ address: { city } }) {\n  console.log(city);\n}\nprintCity({ id: 10, address: { city: 'Berlin' } });",
+          "options": [
+            { "id": "o11", "option": "a", "text": "'Berlin'", "correct": true },
+            { "id": "o12", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "fdt1-01",
+          "title": "Profile Badge Generator Function",
+          "description": "Create a function named %generateBadge% that directly destructures the %username% property from its object parameter. Return a string combining the name with a status tag. Input example: %{ username: 'dev_max', role: 'moderator' }%. Output example: %'User: dev_max'%.",
+          "result": "%User: dev_max%",
+          "solution": "function generateBadge({ username }) {\n  return 'User: ' + username;\n}\nconsole.log(generateBadge({ username: 'dev_max', role: 'moderator' }));"
+        },
+        {
+          "id": "fdt1-02",
+          "title": "Product Alias Price Tag Function",
+          "description": "Create a function named %extractPrice% that destructures the %cost% property from its object parameter and renames it to %amount% directly within the function signature. Return the value of %amount% as a number. Input example: %{ sku: 'A18', cost: 49 }%. Output example: %49%.",
+          "result": "%49%",
+          "solution": "function extractPrice({ cost: amount }) {\n  return amount;\n}\nconsole.log(extractPrice({ sku: 'A18', cost: 49 }));"
+        },
+        {
+          "id": "fdt1-03",
+          "title": "System Logger Custom Prefix Function",
+          "description": "Create a function named %logMessage% that destructures the %status% property from its object parameter. Assign a fallback default value of %'INFO'% to %status% if the property is missing. Return the final string value. Input example: %{ message: 'Database connected' }%. Output example: %'INFO'%.",
+          "result": "%INFO%",
+          "solution": "function logMessage({ status = 'INFO' }) {\n  return status;\n}\nconsole.log(logMessage({ message: 'Database connected' }));"
+        },
+        {
+          "id": "fdt1-04",
+          "title": "Game Score Target Tracker Function",
+          "description": "Create a function named %getSecondaryScore% that accepts an array of scores as a parameter. Directly destructure the array in the function signature to completely skip the first score and capture the second score. Return that value. Input example: %[95, 87, 64]%. Output example: %87%.",
+          "result": "%87%",
+          "solution": "function getSecondaryScore([, second]) {\n  return second;\n}\nconsole.log(getSecondaryScore([95, 87, 64]));"
+        },
+        {
+          "id": "fdt1-05",
+          "title": "Chart Dimensions Multiplier Function",
+          "description": "Create a function named %calculateArea% that accepts an array containing chart dimensions. Destructure the first two values representing width and height directly in the function arguments list, multiply them together, and return the final area value as a number. Input example: %[12, 5]%. Output example: %60%.",
+          "result": "%60%",
+          "solution": "function calculateArea([width, height]) {\n  return width * height;\n}\nconsole.log(calculateArea([12, 5]));"
+        },
+        {
+          "id": "fdt1-06",
+          "title": "Nested Employee Department Finder Function",
+          "description": "Create a function named %getDepartment% that accepts an employee info object containing a nested organizational structure. Use nested object destructuring directly inside the function parameter list to drill straight down into the %meta% structure and unpack the internal %dept% property in a single line, then return it. Input example: %{ name: 'John', meta: { dept: 'Engineering', floor: 3 } }%. Output example: %'Engineering'%.",
+          "result": "%Engineering%",
+          "solution": "function getDepartment({ meta: { dept } }) {\n  return dept;\n}\nconsole.log(getDepartment({ name: 'John', meta: { dept: 'Engineering', floor: 3 } }));"
+        }
+      ]
+    },
+    {
+      "id": "spread-operator-01",
+      "title": "The Spread Operator",
+      "videoID": "32",
+      "questions": [
+        {
+          "id": "soq1-01",
+          "title": "Spreading Array Elements",
+          "question": "const initial = [1, 2];\nconst combined = [...initial, 3, 4];\nconsole.log(combined.length);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "4", "correct": true },
+            { "id": "o2", "option": "b", "text": "3", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "soq1-02",
+          "title": "Spreading Objects",
+          "question": "const base = { role: 'user' };\nconst activeUser = { ...base, active: true };\nconsole.log(activeUser.role);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "'user'", "correct": true },
+            { "id": "o4", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "soq1-03",
+          "title": "Overwriting Object Properties",
+          "question": "const defaults = { status: 'pending', attempts: 1 };\nconst update = { ...defaults, status: 'success' };\nconsole.log(update.status);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "'success'", "correct": true },
+            { "id": "o6", "option": "b", "text": "'pending'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "soq1-04",
+          "title": "Combining Multiple Objects",
+          "question": "const user = { name: 'Alex' };\nconst job = { title: 'Dev' };\nconst employee = { ...user, ...job };\nconsole.log(employee.title);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "'Dev'", "correct": true },
+            { "id": "o8", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "sot1-01",
+          "title": "Array Merger Function",
+          "description": "Create a function named %combineArrays(arr1, arr2)% that takes two arrays. Use the spread operator to merge all elements from both inputs into a single new array and return it. Input example: %[1, 2]% and %[3, 4]%. Output example: %[1, 2, 3, 4]%.",
+          "result": "%[1, 2, 3, 4]%",
+          "solution": "function combineArrays(arr1, arr2) {\n  return [...arr1, ...arr2];\n}\nconsole.log(combineArrays([1, 2], [3, 4]));"
+        },
+        {
+          "id": "sot1-02",
+          "title": "User Profile Merge Function",
+          "description": "Create a function named %mergeProfile(account, details)% that accepts two objects. Use the object spread operator to combine all properties from both objects into a brand new profile object and return it. Input example: %{ id: 101 }% and %{ name: 'Alice' }%. Output example: %{ id: 101, name: 'Alice' }%.",
+          "result": "%{ id: 101, name: 'Alice' }%",
+          "solution": "function mergeProfile(account, details) {\n  return { ...account, ...details };\n}\nconsole.log(mergeProfile({ id: 101 }, { name: 'Alice' }));"
+        },
+        {
+          "id": "sot1-03",
+          "title": "Immutable Push Alternative Function",
+          "description": "Create a function named %appendItem(items, newItem)% that takes an array and a string item. Without changing the original array directly, use the spread operator to create a new array that includes all original items with the %newItem% added cleanly at the end. Input example: %['bag', 'shoes']% and %'hat'%. Output example: %['bag', 'shoes', 'hat']%.",
+          "result": "%['bag', 'shoes', 'hat']%",
+          "solution": "function appendItem(items, newItem) {\n  return [...items, newItem];\n}\nconsole.log(appendItem(['bag', 'shoes'], 'hat'));"
+        },
+        {
+          "id": "sot1-04",
+          "title": "Product Price Updater Function",
+          "description": "Create a function named %updatePrice(productObj, newPrice)% that takes an inventory object and a number value. Use the object spread operator to copy the product data while cleanly updating or overwriting its %price% property with the new number value, returning the final object. Input example: %{ sku: 'A5', price: 15 }% and %22%. Output example: %{ sku: 'A5', price: 22 }%.",
+          "result": "%{ sku: 'A5', price: 22 }%",
+          "solution": "function updatePrice(productObj, newPrice) {\n  return { ...productObj, price: newPrice };\n}\nconsole.log(updatePrice({ sku: 'A5', price: 15 }, 22));"
+        }
+      ]
+    },
+    {
+      "id": "rest-operator-01",
+      "title": "The Rest Operator",
+      "videoID": "33",
+      "questions": [
+        {
+          "id": "roq1-01",
+          "title": "Gathering Remaining Arguments",
+          "question": "function collectNumbers(first, ...rest) {\n  console.log(rest.length);\n}\ncollectNumbers(10, 20, 30, 40);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "3", "correct": true },
+            { "id": "o2", "option": "b", "text": "4", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "roq1-02",
+          "title": "Rest in Array Destructuring",
+          "question": "const team = ['Anna', 'Bob', 'Charlie', 'David'];\nconst [leader, ...everyoneElse] = team;\nconsole.log(everyoneElse[0]);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "'Bob'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'Anna'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "roq1-03",
+          "title": "Rest in Object Destructuring",
+          "question": "const settings = { theme: 'dark', language: 'fr', version: 2 };\nconst { theme, ...remainingOptions } = settings;\nconsole.log(remainingOptions.theme);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o6", "option": "b", "text": "'dark'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "roq1-04",
+          "title": "Function Parameters Position Check",
+          "question": "function handleArgs(first, ...rest) {\n  console.log(first);\n}\nhandleArgs(5, 10, 15);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "5", "correct": true },
+            { "id": "o8", "option": "b", "text": "[10, 15]", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "roq1-05",
+          "title": "Missing Values with Rest Parameter",
+          "question": "function getMore(...items) {\n  console.log(items[0]);\n}\ngetMore();",
+          "options": [
+            { "id": "o9", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o10", "option": "b", "text": "null", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "roq1-06",
+          "title": "Rest Property Extraction Check",
+          "question": "const product = { id: 101, title: 'Shirt', stock: 45 };\nconst { id, ...details } = product;\nconsole.log(details.stock);",
+          "options": [
+            { "id": "o11", "option": "a", "text": "45", "correct": true },
+            { "id": "o12", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "rot1-01",
+          "title": "Skipping First Runner Function",
+          "description": "Create a function named %getBackupRunners(runners)% that receives an array of runner names. Use array destructuring along with the rest operator to capture all participants except the first runner into a new array, and return that subset array. Input example: %['Alex', 'Ben', 'Chris', 'Dan']%.",
+          "result": "%['Ben', 'Chris', 'Dan']%",
+          "solution": "function getBackupRunners(runners) {\n  const [first, ...restOfRunners] = runners;\n  return restOfRunners;\n}\nconsole.log(getBackupRunners(['Alex', 'Ben', 'Chris', 'Dan']));"
+        },
+        {
+          "id": "rot1-02",
+          "title": "Sensitive Payload Filter Function",
+          "description": "Create a function named %filterSensitiveData(userAccount)% that accepts a user account object containing authentication fields. Use object destructuring combined with the rest operator to split the object, extracting the %password% property on its own while packing all remaining properties into a clean separate profile object. Return that filtered profile object. Input example: %{ id: 404, username: 'cyber_hero', password: 'secret123' }%.",
+          "result": "%{ id: 404, username: 'cyber_hero' }%",
+          "solution": "function filterSensitiveData(userAccount) {\n  const { password, ...publicProfile } = userAccount;\n  return publicProfile;\n}\nconsole.log(filterSensitiveData({ id: 404, username: 'cyber_hero', password: 'secret123' }));"
+        },
+        {
+          "id": "rot1-03",
+          "title": "Array Elements Count Guard Function",
+          "description": "Create a function named %countRemainingItems(items)% that accepts an array. Use array destructuring with the rest operator to split off the first two items, storing everything else left over inside a single rest array variable. Return the total count of elements remaining inside that rest array as a number. Input example: %['pen', 'paper', 'clip', 'ruler', 'tape']%.",
+          "result": "%3%",
+          "solution": "function countRemainingItems(items) {\n  const [first, second, ...leftovers] = items;\n  return leftovers.length;\n}\nconsole.log(countRemainingItems(['pen', 'paper', 'clip', 'ruler', 'tape']));"
+        }
+      ]
+    }
   ]
 }
