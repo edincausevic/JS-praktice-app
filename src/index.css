@@ -17,6 +17,19 @@ body {
     width: 100%;
 }
 
+/* This overrides the inline transparent background */
+.challenge-title,
+.challenge-desc,
+.challenge-desc span {
+    background-color: transparent !important;
+}
+
+/* This controls the selection color */
+.challenge-desc::selection,
+.challenge-desc *::selection {
+    background-color: #b3d4fc !important;
+}
+
 /* ========== FIXED LEFT MENU ========== */
 .left-menu {
     position: fixed;
@@ -96,7 +109,6 @@ body {
     font-size: 0.95rem;
     font-weight: 450;
     border-radius: 12px;
-    border: 1px solid transparent;
 }
 .exercise-list li a i { 
     width: 24px; 
@@ -210,7 +222,6 @@ body {
     font-weight: 700;
     background: linear-gradient(145deg, #0f172a, #1e293b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: -0.5px;
 }
@@ -419,7 +430,7 @@ body {
     padding: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.6;
-    border: 1px solid #facc15;
+    border: 1px solid #d4d4d3;
     color: #1e293b;
     margin: 1rem 0 0.5rem;
     line-height: 33px;
