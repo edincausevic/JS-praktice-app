@@ -3853,6 +3853,802 @@ export const seedData = {
       ],
       "tasks": []
     },
-
+    {
+      "id": "logical-combinations-short-circuit-01",
+      "title": "Logical Combinations & Short-Circuit Execution Essentials",
+      "videoID": "42",
+      "questions": [
+        {
+          "id": "lcq1-01",
+          "title": "Basic Left-to-Right Execution without Bounds",
+          "question": "const outcome = true || false && false;\nconsole.log(outcome);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "true", "correct": true },
+            { "id": "o2", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-02",
+          "title": "Parentheses Explicit Logical Evaluation",
+          "question": "const orderEligible = (false || true) && false;\nconsole.log(orderEligible);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "false", "correct": true },
+            { "id": "o4", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-03",
+          "title": "Precedence Challenge with Coupon and Totals",
+          "question": "const hasCoupon = true;\nconst isVIP = false;\nconst total = 40;\nconst isEligible = hasCoupon || isVIP && total > 50;\nconsole.log(isEligible);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "true", "correct": true },
+            { "id": "o6", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-04",
+          "title": "Enforced Parentheses Checking for Cart Rules",
+          "question": "const hasCoupon = true;\nconst isVIP = false;\nconst total = 40;\nconst isEligible = (hasCoupon || isVIP) && total > 50;\nconsole.log(isEligible);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "false", "correct": true },
+            { "id": "o8", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-05",
+          "title": "Short-Circuit Function Execution on True Condition",
+          "question": "let status = 'closed';\nconst openSystem = () => {\n  status = 'open';\n  return true;\n};\nconst trigger = true && openSystem();\nconsole.log(status);",
+          "options": [
+            { "id": "o9", "option": "a", "text": "'open'", "correct": true },
+            { "id": "o10", "option": "b", "text": "'closed'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-06",
+          "title": "Short-Circuit Function Skipping on Falsy Base",
+          "question": "let updateCount = 0;\nconst performUpdate = () => {\n  updateCount = updateCount + 1;\n  return true;\n};\nconst action = false && performUpdate();\nconsole.log(updateCount);",
+          "options": [
+            { "id": "o11", "option": "a", "text": "0", "correct": true },
+            { "id": "o12", "option": "b", "text": "1", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-07",
+          "title": "Compound Evaluation with Return String Nodes",
+          "question": "const response = 'Standard' && 'Premium' || 'Guest';\nconsole.log(response);",
+          "options": [
+            { "id": "o13", "option": "a", "text": "'Premium'", "correct": true },
+            { "id": "o14", "option": "b", "text": "'Guest'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-08",
+          "title": "Complex Truthy Check with Function Execution",
+          "question": "let trackingFlag = false;\nconst logAction = () => {\n  trackingFlag = true;\n  return 'Logged';\n};\nconst access = (false || true) && logAction();\nconsole.log(trackingFlag);",
+          "options": [
+            { "id": "o15", "option": "a", "text": "true", "correct": true },
+            { "id": "o16", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-09",
+          "title": "Short-Circuit Evaluator via Numerical Zero Target",
+          "question": "const points = 0;\nconst layout = points && 'Scoreboards' || 'No-Data';\nconsole.log(layout);",
+          "options": [
+            { "id": "o17", "option": "a", "text": "'No-Data'", "correct": true },
+            { "id": "o18", "option": "b", "text": "0", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "lcq1-10",
+          "title": "Implicit Precedence Bounds with Fallback String Values",
+          "question": "const currentMode = 'Main-Dashboard' || true && false;\nconsole.log(currentMode);",
+          "options": [
+            { "id": "o19", "option": "a", "text": "'Main-Dashboard'", "correct": true },
+            { "id": "o20", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "lct1-01",
+          "title": "E-Commerce Discount Criteria Validation Engine",
+          "description": "Create a function named %verifyDiscountEligibility(order)% that accepts an order configuration target object parameter containing keys: %hasCouponCode% (boolean), %isVIPMember% (boolean), and %cartTotal% (number). Use grouped logical combinations to return %true% if the user has a coupon code OR is a VIP member, AND their cart total is greater than 50. Otherwise return %false%. Input example: %{ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }%.",
+          "result": "%true%",
+          "solution": "function verifyDiscountEligibility(order) {\n  return (order.hasCouponCode || order.isVIPMember) && order.cartTotal > 50;\n}\nconsole.log(verifyDiscountEligibility({ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }));"
+        },
+      ]
+    },
+    {
+      "id": "milestone-exercises-04-updated",
+      "title": "- MILESTONE EXERCISES 4 -",
+      "videoID": "43",
+      "milestone": true,
+      "questions": [
+        {
+          "id": "meq4-01",
+          "title": "Ternary Operator Basic Assignment",
+          "question": "const isMember = true;\nconst discount = isMember ? 0.1 : 0;\nconsole.log(discount);",
+          "options": [
+            { "id": "o1", "option": "a", "text": "0.1", "correct": true },
+            { "id": "o2", "option": "b", "text": "0", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-02",
+          "title": "Ternary with Falsy Condition Evaluation",
+          "question": "const speed = 0;\nconst status = speed ? 'moving' : 'idle';\nconsole.log(status);",
+          "options": [
+            { "id": "o3", "option": "a", "text": "'idle'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'moving'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-03",
+          "title": "Logical AND Operator Precedence Over OR",
+          "question": "const result = true || false && false;\nconsole.log(result);",
+          "options": [
+            { "id": "o5", "option": "a", "text": "true", "correct": true },
+            { "id": "o6", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-04",
+          "title": "Logical AND Short-Circuiting with Truthy Base",
+          "question": "const isLoggedIn = true;\nconst view = isLoggedIn && 'Dashboard';\nconsole.log(view);",
+          "options": [
+            { "id": "o7", "option": "a", "text": "'Dashboard'", "correct": true },
+            { "id": "o8", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-05",
+          "title": "Logical AND Guarding with Falsy Value",
+          "question": "const items = 0;\nconst message = items && 'Items available';\nconsole.log(message);",
+          "options": [
+            { "id": "o9", "option": "a", "text": "0", "correct": true },
+            { "id": "o10", "option": "b", "text": "'Items available'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-06",
+          "title": "Logical OR Fallback with Empty String",
+          "question": "const inputName = '';\nconst displayName = inputName || 'Anonymous';\nconsole.log(displayName);",
+          "options": [
+            { "id": "o11", "option": "a", "text": "'Anonymous'", "correct": true },
+            { "id": "o12", "option": "b", "text": "''", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-07",
+          "title": "Logical OR Bypassing Truthy Value",
+          "question": "const activeRole = 'admin';\nconst primaryRole = activeRole || 'guest';\nconsole.log(primaryRole);",
+          "options": [
+            { "id": "o13", "option": "a", "text": "'admin'", "correct": true },
+            { "id": "o14", "option": "b", "text": "'guest'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-08",
+          "title": "Nullish Coalescing vs Empty String",
+          "question": "const customTitle = '';\nconst title = customTitle ?? 'Untitled';\nconsole.log(title);",
+          "options": [
+            { "id": "o15", "option": "a", "text": "''", "correct": true },
+            { "id": "o16", "option": "b", "text": "'Untitled'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-09",
+          "title": "Nullish Coalescing Resolving Null",
+          "question": "const serverPayload = null;\nconst payload = serverPayload ?? 'No Data';\nconsole.log(payload);",
+          "options": [
+            { "id": "o17", "option": "a", "text": "'No Data'", "correct": true },
+            { "id": "o18", "option": "b", "text": "null", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-10",
+          "title": "Logical NOT Truthy Coercion",
+          "question": "const val = 'hello';\nconsole.log(!val);",
+          "options": [
+            { "id": "o19", "option": "a", "text": "false", "correct": true },
+            { "id": "o20", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-11",
+          "title": "Double NOT Expression Evaluation",
+          "question": "const numericCount = -10;\nconsole.log(!!numericCount);",
+          "options": [
+            { "id": "o21", "option": "a", "text": "true", "correct": true },
+            { "id": "o22", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-12",
+          "title": "Optional Chaining Safe Object Extraction",
+          "question": "const apiResponse = { data: { code: 200 } };\nconsole.log(apiResponse.data?.code);",
+          "options": [
+            { "id": "o23", "option": "a", "text": "200", "correct": true },
+            { "id": "o24", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-13",
+          "title": "Optional Chaining for Extraneous Properties",
+          "question": "const employee = { name: 'Luis' };\nconsole.log(employee.benefits?.health);",
+          "options": [
+            { "id": "o25", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o26", "option": "b", "text": "ReferenceError", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-14",
+          "title": "Chained Logical AND Final Return",
+          "question": "const output = 'A' && 'B' && 'C';\nconsole.log(output);",
+          "options": [
+            { "id": "o27", "option": "a", "text": "'C'", "correct": true },
+            { "id": "o28", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-15",
+          "title": "Chained Logical OR Resolution Strategy",
+          "question": "const route = null || undefined || 'fallback-route';\nconsole.log(route);",
+          "options": [
+            { "id": "o29", "option": "a", "text": "'fallback-route'", "correct": true },
+            { "id": "o30", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-16",
+          "title": "Nullish Coalescing with Numeric Zero Check",
+          "question": "const horizontalOffset = 0;\nconst renderingPosition = horizontalOffset ?? 100;\nconsole.log(renderingPosition);",
+          "options": [
+            { "id": "o31", "option": "a", "text": "0", "correct": true },
+            { "id": "o32", "option": "b", "text": "100", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-17",
+          "title": "Mixing Mixed Logic Without Parentheses",
+          "question": "const canAccess = false && true || true;\nconsole.log(canAccess);",
+          "options": [
+            { "id": "o33", "option": "a", "text": "true", "correct": true },
+            { "id": "o34", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-18",
+          "title": "Parentheses Explicit Hierarchy Overriding",
+          "question": "const canAccess = false && (true || true);\nconsole.log(canAccess);",
+          "options": [
+            { "id": "o35", "option": "a", "text": "false", "correct": true },
+            { "id": "o36", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-19",
+          "title": "Ternary with Explicit Comparison Logic",
+          "question": "const userAge = 16;\nconst accessible = userAge >= 18 ? 'yes' : 'no';\nconsole.log(accessible);",
+          "options": [
+            { "id": "o37", "option": "a", "text": "'no'", "correct": true },
+            { "id": "o38", "option": "b", "text": "'yes'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-20",
+          "title": "Logical AND Short Circuit Tracker",
+          "question": "let executed = false;\nconst run = () => {\n  executed = true;\n  return 'Done';\n};\nconst step = false && run();\nconsole.log(executed);",
+          "options": [
+            { "id": "o39", "option": "a", "text": "false", "correct": true },
+            { "id": "o40", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-21",
+          "title": "Logical OR Short Circuit Execution Profile",
+          "question": "let ticks = 0;\nconst cycle = () => {\n  ticks = ticks + 1;\n  return true;\n};\nconst flag = 'Active' || cycle();\nconsole.log(ticks);",
+          "options": [
+            { "id": "o41", "option": "a", "text": "0", "correct": true },
+            { "id": "o42", "option": "b", "text": "1", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-22",
+          "title": "Nullish Coalescing Chained with False Value",
+          "question": "const isComplete = false;\nconst workflowStatus = isComplete ?? true;\nconsole.log(workflowStatus);",
+          "options": [
+            { "id": "o43", "option": "a", "text": "false", "correct": true },
+            { "id": "o44", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-23",
+          "title": "Logical NOT on NaN Operational Target",
+          "question": "const uninitializedNumber = NaN;\nconsole.log(!uninitializedNumber);",
+          "options": [
+            { "id": "o45", "option": "a", "text": "true", "correct": true },
+            { "id": "o46", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-24",
+          "title": "Dynamic Array Bracket Access Optional Chain",
+          "question": "const indices = null;\nconsole.log(indices?.[0]);",
+          "options": [
+            { "id": "o47", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o48", "option": "b", "text": "TypeError", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-25",
+          "title": "Complex Chain Mixture of Optional and Coalesce",
+          "question": "const state = { current: null };\nconst dataView = state.current?.view ?? 'main';\nconsole.log(dataView);",
+          "options": [
+            { "id": "o49", "option": "a", "text": "'main'", "correct": true },
+            { "id": "o50", "option": "b", "text": "null", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-26",
+          "title": "Ternary with Boolean Returns Evaluation",
+          "question": "const itemStock = 5;\nconst restockNecessary = itemStock < 10 ? true : false;\nconsole.log(restockNecessary);",
+          "options": [
+            { "id": "o51", "option": "a", "text": "true", "correct": true },
+            { "id": "o52", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-27",
+          "title": "Logical AND and Operator Precedence Cascade",
+          "question": "const evaluationResult = true && 'first' || 'second';\nconsole.log(evaluationResult);",
+          "options": [
+            { "id": "o53", "option": "a", "text": "'first'", "correct": true },
+            { "id": "o54", "option": "b", "text": "'second'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-28",
+          "title": "Logical OR Layered with Precedence Bounds",
+          "question": "const calculationResult = false || 0 || 'fallback';\nconsole.log(calculationResult);",
+          "options": [
+            { "id": "o55", "option": "a", "text": "'fallback'", "correct": true },
+            { "id": "o56", "option": "b", "text": "0", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-29",
+          "title": "Nullish Coalescing Over Empty Object Targets",
+          "question": "const trackingProfile = {};\nconst activeNode = trackingProfile ?? { status: 'offline' };\nconsole.log(activeNode);",
+          "options": [
+            { "id": "o57", "option": "a", "text": "{}", "correct": true },
+            { "id": "o58", "option": "b", "text": "{ status: 'offline' }", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-30",
+          "title": "Short-Circuit Mixture with Falsy First Value",
+          "question": "const output = false || 'Verified' && 'Approved';\nconsole.log(output);",
+          "options": [
+            { "id": "o59", "option": "a", "text": "'Approved'", "correct": true },
+            { "id": "o60", "option": "b", "text": "'Verified'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-31",
+          "title": "Parentheses Enforced Short Circuit Evaluation Sequence",
+          "question": "const output = (false || 'Verified') && 'Approved';\nconsole.log(output);",
+          "options": [
+            { "id": "o61", "option": "a", "text": "'Approved'", "correct": true },
+            { "id": "o62", "option": "b", "text": "'Verified'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-32",
+          "title": "Logical AND Short-Circuit Parameter Return Types",
+          "question": "const customConfig = 'Override';\nconst initializedConfig = 'Standard' && customConfig;\nconsole.log(initializedConfig);",
+          "options": [
+            { "id": "o63", "option": "a", "text": "'Override'", "correct": true },
+            { "id": "o64", "option": "b", "text": "'Standard'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-33",
+          "title": "Logical OR Intercepting Truthy Expressions",
+          "question": "const primaryToken = 'auth-token';\nconst operationalToken = primaryToken || 'refresh-token';\nconsole.log(operationalToken);",
+          "options": [
+            { "id": "o65", "option": "a", "text": "'auth-token'", "correct": true },
+            { "id": "o66", "option": "b", "text": "'refresh-token'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-34",
+          "title": "Nullish Coalescing Passing Undefined Context",
+          "let": "let defaultLogLevel;",
+          "question": "let defaultLogLevel;\nconst appliedLevel = defaultLogLevel ?? 'warn';\nconsole.log(appliedLevel);",
+          "options": [
+            { "id": "o67", "option": "a", "text": "'warn'", "correct": true },
+            { "id": "o68", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-35",
+          "title": "Logical NOT on an Explicit Whitespace String",
+          "question": "const blankSpaceString = ' ';\nconsole.log(!blankSpaceString);",
+          "options": [
+            { "id": "o69", "option": "a", "text": "false", "correct": true },
+            { "id": "o70", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-36",
+          "title": "Optional Chaining Defensively Navigating Middle Null Branches",
+          "question": "const matrix = { layerOne: null };\nconsole.log(matrix.layerOne?.layerTwo?.layerThree);",
+          "options": [
+            { "id": "o71", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o72", "option": "b", "text": "TypeError", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-37",
+          "title": "Ternary Evaluation via Compound Logical Condition Block",
+          "question": "const userIsAdmin = true;\nconst systemIsUnlocked = false;\nconst runtimeStatus = userIsAdmin && systemIsUnlocked ? 'Write' : 'Read';\nconsole.log(runtimeStatus);",
+          "options": [
+            { "id": "o73", "option": "a", "text": "'Read'", "correct": true },
+            { "id": "o74", "option": "b", "text": "'Write'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-38",
+          "title": "Chained Mixed Logical Operators Extraction Chain",
+          "question": "const computationValue = (true || false) && 'Assigned';\nconsole.log(computationValue);",
+          "options": [
+            { "id": "o75", "option": "a", "text": "'Assigned'", "correct": true },
+            { "id": "o76", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-39",
+          "title": "Nullish Coalescing Passing Explicit Falsy Numerical Expressions",
+          "question": "const customScalingFactor = 0;\nconst scalingFactor = customScalingFactor ?? 1.5;\nconsole.log(scalingFactor);",
+          "options": [
+            { "id": "o77", "option": "a", "text": "0", "correct": true },
+            { "id": "o78", "option": "b", "text": "1.5", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-40",
+          "title": "Evaluating Precedence with Booleans and Strings",
+          "question": "const status = 'Normal' || true && false;\nconsole.log(status);",
+          "options": [
+            { "id": "o79", "option": "a", "text": "'Normal'", "correct": true },
+            { "id": "o80", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-41",
+          "title": "Optional Chaining Nested Evaluation for Explicit False Properties",
+          "question": "const terminalNode = { preferences: { sound: false } };\nconsole.log(terminalNode.preferences?.sound);",
+          "options": [
+            { "id": "o81", "option": "a", "text": "false", "correct": true },
+            { "id": "o82", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-42",
+          "title": "Ternary Variable Expression Execution Path Validation",
+          "question": "const maximumCount = 100;\nconst currentTargetValue = maximumCount > 50 ? 'High' : 'Low';\nconsole.log(currentTargetValue);",
+          "options": [
+            { "id": "o83", "option": "a", "text": "'High'", "correct": true },
+            { "id": "o84", "option": "b", "text": "'Low'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-43",
+          "title": "Logical AND Short Circuit via Falsy NaN Values",
+          "question": "const operationalFactor = NaN && 'Valid-Factor';\nconsole.log(operationalFactor);",
+          "options": [
+            { "id": "o85", "option": "a", "text": "NaN", "correct": true },
+            { "id": "o86", "option": "b", "text": "'Valid-Factor'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-44",
+          "title": "Logical OR Extracting Last Variable Element in Chain Sequence",
+          "question": "const evaluationOutcome = '' || 0 || false || 'Final-Resolution';\nconsole.log(evaluationOutcome);",
+          "options": [
+            { "id": "o87", "option": "a", "text": "'Final-Resolution'", "correct": true },
+            { "id": "o88", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-45",
+          "title": "Nullish Coalescing over Nested Evaluated Undefined Values",
+          "question": "const executionContext = { metadata: {} };\nconst extractedCode = executionContext.metadata.code ?? 'CODE-404';\nconsole.log(extractedCode);",
+          "options": [
+            { "id": "o89", "option": "a", "text": "'CODE-404'", "correct": true },
+            { "id": "o90", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-46",
+          "title": "Precedence with Embedded Boolean Operators",
+          "question": "const test = false || true && 'Value';\nconsole.log(test);",
+          "options": [
+            { "id": "o91", "option": "a", "text": "'Value'", "correct": true },
+            { "id": "o92", "option": "b", "text": "false", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-47",
+          "title": "Optional Chaining over Functional Arrays Indexes Safety",
+          "question": "const interfaceCollection = null;\nconsole.log(interfaceCollection?.[5]);",
+          "options": [
+            { "id": "o93", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o94", "option": "b", "text": "TypeError", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-48",
+          "title": "Ternary Operations via Compound Logical Comparisons Block Execution",
+          "question": "const totalSalesCount = 500;\nconst incentiveActive = totalSalesCount === 500 ? 'Eligible' : 'Not-Eligible';\nconsole.log(incentiveActive);",
+          "options": [
+            { "id": "o95", "option": "a", "text": "'Eligible'", "correct": true },
+            { "id": "o96", "option": "b", "text": "'Not-Eligible'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-49",
+          "title": "Logical AND Short Circuit Sequence Tracker Involving Modification Methods",
+          "question": "let verificationCount = 10;\nconst mutateState = () => {\n  verificationCount = verificationCount + 5;\n  return true;\n};\nconst resultNode = false && mutateState();\nconsole.log(verificationCount);",
+          "options": [
+            { "id": "o97", "option": "a", "text": "10", "correct": true },
+            { "id": "o98", "option": "b", "text": "15", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-50",
+          "title": "Logical OR Intercepting Compound Pre-Evaluated String Data Nodes",
+          "question": "const cacheKey = 'Cache-01' || 'Cache-Fallback';\nconsole.log(cacheKey);",
+          "options": [
+            { "id": "o99", "option": "a", "text": "'Cache-01'", "correct": true },
+            { "id": "o100", "option": "b", "text": "'Cache-Fallback'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-51",
+          "title": "Nullish Coalescing Passing Explicit Boolean False Constants",
+          "question": "const operationalFlag = false;\nconst deploymentStatus = operationalFlag ?? true;\nconsole.log(deploymentStatus);",
+          "options": [
+            { "id": "o101", "option": "a", "text": "false", "correct": true },
+            { "id": "o102", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-52",
+          "title": "Short Circuit Chain with Zero Evaluation",
+          "question": "const score = 0 && true || 'Fallback';\nconsole.log(score);",
+          "options": [
+            { "id": "o103", "option": "a", "text": "'Fallback'", "correct": true },
+            { "id": "o104", "option": "b", "text": "0", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-53",
+          "title": "Optional Chaining Safely Guarding Property Chains",
+          "question": "const coreDataPayload = { fetch: null };\nconsole.log(coreDataPayload.fetch?.data ?? 'Fallback-Stream');",
+          "options": [
+            { "id": "o105", "option": "a", "text": "'Fallback-Stream'", "correct": true },
+            { "id": "o106", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-54",
+          "title": "Explicit Conditional Hierarchy Mapping Alternative",
+          "question": "const trackingValue = 12;\nlet categorizer = 'Large';\nif (trackingValue < 10) {\n  categorizer = 'Small';\n} else if (trackingValue < 20) {\n  categorizer = 'Medium';\n}\nconsole.log(categorizer);",
+          "options": [
+            { "id": "o107", "option": "a", "text": "'Medium'", "correct": true },
+            { "id": "o108", "option": "b", "text": "'Large'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-55",
+          "title": "Logical AND and Structural Fallback Parameters Types Consistency Checks",
+          "question": "const executionStack = 'Valid-State' && 404;\nconsole.log(executionStack);",
+          "options": [
+            { "id": "o109", "option": "a", "text": "404", "correct": true },
+            { "id": "o110", "option": "b", "text": "'Valid-State'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-56",
+          "title": "Logical OR Executing Past Blank Whitespace Strings Evaluator",
+          "question": "const configurationHeader = ' ' || 'Default-Header';\nconsole.log(configurationHeader);",
+          "options": [
+            { "id": "o111", "option": "a", "text": "' '", "correct": true },
+            { "id": "o112", "option": "b", "text": "'Default-Header'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-57",
+          "title": "Nullish Coalescing Passing Predefined Empty Object Structural Frameworks",
+          "question": "const applicationCache = {};\nconst fallbackBuffer = applicationCache ?? { data: 'empty' };\nconsole.log(fallbackBuffer);",
+          "options": [
+            { "id": "o113", "option": "a", "text": "{}", "correct": true },
+            { "id": "o114", "option": "b", "text": "{ data: 'empty' }", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-58",
+          "title": "Logical NOT on Truthy Pre-Evaluated Floating Point Numeric Elements",
+          "question": "const scaleFactor = 0.001;\nconsole.log(!scaleFactor);",
+          "options": [
+            { "id": "o115", "option": "a", "text": "false", "correct": true },
+            { "id": "o116", "option": "b", "text": "true", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-59",
+          "title": "Optional Chaining Passing Deep Structurally Intact Object Chains",
+          "question": "const profileNode = { parameters: { targets: [99] } };\nconsole.log(profileNode.parameters?.targets?.[0]);",
+          "options": [
+            { "id": "o117", "option": "a", "text": "99", "correct": true },
+            { "id": "o118", "option": "b", "text": "undefined", "correct": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "meq4-60",
+          "title": "Complex Short-Circuit Cascade Verification Processing All Logical Nodes",
+          "question": "const resolutionChain = (null ?? 'Valid') && ('Active' || false);\nconsole.log(resolutionChain);",
+          "options": [
+            { "id": "o119", "option": "a", "text": "'Active'", "correct": true },
+            { "id": "o120", "option": "b", "text": "'Valid'", "correct": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "met4-01",
+          "title": "Dynamic User Premium Access Formatter via Ternary",
+          "description": "Create a function named %formatAccessLevel(isPremium)% that receives a boolean parameter. Use the ternary operator to return the string %'Premium Access'% if the parameter is %true%, otherwise return the string %'Standard Access'%. Input example: %true%.",
+          "result": "%'Premium Access'%",
+          "solution": "function formatAccessLevel(isPremium) {\n  return isPremium ? 'Premium Access' : 'Standard Access';\n}\nconsole.log(formatAccessLevel(true));"
+        },
+        {
+          "id": "met4-02",
+          "title": "API Analytics Delivery Guard with Logical AND",
+          "description": "Create a function named %sendAnalytics(isAllowed, analyticsPayload)% that accepts a boolean allowance flag and a text string data payload. Use the logical AND operator to short-circuit and return the %analyticsPayload% if permission tracking is %true%, otherwise return %false%. Input example: %true, 'User-Click'%.",
+          "result": "%'User-Click'%",
+          "solution": "function sendAnalytics(isAllowed, analyticsPayload) {\n  return isAllowed && analyticsPayload;\n}\nconsole.log(sendAnalytics(true, 'User-Click'));"
+        },
+        {
+          "id": "met4-03",
+          "title": "Robust Profile Username Guard with Logical OR",
+          "description": "Create a function named %resolveUsername(inputName)% that accepts a string input tracking variable. Use the logical OR operator to return the %inputName% if it is a truthy value, otherwise return the fallback string value %'Guest_User'%. Input example: %''%.",
+          "result": "%'Guest_User'%",
+          "solution": "function resolveUsername(inputName) {\n  return inputName || 'Guest_User';\n}\nconsole.log(resolveUsername(''));"
+        },
+        {
+          "id": "met4-04",
+          "title": "UI Progress Bar Zero Coordinate Guardian via Nullish Coalescing",
+          "description": "Create a function named %resolvePositionOffset(configuredOffset)% that accepts a variable representing a custom layout coordinate which might be undefined, null, or a valid number. Use the nullish coalescing operator to return %configuredOffset% if it is not nullish, otherwise return a default value of %100%. Input example: %0%.",
+          "result": "%0%",
+          "solution": "function resolvePositionOffset(configuredOffset) {\n  return configuredOffset ?? 100;\n}\nconsole.log(resolvePositionOffset(0));"
+        },
+        {
+          "id": "met4-05",
+          "title": "System Connectivity Alert Inverter via Logical NOT",
+          "description": "Create a function named %invertConnectionStatus(isOffline)% that accepts a boolean connection status tracking variable. Use the logical NOT operator to return the inverted boolean representation of the input parameter. Input example: %false%.",
+          "result": "%true%",
+          "solution": "function invertConnectionStatus(isOffline) {\n  return !isOffline;\n}\nconsole.log(invertConnectionStatus(false));"
+        },
+        {
+          "id": "met4-06",
+          "title": "Form Text Entry Existence Cast via Double NOT",
+          "description": "Create a function named %hasTextContent(rawInputText)% that accepts a single parameter of any primitive data type. Use the double NOT operator to explicitly coerce and return its strict boolean flag representation. Input example: %'Welcome'%.",
+          "result": "%true%",
+          "solution": "function hasTextContent(rawInputText) {\n  return !!rawInputText;\n}\nconsole.log(hasTextContent('Welcome'));"
+        },
+        {
+          "id": "met4-07",
+          "title": "Nested Server Payload Postal Code Extractor via Optional Chaining",
+          "description": "Create a function named %extractPostalCode(customerProfile)% that accepts a deeply nested customer configuration profile data structure object. Use optional chaining to safely drill down and extract the nested %zipCode% key property from deep inside the %billing.address% object path. Input example: %{ id: 40, billing: { address: { zipCode: '10115' } } }%.",
+          "result": "%'10115'%",
+          "solution": "function extractPostalCode(customerProfile) {\n  return customerProfile.billing?.address?.zipCode;\n}\nconsole.log(extractPostalCode({ id: 40, billing: { address: { zipCode: '10115' } } }));"
+        },
+        {
+          "id": "met4-08",
+          "title": "Guarded Contextual Plugin Property Verification",
+          "description": "Create a function named %checkPluginTermination(pluginExtension)% that accepts an object instance parameter tracking loaded extensions. Use optional chaining to extract the %status% code inside the nested %terminationConfig% path safely if it exists, returning its value. Input example: %{ terminationConfig: { status: 'Clean-Exit' } }%.",
+          "result": "%'Clean-Exit'%",
+          "solution": "function checkPluginTermination(pluginExtension) {\n  return pluginExtension.terminationConfig?.status;\n}\nconsole.log(checkPluginTermination({ terminationConfig: { status: 'Clean-Exit' } }));"
+        },
+        {
+          "id": "met4-09",
+          "title": "Deep Hybrid Application Cache Fallback Resolution Engine",
+          "description": "Create a function named %getAppTheme(deviceContext)% that accepts a complex nested layout environment object tracker. Use optional chaining mixed with the nullish coalescing operator to safely drill down to extract the %visuals.theme% property string parameter, falling back to return the string default %'dark-mode'% if the target path evaluates to null or undefined. Input example: %{ visuals: null }%.",
+          "result": "%'dark-mode'%",
+          "solution": "function getAppTheme(deviceContext) {\n  return deviceContext.visuals?.theme ?? 'dark-mode';\n}\nconsole.log(getAppTheme({ visuals: null }));"
+        },
+        {
+          "id": "met4-10",
+          "title": "Layered Multi-Tier Price Discount Resolver via Explicit Logic Blocks",
+          "description": "Create a function named %calculateLoyaltyTier(purchasePoints)% that accepts an explicit tracking count integer number. Use explicit if-else logic blocks to return the string score label %'Platinum'% if points are greater than or equal to 500, %'Gold'% if points are greater than or equal to 200, and %'Silver'% for any points tracking evaluation parameters less than 200. Input example: %250%.",
+          "result": "%'Gold'%",
+          "solution": "function calculateLoyaltyTier(purchasePoints) {\n  if (purchasePoints >= 500) {\n    return 'Platinum';\n  }\n  if (purchasePoints >= 200) {\n    return 'Gold';\n  }\n  return 'Silver';\n}\nconsole.log(calculateLoyaltyTier(250));"
+        }
+      ]
+    }
   ]
 }
