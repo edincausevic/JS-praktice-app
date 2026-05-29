@@ -9,8 +9,36 @@ import Welcome from "./components/Welcome"
 function App() {
   initDB()
 
+  const getStats = () => {
+    const allData = getDB()
+
+    const questionsTotal = allData.allExercises.reduce((n, e) => { return n + e.questions.length}, 0)
+    const tasksTotal = allData.allExercises.reduce((n, e) => { return n + e.tasks.length}, 0)
+    let totalCorrect = 0;
+
+    allData.allExercises.forEach((section) => {
+      section.questions.forEach((question) => {
+        // Check if the user selected the correct option
+        const userGotItRight = question.options.some(
+          (opt) => opt.correct === true && opt.selected === true
+        );
+
+        if (userGotItRight) totalCorrect++;
+        
+      });
+    });
+
+    return {
+      numOfQuestions: questionsTotal,
+      questionsDone: totalCorrect,
+      numOfAssignments: tasksTotal,
+      assignmentsDone: 1,
+    }
+  }
+
   const [selectedExercise, setSelectedExercise] = useState(null)
   const [courseData, setCourseData] = useState(getDB())
+  const [stats, setStats] = useState(getStats())
 
   
   const displayQuestions = (exerciseData) => {
@@ -50,6 +78,8 @@ function App() {
     
     // save on the server
     saveDB(updatedData)
+
+    setStats(getStats())
   }
 
   const resetAllExercises = () => {
@@ -74,12 +104,16 @@ function App() {
     window.location.reload()
   }
 
+
+
   return (
     <>
       <MainNav data={courseData.allExercises} displayExercise={displayQuestions}/>
 
       <div className="main-panel">
-        <Header onResetBtnClick={resetAllExercises}/>
+        <Header 
+        stats={stats}
+        onResetBtnClick={resetAllExercises}/>
 
         {!selectedExercise ?
         <Welcome/>

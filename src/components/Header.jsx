@@ -1,6 +1,6 @@
 
 
-const Header = ({onResetBtnClick}) => {
+const Header = ({onResetBtnClick, stats}) => {
   return (
     <header className="top-bar">
         {/* <div className="progress-indicator">
@@ -8,9 +8,13 @@ const Header = ({onResetBtnClick}) => {
             <span className="progress-badge" id="progressDisplay">0 / 6</span>
         </div> */}
         <div className="header-stats flex ">
-            <div>Questions: <strong >0 </strong><span >/ 100</span></div>
+            <div>Questions: 
+                <strong > {stats?.questionsDone || 0} </strong>
+                <span >/ {stats?.numOfQuestions || 0}</span></div>
             <div style={{margin: '0 9px'}}>|</div>
-            <div>Assignments: <strong >0 </strong><span>/ 24</span></div>
+            <div>Assignments: 
+                <strong > {stats?.assignmentsDone || 0} </strong>
+                <span>/ {stats?.numOfAssignments || 0}</span></div>
         </div>
         <div></div>
         <button onClick={onResetBtnClick}  className="reset-btn" id="resetAllBtn"><span>↻</span> reset all exercises</button>
