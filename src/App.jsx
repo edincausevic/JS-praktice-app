@@ -30,7 +30,8 @@ function App() {
 
     return {
       numOfQuestions: questionsTotal,
-      questionsDone: totalCorrect,
+      correctQuestions: totalCorrect,
+      incorrectQuestions: 0,
       numOfAssignments: tasksTotal,
       assignmentsDone: 1,
     }

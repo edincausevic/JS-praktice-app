@@ -7,15 +7,33 @@ const MainNav = ({displayExercise, data}) => {
   return (
     <nav className="left-menu">
         <div className="menu-header">
-          <h2>📘 JS drills </h2>
+          <h2>📘 JS Drills </h2>
         </div>
         <div className="course-link">
           <a href="https://example.com/js-course" target="_blank" rel="noopener">
           <span><img style={{height: '15px'}} src={UdemyLogo}/></span> 
           Go to JS Course</a>
+          <a 
+            href="https://youtube.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', textDecoration: 'none', color: 'inherit' }}
+          >
+            <span style={{ display: 'flex', alignItems: 'center' }}>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                style={{ height: '15px', fill: '#FF0000' }}
+              >
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </span>
+            My YouTube
+          </a>
         </div>
         <ul className="exercise-list" >
           <h2 className="pl-2 font-bold">Udemy Videos</h2>
+          <h2>Section 1    2/4 reset</h2>
           {data?.map((listItem) => (
             <li 
               className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 

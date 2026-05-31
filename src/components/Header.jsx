@@ -9,12 +9,13 @@ const Header = ({onResetBtnClick, stats}) => {
         </div> */}
         <div className="header-stats flex ">
             <div>Questions: 
-                <strong > {stats?.questionsDone || 0} </strong>
-                <span >/ {stats?.numOfQuestions || 0}</span></div>
+                <strong > {stats?.correctQuestions} </strong>
+                <strong >/ {stats?.incorrectQuestions} </strong>
+                <span >/ {stats?.numOfQuestions}</span></div>
             <div style={{margin: '0 9px'}}>|</div>
             <div>Assignments: 
-                <strong > {stats?.assignmentsDone || 0} </strong>
-                <span>/ {stats?.numOfAssignments || 0}</span></div>
+                <strong > {stats?.assignmentsDone} </strong>
+                <span>/ {stats?.numOfAssignments}</span></div>
         </div>
         <div></div>
         <button onClick={onResetBtnClick}  className="reset-btn" id="resetAllBtn"><span>↻</span> reset all exercises</button>
