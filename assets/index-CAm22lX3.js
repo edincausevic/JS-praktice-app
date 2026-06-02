@@ -79,7 +79,7 @@ if (score >= 70) {
 if (count !== 20) {
   count = 20;
 }
-console.log(count);`}]},{id:`milestone-foundations-01`,title:`- MILESTONE EXERCISES 1 -`,milestone:!0,videoID:`20`,questions:[{id:`q-rev-001`,title:`Variable Reassignment`,question:`const x = 10;
+console.log(count);`}]},{id:`milestone-foundations-01`,title:`- MILESTONE EXERCISES S1 -`,milestone:!0,videoID:`20`,questions:[{id:`q-rev-001`,title:`Variable Reassignment`,question:`const x = 10;
 x = 20;
 console.log(x);`,options:[{id:`opt-r1`,option:`a`,text:`20`,correct:!1,selected:!1},{id:`opt-r2`,option:`b`,text:`10`,correct:!1,selected:!1},{id:`opt-r3`,option:`c`,text:`TypeError`,correct:!0,selected:!1},{id:`opt-r4`,option:`d`,text:`undefined`,correct:!1,selected:!1}],correctAnswer:`c`},{id:`q-rev-002`,title:`Type Concatenation`,question:`What is typeof (10 + '5')?`,options:[{id:`opt-r5`,option:`a`,text:`number`,correct:!1,selected:!1},{id:`opt-r6`,option:`b`,text:`string`,correct:!0,selected:!1},{id:`opt-r7`,option:`c`,text:`NaN`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-rev-003`,title:`The Null Type`,question:`What does typeof null return?`,options:[{id:`opt-r8`,option:`a`,text:`null`,correct:!1,selected:!1},{id:`opt-r9`,option:`b`,text:`object`,correct:!0,selected:!1},{id:`opt-r10`,option:`c`,text:`undefined`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-rev-004`,title:`Truthy Strings`,question:`Which of these evaluates to true?`,options:[{id:`opt-r11`,option:`a`,text:`Boolean('')`,correct:!1,selected:!1},{id:`opt-r12`,option:`b`,text:`Boolean('false')`,correct:!0,selected:!1},{id:`opt-r13`,option:`c`,text:`Boolean(0)`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-rev-005`,title:`Else If Logic`,question:`let temp = 15;
 if (temp > 20) {
@@ -280,7 +280,7 @@ const manager = admin;
 manager.power = 'Limited';
 console.log(admin.power);`},{id:`task-pri-803`,title:`The Constant Object`,description:`Declare %const phone = { brand: 'Apple' }%. Change the brand to %'Samsung'%. Log the object.`,result:`%{ brand: 'Samsung' }%`,note:`Even with 'const', you can change properties inside an object, because the reference (the 'address') hasn't changed.`,solution:`const phone = { brand: 'Apple' };
 phone.brand = 'Samsung';
-console.log(phone);`}]},{id:`milestone-logic-functions-02`,title:`- MILESTONE EXERCISES 2 -`,milestone:!0,videoID:`29`,questions:[{id:`mq2-01`,title:`Identifying Arrays`,question:`const favoriteColors = ['red', 'blue'];
+console.log(phone);`}]},{id:`milestone-logic-functions-02`,title:`- MILESTONE EXERCISES S2 -`,milestone:!0,videoID:`29`,questions:[{id:`mq2-01`,title:`Identifying Arrays`,question:`const favoriteColors = ['red', 'blue'];
 console.log(typeof favoriteColors);`,options:[{id:`o1`,option:`a`,text:`'array'`,correct:!1},{id:`o2`,option:`b`,text:`'object'`,correct:!0}],correctAnswer:`b`},{id:`mq2-02`,title:`Empty Array Truthiness`,question:`const shoppingCart = [];
 if (shoppingCart) {
   console.log('Cart exists');
@@ -718,7 +718,7 @@ console.log(activateAdmin({ name: 'Pablo', age: 23, isOnline: false }));`},{id:`
   const { age, ...userWithoutAge } = profile;
   return userWithoutAge;
 }
-console.log(removeAgeField({ name: 'Pablo', age: 23, isOnline: false }));`}]},{id:`milestone-exercises-03`,title:`- MILESTONE EXERCISES 3 -`,milestone:!0,videoID:`39`,questions:[{id:`mq3-01`,title:`String Length Check`,question:`const username = 'alpha_dev';
+console.log(removeAgeField({ name: 'Pablo', age: 23, isOnline: false }));`}]},{id:`milestone-exercises-03`,title:`- MILESTONE EXERCISES S3 -`,milestone:!0,videoID:`39`,questions:[{id:`mq3-01`,title:`String Length Check`,question:`const username = 'alpha_dev';
 console.log(username.length);`,options:[{id:`o1`,option:`a`,text:`9`,correct:!0},{id:`o2`,option:`b`,text:`8`,correct:!1}],correctAnswer:`a`},{id:`mq3-02`,title:`Substring Evaluation with Includes`,question:`const email = 'support@company.com';
 console.log(email.includes('@'));`,options:[{id:`o3`,option:`a`,text:`true`,correct:!0},{id:`o4`,option:`b`,text:`false`,correct:!1}],correctAnswer:`a`},{id:`mq3-03`,title:`Prefix Validation`,question:`const url = 'https://api.com';
 console.log(url.startsWith('https'));`,options:[{id:`o5`,option:`a`,text:`true`,correct:!0},{id:`o6`,option:`b`,text:`false`,correct:!1}],correctAnswer:`a`},{id:`mq3-04`,title:`Suffix Validation`,question:`const file = 'invoice.pdf';
@@ -983,7 +983,7 @@ console.log(layout);`,options:[{id:`o17`,option:`a`,text:`'No-Data'`,correct:!0}
 console.log(currentMode);`,options:[{id:`o19`,option:`a`,text:`'Main-Dashboard'`,correct:!0},{id:`o20`,option:`b`,text:`false`,correct:!1}],correctAnswer:`a`}],tasks:[{id:`lct1-01`,title:`E-Commerce Discount Criteria Validation Engine`,description:`Create a function named %verifyDiscountEligibility(order)% that accepts an order configuration target object parameter containing keys: %hasCouponCode% (boolean), %isVIPMember% (boolean), and %cartTotal% (number). Use grouped logical combinations to return %true% if the user has a coupon code OR is a VIP member, AND their cart total is greater than 50. Otherwise return %false%. Input example: %{ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }%.`,result:`%true%`,solution:`function verifyDiscountEligibility(order) {
   return (order.hasCouponCode || order.isVIPMember) && order.cartTotal > 50;
 }
-console.log(verifyDiscountEligibility({ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }));`}]},{id:`milestone-exercises-04-updated`,title:`- MILESTONE EXERCISES 4 -`,videoID:`47`,milestone:!0,questions:[{id:`meq4-01`,title:`Ternary Operator Basic Assignment`,question:`const isMember = true;
+console.log(verifyDiscountEligibility({ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }));`}]},{id:`milestone-exercises-04-updated`,title:`- MILESTONE EXERCISES S4 -`,videoID:`47`,milestone:!0,questions:[{id:`meq4-01`,title:`Ternary Operator Basic Assignment`,question:`const isMember = true;
 const discount = isMember ? 0.1 : 0;
 console.log(discount);`,options:[{id:`o1`,option:`a`,text:`0.1`,correct:!0},{id:`o2`,option:`b`,text:`0`,correct:!1}],correctAnswer:`a`},{id:`meq4-02`,title:`Ternary with Falsy Condition Evaluation`,question:`const speed = 0;
 const status = speed ? 'moving' : 'idle';
@@ -1254,7 +1254,7 @@ console.log(totalAge);`,options:[{id:`o1`,option:`a`,text:`50`,correct:!1},{id:`
     return acc + user.age;
   }, 0);
 }
-console.log(sumUserAges([{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]));`}]},{id:`array-methods-mastery-01`,title:`- MILESTONE EXERCISES 5 -`,videoID:`53`,milestone:!0,questions:[{id:`cmq-01`,title:`Map Shape Transformation Check`,question:`const users = [
+console.log(sumUserAges([{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]));`}]},{id:`array-methods-mastery-01`,title:`- MILESTONE EXERCISES S5 -`,videoID:`53`,milestone:!0,questions:[{id:`cmq-01`,title:`Map Shape Transformation Check`,question:`const users = [
   { firstName: 'Ali', lastName: 'Khan' },
   { firstName: 'Lee', lastName: 'Chen' }
 ];
