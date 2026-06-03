@@ -116,7 +116,12 @@ if (input === 5) {
   console.log('String');
 }`},{id:`t-rev-005`,title:`The Double Check`,description:`Declare %val = 0%. If the value is strictly equal to 0, change the value to 10. Then, using a completely separate block of logic, log %'Success'% if the value is now greater than 5.`,result:`%Success%`,solution:`let val = 0;
 if (val === 0) { val = 10; }
-if (val > 5) { console.log('Success'); }`}]},{id:`intro-to-arrays-117`,title:`Arrays`,videoID:`21`,questions:[{id:`q-arr-101`,title:`The Type Trap`,question:`const temperatures = [32, 35, 40];
+if (val > 5) { console.log('Success'); }`}]},{id:`primitive-values-101`,title:`Primitive Values`,videoID:`21`,questions:[{id:`q-prim-101`,title:`Immutability Check`,question:`let greeting: string = 'hello';
+greeting.toUpperCase();
+console.log(greeting);`,options:[{id:`opt-prim1`,option:`a`,text:`'HELLO'`,correct:!1,selected:!1},{id:`opt-prim2`,option:`b`,text:`'hello'`,correct:!0,selected:!1},{id:`opt-prim3`,option:`c`,text:`undefined`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-prim-102`,title:`The Null Type`,question:`const userStatus: null = null;
+console.log(typeof userStatus);`,options:[{id:`opt-prim4`,option:`a`,text:`'null'`,correct:!1,selected:!1},{id:`opt-prim5`,option:`b`,text:`'undefined'`,correct:!1,selected:!1},{id:`opt-prim6`,option:`c`,text:`'object'`,correct:!0,selected:!1}],correctAnswer:`c`},{id:`q-prim-103`,title:`Strict Comparison`,question:`const valueA: number = 0;
+const valueB: boolean = false;
+console.log(valueA === valueB);`,options:[{id:`opt-prim7`,option:`a`,text:`true`,correct:!1,selected:!1},{id:`opt-prim8`,option:`b`,text:`false`,correct:!0,selected:!1}],correctAnswer:`b`}],tasks:[]},{id:`intro-to-arrays-117`,title:`Arrays`,videoID:`22`,questions:[{id:`q-arr-101`,title:`The Type Trap`,question:`const temperatures = [32, 35, 40];
 console.log(typeof temperatures);`,options:[{id:`opt-ax1`,option:`a`,text:`'array'`,correct:!1,selected:!1},{id:`opt-ax2`,option:`b`,text:`'object'`,correct:!0,selected:!1},{id:`opt-ax3`,option:`c`,text:`'number'`,correct:!1,selected:!1},{id:`opt-ax4`,option:`d`,text:`'undefined'`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-arr-102`,title:`Logical Array Check`,question:`let guests = [];
 if (Boolean(guests)) {
   console.log('Open Door');
@@ -127,7 +132,7 @@ console.log(colors[0]);`,options:[{id:`opt-ax7`,option:`a`,text:`Green`,correct:
 console.log(scores[2]);`,options:[{id:`opt-ax10`,option:`a`,text:`10`,correct:!1,selected:!1},{id:`opt-ax11`,option:`b`,text:`20`,correct:!1,selected:!1},{id:`opt-ax12`,option:`c`,text:`30`,correct:!0,selected:!1}],correctAnswer:`c`}],tasks:[{id:`task-arr-101`,title:`Stock Inventory`,description:`Declare an array %stock% containing %150%, %'In Transit'%, and %true%. Log the second element to the console.`,result:`%In Transit%`,note:`Arrays can hold mixed data types including numbers, strings, and booleans.`,solution:`const stock = [150, 'In Transit', true];
 console.log(stock[1]);`},{id:`task-arr-102`,title:`The Truth Test`,description:`Declare a variable %collection% using the %new Array()% syntax with any three names. Log a %Boolean% conversion of the entire array.`,result:`%true%`,note:`Even if an array is created via the constructor, it remains truthy.`,solution:`const collection = new Array('Alice', 'Bob', 'Charlie');
 console.log(Boolean(collection));`},{id:`task-arr-103`,title:`Type Validation`,description:`Create an array called %playlist%. Write a line of code that logs the %typeof% this variable.`,result:`%object%`,note:`Always remember that arrays are a special type of object in JS.`,solution:`const playlist = ['Song 1', 'Song 2'];
-console.log(typeof playlist);`}]},{id:`mastering-length-property-118`,title:`The Length Property`,videoID:`22`,questions:[{id:`q-len-201`,title:`String Length Basics`,question:`const city = 'New York';
+console.log(typeof playlist);`}]},{id:`mastering-length-property-118`,title:`The Length Property`,videoID:`23`,questions:[{id:`q-len-201`,title:`String Length Basics`,question:`const city = 'New York';
 console.log(city.length);`,options:[{id:`opt-l1`,option:`a`,text:`7`,correct:!1,selected:!1},{id:`opt-l2`,option:`b`,text:`8`,correct:!0,selected:!1},{id:`opt-l3`,option:`c`,text:`undefined`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-len-202`,title:`Empty vs Space`,question:`const input = ' ';
 console.log(input.length);`,options:[{id:`opt-l4`,option:`a`,text:`0`,correct:!1,selected:!1},{id:`opt-l5`,option:`b`,text:`1`,correct:!0,selected:!1},{id:`opt-l6`,option:`c`,text:`null`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-len-203`,title:`The Last Index Formula`,question:`const nums = [10, 20, 30, 40];
 console.log(nums[nums.length - 1]);`,options:[{id:`opt-l7`,option:`a`,text:`40`,correct:!0,selected:!1},{id:`opt-l8`,option:`b`,text:`30`,correct:!1,selected:!1},{id:`opt-l9`,option:`c`,text:`4`,correct:!1,selected:!1}],correctAnswer:`a`},{id:`q-len-204`,title:`Length Comparison`,question:`const tags = ['js', 'code'];
@@ -141,7 +146,7 @@ if (pass.length < 6) {
 } else {
   console.log('Strong');
 }`},{id:`task-len-202`,title:`Dynamic Last Item`,description:`Declare an array %colors% with 4 values. Log the very last item by using the %length - 1% pattern.`,result:`%(Your last color)%`,note:`Using length - 1 ensures you always get the last item regardless of how many are in the array.`,solution:`const colors = ['Red', 'Green', 'Blue', 'Yellow'];
-console.log(colors[colors.length - 1]);`},{id:`task-len-203`,title:`The Bio Counter`,description:"Declare %bio = 'Hello world'%. Create a variable %left% that subtracts the length of the bio from a limit of %50%. Log %`Remaining: ${left}`%.",result:`%Remaining: 39%`,note:`Template literals combined with .length are great for UI feedback.`,solution:"const bio = 'Hello world';\nconst left = 50 - bio.length;\nconsole.log(`Remaining: ${left}`);"}]},{id:`object-fundamentals-119`,title:`Objects`,videoID:`23`,questions:[{id:`q-obj-301`,title:`Object Type Identification`,question:`const laptop = { brand: 'Apple', year: 2024 };
+console.log(colors[colors.length - 1]);`},{id:`task-len-203`,title:`The Bio Counter`,description:"Declare %bio = 'Hello world'%. Create a variable %left% that subtracts the length of the bio from a limit of %50%. Log %`Remaining: ${left}`%.",result:`%Remaining: 39%`,note:`Template literals combined with .length are great for UI feedback.`,solution:"const bio = 'Hello world';\nconst left = 50 - bio.length;\nconsole.log(`Remaining: ${left}`);"}]},{id:`object-fundamentals-119`,title:`Objects`,videoID:`24`,questions:[{id:`q-obj-301`,title:`Object Type Identification`,question:`const laptop = { brand: 'Apple', year: 2024 };
 console.log(typeof laptop);`,options:[{id:`opt-o1`,option:`a`,text:`'object'`,correct:!0,selected:!1},{id:`opt-o2`,option:`b`,text:`'dictionary'`,correct:!1,selected:!1},{id:`opt-o3`,option:`c`,text:`'array'`,correct:!1,selected:!1}],correctAnswer:`a`},{id:`q-obj-302`,title:`Accessing Properties`,question:`const user = { name: 'Alice', age: 28 };
 console.log(user.name);`,options:[{id:`opt-o4`,option:`a`,text:`Alice`,correct:!0,selected:!1},{id:`opt-o5`,option:`b`,text:`name`,correct:!1,selected:!1},{id:`opt-o6`,option:`c`,text:`undefined`,correct:!1,selected:!1}],correctAnswer:`a`},{id:`q-obj-303`,title:`The Missing Property`,question:`const book = { title: 'JS Basics' };
 console.log(book.author);`,options:[{id:`opt-o7`,option:`a`,text:`null`,correct:!1,selected:!1},{id:`opt-o8`,option:`b`,text:`Error`,correct:!1,selected:!1},{id:`opt-o9`,option:`c`,text:`undefined`,correct:!0,selected:!1}],correctAnswer:`c`},{id:`q-obj-304`,title:`Special Key Access`,question:`const data = { 'user-id': 101 };
@@ -149,7 +154,7 @@ How do you access user-id?`,options:[{id:`opt-o10`,option:`a`,text:`data.user-id
 product.color = 'Silver';
 console.log(product.name, product.price, product.color);`},{id:`task-obj-302`,title:`The Boolean Check`,description:`Declare an empty object %settings%. Log its %Boolean% value to the console.`,result:`%true%`,note:`Just like arrays, even an empty object {} is truthy.`,solution:`const settings = {};
 console.log(Boolean(settings));`},{id:`task-obj-303`,title:`Special Properties`,description:`Declare an object %movie% with a property key %'release-year'% set to %2024%. Log that specific property using bracket notation.`,result:`%2024%`,note:`If a key has a hyphen or space, dot notation will break.`,solution:`const movie = { 'release-year': 2024 };
-console.log(movie['release-year']);`}]},{id:`function-foundations-120`,title:`Functions`,videoID:`24`,questions:[{id:`q-func-401`,title:`Execution vs Declaration`,question:`function showMessage() {
+console.log(movie['release-year']);`}]},{id:`function-foundations-120`,title:`Functions`,videoID:`25`,questions:[{id:`q-func-401`,title:`Execution vs Declaration`,question:`function showMessage() {
   console.log('Active');
 }
 // What happens if we don't add showMessage(); after this?`,options:[{id:`opt-f1`,option:`a`,text:`It logs 'Active' automatically`,correct:!1,selected:!1},{id:`opt-f2`,option:`b`,text:`Nothing is logged to the console`,correct:!0,selected:!1},{id:`opt-f3`,option:`c`,text:`The code throws an error`,correct:!1,selected:!1}],correctAnswer:`b`},{id:`q-func-402`,title:`Default Parameters`,question:`const setVolume = (level = 50) => {
@@ -161,7 +166,7 @@ setVolume();`,options:[{id:`opt-f4`,option:`a`,text:`undefined`,correct:!1,selec
 logScore({ points: 100 });`,options:[{id:`opt-f10`,option:`a`,text:`undefined`,correct:!1,selected:!1},{id:`opt-f11`,option:`b`,text:`points`,correct:!1,selected:!1},{id:`opt-f12`,option:`c`,text:`100`,correct:!0,selected:!1}],correctAnswer:`c`}],tasks:[{id:`task-func-401`,title:`The Login Notifier`,description:"Create an arrow function %notify% that takes a %username% parameter. It should log %`User ${username} just logged in`%. Call it once with %'Admin'%.",result:`%User Admin just logged in%`,note:`Parameters allow you to reuse the same logic with different data.`,solution:`const notify = (username) => {
   console.log(\`User \${username} just logged in\`);
 };
-notify('Admin');`},{id:`task-func-402`,title:`Weather Assistant`,description:"Write a function %checkWeather% with two parameters: %temp% and %scale%. Set the default value of %scale% to %'Celsius'%. Log %`It is ${temp} degrees ${scale}`%.",result:`%It is 25 degrees Celsius%`,note:`Default parameters act as a safety net when an argument is missing.`,solution:"const checkWeather = (temp, scale = 'Celsius') => {\n  console.log(`It is ${temp} degrees ${scale}`);\n};\ncheckWeather(25);"},{id:`task-func-403`,title:`Pet Info System`,description:`Create a function %showPet% that receives an object with keys %type% and %breed%. Log a message like %'This is a Dog of breed Husky'%.`,result:`%This is a Dog of breed Husky%`,note:`Passing an object into a function is a great way to handle multiple related pieces of data.`,solution:"const showPet = (pet) => {\n  console.log(`This is a ${pet.type} of breed ${pet.breed}`);\n};\nshowPet({ type: 'Dog', breed: 'Husky' });"}]},{id:`scope-mastery-121`,title:`Function Scope`,videoID:`25`,questions:[{id:`q-sco-501`,title:`Global Access`,question:`let status = 'Active';
+notify('Admin');`},{id:`task-func-402`,title:`Weather Assistant`,description:"Write a function %checkWeather% with two parameters: %temp% and %scale%. Set the default value of %scale% to %'Celsius'%. Log %`It is ${temp} degrees ${scale}`%.",result:`%It is 25 degrees Celsius%`,note:`Default parameters act as a safety net when an argument is missing.`,solution:"const checkWeather = (temp, scale = 'Celsius') => {\n  console.log(`It is ${temp} degrees ${scale}`);\n};\ncheckWeather(25);"},{id:`task-func-403`,title:`Pet Info System`,description:`Create a function %showPet% that receives an object with keys %type% and %breed%. Log a message like %'This is a Dog of breed Husky'%.`,result:`%This is a Dog of breed Husky%`,note:`Passing an object into a function is a great way to handle multiple related pieces of data.`,solution:"const showPet = (pet) => {\n  console.log(`This is a ${pet.type} of breed ${pet.breed}`);\n};\nshowPet({ type: 'Dog', breed: 'Husky' });"}]},{id:`scope-mastery-121`,title:`Function Scope`,videoID:`26`,questions:[{id:`q-sco-501`,title:`Global Access`,question:`let status = 'Active';
 
 function check() {
   console.log(status);
@@ -203,7 +208,7 @@ const addPoints = () => {
   console.log(points);
 };
 addPoints();
-console.log(points);`}]},{id:`hoisting-essentials-122`,title:`Hoisting`,videoID:`26`,questions:[{id:`q-hoi-601`,title:`Function Declaration Hoisting`,question:`show();
+console.log(points);`}]},{id:`hoisting-essentials-122`,title:`Hoisting`,videoID:`27`,questions:[{id:`q-hoi-601`,title:`Function Declaration Hoisting`,question:`show();
 
 function show() {
   console.log('Displaying...');
@@ -236,7 +241,7 @@ function boot() {
 initApp();`},{id:`task-hoi-603`,title:`Expression vs Declaration`,description:`Declare a constant %run% and assign it an arrow function that logs %'Running'%. Try to call %run()% before the declaration and comment out why it fails.`,result:`%ReferenceError%`,note:`Arrow functions assigned to variables (const/let) are NOT hoisted like function declarations.`,solution:`// run(); // This would cause a ReferenceError
 const run = () => {
   console.log('Running');
-};`}]},{id:`return-statement-123`,title:`The Return Statement`,videoID:`27`,questions:[{id:`q-ret-701`,title:`Return vs Log`,question:`function getScore() {
+};`}]},{id:`return-statement-123`,title:`The Return Statement`,videoID:`28`,questions:[{id:`q-ret-701`,title:`Return vs Log`,question:`function getScore() {
   return 100;
 }
 const result = getScore();
@@ -263,7 +268,7 @@ console.log(total);`},{id:`task-ret-702`,title:`Early Exit Pattern`,description:
     displayName: name,
     access: role
   };
-};`}]},{id:`primitives-vs-reference-124`,title:`Primitives vs Objects`,videoID:`28`,questions:[{id:`q-pri-801`,title:`Primitive Assignment`,question:`let a = 'Hello';
+};`}]},{id:`primitives-vs-reference-124`,title:`Primitives vs Objects`,videoID:`29`,questions:[{id:`q-pri-801`,title:`Primitive Assignment`,question:`let a = 'Hello';
 let b = a;
 b = 'Hi';
 console.log(a);`,options:[{id:`opt-p1`,option:`a`,text:`Hello`,correct:!0,selected:!1},{id:`opt-p2`,option:`b`,text:`Hi`,correct:!1,selected:!1},{id:`opt-p3`,option:`c`,text:`undefined`,correct:!1,selected:!1}],correctAnswer:`a`},{id:`q-pri-802`,title:`The Reference Link`,question:`const original = { price: 10 };
@@ -280,7 +285,7 @@ const manager = admin;
 manager.power = 'Limited';
 console.log(admin.power);`},{id:`task-pri-803`,title:`The Constant Object`,description:`Declare %const phone = { brand: 'Apple' }%. Change the brand to %'Samsung'%. Log the object.`,result:`%{ brand: 'Samsung' }%`,note:`Even with 'const', you can change properties inside an object, because the reference (the 'address') hasn't changed.`,solution:`const phone = { brand: 'Apple' };
 phone.brand = 'Samsung';
-console.log(phone);`}]},{id:`milestone-logic-functions-02`,title:`- MILESTONE EXERCISES S2 -`,milestone:!0,videoID:`29`,questions:[{id:`mq2-01`,title:`Identifying Arrays`,question:`const favoriteColors = ['red', 'blue'];
+console.log(phone);`}]},{id:`milestone-logic-functions-02`,title:`- MILESTONE EXERCISES S2 -`,milestone:!0,videoID:`30`,questions:[{id:`mq2-01`,title:`Identifying Arrays`,question:`const favoriteColors = ['red', 'blue'];
 console.log(typeof favoriteColors);`,options:[{id:`o1`,option:`a`,text:`'array'`,correct:!1},{id:`o2`,option:`b`,text:`'object'`,correct:!0}],correctAnswer:`b`},{id:`mq2-02`,title:`Empty Array Truthiness`,question:`const shoppingCart = [];
 if (shoppingCart) {
   console.log('Cart exists');
