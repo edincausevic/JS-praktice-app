@@ -39,7 +39,8 @@ export const seedData = {
           "description": "Create a variable named %message% using %let% and assign it the value %'Hello'%. On the next line, change its value to %'Bye'%.",
           "result": "%Bye%",
           "note": "implement in your editor / console",
-          "solution": "let message = 'Hello';\nmessage = 'Bye';"
+          "solution": "let message = 'Hello';\nmessage = 'Bye';",
+          "done": false,
         },
         {
           "id": "task-let-002",
@@ -47,7 +48,8 @@ export const seedData = {
           "description": "Declare a variable named %price% using %let% without assigning it a value. Then, on a new line, assign it the number %100%.",
           "result": "%100%",
           "note": "implement in your editor / console",
-          "solution": "let price;\nprice = 100;"
+          "solution": "let price;\nprice = 100;",
+          "done": false,
         }
       ]
     },
@@ -100,7 +102,8 @@ export const seedData = {
           "description": "Create a constant named %PI% and assign it the value %3.14%.",
           "result": "%3.14%",
           "note": "implement in your editor / console",
-          "solution": "const PI = 3.14;"
+          "solution": "const PI = 3.14;",
+          "done": false
         },
         {
           "id": "task-const-002",
@@ -108,7 +111,8 @@ export const seedData = {
           "description": "Try to declare a %const% named %taxRate% without a value. Note the error you get in the console.",
           "result": "%SyntaxError%",
           "note": "This task is to observe the error behavior",
-          "solution": "const taxRate = 0.2; // Correct way: must have a value"
+          "solution": "const taxRate = 0.2; // Correct way: must have a value",
+          "done": false
         }
       ]
     },
@@ -161,7 +165,8 @@ export const seedData = {
           "description": "Declare a variable that contains two words (my score). Assign it a value and ensure there are no spaces or dashes.",
           "result": "%Mike%",
           "note": "Don't use spaces or illegal characters",
-          "solution": "let myScore = 100;"
+          "solution": "let myScore = 100;",
+          "done": false
         },
         {
           "id": "task-name-002",
@@ -169,7 +174,8 @@ export const seedData = {
           "description": "Create two variables: %let color = 'red'% and %let Color = 'blue'%. Log both to see that they are separate variables.",
           "result": "%true%",
           "note": "JS sees capital and lowercase letters as different",
-          "solution": "let color = 'red';\nlet Color = 'blue';"
+          "solution": "let color = 'red';\nlet Color = 'blue';",
+          "done": false
         }
       ]
     },
@@ -183,21 +189,7 @@ export const seedData = {
           "title": "Single-line Comments",
           "question": "Which characters are used to start a single-line comment in JavaScript?",
           "options": [
-            { "id": "opt-m1", "option": "a", "text": "<!--", "correct": false, "selected": false },
-            { "id": "opt-m2", "option": "b", "text": "//", "correct": true, "selected": false },
-            { "id": "opt-m3", "option": "c", "text": "#", "correct": false, "selected": false },
-            { "id": "opt-m4", "option": "d", "text": "/*", "correct": false, "selected": false }
-          ],
-          "correctAnswer": "b"
-        },
-        {
-          "id": "q-comm-002",
-          "title": "Multi-line Comments",
-          "question": "How do you start and end a multi-line comment block?",
-          "options": [
-            { "id": "opt-m5", "option": "a", "text": "// and //", "correct": false, "selected": false },
-            { "id": "opt-m6", "option": "b", "text": "/* and */", "correct": true, "selected": false },
-            { "id": "opt-m7", "option": "c", "text": "<!-- and -->", "correct": false, "selected": false },
+            { "id": "opt-m1", "option": "a", "text": "", "correct": false, "selected": false },
             { "id": "opt-m8", "option": "d", "text": "{ and }", "correct": false, "selected": false }
           ],
           "correctAnswer": "b"
@@ -222,7 +214,8 @@ export const seedData = {
           "description": "Take the line %let hiddenValue = 10;% and use a single-line comment so that the JavaScript engine ignores it.",
           "result": "%ignored%",
           "note": "Use the double forward slash",
-          "solution": "// let hiddenValue = 10;"
+          "solution": "// let hiddenValue = 10;",
+          "done": false
         },
         {
           "id": "task-comm-002",
@@ -230,7 +223,8 @@ export const seedData = {
           "description": "Use a multi-line comment to write a two-line note about your code.",
           "result": "%ignored%",
           "note": "Ensure you close the comment block",
-          "solution": "/* This is a \n note */"
+          "solution": "/* This is a \n note */",
+          "done": false
         }
       ]
     },
@@ -307,7 +301,8 @@ export const seedData = {
           "description": "Use single quotes to log the following sentence: %I'm learning JS%. Ensure you escape the single quote correctly.",
           "result": "%I'm learning JS%",
           "note": "Use the backslash character",
-          "solution": "console.log('I\\'m learning JS');"
+          "solution": "console.log('I\\'m learning JS');",
+          "done": false
         },
         {
           "id": "task-str-002",
@@ -315,7 +310,8 @@ export const seedData = {
           "description": "Declare a const %city = 'Paris'%. Use a template literal (backticks) to log: %I want to visit Paris%.",
           "result": "%I want to visit Paris%",
           "note": "Use backticks and ${}",
-          "solution": "const city = 'Paris';\nconsole.log(`I want to visit ${city}`);"
+          "solution": "const city = 'Paris';\nconsole.log(`I want to visit ${city}`);",
+          "done": false
         },
         {
           "id": "task-str-003",
@@ -323,7 +319,8 @@ export const seedData = {
           "description": "Declare two variables, %firstName% and %lastName%. Use the %+% operator to join them with a space in between.",
           "result": "%John Doe%",
           "note": "Don't forget the empty string for the space",
-          "solution": "console.log(firstName + ' ' + lastName);"
+          "solution": "console.log(firstName + ' ' + lastName);",
+          "done": false
         },
         {
           "id": "task-str-004",
@@ -331,7 +328,8 @@ export const seedData = {
           "description": "Log a two-line message using backticks. The first line should say %Line one% and the second line %Line two%.",
           "result": "%Line one\nLine two%",
           "note": "Just press enter inside the backticks",
-          "solution": "console.log(`Line one\nLine two`);"
+          "solution": "console.log(`Line one\nLine two`);",
+          "done": false
         }
       ]
     },
@@ -396,7 +394,8 @@ export const seedData = {
           "description": "Declare a variable %points% and assign it %100%. On the next line, log the result of %points% divided by %4%.",
           "result": "%25%",
           "note": "Use the / operator",
-          "solution": "let points = 100;\nconsole.log(points / 4);"
+          "solution": "let points = 100;\nconsole.log(points / 4);",
+          "done": false
         },
         {
           "id": "task-num-002",
@@ -404,7 +403,8 @@ export const seedData = {
           "description": "Create two constants: %boys = 12% and %girls = 13%. Log a message using backticks that says: %Total students: 25%.",
           "result": "%Total students: 25%",
           "note": "Perform the math inside the ${} curly braces",
-          "solution": "const boys = 12;\nconst girls = 13;\nconsole.log(`Total students: ${boys + girls}`);"
+          "solution": "const boys = 12;\nconst girls = 13;\nconsole.log(`Total students: ${boys + girls}`);",
+          "done": false
         },
         {
           "id": "task-num-003",
@@ -412,7 +412,8 @@ export const seedData = {
           "description": "Declare a variable %level = '5'%. Log the result of %level - 1%.",
           "result": "%4%",
           "note": "Observe how subtraction forces the string to become a number",
-          "solution": "let level = '5';\nconsole.log(level - 1);"
+          "solution": "let level = '5';\nconsole.log(level - 1);",
+          "done": false
         }
       ]
     },
