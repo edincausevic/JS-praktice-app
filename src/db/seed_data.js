@@ -1,11 +1,11 @@
 export const seedData = {
-  id: 123,
-  version: '1.0',
+  id: 114,
+  version: '1.1',
   allExercises: [
     {
       "id": "let-section-101",
       "title": "LET",
-      "videoID": "05",
+      "videoID": "10",
       "questions": [
         {
           "id": "q-let-001",
@@ -54,7 +54,7 @@ export const seedData = {
     {
       "id": "const-section-102",
       "title": "CONST",
-      "videoID": "06",
+      "videoID": "11",
       "questions": [
         {
           "id": "q-const-001",
@@ -115,7 +115,7 @@ export const seedData = {
     {
       "id": "naming-rules-103",
       "title": "Naming Rules",
-      "videoID": "07",
+      "videoID": "12",
       "questions": [
         {
           "id": "q-name-001",
@@ -176,7 +176,7 @@ export const seedData = {
     {
       "id": "comments-section-104",
       "title": "Comments",
-      "videoID": "08",
+      "videoID": "13",
       "questions": [
         {
           "id": "q-comm-001",
@@ -237,7 +237,7 @@ export const seedData = {
     {
       "id": "strings-section-105",
       "title": "Strings",
-      "videoID": "09",
+      "videoID": "14",
       "questions": [
         {
           "id": "q-str-001",
@@ -338,7 +338,7 @@ export const seedData = {
     {
       "id": "numbers-section-106",
       "title": "Numbers",
-      "videoID": "10",
+      "videoID": "15",
       "questions": [
         {
           "id": "q-num-001",
@@ -419,7 +419,7 @@ export const seedData = {
     {
       "id": "null-section-107",
       "title": "Null",
-      "videoID": "11",
+      "videoID": "16",
       "questions": [
         {
           "id": "q-null-001",
@@ -488,7 +488,7 @@ export const seedData = {
     {
       "id": "boolean-section-108",
       "title": "Booleans",
-      "videoID": "12",
+      "videoID": "17",
       "questions": [
         {
           "id": "q-bool-001",
@@ -565,7 +565,7 @@ export const seedData = {
     {
       "id": "if-else-logic-level-113",
       "title": "if else",
-      "videoID": "14",
+      "videoID": "18",
       "questions": [
         {
           "id": "q-if-016",
@@ -658,7 +658,7 @@ export const seedData = {
     {
       "id": "comparison-ops-115",
       "title": "Comparison Operators",
-      "videoID": "15",
+      "videoID": "19",
       "questions": [
         {
           "id": "q-comp-001",
@@ -756,9 +756,9 @@ export const seedData = {
     },
     {
       "id": "milestone-foundations-01",
-      "title": "- MILESTONE EXERCISES 1 -",
+      "title": "- MILESTONE EXERCISES S1 -",
       "milestone": true,
-      "videoID": "16",
+      "videoID": "20",
       "questions": [
         {
           "id": "q-rev-001",
@@ -1011,9 +1011,88 @@ export const seedData = {
       ]
     },
     {
+      "id": "primitive-identification-101",
+      "title": "Identifying Primitives",
+      "videoID": "21",
+      "questions": [
+        {
+          "id": "q-prim-301",
+          "title": "Value: undefined",
+          "question": "Is 'undefined' a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p301-a", "option": "a", "text": "Primitive value", "correct": true, "selected": false },
+            { "id": "opt-p301-b", "option": "b", "text": "Non-primitive (object)", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-prim-302",
+          "title": "Value: [1, 2, 3] (Array)",
+          "question": "Is an Array a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p302-a", "option": "a", "text": "Primitive value", "correct": false, "selected": false },
+            { "id": "opt-p302-b", "option": "b", "text": "Non-primitive (object)", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-prim-303",
+          "title": "Value: 'Hello'",
+          "question": "Is a String literal a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p303-a", "option": "a", "text": "Primitive value", "correct": true, "selected": false },
+            { "id": "opt-p303-b", "option": "b", "text": "Non-primitive (object)", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-prim-304",
+          "title": "Value: 42",
+          "question": "Is a Number a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p304-a", "option": "a", "text": "Primitive value", "correct": true, "selected": false },
+            { "id": "opt-p304-b", "option": "b", "text": "Non-primitive (object)", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-prim-305",
+          "title": "Value: null",
+          "question": "Is 'null' a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p305-a", "option": "a", "text": "Primitive value", "correct": true, "selected": false },
+            { "id": "opt-p305-b", "option": "b", "text": "Non-primitive (object)", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        },
+        {
+          "id": "q-prim-306",
+          "title": "Value: { name: 'Alex' }",
+          "question": "Is a plain Object literal a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p306-a", "option": "a", "text": "Primitive value", "correct": false, "selected": false },
+            { "id": "opt-p306-b", "option": "b", "text": "Non-primitive (object)", "correct": true, "selected": false }
+          ],
+          "correctAnswer": "b"
+        },
+        {
+          "id": "q-prim-307",
+          "title": "Value: true",
+          "question": "Is a Boolean a primitive or a non-primitive (object)?",
+          "options": [
+            { "id": "opt-p307-a", "option": "a", "text": "Primitive value", "correct": true, "selected": false },
+            { "id": "opt-p307-b", "option": "b", "text": "Non-primitive (object)", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "a"
+        }
+      ],
+      "tasks": [
+      ]
+    },
+    {
       "id": "intro-to-arrays-117",
       "title": "Arrays",
-      "videoID": "17",
+      "videoID": "22",
       "questions": [
         {
           "id": "q-arr-101",
@@ -1090,7 +1169,7 @@ export const seedData = {
     {
       "id": "mastering-length-property-118",
       "title": "The Length Property",
-      "videoID": "18",
+      "videoID": "23",
       "questions": [
         {
           "id": "q-len-201",
@@ -1166,7 +1245,7 @@ export const seedData = {
     {
       "id": "object-fundamentals-119",
       "title": "Objects",
-      "videoID": "19",
+      "videoID": "24",
       "questions": [
         {
           "id": "q-obj-301",
@@ -1243,7 +1322,7 @@ export const seedData = {
     {
       "id": "function-foundations-120",
       "title": "Functions",
-      "videoID": "20",
+      "videoID": "25",
       "questions": [
         {
           "id": "q-func-401",
@@ -1320,7 +1399,7 @@ export const seedData = {
     {
       "id": "scope-mastery-121",
       "title": "Function Scope",
-      "videoID": "21",
+      "videoID": "26",
       "questions": [
         {
           "id": "q-sco-501",
@@ -1427,7 +1506,7 @@ export const seedData = {
     {
       "id": "hoisting-essentials-122",
       "title": "Hoisting",
-      "videoID": "22",
+      "videoID": "27",
       "questions": [
         {
           "id": "q-hoi-601",
@@ -1513,7 +1592,7 @@ export const seedData = {
     {
       "id": "return-statement-123",
       "title": "The Return Statement",
-      "videoID": "23",
+      "videoID": "28",
       "questions": [
         {
           "id": "q-ret-701",
@@ -1600,7 +1679,7 @@ export const seedData = {
     {
       "id": "primitives-vs-reference-124",
       "title": "Primitives vs Objects",
-      "videoID": "24",
+      "videoID": "29",
       "questions": [
         {
           "id": "q-pri-801",
@@ -1657,9 +1736,9 @@ export const seedData = {
     },
     {
       "id": "milestone-logic-functions-02",
-      "title": "- MILESTONE EXERCISES 2 -",
+      "title": "- MILESTONE EXERCISES S2 -",
       "milestone": true,
-      "videoID": "25",
+      "videoID": "30",
       "questions": [
         { "id": "mq2-01", "title": "Identifying Arrays", "question": "const favoriteColors = ['red', 'blue'];\nconsole.log(typeof favoriteColors);", "options": [{ "id": "o1", "option": "a", "text": "'array'", "correct": false }, { "id": "o2", "option": "b", "text": "'object'", "correct": true }], "correctAnswer": "b" },
         { "id": "mq2-02", "title": "Empty Array Truthiness", "question": "const shoppingCart = [];\nif (shoppingCart) {\n  console.log('Cart exists');\n}", "options": [{ "id": "o3", "option": "a", "text": "It logs 'Cart exists'", "correct": true }, { "id": "o4", "option": "b", "text": "Nothing happens", "correct": false }], "correctAnswer": "a" },
@@ -1738,7 +1817,7 @@ export const seedData = {
     {
       "id": "string-methods-01",
       "title": "String Methods 1",
-      "videoID": "26",
+      "videoID": "31",
       "questions": [
         { "id": "smq-01", "title": "Checking the Start", "question": "const emailAddress = 'support@company.com';\nconst isSupport = emailAddress.startsWith('support');\nconsole.log(isSupport);", "options": [{ "id": "o1", "option": "a", "text": "true", "correct": true }, { "id": "o2", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
         { "id": "smq-02", "title": "Case Sensitivity Check", "question": "const webAddress = 'HTTPS://google.com';\nconst isSecure = webAddress.startsWith('https');\nconsole.log(isSecure);", "options": [{ "id": "o3", "option": "a", "text": "true", "correct": false }, { "id": "o4", "option": "b", "text": "false", "correct": true }], "correctAnswer": "b" },
@@ -1764,7 +1843,7 @@ export const seedData = {
     {
       "id": "string-methods-02",
       "title": "String Methods 2",
-      "videoID": "27",
+      "videoID": "32",
       "questions": [
         {
           "id": "smq2-01",
@@ -1946,7 +2025,7 @@ export const seedData = {
     {
       "id": "string-methods-03",
       "title": "String Methods 3",
-      "videoID": "28",
+      "videoID": "33",
       "questions": [
         {
           "id": "smq3-01",
@@ -2111,7 +2190,7 @@ export const seedData = {
     {
       "id": "number-methods-01",
       "title": "Number Methods",
-      "videoID": "29",
+      "videoID": "34",
       "questions": [
         {
           "id": "nmq1-01",
@@ -2215,7 +2294,7 @@ export const seedData = {
     {
       "id": "destructuring-01",
       "title": "Array and Object Destructuring",
-      "videoID": "30",
+      "videoID": "35",
       "questions": [
         {
           "id": "dq1-01",
@@ -2326,7 +2405,7 @@ export const seedData = {
     {
       "id": "function-destructuring-01",
       "title": "Function Argument Destructuring",
-      "videoID": "31",
+      "videoID": "36",
       "questions": [
         {
           "id": "fdq1-01",
@@ -2437,7 +2516,7 @@ export const seedData = {
     {
       "id": "spread-operator-01",
       "title": "The Spread Operator",
-      "videoID": "32",
+      "videoID": "37",
       "questions": [
         {
           "id": "soq1-01",
@@ -2514,7 +2593,7 @@ export const seedData = {
     {
       "id": "rest-operator-01",
       "title": "The Rest Operator",
-      "videoID": "33",
+      "videoID": "38",
       "questions": [
         {
           "id": "roq1-01",
@@ -2604,7 +2683,7 @@ export const seedData = {
     {
       "id": "crud-operations-01",
       "title": "CRUD Operations on Arrays and Objects",
-      "videoID": "34",
+      "videoID": "39",
       "questions": [
         {
           "id": "coq1-01",
@@ -2700,9 +2779,9 @@ export const seedData = {
     },
     {
       "id": "milestone-exercises-03",
-      "title": "- MILESTONE EXERCISES 3 -",
+      "title": "- MILESTONE EXERCISES S3 -",
       "milestone": true,
-      "videoID": "35",
+      "videoID": "40",
       "questions": [
         {
           "id": "mq3-01",
@@ -3341,7 +3420,7 @@ export const seedData = {
     {
       "id": "ternary-operator-01",
       "title": "Ternary Operator",
-      "videoID": "36",
+      "videoID": "41",
       "questions": [
         {
           "id": "toq1-01",
@@ -3407,7 +3486,7 @@ export const seedData = {
     {
       "id": "logical-and-01",
       "title": "Logical Operator AND (&&)",
-      "videoID": "37",
+      "videoID": "42",
       "questions": [
         {
           "id": "laq1-01",
@@ -3480,7 +3559,7 @@ export const seedData = {
     {
       "id": "logical-or-nullish-01",
       "title": "Logical OR (||) and Nullish Coalescing (??)",
-      "videoID": "38",
+      "videoID": "43",
       "questions": [
         {
           "id": "onq1-01",
@@ -3583,7 +3662,7 @@ export const seedData = {
     {
       "id": "logical-not-01",
       "title": "Logical NOT (!) Operator",
-      "videoID": "39",
+      "videoID": "44",
       "questions": [
         {
           "id": "lnq1-01",
@@ -3659,7 +3738,7 @@ export const seedData = {
     {
       "id": "double-not-operator-01",
       "title": "Double NOT (!!) Operator",
-      "videoID": "40",
+      "videoID": "45",
       "questions": [
         {
           "id": "dnq1-01",
@@ -3768,7 +3847,7 @@ export const seedData = {
     {
       "id": "optional-chaining-01",
       "title": "Optional Chaining (?.)",
-      "videoID": "41",
+      "videoID": "46",
       "questions": [
         {
           "id": "ocq1-01",
@@ -3856,7 +3935,7 @@ export const seedData = {
     {
       "id": "logical-combinations-short-circuit-01",
       "title": "Logical Combinations & Short-Circuit Execution Essentials",
-      "videoID": "42",
+      "videoID": "47",
       "questions": [
         {
           "id": "lcq1-01",
@@ -3971,8 +4050,8 @@ export const seedData = {
     },
     {
       "id": "milestone-exercises-04-updated",
-      "title": "- MILESTONE EXERCISES 4 -",
-      "videoID": "43",
+      "title": "- MILESTONE EXERCISES S4 -",
+      "videoID": "48",
       "milestone": true,
       "questions": [
         {
@@ -4653,7 +4732,7 @@ export const seedData = {
     {
       "id": "array-map-01",
       "title": ".map()",
-      "videoID": "44",
+      "videoID": "49",
       "questions": [
         {
           "id": "maq1-01",
@@ -4726,7 +4805,7 @@ export const seedData = {
     {
       "id": "array-find-filter-02",
       "title": ".find() vs .filter()",
-      "videoID": "45",
+      "videoID": "50",
       "questions": [
         {
           "id": "ffq2-01",
@@ -4799,7 +4878,7 @@ export const seedData = {
     {
       "id": "array-some-every-02",
       "title": ".some() vs .every",
-      "videoID": "46",
+      "videoID": "51",
       "questions": [
         {
           "id": "seq2-01",
@@ -4869,7 +4948,7 @@ export const seedData = {
     {
       "id": "includes-method-01",
       "title": ".includes()",
-      "videoID": "47",
+      "videoID": "52",
       "questions": [
         {
           "id": "incq-01",
@@ -4922,7 +5001,7 @@ export const seedData = {
     {
       "id": "array-reduce-01",
       "title": ".reduce()",
-      "videoID": "48",
+      "videoID": "53",
       "questions": [
         {
           "id": "redq-01",
@@ -4947,8 +5026,8 @@ export const seedData = {
     },
     {
       "id": "array-methods-mastery-01",
-      "title": "- MILESTONE EXERCISES 5 -",
-      "videoID": "49",
+      "title": "- MILESTONE EXERCISES S5 -",
+      "videoID": "54",
       "milestone": true,
       "questions": [
         {
