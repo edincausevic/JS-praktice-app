@@ -149,6 +149,8 @@ function App() {
             </h2>
 
             {selectedExercise?.tasks.map(task => {
+            console.log('task: ', task);
+            
               return <CodeQuestion key={task.id} {...task}/>
             })}
             

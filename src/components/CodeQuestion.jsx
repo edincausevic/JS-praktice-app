@@ -14,10 +14,15 @@ const CodeQuestion = ({title, description, result, solution}) => {
               dangerouslySetInnerHTML={{ __html: _GL.UTIL.formatCodeMarkup(result) }}
               ></span>
         </div>
-        <div className="challenge-note">
+        <div className="challenge-note flex justify-between">
             <button 
             onClick={() => setIsSolutionVisible(!isSolutionVisible)}
             className="reveal-btn challenge-reveal" >🔍 {isSolutionVisible ? 'Hide' : "Reveal"} Solution</button>
+
+            <div>
+            <button 
+            className="reveal-btn challenge-reveal" >Mark as Done</button>
+            </div>
         </div>
         <div className="" >
             {isSolutionVisible && <div className="code-block" >{solution}</div>}
