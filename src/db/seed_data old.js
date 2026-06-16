@@ -643,8 +643,7 @@ export const seedData = {
           "description": "Declare a const %guest = 'Alex'%. Create an %if(true)% block. Inside, declare a const %welcome% using a template literal: %`Welcome, ${guest}`% and log it to the console.",
           "result": "%Welcome, Alex%",
           "note": "Focus on using the variable inside the block scope",
-          "solution": "const guest = 'Alex';\nif (true) {\n  const welcome = `Welcome, ${guest}`;\n  console.log(welcome);\n}",
-          "done": false
+          "solution": "const guest = 'Alex';\nif (true) {\n  const welcome = `Welcome, ${guest}`;\n  console.log(welcome);\n}"
         },
         {
           "id": "task-if-015",
@@ -652,8 +651,7 @@ export const seedData = {
           "description": "Declare a variable %isMuted = true%. Use a single-line %if% statement (no curly braces) to log %'Silence...'% if the variable is true.",
           "result": "%Silence...%",
           "note": "Practice the shorthand one-line syntax",
-          "solution": "const isMuted = true;\nif (isMuted) console.log('Silence...');",
-          "done": false
+          "solution": "const isMuted = true;\nif (isMuted) console.log('Silence...');"
         },
         {
           "id": "task-if-016",
@@ -661,8 +659,7 @@ export const seedData = {
           "description": "Declare %isLow = false%. Use %if / else% to log %'Battery Low'% if true, and %'Battery Full'% otherwise.",
           "result": "%Battery Full%",
           "note": "Simple branching using a boolean check",
-          "solution": "const isLow = false;\nif (isLow) {\n  console.log('Battery Low');\n} else {\n  console.log('Battery Full');\n}",
-          "done": false
+          "solution": "const isLow = false;\nif (isLow) {\n  console.log('Battery Low');\n} else {\n  console.log('Battery Full');\n}"
         }
       ]
     },
@@ -737,8 +734,7 @@ export const seedData = {
           "description": "Declare a variable %budget = 50%. Write an %if% statement that checks if %budget% is less than %60%. If true, log %'Within budget'%.",
           "result": "%Within budget%",
           "note": "Use the < operator",
-          "solution": "let budget = 50;\nif (budget < 60) {\n  console.log('Within budget');\n}",
-          "done": false
+          "solution": "let budget = 50;\nif (budget < 60) {\n  console.log('Within budget');\n}"
         },
         {
           "id": "task-comp-002",
@@ -746,8 +742,7 @@ export const seedData = {
           "description": "Declare %enteredPin = '1234'%. Compare it to %actualPin = 1234% using %===%. If they are NOT strictly equal, log %'Invalid Type'%.",
           "result": "%Invalid Type%",
           "note": "A string is never strictly equal to a number",
-          "solution": "const enteredPin = '1234';\nconst actualPin = 1234;\nif (enteredPin !== actualPin) {\n  console.log('Invalid Type');\n}",
-          "done": false
+          "solution": "const enteredPin = '1234';\nconst actualPin = 1234;\nif (enteredPin !== actualPin) {\n  console.log('Invalid Type');\n}"
         },
         {
           "id": "task-comp-004",
@@ -755,8 +750,7 @@ export const seedData = {
           "description": "Declare %score = 80%. Use %if / else% to log %'Pass'% if %score >= 70%, otherwise log %'Fail'%.",
           "result": "%Pass%",
           "note": "Check for greater than or equal to",
-          "solution": "let score = 80;\nif (score >= 70) {\n  console.log('Pass');\n} else {\n  console.log('Fail');\n}",
-          "done": false
+          "solution": "let score = 80;\nif (score >= 70) {\n  console.log('Pass');\n} else {\n  console.log('Fail');\n}"
         },
         {
           "id": "task-comp-005",
@@ -764,8 +758,7 @@ export const seedData = {
           "description": "Declare %count = 10%. If %count !== 20%, reassign %count% to %20%. Finally, log %count%.",
           "result": "%20%",
           "note": "Strict inequality ensures we only update if the value/type is different",
-          "solution": "let count = 10;\nif (count !== 20) {\n  count = 20;\n}\nconsole.log(count);\n",
-          "done": false
+          "solution": "let count = 10;\nif (count !== 20) {\n  count = 20;\n}\nconsole.log(count);"
         }
       ]
     },
@@ -993,40 +986,35 @@ export const seedData = {
           "title": "The Grade System",
           "description": "Declare %score = 85%. Use branching logic to log: %'A'% if the score is greater than or equal to 90, %'B'% if the score is greater than or equal to 80, and %'C'% for all other cases.",
           "result": "%B%",
-          "solution": "let score = 85;\nif (score >= 90) {\n  console.log('A');\n} else if (score >= 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}",
-          "done": false
+          "solution": "let score = 85;\nif (score >= 90) {\n  console.log('A');\n} else if (score >= 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}"
         },
         {
           "id": "t-rev-002",
           "title": "User Status Review",
           "description": "Declare %username = null%. Use conditional logic to log %'Welcome guest'% if the username does not have a truthy value. If it does have a value, log a greeting using the name and a template literal.",
           "result": "%Welcome guest%",
-          "solution": "const username = null;\nif (username) {\n  console.log(`Welcome ${username}`);\n} else {\n  console.log('Welcome guest');\n}",
-          "done": false
+          "solution": "const username = null;\nif (username) {\n  console.log(`Welcome ${username}`);\n} else {\n  console.log('Welcome guest');\n}"
         },
         {
           "id": "t-rev-003",
           "title": "Temperature Guard",
           "description": "Declare %temp = 32%. Check if the temperature is strictly equal to 32 and log %'Freezing point'%. Otherwise, check if the temperature is greater than 32 and log %'Above freezing'%.",
           "result": "%Freezing point%",
-          "solution": "let temp = 32;\nif (temp === 32) {\n  console.log('Freezing point');\n} else if (temp > 32) {\n  console.log('Above freezing');\n}",
-          "done": false
+          "solution": "let temp = 32;\nif (temp === 32) {\n  console.log('Freezing point');\n} else if (temp > 32) {\n  console.log('Above freezing');\n}"
         },
         {
           "id": "t-rev-004",
           "title": "Strict Type Filter",
           "description": "Declare %input = '5'%. Write logic that logs %'Number'% only if the input is strictly equal to the number 5. If the type of the input is a string, log %'String'%.",
           "result": "%String%",
-          "solution": "let input = '5';\nif (input === 5) {\n  console.log('Number');\n} else if (typeof input === 'string') {\n  console.log('String');\n}",
-          "done": false
+          "solution": "let input = '5';\nif (input === 5) {\n  console.log('Number');\n} else if (typeof input === 'string') {\n  console.log('String');\n}"
         },
         {
           "id": "t-rev-005",
           "title": "The Double Check",
           "description": "Declare %val = 0%. If the value is strictly equal to 0, change the value to 10. Then, using a completely separate block of logic, log %'Success'% if the value is now greater than 5.",
           "result": "%Success%",
-          "solution": "let val = 0;\nif (val === 0) {\n  val = 10;\n}\nif (val > 5) {\n  console.log('Success');\n}",
-          "done": false
+          "solution": "let val = 0;\nif (val === 0) { val = 10; }\nif (val > 5) { console.log('Success'); }"
         }
       ]
     },
@@ -1166,8 +1154,7 @@ export const seedData = {
           "description": "Declare an array %stock% containing %150%, %'In Transit'%, and %true%. Log the second element to the console.",
           "result": "%In Transit%",
           "note": "Arrays can hold mixed data types including numbers, strings, and booleans.",
-          "solution": "const stock = [150, 'In Transit', true];\nconsole.log(stock[1]);",
-          "done": false
+          "solution": "const stock = [150, 'In Transit', true];\nconsole.log(stock[1]);"
         },
         {
           "id": "task-arr-102",
@@ -1175,8 +1162,7 @@ export const seedData = {
           "description": "Declare a variable %collection% using the %new Array()% syntax with any three names. Log a %Boolean% conversion of the entire array.",
           "result": "%true%",
           "note": "Even if an array is created via the constructor, it remains truthy.",
-          "solution": "const collection = new Array('Alice', 'Bob', 'Charlie');\nconsole.log(Boolean(collection));",
-          "done": false
+          "solution": "const collection = new Array('Alice', 'Bob', 'Charlie');\nconsole.log(Boolean(collection));"
         },
         {
           "id": "task-arr-103",
@@ -1184,8 +1170,7 @@ export const seedData = {
           "description": "Create an array called %playlist%. Write a line of code that logs the %typeof% this variable.",
           "result": "%object%",
           "note": "Always remember that arrays are a special type of object in JS.",
-          "solution": "const playlist = ['Song 1', 'Song 2'];\nconsole.log(typeof playlist);",
-          "done": false
+          "solution": "const playlist = ['Song 1', 'Song 2'];\nconsole.log(typeof playlist);"
         }
       ]
     },
@@ -1245,8 +1230,7 @@ export const seedData = {
           "description": "Declare %pass = '12345'%. If the length is less than 6, log %'Weak'%. Otherwise, log %'Strong'%.",
           "result": "%Weak%",
           "note": "A common real-world use for .length is checking input requirements.",
-          "solution": "const pass = '12345';\nif (pass.length < 6) {\n  console.log('Weak');\n} else {\n  console.log('Strong');\n}",
-          "done": false
+          "solution": "const pass = '12345';\nif (pass.length < 6) {\n  console.log('Weak');\n} else {\n  console.log('Strong');\n}"
         },
         {
           "id": "task-len-202",
@@ -1254,8 +1238,7 @@ export const seedData = {
           "description": "Declare an array %colors% with 4 values. Log the very last item by using the %length - 1% pattern.",
           "result": "%(Your last color)%",
           "note": "Using length - 1 ensures you always get the last item regardless of how many are in the array.",
-          "solution": "const colors = ['Red', 'Green', 'Blue', 'Yellow'];\nconsole.log(colors[colors.length - 1]);",
-          "done": false
+          "solution": "const colors = ['Red', 'Green', 'Blue', 'Yellow'];\nconsole.log(colors[colors.length - 1]);"
         },
         {
           "id": "task-len-203",
@@ -1263,8 +1246,7 @@ export const seedData = {
           "description": "Declare %bio = 'Hello world'%. Create a variable %left% that subtracts the length of the bio from a limit of %50%. Log %`Remaining: ${left}`%.",
           "result": "%Remaining: 39%",
           "note": "Template literals combined with .length are great for UI feedback.",
-          "solution": "const bio = 'Hello world';\nconst left = 50 - bio.length;\nconsole.log(`Remaining: ${left}`);",
-          "done": false
+          "solution": "const bio = 'Hello world';\nconst left = 50 - bio.length;\nconsole.log(`Remaining: ${left}`);"
         }
       ]
     },
@@ -1325,8 +1307,7 @@ export const seedData = {
           "description": "Declare an object %product% with %name: 'Phone'% and %price: 500%. Then, add a %color% property using dot notation after the object is created.",
           "result": "%Phone 500 (color value)%",
           "note": "Objects are mutable, meaning you can add properties at any time.",
-          "solution": "const product = { name: 'Phone', price: 500 };\nproduct.color = 'Silver';\nconsole.log(product.name, product.price, product.color);",
-          "done": false
+          "solution": "const product = { name: 'Phone', price: 500 };\nproduct.color = 'Silver';\nconsole.log(product.name, product.price, product.color);"
         },
         {
           "id": "task-obj-302",
@@ -1334,8 +1315,7 @@ export const seedData = {
           "description": "Declare an empty object %settings%. Log its %Boolean% value to the console.",
           "result": "%true%",
           "note": "Just like arrays, even an empty object {} is truthy.",
-          "solution": "const settings = {};\nconsole.log(Boolean(settings));",
-          "done": false
+          "solution": "const settings = {};\nconsole.log(Boolean(settings));"
         },
         {
           "id": "task-obj-303",
@@ -1343,8 +1323,7 @@ export const seedData = {
           "description": "Declare an object %movie% with a property key %'release-year'% set to %2024%. Log that specific property using bracket notation.",
           "result": "%2024%",
           "note": "If a key has a hyphen or space, dot notation will break.",
-          "solution": "const movie = { 'release-year': 2024 };\nconsole.log(movie['release-year']);",
-          "done": false
+          "solution": "const movie = { 'release-year': 2024 };\nconsole.log(movie['release-year']);"
         }
       ]
     },
@@ -1405,8 +1384,7 @@ export const seedData = {
           "description": "Create an arrow function %notify% that takes a %username% parameter. It should log %`User ${username} just logged in`%. Call it once with %'Admin'%.",
           "result": "%User Admin just logged in%",
           "note": "Parameters allow you to reuse the same logic with different data.",
-          "solution": "const notify = (username) => {\n  console.log(`User ${username} just logged in`);\n};\nnotify('Admin');",
-          "done": false
+          "solution": "const notify = (username) => {\n  console.log(`User ${username} just logged in`);\n};\nnotify('Admin');"
         },
         {
           "id": "task-func-402",
@@ -1414,8 +1392,7 @@ export const seedData = {
           "description": "Write a function %checkWeather% with two parameters: %temp% and %scale%. Set the default value of %scale% to %'Celsius'%. Log %`It is ${temp} degrees ${scale}`%.",
           "result": "%It is 25 degrees Celsius%",
           "note": "Default parameters act as a safety net when an argument is missing.",
-          "solution": "const checkWeather = (temp, scale = 'Celsius') => {\n  console.log(`It is ${temp} degrees ${scale}`);\n};\ncheckWeather(25);",
-          "done": false
+          "solution": "const checkWeather = (temp, scale = 'Celsius') => {\n  console.log(`It is ${temp} degrees ${scale}`);\n};\ncheckWeather(25);"
         },
         {
           "id": "task-func-403",
@@ -1423,8 +1400,7 @@ export const seedData = {
           "description": "Create a function %showPet% that receives an object with keys %type% and %breed%. Log a message like %'This is a Dog of breed Husky'%.",
           "result": "%This is a Dog of breed Husky%",
           "note": "Passing an object into a function is a great way to handle multiple related pieces of data.",
-          "solution": "const showPet = (pet) => {\n  console.log(`This is a ${pet.type} of breed ${pet.breed}`);\n};\nshowPet({ type: 'Dog', breed: 'Husky' });",
-          "done": false
+          "solution": "const showPet = (pet) => {\n  console.log(`This is a ${pet.type} of breed ${pet.breed}`);\n};\nshowPet({ type: 'Dog', breed: 'Husky' });"
         }
       ]
     },
@@ -1507,8 +1483,7 @@ export const seedData = {
           "description": "Declare a global variable %appMode = 'Dark'%. Create an arrow function %getMode% that logs the %appMode%. Call the function.",
           "result": "%Dark%",
           "note": "Variables declared outside of any block are accessible anywhere in your script.",
-          "solution": "const appMode = 'Dark';\nconst getMode = () => {\n  console.log(appMode);\n};\ngetMode();",
-          "done": false
+          "solution": "const appMode = 'Dark';\nconst getMode = () => {\n  console.log(appMode);\n};\ngetMode();"
         },
         {
           "id": "task-sco-502",
@@ -1516,8 +1491,7 @@ export const seedData = {
           "description": "Inside an %if (true)% block, declare %const temp = 98.6%. Try to %console.log(temp)% outside the block and observe the error.",
           "result": "%ReferenceError%",
           "note": "Using 'const' or 'let' locks the variable inside the nearest curly braces {}.",
-          "solution": "if (true) {\n  const temp = 98.6;\n}\n// console.log(temp); // This will cause the error",
-          "done": false
+          "solution": "if (true) {\n  const temp = 98.6;\n}\n// console.log(temp); // This will cause the error"
         },
         {
           "id": "task-sco-503",
@@ -1525,8 +1499,7 @@ export const seedData = {
           "description": "Create a function called %saveData%. Inside, declare %let apiKey = 'abc-123'%. Outside the function, declare another %let apiKey = 'xyz-789'%. Log the one outside the function.",
           "result": "%xyz-789%",
           "note": "Functions create their own scope; variables inside don't 'leak' out to the global space.",
-          "solution": "function saveData() {\n  let apiKey = 'abc-123';\n}\nlet apiKey = 'xyz-789';\nconsole.log(apiKey);",
-          "done": false
+          "solution": "function saveData() {\n  let apiKey = 'abc-123';\n}\nlet apiKey = 'xyz-789';\nconsole.log(apiKey);"
         },
         {
           "id": "task-sco-504",
@@ -1534,8 +1507,7 @@ export const seedData = {
           "description": "Declare a global %points = 0%. Create a function %addPoints% that declares its own local %let points = 50% and logs it. Then log the global %points% outside.",
           "result": "%50 then 0%",
           "note": "Local variables with the same name as global ones take priority inside the function.",
-          "solution": "let points = 0;\nconst addPoints = () => {\n  let points = 50;\n  console.log(points);\n};\naddPoints();\nconsole.log(points);",
-          "done": false
+          "solution": "let points = 0;\nconst addPoints = () => {\n  let points = 50;\n  console.log(points);\n};\naddPoints();\nconsole.log(points);"
         }
       ]
     },
@@ -1605,8 +1577,7 @@ export const seedData = {
           "description": "Write a function declaration called %boot% that logs %'System Booting'%. Call this function *before* you actually write its definition in the code.",
           "result": "%System Booting%",
           "note": "Function declarations are moved to the top of their scope by the JS engine.",
-          "solution": "boot();\nfunction boot() {\n  console.log('System Booting');\n}",
-          "done": false
+          "solution": "boot();\nfunction boot() {\n  console.log('System Booting');\n}"
         },
         {
           "id": "task-hoi-602",
@@ -1614,8 +1585,7 @@ export const seedData = {
           "description": "Create a function %initApp%. Inside it, call a function %loadConfig% before defining it. Inside %loadConfig%, log %'Config Loaded'%.",
           "result": "%Config Loaded%",
           "note": "Hoisting also works for functions nested inside other functions.",
-          "solution": "function initApp() {\n  loadConfig();\n  function loadConfig() {\n    console.log('Config Loaded');\n  }\n}\ninitApp();",
-          "done": false
+          "solution": "function initApp() {\n  loadConfig();\n  function loadConfig() {\n    console.log('Config Loaded');\n  }\n}\ninitApp();"
         },
         {
           "id": "task-hoi-603",
@@ -1623,8 +1593,7 @@ export const seedData = {
           "description": "Declare a constant %run% and assign it an arrow function that logs %'Running'%. Try to call %run()% before the declaration and comment out why it fails.",
           "result": "%ReferenceError%",
           "note": "Arrow functions assigned to variables (const/let) are NOT hoisted like function declarations.",
-          "solution": "// run(); // This would cause a ReferenceError\nconst run = () => {\n  console.log('Running');\n};",
-          "done": false
+          "solution": "// run(); // This would cause a ReferenceError\nconst run = () => {\n  console.log('Running');\n};"
         }
       ]
     },
@@ -1695,8 +1664,7 @@ export const seedData = {
           "description": "Create a function %add% that takes two parameters and %returns% their sum. Store the result in a variable and log that variable.",
           "result": "%(The sum)%",
           "note": "Returning values allows you to 'capture' the result of a calculation for later use.",
-          "solution": "function add(a, b) {\n  return a + b;\n}\nconst total = add(5, 10);\nconsole.log(total);",
-          "done": false
+          "solution": "function add(a, b) {\n  return a + b;\n}\nconst total = add(5, 10);\nconsole.log(total);"
         },
         {
           "id": "task-ret-702",
@@ -1704,8 +1672,7 @@ export const seedData = {
           "description": "Write a function %checkAge% that takes a %number%. If the number is less than 18, %return 'Too young'%. Otherwise, %return 'Welcome'%.",
           "result": "%'Too young' or 'Welcome'%",
           "note": "Using return inside an 'if' statement is a great way to stop a function as soon as you have your answer.",
-          "solution": "const checkAge = (age) => {\n  if (age < 18) return 'Too young to drive.';\n  return 'Welcome';\n};",
-          "done": false
+          "solution": "const checkAge = (age) => {\n  if (age < 18) return 'Too young to drive.';\n  return 'Welcome';\n};"
         },
         {
           "id": "task-ret-703",
@@ -1713,8 +1680,7 @@ export const seedData = {
           "description": "Create a function %formatUser% that takes %name% and %role%. It should return an object like %{ displayName: name, access: role }%.",
           "result": "%{ displayName: '...', access: '...' }%",
           "note": "Functions often act as 'factories' that build and return objects.",
-          "solution": "const formatUser = (name, role) => {\n  return {\n    displayName: name,\n    access: role\n  };\n};",
-          "done": false
+          "solution": "const formatUser = (name, role) => {\n  return {\n    displayName: name,\n    access: role\n  };\n};"
         }
       ]
     },
@@ -1764,8 +1730,7 @@ export const seedData = {
           "description": "Create an object %admin = { power: 'All' }%. Declare a second variable %manager% and set it to %admin%. Change the %power% property of %manager% to %'Limited'%. Log %admin.power%.",
           "result": "%Limited%",
           "note": "Both variables point to the same space in memory. Changing one changes the 'source'.",
-          "solution": "const admin = { power: 'All' };\nconst manager = admin;\nmanager.power = 'Limited';\nconsole.log(admin.power);",
-          "done": false
+          "solution": "const admin = { power: 'All' };\nconst manager = admin;\nmanager.power = 'Limited';\nconsole.log(admin.power);"
         },
         {
           "id": "task-pri-803",
@@ -1773,8 +1738,7 @@ export const seedData = {
           "description": "Declare %const phone = { brand: 'Apple' }%. Change the brand to %'Samsung'%. Log the object.",
           "result": "%{ brand: 'Samsung' }%",
           "note": "Even with 'const', you can change properties inside an object, because the reference (the 'address') hasn't changed.",
-          "solution": "const phone = { brand: 'Apple' };\nphone.brand = 'Samsung';\nconsole.log(phone);",
-          "done": false
+          "solution": "const phone = { brand: 'Apple' };\nphone.brand = 'Samsung';\nconsole.log(phone);"
         }
       ]
     },
@@ -1784,78 +1748,78 @@ export const seedData = {
       "milestone": true,
       "videoID": "30",
       "questions": [
-        { "id": "mq2-01", "title": "Identifying Arrays", "question": "const favoriteColors = ['red', 'blue'];\nconsole.log(typeof favoriteColors);", "options": [{ "id": "o1", "option": "a", "text": "'array'", "correct": false, "selected": false }, { "id": "o2", "option": "b", "text": "'object'", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-02", "title": "Empty Array Truthiness", "question": "const shoppingCart = [];\nif (shoppingCart) {\n  console.log('Cart exists');\n}", "options": [{ "id": "o3", "option": "a", "text": "It logs 'Cart exists'", "correct": true, "selected": false }, { "id": "o4", "option": "b", "text": "Nothing happens", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-03", "title": "Accessing First Item", "question": "const projectDeadlines = [10, 20, 30];\nconsole.log(projectDeadlines[0]);", "options": [{ "id": "o5", "option": "a", "text": "10", "correct": true, "selected": false }, { "id": "o6", "option": "b", "text": "20", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-04", "title": "String Length", "question": "const userStatus = 'Online';\nconsole.log(userStatus.length);", "options": [{ "id": "o7", "option": "a", "text": "5", "correct": false, "selected": false }, { "id": "o8", "option": "b", "text": "6", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-05", "title": "Out of Bounds Index", "question": "const teamMembers = ['Alisa', 'Max'];\nconsole.log(teamMembers[2]);", "options": [{ "id": "o9", "option": "a", "text": "undefined", "correct": true, "selected": false }, { "id": "o10", "option": "b", "text": "Error", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-06", "title": "Space in Strings", "question": "const emptySpace = ' ';\nconsole.log(emptySpace.length);", "options": [{ "id": "o11", "option": "a", "text": "0", "correct": false, "selected": false }, { "id": "o12", "option": "b", "text": "1", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-07", "title": "Missing Object Key", "question": "const employee = { name: 'Alisa' };\nconsole.log(employee.salary);", "options": [{ "id": "o13", "option": "a", "text": "undefined", "correct": true, "selected": false }, { "id": "o14", "option": "b", "text": "null", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-08", "title": "Bracket Notation Need", "question": "const laptop = { 'disk-space': '500GB' };\n// How do we access disk-space?", "options": [{ "id": "o15", "option": "a", "text": "laptop.disk-space", "correct": false, "selected": false }, { "id": "o16", "option": "b", "text": "laptop['disk-space']", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-09", "title": "Running a Function", "question": "function sendEmail() {\n  return 'Sent';\n}\n// Which one actually runs the function?", "options": [{ "id": "o17", "option": "a", "text": "sendEmail()", "correct": true, "selected": false }, { "id": "o18", "option": "b", "text": "sendEmail", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-10", "title": "Default Parameters", "question": "function setVolume(level = 50) {\n  return level;\n}\nconsole.log(setVolume());", "options": [{ "id": "o19", "option": "a", "text": "50", "correct": true, "selected": false }, { "id": "o20", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-11", "title": "Global Scope Access", "question": "const globalScore = 100;\nfunction showScore() {\n  console.log(globalScore);\n}\nshowScore();", "options": [{ "id": "o21", "option": "a", "text": "It logs 100", "correct": true, "selected": false }, { "id": "o22", "option": "b", "text": "ReferenceError", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-12", "title": "Block Scope Const", "question": "if (true) {\n  const internalCode = 999;\n}\nconsole.log(internalCode);", "options": [{ "id": "o23", "option": "a", "text": "999", "correct": false, "selected": false }, { "id": "o24", "option": "b", "text": "ReferenceError", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-13", "title": "Function Hoisting", "question": "greetUser();\nfunction greetUser() {\n  console.log('Welcome!');\n}", "options": [{ "id": "o25", "option": "a", "text": "Works (logs 'Welcome!')", "correct": true, "selected": false }, { "id": "o26", "option": "b", "text": "Fails (Error)", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-14", "title": "Arrow Function Hoisting", "question": "launch();\nconst launch = () => {\n  console.log('Liftoff');\n};", "options": [{ "id": "o27", "option": "a", "text": "Works", "correct": false, "selected": false }, { "id": "o28", "option": "b", "text": "Fails (ReferenceError)", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-15", "title": "The Return Wall", "question": "function processOrder() {\n  return 'Success';\n  console.log('Sending Notification...');\n}\nprocessOrder();", "options": [{ "id": "o29", "option": "a", "text": "Logs 'Sending Notification...'", "correct": false, "selected": false }, { "id": "o30", "option": "b", "text": "Nothing logs", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-16", "title": "Arrow Implicit Return", "question": "const multiplyByTwo = (number) => number * 2;\nconsole.log(multiplyByTwo(5));", "options": [{ "id": "o31", "option": "a", "text": "10", "correct": true, "selected": false }, { "id": "o32", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-17", "title": "Primitive Value Copy", "question": "let originalPrice = 100;\nlet salePrice = originalPrice;\nsalePrice = 80;\nconsole.log(originalPrice);", "options": [{ "id": "o33", "option": "a", "text": "100", "correct": true, "selected": false }, { "id": "o34", "option": "b", "text": "80", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-18", "title": "Object Reference Copy", "question": "const userProfile = { age: 25 };\nconst updatedProfile = userProfile;\nupdatedProfile.age = 30;\nconsole.log(userProfile.age);", "options": [{ "id": "o35", "option": "a", "text": "30", "correct": true, "selected": false }, { "id": "o36", "option": "b", "text": "25", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-19", "title": "Local Scope Privacy", "question": "function setPrice() {\n  let discount = 0.1;\n}\nconsole.log(discount);", "options": [{ "id": "o37", "option": "a", "text": "ReferenceError", "correct": true, "selected": false }, { "id": "o38", "option": "b", "text": "0.1", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-20", "title": "Implicit Return Array", "question": "const getScores = () => [90, 85, 70];\nconst currentScores = getScores();\nconsole.log(currentScores[1]);", "options": [{ "id": "o39", "option": "a", "text": "85", "correct": true, "selected": false }, { "id": "o40", "option": "b", "text": "90", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-21", "title": "Array Length Property", "question": "const taskList = ['Task 1', 'Task 2'];\nconsole.log(taskList.length);", "options": [{ "id": "o41", "option": "a", "text": "2", "correct": true, "selected": false }, { "id": "o42", "option": "b", "text": "1", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-22", "title": "Property Update", "question": "const vehicle = { type: 'Car' };\nvehicle.type = 'Truck';\nconsole.log(vehicle.type);", "options": [{ "id": "o43", "option": "a", "text": "'Truck'", "correct": true, "selected": false }, { "id": "o44", "option": "b", "text": "Error (it is const)", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-23", "title": "Last Index Logic", "question": "If an array has a length of 5 items, what index is the last item located at?", "options": [{ "id": "o45", "option": "a", "text": "5", "correct": false, "selected": false }, { "id": "o46", "option": "b", "text": "4", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "mq2-24", "title": "Function with No Return", "question": "function logMessage() {\n  console.log('Action performed');\n}\nconst result = logMessage();\nconsole.log(result);", "options": [{ "id": "o47", "option": "a", "text": "undefined", "correct": true, "selected": false }, { "id": "o48", "option": "b", "text": "null", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-25", "title": "Const Object Mutation", "question": "Can you add a NEW property to an object declared with 'const'?", "options": [{ "id": "o49", "option": "a", "text": "Yes", "correct": true, "selected": false }, { "id": "o50", "option": "b", "text": "No", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-26", "title": "Array Indexing", "question": "const ages = [21, 25, 30];\nconsole.log(ages[1]);", "options": [{ "id": "o51", "option": "a", "text": "25", "correct": true, "selected": false }, { "id": "o52", "option": "b", "text": "21", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-27", "title": "Length calculation", "question": "const language = 'JavaScript';\nconsole.log(language.length - 1);", "options": [{ "id": "o53", "option": "a", "text": "9", "correct": true, "selected": false }, { "id": "o54", "option": "b", "text": "10", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-28", "title": "Variable keys", "question": "const userProperty = 'username';\nconst account = { username: 'Admin' };\nconsole.log(account[userProperty]);", "options": [{ "id": "o55", "option": "a", "text": "'Admin'", "correct": true, "selected": false }, { "id": "o56", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-29", "title": "Shadowing Variables", "question": "let totalAmount = 50;\nfunction updateAmount() {\n  let totalAmount = 100;\n  console.log(totalAmount);\n}\nupdateAmount();", "options": [{ "id": "o57", "option": "a", "text": "100", "correct": true, "selected": false }, { "id": "o58", "option": "b", "text": "50", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-30", "title": "Multiple Returns", "question": "function validate(val) {\n  if (val > 0) return 'Valid';\n  return 'Invalid';\n}\nconsole.log(validate(10));", "options": [{ "id": "o59", "option": "a", "text": "'Valid'", "correct": true, "selected": false }, { "id": "o60", "option": "b", "text": "'Invalid'", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-31", "title": "Extra Arguments", "question": "function addNumbers(a, b) {\n  return a + b;\n}\nconsole.log(addNumbers(5, 5, 100));", "options": [{ "id": "o61", "option": "a", "text": "10", "correct": true, "selected": false }, { "id": "o62", "option": "b", "text": "110", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-32", "title": "Object Falsiness", "question": "Is an empty object {} considered 'falsy' in an if-statement?", "options": [{ "id": "o63", "option": "a", "text": "No, it is truthy", "correct": true, "selected": false }, { "id": "o64", "option": "b", "text": "Yes, it is falsy", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-33", "title": "Implicit Return Object", "question": "const createPlayer = (playerName) => ({ name: playerName });\n// What does this function return?", "options": [{ "id": "o65", "option": "a", "text": "An object with a name property", "correct": true, "selected": false }, { "id": "o66", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-34", "title": "String Reference", "question": "let cityOne = 'London';\nlet cityTwo = cityOne;\ncityTwo = 'Paris';\n// Does cityOne change?", "options": [{ "id": "o67", "option": "a", "text": "No", "correct": true, "selected": false }, { "id": "o68", "option": "b", "text": "Yes", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-35", "title": "Arrow Body No Return", "question": "const getNumber = () => { 10 };\nconsole.log(getNumber());", "options": [{ "id": "o69", "option": "a", "text": "undefined", "correct": true, "selected": false }, { "id": "o70", "option": "b", "text": "10", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-36", "title": "Implicit Return Logic", "question": "const isEven = (n) => n % 2 === 0;\nconsole.log(isEven(4));", "options": [{ "id": "o71", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o72", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-37", "title": "Typeof Null", "question": "console.log(typeof null);", "options": [{ "id": "o73", "option": "a", "text": "'object'", "correct": true, "selected": false }, { "id": "o74", "option": "b", "text": "'null'", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-38", "title": "Scope Isolation", "question": "function taskA() { let status = 'done'; }\nfunction taskB() { let status = 'pending'; }\n// Do these variables cause an error?", "options": [{ "id": "o75", "option": "a", "text": "No, they are isolated in their functions", "correct": true, "selected": false }, { "id": "o76", "option": "b", "text": "Yes, name conflict", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-39", "title": "Template Literal return", "question": "const currentYear = 2026;\nconst getYear = () => `Year: ${currentYear}`;\nconsole.log(getYear());", "options": [{ "id": "o77", "option": "a", "text": "'Year: 2026'", "correct": true, "selected": false }, { "id": "o78", "option": "b", "text": "Year: 2026 (no quotes)", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-40", "title": "Object value access", "question": "const userSettings = { volume: 80 };\nconsole.log(userSettings['volume']);", "options": [{ "id": "o79", "option": "a", "text": "80", "correct": true, "selected": false }, { "id": "o80", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-41", "title": "Variable for object property", "question": "const dataKey = 'email';\nconst userAccount = { email: 'test@test.com' };\nconsole.log(userAccount.dataKey);", "options": [{ "id": "o81", "option": "a", "text": "undefined", "correct": true, "selected": false }, { "id": "o82", "option": "b", "text": "'test@test.com'", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-42", "title": "Implicit Return vs Braces", "question": "const result = () => 5 + 5;\nconsole.log(result());", "options": [{ "id": "o83", "option": "a", "text": "10", "correct": true, "selected": false }, { "id": "o84", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-43", "title": "Boolean Conversion", "question": "Boolean(0)", "options": [{ "id": "o85", "option": "a", "text": "false", "correct": true, "selected": false }, { "id": "o86", "option": "b", "text": "true", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-44", "title": "Negative Index", "question": "const pointValues = [1, 2];\nconsole.log(pointValues[-1]);", "options": [{ "id": "o87", "option": "a", "text": "undefined", "correct": true, "selected": false }, { "id": "o88", "option": "b", "text": "Error", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-45", "title": "Redeclaring in Scope", "question": "let username = 'Alisa';\nlet username = 'Max'; // (Same scope)", "options": [{ "id": "o89", "option": "a", "text": "Error", "correct": true, "selected": false }, { "id": "o90", "option": "b", "text": "Name changes", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-46", "title": "Logic in Return", "question": "const isAdult = (age) => age >= 18;\nconsole.log(isAdult(20));", "options": [{ "id": "o91", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o92", "option": "b", "text": "false", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-47", "title": "Double space length", "question": "const fillerText = '  ';\nconsole.log(fillerText.length);", "options": [{ "id": "o93", "option": "a", "text": "2", "correct": true, "selected": false }, { "id": "o94", "option": "b", "text": "0", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-48", "title": "Undefined type", "question": "console.log(typeof undefined);", "options": [{ "id": "o95", "option": "a", "text": "'undefined'", "correct": true, "selected": false }, { "id": "o96", "option": "b", "text": "'object'", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-49", "title": "Implicit Return Config", "question": "const getConfig = (type) => ({ theme: type });\nconst myConfig = getConfig('Dark');\nconsole.log(myConfig.theme);", "options": [{ "id": "o97", "option": "a", "text": "'Dark'", "correct": true, "selected": false }, { "id": "o98", "option": "b", "text": "undefined", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "mq2-50", "title": "Parameters as Variables", "question": "function update(data) {\n  return data;\n}\n// Is 'data' accessible outside the function?", "options": [{ "id": "o99", "option": "a", "text": "No", "correct": true, "selected": false }, { "id": "o100", "option": "b", "text": "Yes", "correct": false, "selected": false }], "correctAnswer": "a" }
+        { "id": "mq2-01", "title": "Identifying Arrays", "question": "const favoriteColors = ['red', 'blue'];\nconsole.log(typeof favoriteColors);", "options": [{ "id": "o1", "option": "a", "text": "'array'", "correct": false }, { "id": "o2", "option": "b", "text": "'object'", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-02", "title": "Empty Array Truthiness", "question": "const shoppingCart = [];\nif (shoppingCart) {\n  console.log('Cart exists');\n}", "options": [{ "id": "o3", "option": "a", "text": "It logs 'Cart exists'", "correct": true }, { "id": "o4", "option": "b", "text": "Nothing happens", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-03", "title": "Accessing First Item", "question": "const projectDeadlines = [10, 20, 30];\nconsole.log(projectDeadlines[0]);", "options": [{ "id": "o5", "option": "a", "text": "10", "correct": true }, { "id": "o6", "option": "b", "text": "20", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-04", "title": "String Length", "question": "const userStatus = 'Online';\nconsole.log(userStatus.length);", "options": [{ "id": "o7", "option": "a", "text": "5", "correct": false }, { "id": "o8", "option": "b", "text": "6", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-05", "title": "Out of Bounds Index", "question": "const teamMembers = ['Alisa', 'Max'];\nconsole.log(teamMembers[2]);", "options": [{ "id": "o9", "option": "a", "text": "undefined", "correct": true }, { "id": "o10", "option": "b", "text": "Error", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-06", "title": "Space in Strings", "question": "const emptySpace = ' ';\nconsole.log(emptySpace.length);", "options": [{ "id": "o11", "option": "a", "text": "0", "correct": false }, { "id": "o12", "option": "b", "text": "1", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-07", "title": "Missing Object Key", "question": "const employee = { name: 'Alisa' };\nconsole.log(employee.salary);", "options": [{ "id": "o13", "option": "a", "text": "undefined", "correct": true }, { "id": "o14", "option": "b", "text": "null", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-08", "title": "Bracket Notation Need", "question": "const laptop = { 'disk-space': '500GB' };\n// How do we access disk-space?", "options": [{ "id": "o15", "option": "a", "text": "laptop.disk-space", "correct": false }, { "id": "o16", "option": "b", "text": "laptop['disk-space']", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-09", "title": "Running a Function", "question": "function sendEmail() {\n  return 'Sent';\n}\n// Which one actually runs the function?", "options": [{ "id": "o17", "option": "a", "text": "sendEmail()", "correct": true }, { "id": "o18", "option": "b", "text": "sendEmail", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-10", "title": "Default Parameters", "question": "function setVolume(level = 50) {\n  return level;\n}\nconsole.log(setVolume());", "options": [{ "id": "o19", "option": "a", "text": "50", "correct": true }, { "id": "o20", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-11", "title": "Global Scope Access", "question": "const globalScore = 100;\nfunction showScore() {\n  console.log(globalScore);\n}\nshowScore();", "options": [{ "id": "o21", "option": "a", "text": "It logs 100", "correct": true }, { "id": "o22", "option": "b", "text": "ReferenceError", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-12", "title": "Block Scope Const", "question": "if (true) {\n  const internalCode = 999;\n}\nconsole.log(internalCode);", "options": [{ "id": "o23", "option": "a", "text": "999", "correct": false }, { "id": "o24", "option": "b", "text": "ReferenceError", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-13", "title": "Function Hoisting", "question": "greetUser();\nfunction greetUser() {\n  console.log('Welcome!');\n}", "options": [{ "id": "o25", "option": "a", "text": "Works (logs 'Welcome!')", "correct": true }, { "id": "o26", "option": "b", "text": "Fails (Error)", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-14", "title": "Arrow Function Hoisting", "question": "launch();\nconst launch = () => {\n  console.log('Liftoff');\n};", "options": [{ "id": "o27", "option": "a", "text": "Works", "correct": false }, { "id": "o28", "option": "b", "text": "Fails (ReferenceError)", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-15", "title": "The Return Wall", "question": "function processOrder() {\n  return 'Success';\n  console.log('Sending Notification...');\n}\nprocessOrder();", "options": [{ "id": "o29", "option": "a", "text": "Logs 'Sending Notification...'", "correct": false }, { "id": "o30", "option": "b", "text": "Nothing logs", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-16", "title": "Arrow Implicit Return", "question": "const multiplyByTwo = (number) => number * 2;\nconsole.log(multiplyByTwo(5));", "options": [{ "id": "o31", "option": "a", "text": "10", "correct": true }, { "id": "o32", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-17", "title": "Primitive Value Copy", "question": "let originalPrice = 100;\nlet salePrice = originalPrice;\nsalePrice = 80;\nconsole.log(originalPrice);", "options": [{ "id": "o33", "option": "a", "text": "100", "correct": true }, { "id": "o34", "option": "b", "text": "80", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-18", "title": "Object Reference Copy", "question": "const userProfile = { age: 25 };\nconst updatedProfile = userProfile;\nupdatedProfile.age = 30;\nconsole.log(userProfile.age);", "options": [{ "id": "o35", "option": "a", "text": "30", "correct": true }, { "id": "o36", "option": "b", "text": "25", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-19", "title": "Local Scope Privacy", "question": "function setPrice() {\n  let discount = 0.1;\n}\nconsole.log(discount);", "options": [{ "id": "o37", "option": "a", "text": "ReferenceError", "correct": true }, { "id": "o38", "option": "b", "text": "0.1", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-20", "title": "Implicit Return Array", "question": "const getScores = () => [90, 85, 70];\nconst currentScores = getScores();\nconsole.log(currentScores[1]);", "options": [{ "id": "o39", "option": "a", "text": "85", "correct": true }, { "id": "o40", "option": "b", "text": "90", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-21", "title": "Array Length Property", "question": "const taskList = ['Task 1', 'Task 2'];\nconsole.log(taskList.length);", "options": [{ "id": "o41", "option": "a", "text": "2", "correct": true }, { "id": "o42", "option": "b", "text": "1", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-22", "title": "Property Update", "question": "const vehicle = { type: 'Car' };\nvehicle.type = 'Truck';\nconsole.log(vehicle.type);", "options": [{ "id": "o43", "option": "a", "text": "'Truck'", "correct": true }, { "id": "o44", "option": "b", "text": "Error (it is const)", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-23", "title": "Last Index Logic", "question": "If an array has a length of 5 items, what index is the last item located at?", "options": [{ "id": "o45", "option": "a", "text": "5", "correct": false }, { "id": "o46", "option": "b", "text": "4", "correct": true }], "correctAnswer": "b" },
+        { "id": "mq2-24", "title": "Function with No Return", "question": "function logMessage() {\n  console.log('Action performed');\n}\nconst result = logMessage();\nconsole.log(result);", "options": [{ "id": "o47", "option": "a", "text": "undefined", "correct": true }, { "id": "o48", "option": "b", "text": "null", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-25", "title": "Const Object Mutation", "question": "Can you add a NEW property to an object declared with 'const'?", "options": [{ "id": "o49", "option": "a", "text": "Yes", "correct": true }, { "id": "o50", "option": "b", "text": "No", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-26", "title": "Array Indexing", "question": "const ages = [21, 25, 30];\nconsole.log(ages[1]);", "options": [{ "id": "o51", "option": "a", "text": "25", "correct": true }, { "id": "o52", "option": "b", "text": "21", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-27", "title": "Length calculation", "question": "const language = 'JavaScript';\nconsole.log(language.length - 1);", "options": [{ "id": "o53", "option": "a", "text": "9", "correct": true }, { "id": "o54", "option": "b", "text": "10", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-28", "title": "Variable keys", "question": "const userProperty = 'username';\nconst account = { username: 'Admin' };\nconsole.log(account[userProperty]);", "options": [{ "id": "o55", "option": "a", "text": "'Admin'", "correct": true }, { "id": "o56", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-29", "title": "Shadowing Variables", "question": "let totalAmount = 50;\nfunction updateAmount() {\n  let totalAmount = 100;\n  console.log(totalAmount);\n}\nupdateAmount();", "options": [{ "id": "o57", "option": "a", "text": "100", "correct": true }, { "id": "o58", "option": "b", "text": "50", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-30", "title": "Multiple Returns", "question": "function validate(val) {\n  if (val > 0) return 'Valid';\n  return 'Invalid';\n}\nconsole.log(validate(10));", "options": [{ "id": "o59", "option": "a", "text": "'Valid'", "correct": true }, { "id": "o60", "option": "b", "text": "'Invalid'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-31", "title": "Extra Arguments", "question": "function addNumbers(a, b) {\n  return a + b;\n}\nconsole.log(addNumbers(5, 5, 100));", "options": [{ "id": "o61", "option": "a", "text": "10", "correct": true }, { "id": "o62", "option": "b", "text": "110", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-32", "title": "Object Falsiness", "question": "Is an empty object {} considered 'falsy' in an if-statement?", "options": [{ "id": "o63", "option": "a", "text": "No, it is truthy", "correct": true }, { "id": "o64", "option": "b", "text": "Yes, it is falsy", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-33", "title": "Implicit Return Object", "question": "const createPlayer = (playerName) => ({ name: playerName });\n// What does this function return?", "options": [{ "id": "o65", "option": "a", "text": "An object with a name property", "correct": true }, { "id": "o66", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-34", "title": "String Reference", "question": "let cityOne = 'London';\nlet cityTwo = cityOne;\ncityTwo = 'Paris';\n// Does cityOne change?", "options": [{ "id": "o67", "option": "a", "text": "No", "correct": true }, { "id": "o68", "option": "b", "text": "Yes", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-35", "title": "Arrow Body No Return", "question": "const getNumber = () => { 10 };\nconsole.log(getNumber());", "options": [{ "id": "o69", "option": "a", "text": "undefined", "correct": true }, { "id": "o70", "option": "b", "text": "10", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-36", "title": "Implicit Return Logic", "question": "const isEven = (n) => n % 2 === 0;\nconsole.log(isEven(4));", "options": [{ "id": "o71", "option": "a", "text": "true", "correct": true }, { "id": "o72", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-37", "title": "Typeof Null", "question": "console.log(typeof null);", "options": [{ "id": "o73", "option": "a", "text": "'object'", "correct": true }, { "id": "o74", "option": "b", "text": "'null'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-38", "title": "Scope Isolation", "question": "function taskA() { let status = 'done'; }\nfunction taskB() { let status = 'pending'; }\n// Do these variables cause an error?", "options": [{ "id": "o75", "option": "a", "text": "No, they are isolated in their functions", "correct": true }, { "id": "o76", "option": "b", "text": "Yes, name conflict", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-39", "title": "Template Literal return", "question": "const currentYear = 2026;\nconst getYear = () => `Year: ${currentYear}`;\nconsole.log(getYear());", "options": [{ "id": "o77", "option": "a", "text": "'Year: 2026'", "correct": true }, { "id": "o78", "option": "b", "text": "Year: 2026 (no quotes)", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-40", "title": "Object value access", "question": "const userSettings = { volume: 80 };\nconsole.log(userSettings['volume']);", "options": [{ "id": "o79", "option": "a", "text": "80", "correct": true }, { "id": "o80", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-41", "title": "Variable for object property", "question": "const dataKey = 'email';\nconst userAccount = { email: 'test@test.com' };\nconsole.log(userAccount.dataKey);", "options": [{ "id": "o81", "option": "a", "text": "undefined", "correct": true }, { "id": "o82", "option": "b", "text": "'test@test.com'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-42", "title": "Implicit Return vs Braces", "question": "const result = () => 5 + 5;\nconsole.log(result());", "options": [{ "id": "o83", "option": "a", "text": "10", "correct": true }, { "id": "o84", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-43", "title": "Boolean Conversion", "question": "Boolean(0)", "options": [{ "id": "o85", "option": "a", "text": "false", "correct": true }, { "id": "o86", "option": "b", "text": "true", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-44", "title": "Negative Index", "question": "const pointValues = [1, 2];\nconsole.log(pointValues[-1]);", "options": [{ "id": "o87", "option": "a", "text": "undefined", "correct": true }, { "id": "o88", "option": "b", "text": "Error", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-45", "title": "Redeclaring in Scope", "question": "let username = 'Alisa';\nlet username = 'Max'; // (Same scope)", "options": [{ "id": "o89", "option": "a", "text": "Error", "correct": true }, { "id": "o90", "option": "b", "text": "Name changes", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-46", "title": "Logic in Return", "question": "const isAdult = (age) => age >= 18;\nconsole.log(isAdult(20));", "options": [{ "id": "o91", "option": "a", "text": "true", "correct": true }, { "id": "o92", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-47", "title": "Double space length", "question": "const fillerText = '  ';\nconsole.log(fillerText.length);", "options": [{ "id": "o93", "option": "a", "text": "2", "correct": true }, { "id": "o94", "option": "b", "text": "0", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-48", "title": "Undefined type", "question": "console.log(typeof undefined);", "options": [{ "id": "o95", "option": "a", "text": "'undefined'", "correct": true }, { "id": "o96", "option": "b", "text": "'object'", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-49", "title": "Implicit Return Config", "question": "const getConfig = (type) => ({ theme: type });\nconst myConfig = getConfig('Dark');\nconsole.log(myConfig.theme);", "options": [{ "id": "o97", "option": "a", "text": "'Dark'", "correct": true }, { "id": "o98", "option": "b", "text": "undefined", "correct": false }], "correctAnswer": "a" },
+        { "id": "mq2-50", "title": "Parameters as Variables", "question": "function update(data) {\n  return data;\n}\n// Is 'data' accessible outside the function?", "options": [{ "id": "o99", "option": "a", "text": "No", "correct": true }, { "id": "o100", "option": "b", "text": "Yes", "correct": false }], "correctAnswer": "a" }
       ],
       "tasks": [
-        { "id": "mt2-01", "title": "Inventory Check", "description": "Declare %const stockItems = [10, 'In Stock', true]%. Log the %typeof% the middle element.", "result": "%string%", "solution": "const stockItems = [10, 'In Stock', true];\nconsole.log(typeof stockItems[1]);", "done": false },
-        { "id": "mt2-02", "title": "Security Check", "description": "Declare %let password = 'abc'%. If the %length% is less than 5, log %'Weak Password'%.", "result": "%Weak Password%", "solution": "let password = 'abc';\nif (password.length < 5) {\n  console.log('Weak Password');\n}", "done": false },
-        { "id": "mt2-03", "title": "Dynamic Profile", "description": "Create an empty object %const userAccount = {}%. After it is created, add a property %email% with a string value.", "result": "%{email: '...'}%", "solution": "const userAccount = {};\nuserAccount.email = 'alisa@example.com';", "done": false },
-        { "id": "mt2-04", "title": "Price Calculator", "description": "Create an arrow function %getDiscountedPrice% that takes %price% and %discount% as parameters and returns the %price - discount%. Log the result of %getDiscountedPrice(100, 20)%.", "result": "%80%", "solution": "const getDiscountedPrice = (price, discount) => {\n  return price - discount;\n};\nconsole.log(getDiscountedPrice(100, 20));", "done": false },
-        { "id": "mt2-05", "title": "Global Settings", "description": "Declare a global variable %const appTheme = 'Dark'%. Create a function %showTheme% that logs this global variable.", "result": "%Dark%", "solution": "const appTheme = 'Dark';\nconst showTheme = () => {\n  console.log(appTheme);\n};\nshowTheme();", "done": false },
-        { "id": "mt2-06", "title": "Function Order", "description": "Write a function declaration %displayAlert()% that logs %'System Ready'%. Call it on the line ABOVE where you wrote the function.", "result": "%System Ready%", "solution": "displayAlert();\nfunction displayAlert() {\n  console.log('System Ready');\n}", "done": false },
-        { "id": "mt2-07", "title": "Shared Database", "description": "Create an object %const database = { status: 'Online' }%. Declare a second variable %localCopy% and set it equal to %database%. Change %localCopy.status% to %'Offline'%. Log %database.status%.", "result": "%Offline%", "solution": "const database = { status: 'Online' };\nconst localCopy = database;\nlocalCopy.status = 'Offline';\nconsole.log(database.status);", "done": false },
-        { "id": "mt2-08", "title": "Label Length", "description": "Declare %const productLabel = 'Premium Coffee'%. Log the length of this string.", "result": "%14%", "solution": "const productLabel = 'Premium Coffee';\nconsole.log(productLabel.length);", "done": false },
-        { "id": "mt2-09", "title": "Smart Greeting", "description": "Create a function %greetMember% that takes a %name% parameter with a default value of %'Guest'%. It should return a template literal: %`Welcome, ${name}`%.", "result": "%Welcome, Guest%", "solution": "const greetMember = (name = 'Guest') => {\n  return `Welcome, ${name}`;\n};\nconsole.log(greetMember());", "done": false },
-        { "id": "mt2-10", "title": "Special Key Access", "description": "Create an object %const serverData = { 'response-time': 150 }%. Use bracket notation to log this property.", "result": "%150%", "solution": "const serverData = { 'response-time': 150 };\nconsole.log(serverData['response-time']);", "done": false },
-        { "id": "mt2-11", "title": "Last Queue Item", "description": "Create an array %const waitingQueue = ['User1', 'User2', 'User3']%. Use the %length% property to log the very last item in the array.", "result": "%User3%", "solution": "const waitingQueue = ['User1', 'User2', 'User3'];\nconsole.log(waitingQueue[waitingQueue.length - 1]);", "done": false },
-        { "id": "mt2-12", "title": "Validation Logic", "description": "Create a function %checkAge% that takes a %userAge% parameter. If %userAge% is 18 or more, return %'Access Granted'%. Otherwise, return %'Access Denied'%.", "result": "%...%", "solution": "const checkAge = (userAge) => {\n  if (userAge >= 18) {\n    return 'Access Granted';\n  }\n  return 'Access Denied';\n};", "done": false },
-        { "id": "mt2-13", "title": "Variable Privacy", "description": "Create a function %saveData%. Inside it, declare %let secretKey = '12345'%. Try to log %secretKey% OUTSIDE the function and explain why it fails.", "result": "%Error%", "solution": "function saveData() {\n  let secretKey = '12345';\n}\n// console.log(secretKey); // Fails because of function scope", "done": false },
-        { "id": "mt2-14", "title": "Complex Data Array", "description": "Declare an array %const userDashboard% that contains: a string (name), a number (id), and an object (settings).", "result": "%[...]%", "solution": "const userDashboard = [\n  'Alisa',\n  101,\n  { theme: 'Light' }\n];", "done": false },
-        { "id": "mt2-15", "title": "Total Score Arrow", "description": "Create an arrow function %calculateTotal% that takes three parameters (%round1%, %round2%, %round3%) and returns their sum using an implicit return.", "result": "%Sum%", "solution": "const calculateTotal = (round1, round2, round3) => round1 + round2 + round3;", "done": false },
-        { "id": "mt2-16", "title": "Object Factory", "description": "Create an arrow function %buildUser% that takes a %username% and returns an object %{ name: username, active: true }% using an implicit return.", "result": "%{name, active}%", "solution": "const buildUser = (username) => ({ name: username, active: true });", "done": false },
-        { "id": "mt2-17", "title": "Type Inspector", "description": "Create a function %inspectValue% that takes one parameter and returns its %typeof% as a string.", "result": "%...%", "solution": "const inspectValue = (input) => {\n  return typeof input;\n};", "done": false },
-        { "id": "mt2-18", "title": "Template Task", "description": "Create an arrow function %formatPrice% that takes a %value% and returns %`$${value}`% using an implicit return.", "result": "%$...%", "solution": "const formatPrice = (value) => `$${value}`;", "done": false },
-        { "id": "mt2-19", "title": "Copy Protection", "description": "Declare %let originalName = 'Max'%. Set %let backupName = originalName%. Change %backupName% to %'Joe'%. Log both to show the original didn't change.", "result": "%Max Joe%", "solution": "let originalName = 'Max';\nlet backupName = originalName;\nbackupName = 'Joe';\nconsole.log(originalName, backupName);", "done": false },
-        { "id": "mt2-20", "title": "Block Security", "description": "Inside an %if (true)% block, declare %const sessionToken = 'XYZ'%. Try to log it outside and see the error.", "result": "%Error%", "solution": "if (true) {\n  const sessionToken = 'XYZ';\n}\n// console.log(sessionToken); // ReferenceError", "done": false }
+        { "id": "mt2-01", "title": "Inventory Check", "description": "Declare %const stockItems = [10, 'In Stock', true]%. Log the %typeof% the middle element.", "result": "%string%", "solution": "const stockItems = [10, 'In Stock', true];\nconsole.log(typeof stockItems[1]);" },
+        { "id": "mt2-02", "title": "Security Check", "description": "Declare %let password = 'abc'%. If the %length% is less than 5, log %'Weak Password'%.", "result": "%Weak Password%", "solution": "let password = 'abc';\nif (password.length < 5) {\n  console.log('Weak Password');\n}" },
+        { "id": "mt2-03", "title": "Dynamic Profile", "description": "Create an empty object %const userAccount = {}%. After it is created, add a property %email% with a string value.", "result": "%{email: '...'}%", "solution": "const userAccount = {};\nuserAccount.email = 'alisa@example.com';" },
+        { "id": "mt2-04", "title": "Price Calculator", "description": "Create an arrow function %getDiscountedPrice% that takes %price% and %discount% as parameters and returns the %price - discount%. Log the result of %getDiscountedPrice(100, 20)%.", "result": "%80%", "solution": "const getDiscountedPrice = (price, discount) => {\n  return price - discount;\n};\nconsole.log(getDiscountedPrice(100, 20));" },
+        { "id": "mt2-05", "title": "Global Settings", "description": "Declare a global variable %const appTheme = 'Dark'%. Create a function %showTheme% that logs this global variable.", "result": "%Dark%", "solution": "const appTheme = 'Dark';\nconst showTheme = () => {\n  console.log(appTheme);\n};\nshowTheme();" },
+        { "id": "mt2-06", "title": "Function Order", "description": "Write a function declaration %displayAlert()% that logs %'System Ready'%. Call it on the line ABOVE where you wrote the function.", "result": "%System Ready%", "solution": "displayAlert();\nfunction displayAlert() {\n  console.log('System Ready');\n}" },
+        { "id": "mt2-07", "title": "Shared Database", "description": "Create an object %const database = { status: 'Online' }%. Declare a second variable %localCopy% and set it equal to %database%. Change %localCopy.status% to %'Offline'%. Log %database.status%.", "result": "%Offline%", "solution": "const database = { status: 'Online' };\nconst localCopy = database;\nlocalCopy.status = 'Offline';\nconsole.log(database.status);" },
+        { "id": "mt2-08", "title": "Label Length", "description": "Declare %const productLabel = 'Premium Coffee'%. Log the length of this string.", "result": "%14%", "solution": "const productLabel = 'Premium Coffee';\nconsole.log(productLabel.length);" },
+        { "id": "mt2-09", "title": "Smart Greeting", "description": "Create a function %greetMember% that takes a %name% parameter with a default value of %'Guest'%. It should return a template literal: %`Welcome, ${name}`%.", "result": "%Welcome, Guest%", "solution": "const greetMember = (name = 'Guest') => {\n  return `Welcome, ${name}`;\n};\nconsole.log(greetMember());" },
+        { "id": "mt2-10", "title": "Special Key Access", "description": "Create an object %const serverData = { 'response-time': 150 }%. Use bracket notation to log this property.", "result": "%150%", "solution": "const serverData = { 'response-time': 150 };\nconsole.log(serverData['response-time']);" },
+        { "id": "mt2-11", "title": "Last Queue Item", "description": "Create an array %const waitingQueue = ['User1', 'User2', 'User3']%. Use the %length% property to log the very last item in the array.", "result": "%User3%", "solution": "const waitingQueue = ['User1', 'User2', 'User3'];\nconsole.log(waitingQueue[waitingQueue.length - 1]);" },
+        { "id": "mt2-12", "title": "Validation Logic", "description": "Create a function %checkAge% that takes a %userAge% parameter. If %userAge% is 18 or more, return %'Access Granted'%. Otherwise, return %'Access Denied'%.", "result": "%...%", "solution": "const checkAge = (userAge) => {\n  if (userAge >= 18) {\n    return 'Access Granted';\n  }\n  return 'Access Denied';\n};" },
+        { "id": "mt2-13", "title": "Variable Privacy", "description": "Create a function %saveData%. Inside it, declare %let secretKey = '12345'%. Try to log %secretKey% OUTSIDE the function and explain why it fails.", "result": "%Error%", "solution": "function saveData() {\n  let secretKey = '12345';\n}\n// console.log(secretKey); // Fails because of function scope" },
+        { "id": "mt2-14", "title": "Complex Data Array", "description": "Declare an array %const userDashboard% that contains: a string (name), a number (id), and an object (settings).", "result": "%[...]%", "solution": "const userDashboard = [\n  'Alisa',\n  101,\n  { theme: 'Light' }\n];" },
+        { "id": "mt2-15", "title": "Total Score Arrow", "description": "Create an arrow function %calculateTotal% that takes three parameters (%round1%, %round2%, %round3%) and returns their sum using an implicit return.", "result": "%Sum%", "solution": "const calculateTotal = (round1, round2, round3) => round1 + round2 + round3;" },
+        { "id": "mt2-16", "title": "Object Factory", "description": "Create an arrow function %buildUser% that takes a %username% and returns an object %{ name: username, active: true }% using an implicit return.", "result": "%{name, active}%", "solution": "const buildUser = (username) => ({ name: username, active: true });" },
+        { "id": "mt2-17", "title": "Type Inspector", "description": "Create a function %inspectValue% that takes one parameter and returns its %typeof% as a string.", "result": "%...%", "solution": "const inspectValue = (input) => {\n  return typeof input;\n};" },
+        { "id": "mt2-18", "title": "Template Task", "description": "Create an arrow function %formatPrice% that takes a %value% and returns %`$${value}`% using an implicit return.", "result": "%$...%", "solution": "const formatPrice = (value) => `$${value}`;" },
+        { "id": "mt2-19", "title": "Copy Protection", "description": "Declare %let originalName = 'Max'%. Set %let backupName = originalName%. Change %backupName% to %'Joe'%. Log both to show the original didn't change.", "result": "%Max Joe%", "solution": "let originalName = 'Max';\nlet backupName = originalName;\nbackupName = 'Joe';\nconsole.log(originalName, backupName);" },
+        { "id": "mt2-20", "title": "Block Security", "description": "Inside an %if (true)% block, declare %const sessionToken = 'XYZ'%. Try to log it outside and see the error.", "result": "%Error%", "solution": "if (true) {\n  const sessionToken = 'XYZ';\n}\n// console.log(sessionToken); // ReferenceError" }
       ]
     },
     {
@@ -1863,25 +1827,25 @@ export const seedData = {
       "title": "String Methods 1",
       "videoID": "31",
       "questions": [
-        { "id": "smq-01", "title": "Checking the Start", "question": "const emailAddress = 'support@company.com';\nconst isSupport = emailAddress.startsWith('support');\nconsole.log(isSupport);", "options": [{ "id": "o1", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o2", "option": "b", "text": "false", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-02", "title": "Case Sensitivity Check", "question": "const webAddress = 'HTTPS://google.com';\nconst isSecure = webAddress.startsWith('https');\nconsole.log(isSecure);", "options": [{ "id": "o3", "option": "a", "text": "true", "correct": false, "selected": false }, { "id": "o4", "option": "b", "text": "false", "correct": true, "selected": false }], "correctAnswer": "b" },
-        { "id": "smq-03", "title": "Finding a Keyword", "question": "const productDescription = 'Laptop with 16GB RAM and fast processor';\nconst hasRamInfo = productDescription.includes('16GB');\nconsole.log(hasRamInfo);", "options": [{ "id": "o5", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o6", "option": "b", "text": "false", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-04", "title": "Extracting a Substring", "question": "const spreadsheetRow = '2026-Data-Export';\nconst extractedYear = spreadsheetRow.slice(0, 4);\nconsole.log(extractedYear);", "options": [{ "id": "o7", "option": "a", "text": "'2026'", "correct": true, "selected": false }, { "id": "o8", "option": "b", "text": "'2026-'", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-05", "title": "Checking the End", "question": "const uploadedFile = 'invoice_draft.pdf';\nconst isPdf = uploadedFile.endsWith('.pdf');\nconsole.log(isPdf);", "options": [{ "id": "o9", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o10", "option": "b", "text": "false", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-06", "title": "Slice with One Argument", "question": "const serialNumber = 'SN-99823';\nconst numericPart = serialNumber.slice(3);\nconsole.log(numericPart);", "options": [{ "id": "o11", "option": "a", "text": "'99823'", "correct": true, "selected": false }, { "id": "o12", "option": "b", "text": "'SN-'", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-07", "title": "Includes Empty String", "question": "const messageText = 'Hello World';\nconst result = messageText.includes('');\nconsole.log(result);", "options": [{ "id": "o13", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o14", "option": "b", "text": "false", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-08", "title": "Slice Out of Bounds", "question": "const shortCode = 'ABC';\nconst partialCode = shortCode.slice(0, 10);\nconsole.log(partialCode);", "options": [{ "id": "o15", "option": "a", "text": "'ABC'", "correct": true, "selected": false }, { "id": "o16", "option": "b", "text": "Error", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-09", "title": "Space and Includes", "question": "const searchBanner = 'New Arrivals';\nconst hasSpace = searchBanner.includes(' ');\nconsole.log(hasSpace);", "options": [{ "id": "o17", "option": "a", "text": "true", "correct": true, "selected": false }, { "id": "o18", "option": "b", "text": "false", "correct": false, "selected": false }], "correctAnswer": "a" },
-        { "id": "smq-10", "title": "String Character Count", "question": "const couponCode = 'SAVE20';\nconsole.log(couponCode.length);", "options": [{ "id": "o19", "option": "a", "text": "6", "correct": true, "selected": false }, { "id": "o20", "option": "b", "text": "5", "correct": false, "selected": false }], "correctAnswer": "a" }
+        { "id": "smq-01", "title": "Checking the Start", "question": "const emailAddress = 'support@company.com';\nconst isSupport = emailAddress.startsWith('support');\nconsole.log(isSupport);", "options": [{ "id": "o1", "option": "a", "text": "true", "correct": true }, { "id": "o2", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-02", "title": "Case Sensitivity Check", "question": "const webAddress = 'HTTPS://google.com';\nconst isSecure = webAddress.startsWith('https');\nconsole.log(isSecure);", "options": [{ "id": "o3", "option": "a", "text": "true", "correct": false }, { "id": "o4", "option": "b", "text": "false", "correct": true }], "correctAnswer": "b" },
+        { "id": "smq-03", "title": "Finding a Keyword", "question": "const productDescription = 'Laptop with 16GB RAM and fast processor';\nconst hasRamInfo = productDescription.includes('16GB');\nconsole.log(hasRamInfo);", "options": [{ "id": "o5", "option": "a", "text": "true", "correct": true }, { "id": "o6", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-04", "title": "Extracting a Substring", "question": "const spreadsheetRow = '2026-Data-Export';\nconst extractedYear = spreadsheetRow.slice(0, 4);\nconsole.log(extractedYear);", "options": [{ "id": "o7", "option": "a", "text": "'2026'", "correct": true }, { "id": "o8", "option": "b", "text": "'2026-'", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-05", "title": "Checking the End", "question": "const uploadedFile = 'invoice_draft.pdf';\nconst isPdf = uploadedFile.endsWith('.pdf');\nconsole.log(isPdf);", "options": [{ "id": "o9", "option": "a", "text": "true", "correct": true }, { "id": "o10", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-06", "title": "Slice with One Argument", "question": "const serialNumber = 'SN-99823';\nconst numericPart = serialNumber.slice(3);\nconsole.log(numericPart);", "options": [{ "id": "o11", "option": "a", "text": "'99823'", "correct": true }, { "id": "o12", "option": "b", "text": "'SN-'", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-07", "title": "Includes Empty String", "question": "const messageText = 'Hello World';\nconst result = messageText.includes('');\nconsole.log(result);", "options": [{ "id": "o13", "option": "a", "text": "true", "correct": true }, { "id": "o14", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-08", "title": "Slice Out of Bounds", "question": "const shortCode = 'ABC';\nconst partialCode = shortCode.slice(0, 10);\nconsole.log(partialCode);", "options": [{ "id": "o15", "option": "a", "text": "'ABC'", "correct": true }, { "id": "o16", "option": "b", "text": "Error", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-09", "title": "Space and Includes", "question": "const searchBanner = 'New Arrivals';\nconst hasSpace = searchBanner.includes(' ');\nconsole.log(hasSpace);", "options": [{ "id": "o17", "option": "a", "text": "true", "correct": true }, { "id": "o18", "option": "b", "text": "false", "correct": false }], "correctAnswer": "a" },
+        { "id": "smq-10", "title": "String Character Count", "question": "const couponCode = 'SAVE20';\nconsole.log(couponCode.length);", "options": [{ "id": "o19", "option": "a", "text": "6", "correct": true }, { "id": "o20", "option": "b", "text": "5", "correct": false }], "correctAnswer": "a" }
       ],
       "tasks": [
-        { "id": "smt-01", "title": "URL Security Check", "description": "Declare %const websiteUrl = 'https://mybank.com'%. Use a string method to check if the URL starts with %'https'%. Log the result.", "result": "%true%", "solution": "const websiteUrl = 'https://mybank.com';\nconst isSecure = websiteUrl.startsWith('https');\nconsole.log(isSecure);", "done": false },
-        { "id": "smt-02", "title": "Extract Area Code", "description": "Declare %const phoneNumber = '(555) 123-4567'%. Use the %slice()% method to extract only the area code %'555'% (do not include the parentheses). Log the result.", "result": "%555%", "solution": "const phoneNumber = '(555) 123-4567';\nconst areaCode = phoneNumber.slice(1, 4);\nconsole.log(areaCode);", "done": false },
-        { "id": "smt-03", "title": "Spam Keyword Filter", "description": "Declare %const incomingMessage = 'Get rich fast! Click here.'%. Write an %if% statement that checks if the message %includes()% the word %'rich'%. If it does, log %'Spam Blocked'%.", "result": "%Spam Blocked%", "solution": "const incomingMessage = 'Get rich fast! Click here.';\nif (incomingMessage.includes('rich')) {\n  console.log('Spam Blocked');\n}", "done": false },
-        { "id": "smt-04", "title": "Document Extension Check", "description": "Declare %const originalDocument = 'report_final.docx'%. Use a string method to check if the filename ends with %'.docx'%. Log the true/false result.", "result": "%true%", "solution": "const originalDocument = 'report_final.docx';\nconst isWordDoc = originalDocument.endsWith('.docx');\nconsole.log(isWordDoc);", "done": false },
-        { "id": "smt-05", "title": "Username Length Guard", "description": "Declare %const accountUsername = 'Alisa'%. Create an %if% statement that checks if the character length is less than 8. If it is, log %'Username too short'%.", "result": "%Username too short%", "solution": "const accountUsername = 'Alisa';\nif (accountUsername.length < 8) {\n  console.log('Username too short');\n}", "done": false },
-        { "id": "smt-06", "title": "Extract File Name", "description": "Declare %const absoluteFilePath = '/images/profile_picture.png'%. Use the %slice()% method with only ONE parameter to extract everything after the second slash, starting from %'profile_picture.png'%. Log the result.", "result": "%profile_picture.png%", "solution": "const absoluteFilePath = '/images/profile_picture.png';\nconst fileNameOnly = absoluteFilePath.slice(8);\nconsole.log(fileNameOnly);", "done": false },
-        { "id": "smt-07", "title": "Domain Finder", "description": "Declare %const customerEmail = 'john.doe@gmail.com'%. Use the %includes()% method to check if the email belongs to a gmail domain (%'gmail.com'%). Log the true/false result.", "result": "%true%", "solution": "const customerEmail = 'john.doe@gmail.com';\nconst isGmail = customerEmail.includes('gmail.com');\nconsole.log(isGmail);", "done": false }
+        { "id": "smt-01", "title": "URL Security Check", "description": "Declare %const websiteUrl = 'https://mybank.com'%. Use a string method to check if the URL starts with %'https'%. Log the result.", "result": "%true%", "solution": "const websiteUrl = 'https://mybank.com';\nconst isSecure = websiteUrl.startsWith('https');\nconsole.log(isSecure);" },
+        { "id": "smt-02", "title": "Extract Area Code", "description": "Declare %const phoneNumber = '(555) 123-4567'%. Use the %slice()% method to extract only the area code %'555'% (do not include the parentheses). Log the result.", "result": "%555%", "solution": "const phoneNumber = '(555) 123-4567';\nconst areaCode = phoneNumber.slice(1, 4);\nconsole.log(areaCode);" },
+        { "id": "smt-03", "title": "Spam Keyword Filter", "description": "Declare %const incomingMessage = 'Get rich fast! Click here.'%. Write an %if% statement that checks if the message %includes()% the word %'rich'%. If it does, log %'Spam Blocked'%.", "result": "%Spam Blocked%", "solution": "const incomingMessage = 'Get rich fast! Click here.';\nif (incomingMessage.includes('rich')) {\n  console.log('Spam Blocked');\n}" },
+        { "id": "smt-04", "title": "Document Extension Check", "description": "Declare %const originalDocument = 'report_final.docx'%. Use a string method to check if the filename ends with %'.docx'%. Log the true/false result.", "result": "%true%", "solution": "const originalDocument = 'report_final.docx';\nconst isWordDoc = originalDocument.endsWith('.docx');\nconsole.log(isWordDoc);" },
+        { "id": "smt-05", "title": "Username Length Guard", "description": "Declare %const accountUsername = 'Alisa'%. Create an %if% statement that checks if the character length is less than 8. If it is, log %'Username too short'%.", "result": "%Username too short%", "solution": "const accountUsername = 'Alisa';\nif (accountUsername.length < 8) {\n  console.log('Username too short');\n}" },
+        { "id": "smt-06", "title": "Extract File Name", "description": "Declare %const absoluteFilePath = '/images/profile_picture.png'%. Use the %slice()% method with only ONE parameter to extract everything after the second slash, starting from %'profile_picture.png'%. Log the result.", "result": "%profile_picture.png%", "solution": "const absoluteFilePath = '/images/profile_picture.png';\nconst fileNameOnly = absoluteFilePath.slice(8);\nconsole.log(fileNameOnly);" },
+        { "id": "smt-07", "title": "Domain Finder", "description": "Declare %const customerEmail = 'john.doe@gmail.com'%. Use the %includes()% method to check if the email belongs to a gmail domain (%'gmail.com'%). Log the true/false result.", "result": "%true%", "solution": "const customerEmail = 'john.doe@gmail.com';\nconst isGmail = customerEmail.includes('gmail.com');\nconsole.log(isGmail);" }
       ]
     },
     {
@@ -1894,18 +1858,18 @@ export const seedData = {
           "title": "Changing to Uppercase",
           "question": "const discountCode = 'save20';\nconst updatedCode = discountCode.toUpperCase();\nconsole.log(updatedCode);",
           "options": [
-            { "id": "o2", "option": "a", "text": "'save20'", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "'SAVE20'", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "'SAVE20'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'save20'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq2-02",
           "title": "Changing to Lowercase",
           "question": "const userEmailInput = 'MAX@Example.com';\nconst lowerCaseEmail = userEmailInput.toLowerCase();\nconsole.log(lowerCaseEmail);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'max@example.com'", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "'MAX@EXAMPLE.COM'", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "'max@example.com'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'MAX@EXAMPLE.COM'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -1914,8 +1878,8 @@ export const seedData = {
           "title": "Removing Outer Spaces",
           "question": "const usernameInput = '   alisa_developer   ';\nconst cleanUsername = usernameInput.trim();\nconsole.log(cleanUsername);",
           "options": [
-            { "id": "o5", "option": "a", "text": "'alisa_developer'", "correct": true, "selected": false },
-            { "id": "o6", "option": "b", "text": "'   alisa_developer   '", "correct": false, "selected": false }
+            { "id": "o5", "option": "a", "text": "'alisa_developer'", "correct": true },
+            { "id": "o6", "option": "b", "text": "'   alisa_developer   '", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -1924,28 +1888,28 @@ export const seedData = {
           "title": "Replacing Text Content",
           "question": "const systemStatus = 'System: Error detected';\nconst updatedStatus = systemStatus.replace('Error', 'Success');\nconsole.log(updatedStatus);",
           "options": [
-            { "id": "o8", "option": "a", "text": "'System: Error detected'", "correct": false, "selected": false },
-            { "id": "o7", "option": "b", "text": "'System: Success detected'", "correct": true, "selected": false }
+            { "id": "o7", "option": "a", "text": "'System: Success detected'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'System: Error detected'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq2-05",
           "title": "Splitting at Commas",
           "question": "const itemsList = 'shoes,shirts,hats';\nconst itemsArray = itemsList.split(',');\nconsole.log(itemsArray[0]);",
           "options": [
-            { "id": "o10", "option": "a", "text": "'shirts'", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "'shoes'", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "'shoes'", "correct": true },
+            { "id": "o10", "option": "b", "text": "'shirts'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq2-06",
           "title": "Joining with Hyphens",
           "question": "const dateParts = ['2026', '05', '18'];\nconst formattedDate = dateParts.join('-');\nconsole.log(formattedDate);",
           "options": [
-            { "id": "o11", "option": "a", "text": "'2026-05-18'", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "'20260518'", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "'2026-05-18'", "correct": true },
+            { "id": "o12", "option": "b", "text": "'20260518'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -1954,18 +1918,18 @@ export const seedData = {
           "title": "Splitting Spaces into Words",
           "question": "const shortNotice = 'Welcome Back Admin';\nconst wordsArray = shortNotice.split(' ');\nconsole.log(wordsArray.length);",
           "options": [
-            { "id": "o14", "option": "a", "text": "1", "correct": false, "selected": false },
-            { "id": "o13", "option": "b", "text": "3", "correct": true, "selected": false }
+            { "id": "o13", "option": "a", "text": "3", "correct": true },
+            { "id": "o14", "option": "b", "text": "1", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq2-08",
           "title": "Case Sensitive Replacement",
           "question": "const chatMessage = 'Please do not Spam here';\nconst cleanMessage = chatMessage.replace('spam', 'post');\nconsole.log(cleanMessage);",
           "options": [
-            { "id": "o15", "option": "a", "text": "'Please do not Spam here'", "correct": true, "selected": false },
-            { "id": "o16", "option": "b", "text": "'Please do not post here'", "correct": false, "selected": false }
+            { "id": "o15", "option": "a", "text": "'Please do not Spam here'", "correct": true },
+            { "id": "o16", "option": "b", "text": "'Please do not post here'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -1974,18 +1938,18 @@ export const seedData = {
           "title": "Joining Without Spaces",
           "question": "const singleLetters = ['R', 'e', 'a', 'c', 't'];\nconst completeWord = singleLetters.join('');\nconsole.log(completeWord);",
           "options": [
-            { "id": "o18", "option": "a", "text": "'R e a c t'", "correct": false, "selected": false },
-            { "id": "o17", "option": "b", "text": "'React'", "correct": true, "selected": false }
+            { "id": "o17", "option": "a", "text": "'React'", "correct": true },
+            { "id": "o18", "option": "b", "text": "'R e a c t'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq2-12",
           "title": "Method Chaining Order",
           "question": "const rawInputText = '  hello  ';\nconst finalOutput = rawInputText.trim().toUpperCase();\nconsole.log(finalOutput);",
           "options": [
-            { "id": "o23", "option": "a", "text": "'HELLO'", "correct": true, "selected": false },
-            { "id": "o24", "option": "b", "text": "'  HELLO  '", "correct": false, "selected": false }
+            { "id": "o23", "option": "a", "text": "'HELLO'", "correct": true },
+            { "id": "o24", "option": "b", "text": "'  HELLO  '", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -1994,10 +1958,10 @@ export const seedData = {
           "title": "Join with Space Delimiter",
           "question": "const namesArray = ['John', 'Smith'];\nconst introduction = namesArray.join(' ');\nconsole.log(introduction);",
           "options": [
-            { "id": "o28", "option": "a", "text": "'JohnSmith'", "correct": false, "selected": false },
-            { "id": "o27", "option": "b", "text": "'John Smith'", "correct": true, "selected": false }
+            { "id": "o27", "option": "a", "text": "'John Smith'", "correct": true },
+            { "id": "o28", "option": "b", "text": "'JohnSmith'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         }
       ],
       "tasks": [
@@ -2006,72 +1970,63 @@ export const seedData = {
           "title": "Search Query Normalizer",
           "description": "Declare %const userSearchInput = '   PrOdUcT   '%. Create a new variable that removes the white spaces around it and completely converts it to lowercase. Log the clean result.",
           "result": "%product%",
-          "solution": "const userSearchInput = '   PrOdUcT   ';\nconst cleanInput = userSearchInput.trim().toLowerCase();\nconsole.log(cleanInput);",
-          "done": false
+          "solution": "const userSearchInput = '   PrOdUcT   ';\nconst cleanInput = userSearchInput.trim().toLowerCase();\nconsole.log(cleanInput);"
         },
         {
           "id": "smt2-02",
           "title": "Comma Separated Values Data Converter",
           "description": "Declare %const csvLineData = 'Laptop,Electronics,1200,InStock'%. Convert this string text into an array wherever a comma character appears. Log the newly created array structure.",
           "result": "%[...]%",
-          "solution": "const csvLineData = 'Laptop,Electronics,1200,InStock';\nconst datasetArray = csvLineData.split(',');\nconsole.log(datasetArray);",
-          "done": false
+          "solution": "const csvLineData = 'Laptop,Electronics,1200,InStock';\nconst datasetArray = csvLineData.split(',');\nconsole.log(datasetArray);"
         },
         {
           "id": "smt2-03",
           "title": "Website Address Link Generator",
           "description": "Declare %const phraseSegments = ['building', 'modern', 'websites']%. Join these words together using a single hyphen character (%'-'%) to make a web address link. Log the combined text string.",
           "result": "%building-modern-websites%",
-          "solution": "const phraseSegments = ['building', 'modern', 'websites'];\nconst webLinkSlug = phraseSegments.join('-');\nconsole.log(webLinkSlug);",
-          "done": false
+          "solution": "const phraseSegments = ['building', 'modern', 'websites'];\nconst webLinkSlug = phraseSegments.join('-');\nconsole.log(webLinkSlug);"
         },
         {
           "id": "smt2-04",
           "title": "Sensitive Log Scrubbing",
           "description": "Declare %const dangerousSystemLog = 'Database failure caused by password123 error'%. Target the string %'password123'% inside this sentence text and switch it to %'REDACTED'%. Log the updated message content.",
           "result": "%Database failure caused by REDACTED error%",
-          "solution": "const dangerousSystemLog = 'Database failure caused by password123 error';\nconst safeSystemLog = dangerousSystemLog.replace('password123', 'REDACTED');\nconsole.log(safeSystemLog);",
-          "done": false
+          "solution": "const dangerousSystemLog = 'Database failure caused by password123 error';\nconst safeSystemLog = dangerousSystemLog.replace('password123', 'REDACTED');\nconsole.log(safeSystemLog);"
         },
         {
           "id": "smt2-05",
           "title": "Input Spacing Verification",
           "description": "Declare %const customerEmailAddress = '  contact@agency.com '%. Create an %if% statement checking if the email has starting spaces using %startsWith(' ')%. If it does, use a string method to safely strip the blank spaces and log %'Email Sanitized'%.",
           "result": "%Email Sanitized%",
-          "solution": "const customerEmailAddress = '  contact@agency.com ';\nif (customerEmailAddress.startsWith(' ')) {\n  const sanitizedEmail = customerEmailAddress.trim();\n  console.log('Email Sanitized');\n}",
-          "done": false
+          "solution": "const customerEmailAddress = '  contact@agency.com ';\nif (customerEmailAddress.startsWith(' ')) {\n  const sanitizedEmail = customerEmailAddress.trim();\n  console.log('Email Sanitized');\n}"
         },
         {
           "id": "smt2-06",
           "title": "High Visibility Banner Text Converter",
           "description": "Declare %const regularAlertMessage = 'warning: low server storage space remaining'%. Translate this alert line fully into capital letters so it catches eyes in logs. Log the transformed capital sentence string.",
           "result": "%WARNING: LOW SERVER STORAGE SPACE REMAINING%",
-          "solution": "const regularAlertMessage = 'warning: low server storage space remaining';\nconst highVisibilityAlert = regularAlertMessage.toUpperCase();\nconsole.log(highVisibilityAlert);",
-          "done": false
+          "solution": "const regularAlertMessage = 'warning: low server storage space remaining';\nconst highVisibilityAlert = regularAlertMessage.toUpperCase();\nconsole.log(highVisibilityAlert);"
         },
         {
           "id": "smt2-07",
           "title": "Sentence Word Counter",
           "description": "Declare %const shortArticleTeaser = 'Learning programming opens many career opportunities'%. Break up this entire line into an array of isolated single words separated by space inputs. Log the numerical count of how many single words are located inside that resulting list array.",
           "result": "%7%",
-          "solution": "const shortArticleTeaser = 'Learning programming opens many career opportunities';\nconst wordsCollection = shortArticleTeaser.split(' ');\nconsole.log(wordsCollection.length);",
-          "done": false
+          "solution": "const shortArticleTeaser = 'Learning programming opens many career opportunities';\nconst wordsCollection = shortArticleTeaser.split(' ');\nconsole.log(wordsCollection.length);"
         },
         {
           "id": "smt2-08",
           "title": "Title Case Normalization",
           "description": "Declare %const rawTitleInput = '  welcome to our portal'%. Trim any starting spaces, then replace the lowercase word %'welcome'% with an uppercase %'Welcome'%. Log the completed title string.",
           "result": "%Welcome to our portal%",
-          "solution": "const rawTitleInput = '  welcome to our portal';\nconst trimmedTitle = rawTitleInput.trim();\nconst correctedTitle = trimmedTitle.replace('welcome', 'Welcome');\nconsole.log(correctedTitle);",
-          "done": false
+          "solution": "const rawTitleInput = '  welcome to our portal';\nconst trimmedTitle = rawTitleInput.trim();\nconst correctedTitle = trimmedTitle.replace('welcome', 'Welcome');\nconsole.log(correctedTitle);"
         },
         {
           "id": "smt2-09",
           "title": "File Format Path Splitter",
           "description": "Declare %const fullImageFileName = 'user_avatar.png'%. Split this filename into two parts using the dot (%'.'%) symbol. Access the array index for the file format extension and log it.",
           "result": "%png%",
-          "solution": "const fullImageFileName = 'user_avatar.png';\nconst segmentedFileName = fullImageFileName.split('.');\nconsole.log(segmentedFileName[1]);",
-          "done": false
+          "solution": "const fullImageFileName = 'user_avatar.png';\nconst segmentedFileName = fullImageFileName.split('.');\nconsole.log(segmentedFileName[1]);"
         }
       ]
     },
@@ -2085,18 +2040,18 @@ export const seedData = {
           "title": "Checking String Length",
           "question": "const password = 'secure123';\nconsole.log(password.length);",
           "options": [
-            { "id": "o2", "option": "a", "text": "10", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "9", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "9", "correct": true },
+            { "id": "o2", "option": "b", "text": "10", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq3-02",
           "title": "Substrings with Includes",
           "question": "const email = 'admin@domain.com';\nconst hasAdmin = email.includes('admin');\nconsole.log(hasAdmin);",
           "options": [
-            { "id": "o3", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "true", "correct": true },
+            { "id": "o4", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2105,8 +2060,8 @@ export const seedData = {
           "title": "Extracting with Slice",
           "question": "const code = 'JS-2026';\nconst year = code.slice(3);\nconsole.log(year);",
           "options": [
-            { "id": "o5", "option": "a", "text": "'2026'", "correct": true, "selected": false },
-            { "id": "o6", "option": "b", "text": "'-2026'", "correct": false, "selected": false }
+            { "id": "o5", "option": "a", "text": "'2026'", "correct": true },
+            { "id": "o6", "option": "b", "text": "'-2026'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2115,28 +2070,28 @@ export const seedData = {
           "title": "Replacing All Occurrences",
           "question": "const phrase = 'cats and cats';\nconst updated = phrase.replaceAll('cats', 'dogs');\nconsole.log(updated);",
           "options": [
-            { "id": "o8", "option": "a", "text": "'dogs and cats'", "correct": false, "selected": false },
-            { "id": "o7", "option": "b", "text": "'dogs and dogs'", "correct": true, "selected": false }
+            { "id": "o7", "option": "a", "text": "'dogs and dogs'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'dogs and cats'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq3-05",
           "title": "Checking the Beginning",
           "question": "const url = 'https://example.com';\nconsole.log(url.startsWith('https'));",
           "options": [
-            { "id": "o10", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "true", "correct": true },
+            { "id": "o10", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq3-06",
           "title": "Checking the End",
           "question": "const file = 'document.pdf';\nconsole.log(file.endsWith('.pdf'));",
           "options": [
-            { "id": "o11", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "true", "correct": true },
+            { "id": "o12", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2145,18 +2100,18 @@ export const seedData = {
           "title": "Negative Slice Indexing",
           "question": "const text = 'JavaScript';\nconst endPart = text.slice(-2);\nconsole.log(endPart);",
           "options": [
-            { "id": "o14", "option": "a", "text": "'ip'", "correct": false, "selected": false },
-            { "id": "o13", "option": "b", "text": "'pt'", "correct": true, "selected": false }
+            { "id": "o13", "option": "a", "text": "'pt'", "correct": true },
+            { "id": "o14", "option": "b", "text": "'ip'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq3-08",
           "title": "Includes Case Sensitivity",
           "question": "const message = 'Hello World';\nconsole.log(message.includes('hello'));",
           "options": [
-            { "id": "o15", "option": "a", "text": "false", "correct": true, "selected": false },
-            { "id": "o16", "option": "b", "text": "true", "correct": false, "selected": false }
+            { "id": "o15", "option": "a", "text": "false", "correct": true },
+            { "id": "o16", "option": "b", "text": "true", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2165,18 +2120,18 @@ export const seedData = {
           "title": "Slice with Two Parameters",
           "question": "const phrase = 'ReduxToolkit';\nconst sub = phrase.slice(0, 5);\nconsole.log(sub);",
           "options": [
-            { "id": "o18", "option": "a", "text": "'ReduxT'", "correct": false, "selected": false },
-            { "id": "o17", "option": "b", "text": "'Redux'", "correct": true, "selected": false }
+            { "id": "o17", "option": "a", "text": "'Redux'", "correct": true },
+            { "id": "o18", "option": "b", "text": "'ReduxT'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "smq3-10",
           "title": "Empty Split Delimiter",
           "question": "const word = 'UI';\nconst letters = word.split('');\nconsole.log(letters[0]);",
           "options": [
-            { "id": "o19", "option": "a", "text": "'U'", "correct": true, "selected": false },
-            { "id": "o20", "option": "b", "text": "'I'", "correct": false, "selected": false }
+            { "id": "o19", "option": "a", "text": "'U'", "correct": true },
+            { "id": "o20", "option": "b", "text": "'I'", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -2187,64 +2142,56 @@ export const seedData = {
           "title": "Password Length Validator Function",
           "description": "Create a function named %validatePassword(pass)% that checks if the incoming string parameter has fewer than 8 characters. If it is too short, return %'Too Short'%, otherwise return %'Valid'%.",
           "result": "%Too Short%",
-          "solution": "function validatePassword(pass) {\n  if (pass.length < 8) {\n    return 'Too Short';\n  }\n  return 'Valid';\n}\nconsole.log(validatePassword('12345'));",
-          "done": false
+          "solution": "function validatePassword(pass) {\n  if (pass.length < 8) {\n    return 'Too Short';\n  }\n  return 'Valid';\n}\nconsole.log(validatePassword('12345'));"
         },
         {
           "id": "smt3-02",
           "title": "Email Domain Guard Function",
           "description": "Create a function named %checkCorporateEmail(email)% that looks inside an email address string to verify whether it belongs to the corporate domain %'@company.com'%. Return %true% if it does, and %false% if it does not.",
           "result": "%true%",
-          "solution": "function checkCorporateEmail(email) {\n  if (email.includes('@company.com')) {\n    return true;\n  }\n  return false;\n}\nconsole.log(checkCorporateEmail('alex@company.com'));",
-          "done": false
+          "solution": "function checkCorporateEmail(email) {\n  if (email.includes('@company.com')) {\n    return true;\n  }\n  return false;\n}\nconsole.log(checkCorporateEmail('alex@company.com'));"
         },
         {
           "id": "smt3-03",
           "title": "URL Protocol Secure Fixer Function",
           "description": "Create a function named %enforceHttps(url)% that checks if a link starts with unsecured web layout text %'http://'%. If it matches, fix the link by changing that specific part to %'https://'% and return the updated secure string. Otherwise, return the original url.",
           "result": "%https://myweb.com%",
-          "solution": "function enforceHttps(url) {\n  if (url.startsWith('http://')) {\n    return url.replace('http://', 'https://');\n  }\n  return url;\n}\nconsole.log(enforceHttps('http://myweb.com'));",
-          "done": false
+          "solution": "function enforceHttps(url) {\n  if (url.startsWith('http://')) {\n    return url.replace('http://', 'https://');\n  }\n  return url;\n}\nconsole.log(enforceHttps('http://myweb.com'));"
         },
         {
           "id": "smt3-04",
           "title": "E-Commerce Slug Generator Function",
           "description": "Create a function named %generateProductSlug(title)% that takes a raw title string like %'   Blue Nike Shoes   '%. The function should remove any trailing or leading empty spaces, convert all text to lowercase, and switch every internal space into a single hyphen character (%'-'%). Return the formatted text.",
           "result": "%blue-nike-shoes%",
-          "solution": "function generateProductSlug(title) {\n  const cleanTitle = title.trim().toLowerCase();\n  return cleanTitle.replaceAll(' ', '-');\n}\nconsole.log(generateProductSlug('   Blue Nike Shoes   '));",
-          "done": false
+          "solution": "function generateProductSlug(title) {\n  const cleanTitle = title.trim().toLowerCase();\n  return cleanTitle.replaceAll(' ', '-');\n}\nconsole.log(generateProductSlug('   Blue Nike Shoes   '));"
         },
         {
           "id": "smt3-05",
           "title": "Image File Validator Function",
           "description": "Create a function named %isPngFile(filename)% that checks an uploaded file name. Verify if the file string terminates with the image format extension %'.png'%. Return %'Approved Image'% if it matches, and %'Unsupported File'% if it doesn't.",
           "result": "%Approved Image%",
-          "solution": "function isPngFile(filename) {\n  if (filename.endsWith('.png')) {\n    return 'Approved Image';\n  }\n  return 'Unsupported File';\n}\nconsole.log(isPngFile('avatar.png'));",
-          "done": false
+          "solution": "function isPngFile(filename) {\n  if (filename.endsWith('.png')) {\n    return 'Approved Image';\n  }\n  return 'Unsupported File';\n}\nconsole.log(isPngFile('avatar.png'));"
         },
         {
           "id": "smt3-06",
           "title": "Text Preview Snippet Function",
           "description": "Create a function named %getArticlePreview(text)% that takes a long content string. Extract precisely the first 10 characters from that text sequence, combine it with a trailing ellipsis %'...'% symbol, and return the final condensed preview snippet.",
           "result": "%Read more ...%",
-          "solution": "function getArticlePreview(text) {\n  const cutText = text.slice(0, 10);\n  return cutText + '...';\n}\nconsole.log(getArticlePreview('Read more about JavaScript string methods'));",
-          "done": false
+          "solution": "function getArticlePreview(text) {\n  const cutText = text.slice(0, 10);\n  return cutText + '...';\n}\nconsole.log(getArticlePreview('Read more about JavaScript string methods'));"
         },
         {
           "id": "smt3-07",
           "title": "CSV First Column Extractor Function",
           "description": "Create a function named %getUserIdFromCsv(csvRow)% that handles comma-separated values like %'USR99,John,Active'%. Separate the record values out into an isolated collection, and return only the first element located at the start of that sequence.",
           "result": "%USR99%",
-          "solution": "function getUserIdFromCsv(csvRow) {\n  const parsedData = csvRow.split(',');\n  return parsedData[0];\n}\nconsole.log(getUserIdFromCsv('USR99,John,Active'));",
-          "done": false
+          "solution": "function getUserIdFromCsv(csvRow) {\n  const parsedData = csvRow.split(',');\n  return parsedData[0];\n}\nconsole.log(getUserIdFromCsv('USR99,John,Active'));"
         },
         {
           "id": "smt3-08",
           "title": "Tag Collection Compiler Function",
           "description": "Create a function named %compileTagsString(tagsArray)% that takes an array list of string indicators like %['react', 'js', 'html']%. Compile all elements together into a single cohesive string where each word is separated exclusively by a blank space. Return the compiled string text.",
           "result": "%react js html%",
-          "solution": "function compileTagsString(tagsArray) {\n  return tagsArray.join(' ');\n}\nconsole.log(compileTagsString(['react', 'js', 'html']));",
-          "done": false
+          "solution": "function compileTagsString(tagsArray) {\n  return tagsArray.join(' ');\n}\nconsole.log(compileTagsString(['react', 'js', 'html']));"
         }
       ]
     },
@@ -2258,18 +2205,18 @@ export const seedData = {
           "title": "Converting Number to String",
           "question": "const score = 45;\nconst result = score.toString();\nconsole.log(typeof result);",
           "options": [
-            { "id": "o2", "option": "a", "text": "'number'", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "'string'", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "'string'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'number'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "nmq1-02",
           "title": "Parsing String to Number",
           "question": "const entry = '29.99';\nconst price = Number(entry);\nconsole.log(typeof price);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'number'", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "'string'", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "'number'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'string'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2278,8 +2225,8 @@ export const seedData = {
           "title": "Formatting Decimal Places",
           "question": "const pi = 3.14159;\nconst formatted = pi.toFixed(2);\nconsole.log(formatted);",
           "options": [
-            { "id": "o5", "option": "a", "text": "'3.14'", "correct": true, "selected": false },
-            { "id": "o6", "option": "b", "text": "3.14", "correct": false, "selected": false }
+            { "id": "o5", "option": "a", "text": "'3.14'", "correct": true },
+            { "id": "o6", "option": "b", "text": "3.14", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2288,28 +2235,28 @@ export const seedData = {
           "title": "Checking Finite Numbers",
           "question": "const value = 100;\nconsole.log(isFinite(value));",
           "options": [
-            { "id": "o8", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o7", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o7", "option": "a", "text": "true", "correct": true },
+            { "id": "o8", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "nmq1-05",
           "title": "Checking Global Infinity",
           "question": "console.log(isFinite(Infinity));",
           "options": [
-            { "id": "o10", "option": "a", "text": "true", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "false", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "false", "correct": true },
+            { "id": "o10", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "nmq1-06",
           "title": "Invalid Number Conversion",
           "question": "const dynamicValue = Number('abc');\nconsole.log(isFinite(dynamicValue));",
           "options": [
-            { "id": "o11", "option": "a", "text": "false", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "true", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "false", "correct": true },
+            { "id": "o12", "option": "b", "text": "true", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -2320,40 +2267,35 @@ export const seedData = {
           "title": "Checkout Currency Formatter Function",
           "description": "Create a function named %formatPrice(amount)% that takes a number decimal value (like %19.9862%). The function should round and limit the value to exactly 2 decimal places and return the result as a string (like %'19.99'%).",
           "result": "%19.99%",
-          "solution": "function formatPrice(amount) {\n  return amount.toFixed(2);\n}\nconsole.log(formatPrice(19.9862));",
-          "done": false
+          "solution": "function formatPrice(amount) {\n  return amount.toFixed(2);\n}\nconsole.log(formatPrice(19.9862));"
         },
         {
           "id": "nmt1-02",
           "title": "Form Input Parser Function",
           "description": "Create a function named %processAgeInput(inputString)% that receives a string representing an age (like %'25'%). Convert that text input into a real number and return it (like %25%).",
           "result": "%25%",
-          "solution": "function processAgeInput(inputString) {\n  return Number(inputString);\n}\nconsole.log(processAgeInput('25'));",
-          "done": false
+          "solution": "function processAgeInput(inputString) {\n  return Number(inputString);\n}\nconsole.log(processAgeInput('25'));"
         },
         {
           "id": "nmt1-03",
           "title": "API Code ID Normalizer Function",
           "description": "Create a function named %stringifyId(numericId)% that accepts a number type ID (like %1024%). Transform this number into a string and return it (like %'1024'%).",
           "result": "%1024%",
-          "solution": "function stringifyId(numericId) {\n  return numericId.toString();\n}\nconsole.log(stringifyId(1024));",
-          "done": false
+          "solution": "function stringifyId(numericId) {\n  return numericId.toString();\n}\nconsole.log(stringifyId(1024));"
         },
         {
           "id": "nmt1-04",
           "title": "Division Safety Guard Function",
           "description": "Create a function named %validateResult(total, parts)% that divides the %total% parameter by %parts%. Check if the result of this division is a valid, finite number. Return %true% if it is a valid finite number, and %false% if it is not (such as when dividing %10% by %0%).",
           "result": "%false%",
-          "solution": "function validateResult(total, parts) {\n  const outcome = total / parts;\n  if (isFinite(outcome)) {\n    return true;\n  }\n  return false;\n}\nconsole.log(validateResult(10, 0));",
-          "done": false
+          "solution": "function validateResult(total, parts) {\n  const outcome = total / parts;\n  if (isFinite(outcome)) {\n    return true;\n  }\n  return false;\n}\nconsole.log(validateResult(10, 0));"
         },
         {
           "id": "nmt1-05",
           "title": "E-Commerce Discount Display Function",
           "description": "Create a function named %getIntegerDiscount(percentage)% that takes a decimal discount number (like %14.85%). Format the value down to show exactly 0 decimal locations and return the result as a string (like %'15'%).",
           "result": "%15%",
-          "solution": "function getIntegerDiscount(percentage) {\n  return percentage.toFixed();\n}\nconsole.log(getIntegerDiscount(14.85));",
-          "done": false
+          "solution": "function getIntegerDiscount(percentage) {\n  return percentage.toFixed();\n}\nconsole.log(getIntegerDiscount(14.85));"
         }
       ]
     },
@@ -2367,18 +2309,18 @@ export const seedData = {
           "title": "Basic Array Destructuring",
           "question": "const colors = ['red', 'green', 'blue'];\nconst [firstColor, secondColor] = colors;\nconsole.log(secondColor);",
           "options": [
-            { "id": "o2", "option": "a", "text": "'red'", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "'green'", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "'green'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'red'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dq1-02",
           "title": "Skipping Items in Array",
           "question": "const settings = ['light', 'en', 'v1.0'];\nconst [theme, , version] = settings;\nconsole.log(version);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'v1.0'", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "'en'", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "'v1.0'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'en'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2387,18 +2329,18 @@ export const seedData = {
           "title": "Basic Object Destructuring",
           "question": "const user = { username: 'alex99', role: 'admin' };\nconst { username } = user;\nconsole.log(username);",
           "options": [
-            { "id": "o6", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o5", "option": "b", "text": "'alex99'", "correct": true, "selected": false }
+            { "id": "o5", "option": "a", "text": "'alex99'", "correct": true },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dq1-04",
           "title": "Destructuring with Variable Renaming",
           "question": "const product = { id: 101, title: 'Phone' };\nconst { title: productName } = product;\nconsole.log(productName);",
           "options": [
-            { "id": "o7", "option": "a", "text": "'Phone'", "correct": true, "selected": false },
-            { "id": "o8", "option": "b", "text": "'title'", "correct": false, "selected": false }
+            { "id": "o7", "option": "a", "text": "'Phone'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'title'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2407,18 +2349,18 @@ export const seedData = {
           "title": "Destructuring Default Values",
           "question": "const config = { host: 'localhost' };\nconst { host, port = 8080 } = config;\nconsole.log(port);",
           "options": [
-            { "id": "o10", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "8080", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "8080", "correct": true },
+            { "id": "o10", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dq1-06",
           "title": "Nested Object Destructuring",
           "question": "const profile = { id: 1, info: { email: 'test@test.com' } };\nconst { info: { email } } = profile;\nconsole.log(email);",
           "options": [
-            { "id": "o11", "option": "a", "text": "'test@test.com'", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "undefined", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "'test@test.com'", "correct": true },
+            { "id": "o12", "option": "b", "text": "undefined", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -2429,48 +2371,42 @@ export const seedData = {
           "title": "GPS Coordinate Unpacker Function",
           "description": "Create a function named %getLatitude(coordinates)% that receives an array containing two numbers representing a location. Input example: %[48.208, 16.373]%. Use array destructuring to unpack the coordinates and return only the first coordinate value. Output example: %48.208%.",
           "result": "%48.208%",
-          "solution": "function getLatitude(coordinates) {\n  const [latitude, longitude] = coordinates;\n  return latitude;\n}\nconsole.log(getLatitude([48.208, 16.373]));",
-          "done": false
+          "solution": "function getLatitude(coordinates) {\n  const [latitude, longitude] = coordinates;\n  return latitude;\n}\nconsole.log(getLatitude([48.208, 16.373]));"
         },
         {
           "id": "dt1-02",
           "title": "User Destructuring Welcome Function",
           "description": "Create a function named %greetUser(userObj)% that accepts an object representing a registered member. Input example: %{ firstName: 'Anna', age: 28 }%. Use object destructuring to extract the %firstName% property from the parameter and return a welcome greeting message. Output example: %'Welcome Anna'%.",
           "result": "%Welcome Anna%",
-          "solution": "function greetUser(userObj) {\n  const { firstName } = userObj;\n  return 'Welcome ' + firstName;\n}\nconsole.log(greetUser({ firstName: 'Anna', age: 28 }));",
-          "done": false
+          "solution": "function greetUser(userObj) {\n  const { firstName } = userObj;\n  return 'Welcome ' + firstName;\n}\nconsole.log(greetUser({ firstName: 'Anna', age: 28 }));"
         },
         {
           "id": "dt1-03",
           "title": "E-Commerce Alias Price Reducer Function",
           "description": "Create a function named %getDiscountedPrice(productObj)% that accepts an item object containing pricing details. Input example: %{ itemId: 'B12', price: 100 }%. Use object destructuring to extract the %price% property but rename it to a variable called %originalPrice%. Subtract 20 from %originalPrice% and return that calculated value as a number. Output example: %80%.",
           "result": "%80%",
-          "solution": "function getDiscountedPrice(productObj) {\n  const { price: originalPrice } = productObj;\n  return originalPrice - 20;\n}\nconsole.log(getDiscountedPrice({ itemId: 'B12', price: 100 }));",
-          "done": false
+          "solution": "function getDiscountedPrice(productObj) {\n  const { price: originalPrice } = productObj;\n  return originalPrice - 20;\n}\nconsole.log(getDiscountedPrice({ itemId: 'B12', price: 100 }));"
         },
         {
           "id": "dt1-04",
           "title": "Server Safe Fallback Config Function",
           "description": "Create a function named %getServerMode(config)% that accepts an option object. Input example: %{ timeout: 5000 }%. Use object destructuring to unpack a property named %mode%. Provide a fallback default assignment value of %'production'% to that extracted variable during the destructuring process if it does not exist on the object, and return its final value. Output example: %'production'%.",
           "result": "%production%",
-          "solution": "function getServerMode(config) {\n  const { mode = 'production' } = config;\n  return mode;\n}\nconsole.log(getServerMode({ timeout: 5000 }));",
-          "done": false
+          "solution": "function getServerMode(config) {\n  const { mode = 'production' } = config;\n  return mode;\n}\nconsole.log(getServerMode({ timeout: 5000 }));"
         },
         {
           "id": "dt1-05",
           "title": "RGB Color Value Extractor Function",
           "description": "Create a function named %getBlueValue(rgbColors)% that receives an array displaying primary coloring metrics. Input example: %['255', '120', '40']%. Use array destructuring to completely skip over the first two indices and capture only the third index sequence, returning that string value. Output example: %'40'%.",
           "result": "%40%",
-          "solution": "function getBlueValue(rgbColors) {\n  const [, , blue] = rgbColors;\n  return blue;\n}\nconsole.log(getBlueValue(['255', '120', '40']));",
-          "done": false
+          "solution": "function getBlueValue(rgbColors) {\n  const [, , blue] = rgbColors;\n  return blue;\n}\nconsole.log(getBlueValue(['255', '120', '40']));"
         },
         {
           "id": "dt1-06",
           "title": "Nested Order City Extractor Function",
           "description": "Create a function named %getOrderCity(orderData)% that receives a complex transaction summary containing nested information. Input example: %{ id: 951, shipping: { city: 'Vienna', zip: '1010' } }%. Use nested object destructuring to drill straight down into the %shipping% structure, extract the internal %city% property in a single operational line, and return it. Output example: %'Vienna'%.",
           "result": "%Vienna%",
-          "solution": "function getOrderCity(orderData) {\n  const { shipping: { city } } = orderData;\n  return city;\n}\nconsole.log(getOrderCity({ id: 951, shipping: { city: 'Vienna', zip: '1010' } }));",
-          "done": false
+          "solution": "function getOrderCity(orderData) {\n  const { shipping: { city } } = orderData;\n  return city;\n}\nconsole.log(getOrderCity({ id: 951, shipping: { city: 'Vienna', zip: '1010' } }));"
         }
       ]
     },
@@ -2484,18 +2420,18 @@ export const seedData = {
           "title": "Basic Object Argument Destructuring",
           "question": "function displayUser({ name }) {\n  console.log(name);\n}\ndisplayUser({ name: 'Sarah', age: 31 });",
           "options": [
-            { "id": "o2", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "'Sarah'", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "'Sarah'", "correct": true },
+            { "id": "o2", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "fdq1-02",
           "title": "Renaming Object Parameters",
           "question": "function logId({ id: userId }) {\n  console.log(userId);\n}\nlogId({ id: 505 });",
           "options": [
-            { "id": "o3", "option": "a", "text": "505", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "undefined", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "505", "correct": true },
+            { "id": "o4", "option": "b", "text": "undefined", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2504,28 +2440,28 @@ export const seedData = {
           "title": "Default Parameter Values",
           "question": "function setVolume({ level = 50 }) {\n  console.log(level);\n}\nsetVolume({});",
           "options": [
-            { "id": "o6", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o5", "option": "b", "text": "50", "correct": true, "selected": false }
+            { "id": "o5", "option": "a", "text": "50", "correct": true },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "fdq1-04",
           "title": "Basic Array Argument Destructuring",
           "question": "function handleCoordinates([x, y]) {\n  console.log(y);\n}\nhandleCoordinates([10, 20]);",
           "options": [
-            { "id": "o8", "option": "a", "text": "10", "correct": false, "selected": false },
-            { "id": "o7", "option": "b", "text": "20", "correct": true, "selected": false }
+            { "id": "o7", "option": "a", "text": "20", "correct": true },
+            { "id": "o8", "option": "b", "text": "10", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "fdq1-05",
           "title": "Skipping Array Parameters",
           "question": "function processItems([, second]) {\n  console.log(second);\n}\nprocessItems(['apple', 'banana', 'orange']);",
           "options": [
-            { "id": "o9", "option": "a", "text": "'banana'", "correct": true, "selected": false },
-            { "id": "o10", "option": "b", "text": "'apple'", "correct": false, "selected": false }
+            { "id": "o9", "option": "a", "text": "'banana'", "correct": true },
+            { "id": "o10", "option": "b", "text": "'apple'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2534,10 +2470,10 @@ export const seedData = {
           "title": "Nested Destructuring in Arguments",
           "question": "function printCity({ address: { city } }) {\n  console.log(city);\n}\nprintCity({ id: 10, address: { city: 'Berlin' } });",
           "options": [
-            { "id": "o12", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o11", "option": "b", "text": "'Berlin'", "correct": true, "selected": false }
+            { "id": "o11", "option": "a", "text": "'Berlin'", "correct": true },
+            { "id": "o12", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         }
       ],
       "tasks": [
@@ -2546,48 +2482,42 @@ export const seedData = {
           "title": "Profile Badge Generator Function",
           "description": "Create a function named %generateBadge% that directly destructures the %username% property from its object parameter. Return a string combining the name with a status tag. Input example: %{ username: 'dev_max', role: 'moderator' }%. Output example: %'User: dev_max'%.",
           "result": "%User: dev_max%",
-          "solution": "function generateBadge({ username }) {\n  return 'User: ' + username;\n}\nconsole.log(generateBadge({ username: 'dev_max', role: 'moderator' }));",
-          "done": false
+          "solution": "function generateBadge({ username }) {\n  return 'User: ' + username;\n}\nconsole.log(generateBadge({ username: 'dev_max', role: 'moderator' }));"
         },
         {
           "id": "fdt1-02",
           "title": "Product Alias Price Tag Function",
           "description": "Create a function named %extractPrice% that destructures the %cost% property from its object parameter and renames it to %amount% directly within the function signature. Return the value of %amount% as a number. Input example: %{ sku: 'A18', cost: 49 }%. Output example: %49%.",
           "result": "%49%",
-          "solution": "function extractPrice({ cost: amount }) {\n  return amount;\n}\nconsole.log(extractPrice({ sku: 'A18', cost: 49 }));",
-          "done": false
+          "solution": "function extractPrice({ cost: amount }) {\n  return amount;\n}\nconsole.log(extractPrice({ sku: 'A18', cost: 49 }));"
         },
         {
           "id": "fdt1-03",
           "title": "System Logger Custom Prefix Function",
           "description": "Create a function named %logMessage% that destructures the %status% property from its object parameter. Assign a fallback default value of %'INFO'% to %status% if the property is missing. Return the final string value. Input example: %{ message: 'Database connected' }%. Output example: %'INFO'%.",
           "result": "%INFO%",
-          "solution": "function logMessage({ status = 'INFO' }) {\n  return status;\n}\nconsole.log(logMessage({ message: 'Database connected' }));",
-          "done": false
+          "solution": "function logMessage({ status = 'INFO' }) {\n  return status;\n}\nconsole.log(logMessage({ message: 'Database connected' }));"
         },
         {
           "id": "fdt1-04",
           "title": "Game Score Target Tracker Function",
           "description": "Create a function named %getSecondaryScore% that accepts an array of scores as a parameter. Directly destructure the array in the function signature to completely skip the first score and capture the second score. Return that value. Input example: %[95, 87, 64]%. Output example: %87%.",
           "result": "%87%",
-          "solution": "function getSecondaryScore([, second]) {\n  return second;\n}\nconsole.log(getSecondaryScore([95, 87, 64]));",
-          "done": false
+          "solution": "function getSecondaryScore([, second]) {\n  return second;\n}\nconsole.log(getSecondaryScore([95, 87, 64]));"
         },
         {
           "id": "fdt1-05",
           "title": "Chart Dimensions Multiplier Function",
           "description": "Create a function named %calculateArea% that accepts an array containing chart dimensions. Destructure the first two values representing width and height directly in the function arguments list, multiply them together, and return the final area value as a number. Input example: %[12, 5]%. Output example: %60%.",
           "result": "%60%",
-          "solution": "function calculateArea([width, height]) {\n  return width * height;\n}\nconsole.log(calculateArea([12, 5]));",
-          "done": false
+          "solution": "function calculateArea([width, height]) {\n  return width * height;\n}\nconsole.log(calculateArea([12, 5]));"
         },
         {
           "id": "fdt1-06",
           "title": "Nested Employee Department Finder Function",
           "description": "Create a function named %getDepartment% that accepts an employee info object containing a nested organizational structure. Use nested object destructuring directly inside the function parameter list to drill straight down into the %meta% structure and unpack the internal %dept% property in a single line, then return it. Input example: %{ name: 'John', meta: { dept: 'Engineering', floor: 3 } }%. Output example: %'Engineering'%.",
           "result": "%Engineering%",
-          "solution": "function getDepartment({ meta: { dept } }) {\n  return dept;\n}\nconsole.log(getDepartment({ name: 'John', meta: { dept: 'Engineering', floor: 3 } }));",
-          "done": false
+          "solution": "function getDepartment({ meta: { dept } }) {\n  return dept;\n}\nconsole.log(getDepartment({ name: 'John', meta: { dept: 'Engineering', floor: 3 } }));"
         }
       ]
     },
@@ -2601,18 +2531,18 @@ export const seedData = {
           "title": "Spreading Array Elements",
           "question": "const initial = [1, 2];\nconst combined = [...initial, 3, 4];\nconsole.log(combined.length);",
           "options": [
-            { "id": "o2", "option": "a", "text": "3", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "4", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "4", "correct": true },
+            { "id": "o2", "option": "b", "text": "3", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "soq1-02",
           "title": "Spreading Objects",
           "question": "const base = { role: 'user' };\nconst activeUser = { ...base, active: true };\nconsole.log(activeUser.role);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'user'", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "undefined", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "'user'", "correct": true },
+            { "id": "o4", "option": "b", "text": "undefined", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2621,18 +2551,18 @@ export const seedData = {
           "title": "Overwriting Object Properties",
           "question": "const defaults = { status: 'pending', attempts: 1 };\nconst update = { ...defaults, status: 'success' };\nconsole.log(update.status);",
           "options": [
-            { "id": "o6", "option": "a", "text": "'pending'", "correct": false, "selected": false },
-            { "id": "o5", "option": "b", "text": "'success'", "correct": true, "selected": false }
+            { "id": "o5", "option": "a", "text": "'success'", "correct": true },
+            { "id": "o6", "option": "b", "text": "'pending'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "soq1-04",
           "title": "Combining Multiple Objects",
           "question": "const user = { name: 'Alex' };\nconst job = { title: 'Dev' };\nconst employee = { ...user, ...job };\nconsole.log(employee.title);",
           "options": [
-            { "id": "o7", "option": "a", "text": "'Dev'", "correct": true, "selected": false },
-            { "id": "o8", "option": "b", "text": "undefined", "correct": false, "selected": false }
+            { "id": "o7", "option": "a", "text": "'Dev'", "correct": true },
+            { "id": "o8", "option": "b", "text": "undefined", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -2643,32 +2573,28 @@ export const seedData = {
           "title": "Array Merger Function",
           "description": "Create a function named %combineArrays(arr1, arr2)% that takes two arrays. Use the spread operator to merge all elements from both inputs into a single new array and return it. Input example: %[1, 2]% and %[3, 4]%. Output example: %[1, 2, 3, 4]%.",
           "result": "%[1, 2, 3, 4]%",
-          "solution": "function combineArrays(arr1, arr2) {\n  return [...arr1, ...arr2];\n}\nconsole.log(combineArrays([1, 2], [3, 4]));",
-          "done": false
+          "solution": "function combineArrays(arr1, arr2) {\n  return [...arr1, ...arr2];\n}\nconsole.log(combineArrays([1, 2], [3, 4]));"
         },
         {
           "id": "sot1-02",
           "title": "User Profile Merge Function",
           "description": "Create a function named %mergeProfile(account, details)% that accepts two objects. Use the object spread operator to combine all properties from both objects into a brand new profile object and return it. Input example: %{ id: 101 }% and %{ name: 'Alice' }%. Output example: %{ id: 101, name: 'Alice' }%.",
           "result": "%{ id: 101, name: 'Alice' }%",
-          "solution": "function mergeProfile(account, details) {\n  return { ...account, ...details };\n}\nconsole.log(mergeProfile({ id: 101 }, { name: 'Alice' }));",
-          "done": false
+          "solution": "function mergeProfile(account, details) {\n  return { ...account, ...details };\n}\nconsole.log(mergeProfile({ id: 101 }, { name: 'Alice' }));"
         },
         {
           "id": "sot1-03",
           "title": "Immutable Push Alternative Function",
           "description": "Create a function named %appendItem(items, newItem)% that takes an array and a string item. Without changing the original array directly, use the spread operator to create a new array that includes all original items with the %newItem% added cleanly at the end. Input example: %['bag', 'shoes']% and %'hat'%. Output example: %['bag', 'shoes', 'hat']%.",
           "result": "%['bag', 'shoes', 'hat']%",
-          "solution": "function appendItem(items, newItem) {\n  return [...items, newItem];\n}\nconsole.log(appendItem(['bag', 'shoes'], 'hat'));",
-          "done": false
+          "solution": "function appendItem(items, newItem) {\n  return [...items, newItem];\n}\nconsole.log(appendItem(['bag', 'shoes'], 'hat'));"
         },
         {
           "id": "sot1-04",
           "title": "Product Price Updater Function",
           "description": "Create a function named %updatePrice(productObj, newPrice)% that takes an inventory object and a number value. Use the object spread operator to copy the product data while cleanly updating or overwriting its %price% property with the new number value, returning the final object. Input example: %{ sku: 'A5', price: 15 }% and %22%. Output example: %{ sku: 'A5', price: 22 }%.",
           "result": "%{ sku: 'A5', price: 22 }%",
-          "solution": "function updatePrice(productObj, newPrice) {\n  return { ...productObj, price: newPrice };\n}\nconsole.log(updatePrice({ sku: 'A5', price: 15 }, 22));",
-          "done": false
+          "solution": "function updatePrice(productObj, newPrice) {\n  return { ...productObj, price: newPrice };\n}\nconsole.log(updatePrice({ sku: 'A5', price: 15 }, 22));"
         }
       ]
     },
@@ -2682,18 +2608,18 @@ export const seedData = {
           "title": "Gathering Remaining Arguments",
           "question": "function collectNumbers(first, ...rest) {\n  console.log(rest.length);\n}\ncollectNumbers(10, 20, 30, 40);",
           "options": [
-            { "id": "o2", "option": "a", "text": "4", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "3", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "3", "correct": true },
+            { "id": "o2", "option": "b", "text": "4", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "roq1-02",
           "title": "Rest in Array Destructuring",
           "question": "const team = ['Anna', 'Bob', 'Charlie', 'David'];\nconst [leader, ...everyoneElse] = team;\nconsole.log(everyoneElse[0]);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'Bob'", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "'Anna'", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "'Bob'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'Anna'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2702,8 +2628,8 @@ export const seedData = {
           "title": "Rest in Object Destructuring",
           "question": "const settings = { theme: 'dark', language: 'fr', version: 2 };\nconst { theme, ...remainingOptions } = settings;\nconsole.log(remainingOptions.theme);",
           "options": [
-            { "id": "o5", "option": "a", "text": "undefined", "correct": true, "selected": false },
-            { "id": "o6", "option": "b", "text": "'dark'", "correct": false, "selected": false }
+            { "id": "o5", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o6", "option": "b", "text": "'dark'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2712,8 +2638,8 @@ export const seedData = {
           "title": "Function Parameters Position Check",
           "question": "function handleArgs(first, ...rest) {\n  console.log(first);\n}\nhandleArgs(5, 10, 15);",
           "options": [
-            { "id": "o7", "option": "a", "text": "5", "correct": true, "selected": false },
-            { "id": "o8", "option": "b", "text": "[10, 15]", "correct": false, "selected": false }
+            { "id": "o7", "option": "a", "text": "5", "correct": true },
+            { "id": "o8", "option": "b", "text": "[10, 15]", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2722,8 +2648,8 @@ export const seedData = {
           "title": "Missing Values with Rest Parameter",
           "question": "function getMore(...items) {\n  console.log(items[0]);\n}\ngetMore();",
           "options": [
-            { "id": "o9", "option": "a", "text": "undefined", "correct": true, "selected": false },
-            { "id": "o10", "option": "b", "text": "null", "correct": false, "selected": false }
+            { "id": "o9", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o10", "option": "b", "text": "null", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2732,8 +2658,8 @@ export const seedData = {
           "title": "Rest Property Extraction Check",
           "question": "const product = { id: 101, title: 'Shirt', stock: 45 };\nconst { id, ...details } = product;\nconsole.log(details.stock);",
           "options": [
-            { "id": "o11", "option": "a", "text": "45", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "undefined", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "45", "correct": true },
+            { "id": "o12", "option": "b", "text": "undefined", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -2744,24 +2670,21 @@ export const seedData = {
           "title": "Skipping First Runner Function",
           "description": "Create a function named %getBackupRunners(runners)% that receives an array of runner names. Use array destructuring along with the rest operator to capture all participants except the first runner into a new array, and return that subset array. Input example: %['Alex', 'Ben', 'Chris', 'Dan']%.",
           "result": "%['Ben', 'Chris', 'Dan']%",
-          "solution": "function getBackupRunners(runners) {\n  const [first, ...restOfRunners] = runners;\n  return restOfRunners;\n}\nconsole.log(getBackupRunners(['Alex', 'Ben', 'Chris', 'Dan']));",
-          "done": false
+          "solution": "function getBackupRunners(runners) {\n  const [first, ...restOfRunners] = runners;\n  return restOfRunners;\n}\nconsole.log(getBackupRunners(['Alex', 'Ben', 'Chris', 'Dan']));"
         },
         {
           "id": "rot1-02",
           "title": "Sensitive Payload Filter Function",
           "description": "Create a function named %filterSensitiveData(userAccount)% that accepts a user account object containing authentication fields. Use object destructuring combined with the rest operator to split the object, extracting the %password% property on its own while packing all remaining properties into a clean separate profile object. Return that filtered profile object. Input example: %{ id: 404, username: 'cyber_hero', password: 'secret123' }%.",
           "result": "%{ id: 404, username: 'cyber_hero' }%",
-          "solution": "function filterSensitiveData(userAccount) {\n  const { password, ...publicProfile } = userAccount;\n  return publicProfile;\n}\nconsole.log(filterSensitiveData({ id: 404, username: 'cyber_hero', password: 'secret123' }));",
-          "done": false
+          "solution": "function filterSensitiveData(userAccount) {\n  const { password, ...publicProfile } = userAccount;\n  return publicProfile;\n}\nconsole.log(filterSensitiveData({ id: 404, username: 'cyber_hero', password: 'secret123' }));"
         },
         {
           "id": "rot1-03",
           "title": "Array Elements Count Guard Function",
           "description": "Create a function named %countRemainingItems(items)% that accepts an array. Use array destructuring with the rest operator to split off the first two items, storing everything else left over inside a single rest array variable. Return the total count of elements remaining inside that rest array as a number. Input example: %['pen', 'paper', 'clip', 'ruler', 'tape']%.",
           "result": "%3%",
-          "solution": "function countRemainingItems(items) {\n  const [first, second, ...leftovers] = items;\n  return leftovers.length;\n}\nconsole.log(countRemainingItems(['pen', 'paper', 'clip', 'ruler', 'tape']));",
-          "done": false
+          "solution": "function countRemainingItems(items) {\n  const [first, second, ...leftovers] = items;\n  return leftovers.length;\n}\nconsole.log(countRemainingItems(['pen', 'paper', 'clip', 'ruler', 'tape']));"
         }
       ]
     },
@@ -2775,18 +2698,18 @@ export const seedData = {
           "title": "Adding Elements to Arrays",
           "question": "const fruits = ['apple', 'banana'];\nconst updated = ['kiwi', ...fruits, 'mango'];\nconsole.log(updated[0]);",
           "options": [
-            { "id": "o2", "option": "a", "text": "'apple'", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "'kiwi'", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "'kiwi'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'apple'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "coq1-02",
           "title": "Targeting the Last Array Element",
           "question": "const items = ['pen', 'paper', 'clip'];\nconst last = items.at(-1);\nconsole.log(last);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'clip'", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "'pen'", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "'clip'", "correct": true },
+            { "id": "o4", "option": "b", "text": "'pen'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2795,18 +2718,18 @@ export const seedData = {
           "title": "Removing the Last Array Element",
           "question": "const list = ['a', 'b', 'c'];\nconst subset = [...list.slice(0, -1)];\nconsole.log(subset.length);",
           "options": [
-            { "id": "o6", "option": "a", "text": "3", "correct": false, "selected": false },
-            { "id": "o5", "option": "b", "text": "2", "correct": true, "selected": false }
+            { "id": "o5", "option": "a", "text": "2", "correct": true },
+            { "id": "o6", "option": "b", "text": "3", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "coq1-04",
           "title": "Updating Object States",
           "question": "const user = { name: 'Pablo', isOnline: false };\nconst updatedUser = { ...user, isOnline: true, isAdmin: true };\nconsole.log(updatedUser.isOnline);",
           "options": [
-            { "id": "o7", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o8", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o7", "option": "a", "text": "true", "correct": true },
+            { "id": "o8", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2815,18 +2738,18 @@ export const seedData = {
           "title": "Removing Properties via Rest",
           "question": "const account = { id: 1, age: 23, role: 'user' };\nconst { age, ...cleanAccount } = account;\nconsole.log(cleanAccount.age);",
           "options": [
-            { "id": "o10", "option": "a", "text": "23", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "undefined", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o10", "option": "b", "text": "23", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "coq1-06",
           "title": "Array Tail Extraction",
           "question": "const colors = ['red', 'green', 'blue'];\nconst [first, ...restOfColors] = colors;\nconsole.log(restOfColors[0]);",
           "options": [
-            { "id": "o11", "option": "a", "text": "'green'", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "'red'", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "'green'", "correct": true },
+            { "id": "o12", "option": "b", "text": "'red'", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -2837,32 +2760,28 @@ export const seedData = {
           "title": "Array Boundary Inserter Function",
           "description": "Create a function named %wrapArray(items, leading, trailing)% that accepts an array and two string elements. Use the spread operator to return a new array where %leading% is placed at the start, followed by all original items, and %trailing% is placed at the very end. Input example: %['banana']%, %'kiwi'%, and %'mango'%.",
           "result": "%['kiwi', 'banana', 'mango']%",
-          "solution": "function wrapArray(items, leading, trailing) {\n  return [leading, ...items, trailing];\n}\nconsole.log(wrapArray(['banana'], 'kiwi', 'mango'));",
-          "done": false
+          "solution": "function wrapArray(items, leading, trailing) {\n  return [leading, ...items, trailing];\n}\nconsole.log(wrapArray(['banana'], 'kiwi', 'mango'));"
         },
         {
           "id": "cot1-02",
           "title": "Array Tail Dropper Function",
           "description": "Create a function named %removeLastElement(list)% that receives an array. Use the slice method inside an array literal combined with the spread operator to copy and return a new array containing all elements except the very last one. Input example: %['apple', 'banana', 'orange']%.",
           "result": "%['apple', 'banana']%",
-          "solution": "function removeLastElement(list) {\n  return [...list.slice(0, -1)];\n}\nconsole.log(removeLastElement(['apple', 'banana', 'orange']));",
-          "done": false
+          "solution": "function removeLastElement(list) {\n  return [...list.slice(0, -1)];\n}\nconsole.log(removeLastElement(['apple', 'banana', 'orange']));"
         },
         {
           "id": "cot1-03",
           "title": "Object Editor and Extender Function",
           "description": "Create a function named %activateAdmin(userObj)% that accepts an identity object. Use the object spread operator to create a new object that copies the original properties, updates %isOnline% to %true%, and adds a new property named %isAdmin% set to %true%. Return this new object. Input example: %{ name: 'Pablo', age: 23, isOnline: false }%.",
           "result": "%{ name: 'Pablo', age: 23, isOnline: true, isAdmin: true }%",
-          "solution": "function activateAdmin(userObj) {\n  return { ...userObj, isOnline: true, isAdmin: true };\n}\nconsole.log(activateAdmin({ name: 'Pablo', age: 23, isOnline: false }));",
-          "done": false
+          "solution": "function activateAdmin(userObj) {\n  return { ...userObj, isOnline: true, isAdmin: true };\n}\nconsole.log(activateAdmin({ name: 'Pablo', age: 23, isOnline: false }));"
         },
         {
           "id": "cot1-04",
           "title": "Property Exclusion Filter Function",
           "description": "Create a function named %removeAgeField(profile)% that accepts an object. Use object destructuring and the rest operator to extract and isolate the %age% property into its own variable while collecting all other properties into a separate object. Return that separate object without the age field. Input example: %{ name: 'Pablo', age: 23, isOnline: false }%.",
           "result": "%{ name: 'Pablo', isOnline: false }%",
-          "solution": "function removeAgeField(profile) {\n  const { age, ...userWithoutAge } = profile;\n  return userWithoutAge;\n}\nconsole.log(removeAgeField({ name: 'Pablo', age: 23, isOnline: false }));",
-          "done": false
+          "solution": "function removeAgeField(profile) {\n  const { age, ...userWithoutAge } = profile;\n  return userWithoutAge;\n}\nconsole.log(removeAgeField({ name: 'Pablo', age: 23, isOnline: false }));"
         }
       ]
     },
@@ -2877,28 +2796,28 @@ export const seedData = {
           "title": "String Length Check",
           "question": "const username = 'alpha_dev';\nconsole.log(username.length);",
           "options": [
-            { "id": "o2", "option": "a", "text": "8", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "9", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "9", "correct": true },
+            { "id": "o2", "option": "b", "text": "8", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-02",
           "title": "Substring Evaluation with Includes",
           "question": "const email = 'support@company.com';\nconsole.log(email.includes('@'));",
           "options": [
-            { "id": "o4", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o3", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o3", "option": "a", "text": "true", "correct": true },
+            { "id": "o4", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-03",
           "title": "Prefix Validation",
           "question": "const url = 'https://api.com';\nconsole.log(url.startsWith('https'));",
           "options": [
-            { "id": "o5", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o6", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o5", "option": "a", "text": "true", "correct": true },
+            { "id": "o6", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2907,28 +2826,28 @@ export const seedData = {
           "title": "Suffix Validation",
           "question": "const file = 'invoice.pdf';\nconsole.log(file.endsWith('.pdf'));",
           "options": [
-            { "id": "o8", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o7", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o7", "option": "a", "text": "true", "correct": true },
+            { "id": "o8", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-05",
           "title": "JavaScript Primitives",
           "question": "Which of the following options lists ONLY primitive data types in JavaScript, excluding bigint and symbol?",
           "options": [
-            { "id": "o10", "option": "a", "text": "String, Number, Boolean, Object, Array", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "String, Number, Boolean, undefined, null", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "String, Number, Boolean, undefined, null", "correct": true },
+            { "id": "o10", "option": "b", "text": "String, Number, Boolean, Object, Array", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-06",
           "title": "String Splice and Isolation",
           "question": "const text = 'JavaScript';\nconsole.log(text.slice(0, 4));",
           "options": [
-            { "id": "o11", "option": "a", "text": "'Java'", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "'Script'", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "'Java'", "correct": true },
+            { "id": "o12", "option": "b", "text": "'Script'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2937,18 +2856,18 @@ export const seedData = {
           "title": "Case Transformation Upper",
           "question": "const code = 'promo10';\nconsole.log(code.toUpperCase());",
           "options": [
-            { "id": "o14", "option": "a", "text": "'promo10'", "correct": false, "selected": false },
-            { "id": "o13", "option": "b", "text": "'PROMO10'", "correct": true, "selected": false }
+            { "id": "o13", "option": "a", "text": "'PROMO10'", "correct": true },
+            { "id": "o14", "option": "b", "text": "'promo10'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-08",
           "title": "Case Transformation Lower",
           "question": "const input = 'USER_NAME';\nconsole.log(input.toLowerCase());",
           "options": [
-            { "id": "o15", "option": "a", "text": "'user_name'", "correct": true, "selected": false },
-            { "id": "o16", "option": "b", "text": "'username'", "correct": false, "selected": false }
+            { "id": "o15", "option": "a", "text": "'user_name'", "correct": true },
+            { "id": "o16", "option": "b", "text": "'username'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2957,18 +2876,18 @@ export const seedData = {
           "title": "String Parsing into Arrays",
           "question": "const tags = 'html,css,js';\nconst list = tags.split(',');\nconsole.log(list[1]);",
           "options": [
-            { "id": "o18", "option": "a", "text": "'html'", "correct": false, "selected": false },
-            { "id": "o17", "option": "b", "text": "'css'", "correct": true, "selected": false }
+            { "id": "o17", "option": "a", "text": "'css'", "correct": true },
+            { "id": "o18", "option": "b", "text": "'html'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-10",
           "title": "Array Aggregation into Strings",
           "question": "const path = ['usr', 'bin'];\nconsole.log(path.join('/'));",
           "options": [
-            { "id": "o19", "option": "a", "text": "'usr/bin'", "correct": true, "selected": false },
-            { "id": "o20", "option": "b", "text": "'usr,bin'", "correct": false, "selected": false }
+            { "id": "o19", "option": "a", "text": "'usr/bin'", "correct": true },
+            { "id": "o20", "option": "b", "text": "'usr,bin'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2977,18 +2896,18 @@ export const seedData = {
           "title": "Whitespace Cleanup",
           "question": "const input = '   admin   ';\nconsole.log(input.trim());",
           "options": [
-            { "id": "o22", "option": "a", "text": "'   admin'", "correct": false, "selected": false },
-            { "id": "o21", "option": "b", "text": "'admin'", "correct": true, "selected": false }
+            { "id": "o21", "option": "a", "text": "'admin'", "correct": true },
+            { "id": "o22", "option": "b", "text": "'   admin'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-12",
           "title": "Identifying Falsy Values",
           "question": "Which of the following evaluations represents a falsy value in standard JavaScript conditions?",
           "options": [
-            { "id": "o23", "option": "a", "text": "0", "correct": true, "selected": false },
-            { "id": "o24", "option": "b", "text": "'0'", "correct": false, "selected": false }
+            { "id": "o23", "option": "a", "text": "0", "correct": true },
+            { "id": "o24", "option": "b", "text": "'0'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -2997,18 +2916,18 @@ export const seedData = {
           "title": "Single Character Replacement",
           "question": "const phrase = 'test-case';\nconsole.log(phrase.replace('-', '_'));",
           "options": [
-            { "id": "o26", "option": "a", "text": "'testcase'", "correct": false, "selected": false },
-            { "id": "o25", "option": "b", "text": "'test_case'", "correct": true, "selected": false }
+            { "id": "o25", "option": "a", "text": "'test_case'", "correct": true },
+            { "id": "o26", "option": "b", "text": "'testcase'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-14",
           "title": "Global Occurrence Replacement",
           "question": "const path = '2026/05/20';\nconsole.log(path.replaceAll('/', '-'));",
           "options": [
-            { "id": "o27", "option": "a", "text": "'2026-05-20'", "correct": true, "selected": false },
-            { "id": "o28", "option": "b", "text": "'2026/05-20'", "correct": false, "selected": false }
+            { "id": "o27", "option": "a", "text": "'2026-05-20'", "correct": true },
+            { "id": "o28", "option": "b", "text": "'2026/05-20'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3017,28 +2936,28 @@ export const seedData = {
           "title": "Float Precision Formatting",
           "question": "const balance = 10.5678;\nconsole.log(balance.toFixed(2));",
           "options": [
-            { "id": "o30", "option": "a", "text": "10.57", "correct": false, "selected": false },
-            { "id": "o29", "option": "b", "text": "'10.57'", "correct": true, "selected": false }
+            { "id": "o29", "option": "a", "text": "'10.57'", "correct": true },
+            { "id": "o30", "option": "b", "text": "10.57", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-16",
           "title": "Explicit Type Parsing",
           "question": "const entry = '4';\nconst parsed = Number(entry);\nconsole.log(typeof parsed);",
           "options": [
-            { "id": "o32", "option": "a", "text": "'string'", "correct": false, "selected": false },
-            { "id": "o31", "option": "b", "text": "'number'", "correct": true, "selected": false }
+            { "id": "o31", "option": "a", "text": "'number'", "correct": true },
+            { "id": "o32", "option": "b", "text": "'string'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-17",
           "title": "Array Head Discarding Pattern",
           "question": "const fruits = ['apple', 'banana', 'orange'];\nconst [, ...tail] = fruits;\nconsole.log(tail[0]);",
           "options": [
-            { "id": "o33", "option": "a", "text": "'banana'", "correct": true, "selected": false },
-            { "id": "o34", "option": "b", "text": "'apple'", "correct": false, "selected": false }
+            { "id": "o33", "option": "a", "text": "'banana'", "correct": true },
+            { "id": "o34", "option": "b", "text": "'apple'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3047,28 +2966,28 @@ export const seedData = {
           "title": "Object Key Extraction Safety",
           "question": "const data = { id: 5, score: 90 };\nconst { id, ...remainder } = data;\nconsole.log(remainder.id);",
           "options": [
-            { "id": "o36", "option": "a", "text": "5", "correct": false, "selected": false },
-            { "id": "o35", "option": "b", "text": "undefined", "correct": true, "selected": false }
+            { "id": "o35", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o36", "option": "b", "text": "5", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-19",
           "title": "Array Head Extraction",
           "question": "const queue = ['task1', 'task2'];\nconst [nextTask] = queue;\nconsole.log(nextTask);",
           "options": [
-            { "id": "o38", "option": "a", "text": "'task2'", "correct": false, "selected": false },
-            { "id": "o37", "option": "b", "text": "'task1'", "correct": true, "selected": false }
+            { "id": "o37", "option": "a", "text": "'task1'", "correct": true },
+            { "id": "o38", "option": "b", "text": "'task2'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-20",
           "title": "Understanding Hoisting",
           "question": "console.log(greet());\nfunction greet() {\n  return 'hello';\n}",
           "options": [
-            { "id": "o39", "option": "a", "text": "'hello'", "correct": true, "selected": false },
-            { "id": "o40", "option": "b", "text": "TypeError", "correct": false, "selected": false }
+            { "id": "o39", "option": "a", "text": "'hello'", "correct": true },
+            { "id": "o40", "option": "b", "text": "TypeError", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3077,18 +2996,18 @@ export const seedData = {
           "title": "Relative Array Indexing",
           "question": "const speeds = [30, 50, 80];\nconsole.log(speeds.at(-1));",
           "options": [
-            { "id": "o42", "option": "a", "text": "30", "correct": false, "selected": false },
-            { "id": "o41", "option": "b", "text": "80", "correct": true, "selected": false }
+            { "id": "o41", "option": "a", "text": "80", "correct": true },
+            { "id": "o42", "option": "b", "text": "30", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-22",
           "title": "Array Leftover Collection",
           "question": "const logs = ['error1', 'info1', 'info2'];\nconst [first, ...remaining] = logs;\nconsole.log(remaining.length);",
           "options": [
-            { "id": "o43", "option": "a", "text": "2", "correct": true, "selected": false },
-            { "id": "o44", "option": "b", "text": "3", "correct": false, "selected": false }
+            { "id": "o43", "option": "a", "text": "2", "correct": true },
+            { "id": "o44", "option": "b", "text": "3", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3097,18 +3016,18 @@ export const seedData = {
           "title": "Array Element Prepending",
           "question": "const systems = ['linux'];\nconst collection = ['macOS', ...systems];\nconsole.log(collection[0]);",
           "options": [
-            { "id": "o46", "option": "a", "text": "'linux'", "correct": false, "selected": false },
-            { "id": "o45", "option": "b", "text": "'macOS'", "correct": true, "selected": false }
+            { "id": "o45", "option": "a", "text": "'macOS'", "correct": true },
+            { "id": "o46", "option": "b", "text": "'linux'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-24",
           "title": "Array Element Replacement Slicing",
           "question": "const original = ['x', 'y', 'z'];\nconst [, ...withoutFirstEl] = original;\nconst updated = [...withoutFirstEl, 'w'];\nconsole.log(updated[1]);",
           "options": [
-            { "id": "o47", "option": "a", "text": "'z'", "correct": true, "selected": false },
-            { "id": "o48", "option": "b", "text": "'y'", "correct": false, "selected": false }
+            { "id": "o47", "option": "a", "text": "'z'", "correct": true },
+            { "id": "o48", "option": "b", "text": "'y'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3117,18 +3036,18 @@ export const seedData = {
           "title": "Array Element Appending",
           "question": "const stack = ['git'];\nconst fullStack = [...stack, 'docker'];\nconsole.log(fullStack.at(-1));",
           "options": [
-            { "id": "o50", "option": "a", "text": "'git'", "correct": false, "selected": false },
-            { "id": "o49", "option": "b", "text": "'docker'", "correct": true, "selected": false }
+            { "id": "o49", "option": "a", "text": "'docker'", "correct": true },
+            { "id": "o50", "option": "b", "text": "'git'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-26",
           "title": "State Update Overwrites",
           "question": "const user = { name: 'Pablo', isOnline: false };\nconst nextUser = { ...user, isOnline: true, isAdmin: true };\nconsole.log(nextUser.isOnline);",
           "options": [
-            { "id": "o51", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o52", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o51", "option": "a", "text": "true", "correct": true },
+            { "id": "o52", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3137,18 +3056,18 @@ export const seedData = {
           "title": "Object Field Extraction Exclusion",
           "question": "const client = { uid: 99, age: 23, plan: 'basic' };\nconst { age, ...clientWithoutAge } = client;\nconsole.log(clientWithoutAge.age);",
           "options": [
-            { "id": "o54", "option": "a", "text": "23", "correct": false, "selected": false },
-            { "id": "o53", "option": "b", "text": "undefined", "correct": true, "selected": false }
+            { "id": "o53", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o54", "option": "b", "text": "23", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-28",
           "title": "Function Scope Isolation",
           "question": "function run() {\n  let internal = 'secured';\n}\nrun();\nconsole.log(typeof internal);",
           "options": [
-            { "id": "o55", "option": "a", "text": "'undefined'", "correct": true, "selected": false },
-            { "id": "o56", "option": "b", "text": "'string'", "correct": false, "selected": false }
+            { "id": "o55", "option": "a", "text": "'undefined'", "correct": true },
+            { "id": "o56", "option": "b", "text": "'string'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3157,18 +3076,18 @@ export const seedData = {
           "title": "Destructured Defaults Evaluation",
           "question": "const data = { token: 'xyz' };\nconst { token, type = 'Bearer' } = data;\nconsole.log(type);",
           "options": [
-            { "id": "o58", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o57", "option": "b", "text": "'Bearer'", "correct": true, "selected": false }
+            { "id": "o57", "option": "a", "text": "'Bearer'", "correct": true },
+            { "id": "o58", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-30",
           "title": "Argument Binding via Destruction",
           "question": "function show({ title }) {\n  return title;\n}\nconsole.log(show({ id: 5, title: 'Book' }));",
           "options": [
-            { "id": "o59", "option": "a", "text": "'Book'", "correct": true, "selected": false },
-            { "id": "o60", "option": "b", "text": "undefined", "correct": false, "selected": false }
+            { "id": "o59", "option": "a", "text": "'Book'", "correct": true },
+            { "id": "o60", "option": "b", "text": "undefined", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3177,28 +3096,28 @@ export const seedData = {
           "title": "Renaming During State Spread",
           "question": "const original = { categoryId: 10 };\nconst { categoryId: id } = original;\nconsole.log(id);",
           "options": [
-            { "id": "o62", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o61", "option": "b", "text": "10", "correct": true, "selected": false }
+            { "id": "o61", "option": "a", "text": "10", "correct": true },
+            { "id": "o62", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-32",
           "title": "Array Boundary Relative Indexing",
           "question": "const devices = ['phone', 'tablet', 'laptop'];\nconsole.log(devices.at(-1));",
           "options": [
-            { "id": "o64", "option": "a", "text": "'phone'", "correct": false, "selected": false },
-            { "id": "o63", "option": "b", "text": "'laptop'", "correct": true, "selected": false }
+            { "id": "o63", "option": "a", "text": "'laptop'", "correct": true },
+            { "id": "o64", "option": "b", "text": "'phone'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-33",
           "title": "String Conditional Matching",
           "question": "const alertMessage = 'ERROR: Database failed';\nconsole.log(alertMessage.startsWith('ERROR'));",
           "options": [
-            { "id": "o65", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o66", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o65", "option": "a", "text": "true", "correct": true },
+            { "id": "o66", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3207,18 +3126,18 @@ export const seedData = {
           "title": "Object Variable Value Injection",
           "question": "const status = 'active';\nconst config = { status, version: 1 };\nconsole.log(config.status);",
           "options": [
-            { "id": "o68", "option": "a", "text": "undefined", "correct": false, "selected": false },
-            { "id": "o67", "option": "b", "text": "'active'", "correct": true, "selected": false }
+            { "id": "o67", "option": "a", "text": "'active'", "correct": true },
+            { "id": "o68", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-35",
           "title": "Array Element Isolation via Rest",
           "question": "const rates = [1.2, 3.4, 5.6];\nconst [primary, ...restRates] = rates;\nconsole.log(restRates[0]);",
           "options": [
-            { "id": "o69", "option": "a", "text": "3.4", "correct": true, "selected": false },
-            { "id": "o70", "option": "b", "text": "1.2", "correct": false, "selected": false }
+            { "id": "o69", "option": "a", "text": "3.4", "correct": true },
+            { "id": "o70", "option": "b", "text": "1.2", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3227,28 +3146,28 @@ export const seedData = {
           "title": "Number Evaluation of Fixed Values",
           "question": "const score = 9.99;\nconst output = score.toFixed(0);\nconsole.log(typeof output);",
           "options": [
-            { "id": "o72", "option": "a", "text": "'number'", "correct": false, "selected": false },
-            { "id": "o71", "option": "b", "text": "'string'", "correct": true, "selected": false }
+            { "id": "o71", "option": "a", "text": "'string'", "correct": true },
+            { "id": "o72", "option": "b", "text": "'number'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-37",
           "title": "Character Replacement Chain",
           "question": "const item = 'tea cup';\nconsole.log(item.replace(' ', '-'));",
           "options": [
-            { "id": "o74", "option": "a", "text": "'teacup'", "correct": false, "selected": false },
-            { "id": "o73", "option": "b", "text": "'tea-cup'", "correct": true, "selected": false }
+            { "id": "o73", "option": "a", "text": "'tea-cup'", "correct": true },
+            { "id": "o74", "option": "b", "text": "'teacup'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-38",
           "title": "Block Scope Constraints",
           "question": "if (true) {\n  let temporary = 'inside';\n}\nconsole.log(typeof temporary);",
           "options": [
-            { "id": "o75", "option": "a", "text": "'undefined'", "correct": true, "selected": false },
-            { "id": "o76", "option": "b", "text": "'string'", "correct": false, "selected": false }
+            { "id": "o75", "option": "a", "text": "'undefined'", "correct": true },
+            { "id": "o76", "option": "b", "text": "'string'", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3257,18 +3176,18 @@ export const seedData = {
           "title": "String Suffix Evaluation",
           "question": "const file = 'main.js';\nconsole.log(file.endsWith('.js'));",
           "options": [
-            { "id": "o78", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o77", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o77", "option": "a", "text": "true", "correct": true },
+            { "id": "o78", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-41",
           "title": "Property Accumulation via Spreading",
           "question": "const base = { x: 1 };\nconst point = { ...base, y: 2, x: 3 };\nconsole.log(point.x);",
           "options": [
-            { "id": "o81", "option": "a", "text": "3", "correct": true, "selected": false },
-            { "id": "o82", "option": "b", "text": "1", "correct": false, "selected": false }
+            { "id": "o81", "option": "a", "text": "3", "correct": true },
+            { "id": "o82", "option": "b", "text": "1", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3277,28 +3196,28 @@ export const seedData = {
           "title": "Substring Match Inclusion Check",
           "question": "const msg = 'Welcome administrator';\nconsole.log(msg.includes('admin'));",
           "options": [
-            { "id": "o84", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o83", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o83", "option": "a", "text": "true", "correct": true },
+            { "id": "o84", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-43",
           "title": "Explicit Real Number Assignment",
           "question": "const metric = '42';\nconsole.log(Number(metric) + 1);",
           "options": [
-            { "id": "o86", "option": "a", "text": "'421'", "correct": false, "selected": false },
-            { "id": "o85", "option": "b", "text": "43", "correct": true, "selected": false }
+            { "id": "o85", "option": "a", "text": "43", "correct": true },
+            { "id": "o86", "option": "b", "text": "'421'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-44",
           "title": "String Cleansing Operations",
           "question": "const token = ' token_val ';\nconsole.log(token.trim().length);",
           "options": [
-            { "id": "o87", "option": "a", "text": "9", "correct": true, "selected": false },
-            { "id": "o88", "option": "b", "text": "11", "correct": false, "selected": false }
+            { "id": "o87", "option": "a", "text": "9", "correct": true },
+            { "id": "o88", "option": "b", "text": "11", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3307,18 +3226,18 @@ export const seedData = {
           "title": "Object Key Removal Isolation",
           "question": "const entity = { k1: 'v1', k2: 'v2' };\nconst { k1, ...restEntity } = entity;\nconsole.log(restEntity.k1);",
           "options": [
-            { "id": "o90", "option": "a", "text": "'v1'", "correct": false, "selected": false },
-            { "id": "o89", "option": "b", "text": "undefined", "correct": true, "selected": false }
+            { "id": "o89", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o90", "option": "b", "text": "'v1'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-46",
           "title": "Array Conversion via Division",
           "question": "const phrase = 'a b c';\nconsole.log(phrase.split(' ').length);",
           "options": [
-            { "id": "o91", "option": "a", "text": "3", "correct": true, "selected": false },
-            { "id": "o92", "option": "b", "text": "1", "correct": false, "selected": false }
+            { "id": "o91", "option": "a", "text": "3", "correct": true },
+            { "id": "o92", "option": "b", "text": "1", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3327,18 +3246,18 @@ export const seedData = {
           "title": "String Character Transformations",
           "question": "const label = 'Item';\nconsole.log(label.toUpperCase() === 'ITEM');",
           "options": [
-            { "id": "o94", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o93", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o93", "option": "a", "text": "true", "correct": true },
+            { "id": "o94", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-48",
           "title": "Array Bound Indexing Offset",
           "question": "const codes = [99, 101];\nconsole.log(codes.at(-1));",
           "options": [
-            { "id": "o95", "option": "a", "text": "101", "correct": true, "selected": false },
-            { "id": "o96", "option": "b", "text": "99", "correct": false, "selected": false }
+            { "id": "o95", "option": "a", "text": "101", "correct": true },
+            { "id": "o96", "option": "b", "text": "99", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -3347,18 +3266,18 @@ export const seedData = {
           "title": "Global Replacements Chain Evaluation",
           "question": "const route = 'one.two.three';\nconsole.log(route.replaceAll('.', '/'));",
           "options": [
-            { "id": "o98", "option": "a", "text": "'one/two.three'", "correct": false, "selected": false },
-            { "id": "o97", "option": "b", "text": "'one/two/three'", "correct": true, "selected": false }
+            { "id": "o97", "option": "a", "text": "'one/two/three'", "correct": true },
+            { "id": "o98", "option": "b", "text": "'one/two.three'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "mq3-50",
           "title": "Destructured Parameter Value Reassignments",
           "question": "function compute({ scale = 2 }) {\n  return scale * 10;\n}\nconsole.log(compute({}));",
           "options": [
-            { "id": "o99", "option": "a", "text": "20", "correct": true, "selected": false },
-            { "id": "o100", "option": "b", "text": "NaN", "correct": false, "selected": false }
+            { "id": "o99", "option": "a", "text": "20", "correct": true },
+            { "id": "o100", "option": "b", "text": "NaN", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -3369,128 +3288,140 @@ export const seedData = {
           "title": "User Promo Code Normalizer Function",
           "description": "Create a function named %normalizePromoCode(rawCode)% that cleans up user voucher string inputs. Trim any trailing or leading empty white spaces, convert the entire text value to lowercase characters, and return the cleaned string. Input example: %'  WINTER50 '%.",
           "result": "%'winter50'%",
-          "solution": "function normalizePromoCode(rawCode) {\n  return rawCode.trim().toLowerCase();\n}\nconsole.log(normalizePromoCode('  WINTER50 '));",
-          "done": false
+          "solution": "function normalizePromoCode(rawCode) {\n  return rawCode.trim().toLowerCase();\n}\nconsole.log(normalizePromoCode('  WINTER50 '));"
         },
         {
           "id": "mt3-02",
           "title": "Secure API Path Detector Function",
           "description": "Create a function named %isSecureEndpoint(url)% that checks if an API target URL matches necessary security requirements. Return true if the endpoint starts precisely with the secure token string protocol %'https'%, and false otherwise. Input example: %'https://api.gateway.io'%.",
           "result": "%true%",
-          "solution": "function isSecureEndpoint(url) {\n  return url.startsWith('https');\n}\nconsole.log(isSecureEndpoint('https://api.gateway.io'));",
-          "done": false
+          "solution": "function isSecureEndpoint(url) {\n  return url.startsWith('https');\n}\nconsole.log(isSecureEndpoint('https://api.gateway.io'));"
         },
         {
           "id": "mt3-03",
           "title": "Document Extension Guard Function",
           "description": "Create a function named %validatePdfFile(filename)% that takes a string. Check if the string ends with %'.pdf'%. Convert the filename to lowercase before checking to ensure it catches uppercase variations. Return true if valid, or false if not. Input example: %'INVOICE.PDF'%.",
           "result": "%true%",
-          "solution": "function validatePdfFile(filename) {\n  const lower = filename.toLowerCase();\n  return lower.endsWith('.pdf');\n}\nconsole.log(validatePdfFile('INVOICE.PDF'));",
-          "done": false
+          "solution": "function validatePdfFile(filename) {\n  const lower = filename.toLowerCase();\n  return lower.endsWith('.pdf');\n}\nconsole.log(validatePdfFile('INVOICE.PDF'));"
         },
         {
           "id": "mt3-04",
           "title": "Slug Text Generator Function",
           "description": "Create a function named %generateSlug(title)% that converts an article header title string into a url safe string. Transform all characters to lowercase, replace every blank empty space with a single dash connector symbol %'-'%, and return the final string. Input example: %'My First Post'%.",
           "result": "%'my-first-post'%",
-          "solution": "function generateSlug(title) {\n  return title.toLowerCase().replaceAll(' ', '-');\n}\nconsole.log(generateSlug('My First Post'));",
-          "done": false
+          "solution": "function generateSlug(title) {\n  return title.toLowerCase().replaceAll(' ', '-');\n}\nconsole.log(generateSlug('My First Post'));"
         },
         {
           "id": "mt3-05",
           "title": "Product Cost Estimator Function",
           "description": "Create a function named %formatTotalCost(priceString, quantity)% that accepts a price as a string and a quantity number. Explicitly convert the price string into a real number, multiply it by the quantity, format the outcome down to exactly 2 decimal locations as a string, and return it. Input example: %'12.345'% and %3%.",
           "result": "%'37.04'%",
-          "solution": "function formatTotalCost(priceString, quantity) {\n  const numericPrice = Number(priceString);\n  const total = numericPrice * quantity;\n  return total.toFixed(2);\n}\nconsole.log(formatTotalCost('12.345', 3));",
-          "done": false
+          "solution": "function formatTotalCost(priceString, quantity) {\n  const numericPrice = Number(priceString);\n  const total = numericPrice * quantity;\n  return total.toFixed(2);\n}\nconsole.log(formatTotalCost('12.345', 3));"
         },
         {
           "id": "mt3-06",
           "title": "CSV Row Parser Function",
           "description": "Create a function named %extractFirstColumn(csvRow)% that parses values from comma-separated logs. Split the text record wherever a comma separator is found, use array destructuring to capture only the first separated item entry, and return that item value. Input example: %'active_user,2026,true'%.",
           "result": "%'active_user'%",
-          "solution": "function extractFirstColumn(csvRow) {\n  const [firstItem] = csvRow.split(',');\n  return firstItem;\n}\nconsole.log(extractFirstColumn('active_user,2026,true'));",
-          "done": false
+          "solution": "function extractFirstColumn(csvRow) {\n  const [firstItem] = csvRow.split(',');\n  return firstItem;\n}\nconsole.log(extractFirstColumn('active_user,2026,true'));"
         },
         {
           "id": "mt3-07",
           "title": "System Log Stream Prepend Function",
           "description": "Create a function named %prependUrgentLog(logs, newLog)% that accepts an array of strings and a single urgent message log string. Use the spread operator to place the %newLog% at the very front index of a new array, followed by all elements from the existing logs array, and return it. Input example: %['info1', 'info2']% and %'critical_error'%.",
           "result": "%['critical_error', 'info1', 'info2']%",
-          "solution": "function prependUrgentLog(logs, newLog) {\n  return [newLog, ...logs];\n}\nconsole.log(prependUrgentLog(['info1', 'info2'], 'critical_error'));",
-          "done": false
+          "solution": "function prependUrgentLog(logs, newLog) {\n  return [newLog, ...logs];\n}\nconsole.log(prependUrgentLog(['info1', 'info2'], 'critical_error'));"
         },
         {
           "id": "mt3-08",
           "title": "Database Connection String Masker Function",
           "description": "Create a function named %maskSecretKey(apiKey)% that keeps sensitive information secure. Extract the first 4 characters of the key string using the slice method, append three asterisks %'***'% directly to the end of that sliced chunk, and return the masked sequence. Input example: %'secret_api_key_99'%.",
           "result": "%'secr***'%",
-          "solution": "function maskSecretKey(apiKey) {\n  return apiKey.slice(0, 4) + '***';\n}\nconsole.log(maskSecretKey('secret_api_key_99'));",
-          "done": false
+          "solution": "function maskSecretKey(apiKey) {\n  return apiKey.slice(0, 4) + '***';\n}\nconsole.log(maskSecretKey('secret_api_key_99'));"
         },
         {
           "id": "mt3-09",
           "title": "E-Commerce Recent Item Tracker Function",
           "description": "Create a function named %getLastViewedItem(history)% that receives a customer's history array of items. Extract the very last item in the collection array without altering the original array data structure using the modern array index relative locator method, and return it. Input example: %['shoes', 'bag', 'jacket']%.",
           "result": "%'jacket'%",
-          "solution": "function getLastViewedItem(history) {\n  return history.at(-1);\n}\nconsole.log(getLastViewedItem(['shoes', 'bag', 'jacket']));",
-          "done": false
+          "solution": "function getLastViewedItem(history) {\n  return history.at(-1);\n}\nconsole.log(getLastViewedItem(['shoes', 'bag', 'jacket']));"
         },
         {
           "id": "mt3-10",
           "title": "User Account Activator and Upgrade Function",
           "description": "Create a function named %upgradeUserSession(sessionObj)% that modifies an active connection status state. Use the object spread operator to duplicate the existing properties, modify %isOnline% directly to true, and add a new %isAdmin% property set to true. Return this customized object configuration. Input example: %{ name: 'Pablo', age: 23, isOnline: false }%.",
           "result": "%{ name: 'Pablo', age: 23, isOnline: true, isAdmin: true }%",
-          "solution": "function upgradeUserSession(sessionObj) {\n  return { ...sessionObj, isOnline: true, isAdmin: true };\n}\nconsole.log(upgradeUserSession({ name: 'Pablo', age: 23, isOnline: false }));",
-          "done": false
+          "solution": "function upgradeUserSession(sessionObj) {\n  return { ...sessionObj, isOnline: true, isAdmin: true };\n}\nconsole.log(upgradeUserSession({ name: 'Pablo', age: 23, isOnline: false }));"
         },
         {
           "id": "mt3-11",
           "title": "PII Data Scrubbing Function",
           "description": "Create a function named %stripAgeData(payload)% that filters structured customer metadata. Use object destructuring and the rest operator together in a clean single assignment statement to split out the %age% property onto its own variable, and return only the remaining database safe profile fields wrapped in an object. Input example: %{ name: 'Pablo', age: 23, isOnline: false }%.",
           "result": "%{ name: 'Pablo', isOnline: false }%",
-          "solution": "function stripAgeData(payload) {\n  const { age, ...userWithoutAge } = payload;\n  return userWithoutAge;\n}\nconsole.log(stripAgeData({ name: 'Pablo', age: 23, isOnline: false }));",
-          "done": false
+          "solution": "function stripAgeData(payload) {\n  const { age, ...userWithoutAge } = payload;\n  return userWithoutAge;\n}\nconsole.log(stripAgeData({ name: 'Pablo', age: 23, isOnline: false }));"
         },
         {
           "id": "mt3-12",
           "title": "Domain Name Extractor Function",
           "description": "Create a function named %extractDomain(email)% that extracts web infrastructure targets. Use the split method to break up the email address string at the %'@'% separator symbol, use array destructuring to grab the second part of the resulting array split, and return it. Input example: %'dev@code.io'%.",
           "result": "%'code.io'%",
-          "solution": "function extractDomain(email) {\n  const [, domain] = email.split('@');\n  return domain;\n}\nconsole.log(extractDomain('dev@code.io'));",
-          "done": false
+          "solution": "function extractDomain(email) {\n  const [, domain] = email.split('@');\n  return domain;\n}\nconsole.log(extractDomain('dev@code.io'));"
         },
         {
           "id": "mt3-14",
           "title": "Structured Address Formatter Function",
           "description": "Create a function named %formatAddress({ city, zip })% that accepts an object containing customer location indicators. Destructure both fields directly within the function argument parameter list, combine them into a uniform human readable string formatted with a space separator, and return it. Input example: %{ city: 'Vienna', zip: '1010' }%.",
           "result": "%'Vienna 1010'%",
-          "solution": "function formatAddress({ city, zip }) {\n  return city + ' ' + zip;\n}\nconsole.log(formatAddress({ city: 'Vienna', zip: '1010' }));",
-          "done": false
+          "solution": "function formatAddress({ city, zip }) {\n  return city + ' ' + zip;\n}\nconsole.log(formatAddress({ city: 'Vienna', zip: '1010' }));"
         },
         {
           "id": "mt3-15",
           "title": "Subdomain URL Normalizer Function",
           "description": "Create a function named %cleanSubdomain(host)% that processes network infrastructure references. Use the replaceAll method to switch out every occurrence of a dot descriptor symbol %'.'% with a uniform dash connector symbol %'-'%, transform the entire string to uppercase, and return it. Input example: %'dev.api.v1'%.",
           "result": "%'DEV-API-V1'%",
-          "solution": "function cleanSubdomain(host) {\n  return host.replaceAll('.', '-').toUpperCase();\n}\nconsole.log(cleanSubdomain('dev.api.v1'));",
-          "done": false
+          "solution": "function cleanSubdomain(host) {\n  return host.replaceAll('.', '-').toUpperCase();\n}\nconsole.log(cleanSubdomain('dev.api.v1'));"
         },
         {
           "id": "mt3-16",
           "title": "Dynamic Cart Item Append Function",
           "description": "Create a function named %addItemToCart(currentCart, item)% that preserves structural integrity. Use the array spread operator to assemble a completely new list structure that copies all active elements from the %currentCart% array and appends the new %item% string cleanly onto the end position, returning it. Input example: %['kiwi', 'banana']% and %'mango'%.",
           "result": "%['kiwi', 'banana', 'mango']%",
-          "solution": "function addItemToCart(currentCart, item) {\n  return [...currentCart, item];\n}\nconsole.log(addItemToCart(['kiwi', 'banana'], 'mango'));",
-          "done": false
+          "solution": "function addItemToCart(currentCart, item) {\n  return [...currentCart, item];\n}\nconsole.log(addItemToCart(['kiwi', 'banana'], 'mango'));"
         },
         {
           "id": "mt3-16.1",
           "title": "Property Exclusion Filter Function",
           "description": "Create a function named %removeAgeField(profile)% that accepts an object. Use object destructuring and the rest operator to extract and isolate the %age% property into its own variable while collecting all other properties into a separate object. Return that separate object without the age field. Input example: %{ name: 'Pablo', age: 23, isOnline: false }%.",
           "result": "%{ name: 'Pablo', isOnline: false }%",
-          "solution": "function removeAgeField(profile) {\n  const { age, ...userWithoutAge } = profile;\n  return userWithoutAge;\n}\nconsole.log(removeAgeField({ name: 'Pablo', age: 23, isOnline: false }));",
-          "done": false
+          "solution": "function removeAgeField(profile) {\n  const { age, ...userWithoutAge } = profile;\n  return userWithoutAge;\n}\nconsole.log(removeAgeField({ name: 'Pablo', age: 23, isOnline: false }));"
+        },
+        {
+          "id": "mt3-17",
+          "title": "Compact Description Snippet Function",
+          "description": "Create a function named %createSnippet(text)% that generates small overview feeds. Extract the first 10 character components using the slice method, append an ellipsis sequence string %'...'%, and return that final combined string statement. Input example: %'Learn JavaScript basics'%.",
+          "result": "%'Learn Java...'%",
+          "solution": "function createSnippet(text) {\n  return text.slice(0, 10) + '...';\n}\nconsole.log(createSnippet('Learn JavaScript basics'));"
+        },
+        {
+          "id": "mt3-18",
+          "title": "Data Inventory Identifier Extractor Function",
+          "description": "Create a function named %extractAssetMetadata(assetRecord)% that unpacks complex tracking details. Use object destructuring inside the function signature to capture an attribute named %skuCode% but rename it locally onto a distinct working variable called %id%, then return its value. Input example: %{ skuCode: 'MN-92', price: 450 }%.",
+          "result": "%'MN-92'%",
+          "solution": "function extractAssetMetadata({ skuCode: id }) {\n  return id;\n}\nconsole.log(extractAssetMetadata({ skuCode: 'MN-92', price: 450 }));"
+        },
+        {
+          "id": "mt3-19",
+          "title": "Search Keyword Matcher Function",
+          "description": "Create a function named %hasSearchKeyword(sentence, keyword)% that verifies text records. Transform both the source sentence and target keyword parameter string elements completely into lowercase characters first, then use the includes method to check if the sentence contains the keyword, returning true or false. Input example: %'React Query Tutorial'%, %'query'%.",
+          "result": "%true%",
+          "solution": "function hasSearchKeyword(sentence, keyword) {\n  const lowerSentence = sentence.toLowerCase();\n  const lowerKeyword = keyword.toLowerCase();\n  return lowerSentence.includes(lowerKeyword);\n}\nconsole.log(hasSearchKeyword('React Query Tutorial', 'query'));"
+        },
+        {
+          "id": "mt3-20",
+          "title": "Array Tail Elements Rest Isolator Function",
+          "description": "Create a function named %getTailElements(items)% that breaks down structured listings. Use array destructuring along with the rest operator to catch and split off the first array element entry index, saving all remaining items leftover neatly inside a single sub-array package, and return that sub-array. Input example: %['apple', 'banana', 'orange']%.",
+          "result": "%['banana', 'orange']%",
+          "solution": "function getTailElements(items) {\n  const [first, ...withoutFirstEl] = items;\n  return withoutFirstEl;\n}\nconsole.log(getTailElements(['apple', 'banana', 'orange']));"
         }
       ]
     },
@@ -3504,10 +3435,10 @@ export const seedData = {
           "title": "Basic Ternary Execution",
           "question": "const isActive = true;\nconst status = isActive ? 'Active' : 'Inactive';\nconsole.log(status);",
           "options": [
-            { "id": "o2", "option": "a", "text": "'Inactive'", "correct": false },
-            { "id": "o1", "option": "b", "text": "'Active'", "correct": true }
+            { "id": "o1", "option": "a", "text": "'Active'", "correct": true },
+            { "id": "o2", "option": "b", "text": "'Inactive'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "toq1-02",
@@ -3524,10 +3455,10 @@ export const seedData = {
           "title": "Ternary with Template Literals",
           "question": "const isPremium = true;\nconst message = `Status: ${isPremium ? 'VIP' : 'Guest'}`;\nconsole.log(message);",
           "options": [
-            { "id": "o8", "option": "a", "text": "'Status: Guest'", "correct": false },
-            { "id": "o7", "option": "b", "text": "'Status: VIP'", "correct": true }
+            { "id": "o7", "option": "a", "text": "'Status: VIP'", "correct": true },
+            { "id": "o8", "option": "b", "text": "'Status: Guest'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "toq1-04",
@@ -3544,10 +3475,10 @@ export const seedData = {
           "title": "Nested Ternary Evaluation",
           "question": "const speed = 120;\nconst alert = speed > 100 ? (speed > 130 ? 'Danger' : 'Warning') : 'Normal';\nconsole.log(alert);",
           "options": [
-            { "id": "o12", "option": "a", "text": "'Danger'", "correct": false },
-            { "id": "o11", "option": "b", "text": "'Warning'", "correct": true }
+            { "id": "o11", "option": "a", "text": "'Warning'", "correct": true },
+            { "id": "o12", "option": "b", "text": "'Danger'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         }
       ],
       "tasks": [
@@ -3557,7 +3488,7 @@ export const seedData = {
           "description": "Create a function named %getTheme(isDarkMode)% that accepts a boolean parameter. Use a ternary operator to return the string %'dark'% if true, and %'light'% if false. Input example: %true%.",
           "result": "%'dark'%",
           "solution": "function getTheme(isDarkMode) {\n  return isDarkMode ? 'dark' : 'light';\n}\nconsole.log(getTheme(true));"
-        }
+        },
       ]
     },
     {
@@ -3570,10 +3501,10 @@ export const seedData = {
           "title": "Basic Boolean AND Evaluation",
           "question": "const hasKey = true;\nconst hasPermission = false;\nconst canEnter = hasKey && hasPermission;\nconsole.log(canEnter);",
           "options": [
-            { "id": "o2", "option": "a", "text": "true", "correct": false },
-            { "id": "o1", "option": "b", "text": "false", "correct": true }
+            { "id": "o1", "option": "a", "text": "false", "correct": true },
+            { "id": "o2", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "laq1-02",
@@ -3590,10 +3521,10 @@ export const seedData = {
           "title": "Short Circuit Returning Last Truthy",
           "question": "const isLoggedIn = true;\nconst userRole = 'Editor';\nconst currentAccess = isLoggedIn && userRole;\nconsole.log(currentAccess);",
           "options": [
-            { "id": "o6", "option": "a", "text": "true", "correct": false },
-            { "id": "o5", "option": "b", "text": "'Editor'", "correct": true }
+            { "id": "o5", "option": "a", "text": "'Editor'", "correct": true },
+            { "id": "o6", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "laq1-04",
@@ -3610,10 +3541,10 @@ export const seedData = {
           "title": "Guarded Function Execution",
           "question": "let value = 10;\nconst logValue = () => { value = 20; return true; };\nfalse && logValue();\nconsole.log(value);",
           "options": [
-            { "id": "o10", "option": "a", "text": "20", "correct": false },
-            { "id": "o9", "option": "b", "text": "10", "correct": true }
+            { "id": "o9", "option": "a", "text": "10", "correct": true },
+            { "id": "o10", "option": "b", "text": "20", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         }
       ],
       "tasks": [
@@ -3630,7 +3561,7 @@ export const seedData = {
           "description": "Create a function named %renderWidget(isLoaded, textContent)% that accepts a boolean and a string parameter. Use the short-circuit behavior of the logical AND operator to return %textContent% only if %isLoaded% is true. If %isLoaded% is false, it must return the false condition value. Input example: %true% and %'Analytics Dashboard'%.",
           "result": "%'Analytics Dashboard'%",
           "solution": "function renderWidget(isLoaded, textContent) {\n  return isLoaded && textContent;\n}\nconsole.log(renderWidget(true, 'Analytics Dashboard'));"
-        }
+        },
       ]
     },
     {
@@ -3643,10 +3574,10 @@ export const seedData = {
           "title": "Logical OR Falsy Fallback",
           "question": "const userTheme = '';\nconst defaultTheme = 'dark';\nconst theme = userTheme || defaultTheme;\nconsole.log(theme);",
           "options": [
-            { "id": "o2", "option": "a", "text": "''", "correct": false },
-            { "id": "o1", "option": "b", "text": "'dark'", "correct": true }
+            { "id": "o1", "option": "a", "text": "'dark'", "correct": true },
+            { "id": "o2", "option": "b", "text": "''", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "onq1-02",
@@ -3663,10 +3594,10 @@ export const seedData = {
           "title": "Logical OR with Numeric Zero",
           "question": "const customTimeout = 0;\nconst timeout = customTimeout || 3000;\nconsole.log(timeout);",
           "options": [
-            { "id": "o6", "option": "a", "text": "0", "correct": false },
-            { "id": "o5", "option": "b", "text": "3000", "correct": true }
+            { "id": "o5", "option": "a", "text": "3000", "correct": true },
+            { "id": "o6", "option": "b", "text": "0", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "onq1-04",
@@ -3683,10 +3614,10 @@ export const seedData = {
           "title": "Nullish Coalescing with Undefined and Null",
           "question": "const config = null;\nconst result = config ?? 'default-config';\nconsole.log(result);",
           "options": [
-            { "id": "o10", "option": "a", "text": "null", "correct": false },
-            { "id": "o9", "option": "b", "text": "'default-config'", "correct": true }
+            { "id": "o9", "option": "a", "text": "'default-config'", "correct": true },
+            { "id": "o10", "option": "b", "text": "null", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "onq1-06",
@@ -3713,10 +3644,10 @@ export const seedData = {
           "title": "Chained Nullish Coalescing Operators",
           "question": "const score = undefined ?? null ?? 10;\nconsole.log(score);",
           "options": [
-            { "id": "o20", "option": "a", "text": "null", "correct": false },
-            { "id": "o19", "option": "b", "text": "10", "correct": true }
+            { "id": "o19", "option": "a", "text": "10", "correct": true },
+            { "id": "o20", "option": "b", "text": "null", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         }
       ],
       "tasks": [
@@ -3756,20 +3687,20 @@ export const seedData = {
           "title": "Inverting Empty String Falsy Value",
           "question": "const username = '';\nconsole.log(!username);",
           "options": [
-            { "id": "o4", "option": "a", "text": "false", "correct": false },
-            { "id": "o3", "option": "b", "text": "true", "correct": true }
+            { "id": "o3", "option": "a", "text": "true", "correct": true },
+            { "id": "o4", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lnq1-05",
           "title": "NOT Operator with Numeric Zero",
           "question": "const totalItems = 0;\nconsole.log(!totalItems);",
           "options": [
-            { "id": "o10", "option": "a", "text": "false", "correct": false },
-            { "id": "o9", "option": "b", "text": "true", "correct": true }
+            { "id": "o9", "option": "a", "text": "true", "correct": true },
+            { "id": "o10", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lnq1-06",
@@ -3800,7 +3731,7 @@ export const seedData = {
             { "id": "o18", "option": "b", "text": "true", "correct": false }
           ],
           "correctAnswer": "a"
-        }
+        },
       ],
       "tasks": [
         {
@@ -3822,10 +3753,10 @@ export const seedData = {
           "title": "Boolean Coercion of a Valid String",
           "question": "const username = 'pablo';\nconsole.log(!!username);",
           "options": [
-            { "id": "o2", "option": "a", "text": "false", "correct": false },
-            { "id": "o1", "option": "b", "text": "true", "correct": true }
+            { "id": "o1", "option": "a", "text": "true", "correct": true },
+            { "id": "o2", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dnq1-02",
@@ -3852,10 +3783,10 @@ export const seedData = {
           "title": "Double NOT on a Positive Number",
           "question": "const total = 42;\nconsole.log(!!total);",
           "options": [
-            { "id": "o8", "option": "a", "text": "false", "correct": false },
-            { "id": "o7", "option": "b", "text": "true", "correct": true }
+            { "id": "o7", "option": "a", "text": "true", "correct": true },
+            { "id": "o8", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dnq1-05",
@@ -3882,20 +3813,20 @@ export const seedData = {
           "title": "Double NOT on a Declared Object Lit",
           "question": "const userSession = {};\nconsole.log(!!userSession);",
           "options": [
-            { "id": "o14", "option": "a", "text": "false", "correct": false },
-            { "id": "o13", "option": "b", "text": "true", "correct": true }
+            { "id": "o13", "option": "a", "text": "true", "correct": true },
+            { "id": "o14", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dnq1-08",
           "title": "Double NOT on a Declared Array",
           "question": "const itemsList = [];\nconsole.log(!!itemsList);",
           "options": [
-            { "id": "o16", "option": "a", "text": "false", "correct": false },
-            { "id": "o15", "option": "b", "text": "true", "correct": true }
+            { "id": "o15", "option": "a", "text": "true", "correct": true },
+            { "id": "o16", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "dnq1-09",
@@ -3912,13 +3843,14 @@ export const seedData = {
           "title": "Strict Type Matching via Double NOT",
           "question": "const rawValue = 'Token';\nconst converted = !!rawValue;\nconsole.log(typeof converted);",
           "options": [
-            { "id": "o20", "option": "a", "text": "'string'", "correct": false },
-            { "id": "o19", "option": "b", "text": "'boolean'", "correct": true }
+            { "id": "o19", "option": "a", "text": "'boolean'", "correct": true },
+            { "id": "o20", "option": "b", "text": "'string'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         }
       ],
-      "tasks": []
+      "tasks": [
+      ]
     },
     {
       "id": "optional-chaining-01",
@@ -3930,10 +3862,10 @@ export const seedData = {
           "title": "Accessing Existing Nested Properties",
           "question": "const user = { profile: { name: 'Alice' } };\nconsole.log(user.profile?.name);",
           "options": [
-            { "id": "o2", "option": "a", "text": "undefined", "correct": false },
-            { "id": "o1", "option": "b", "text": "'Alice'", "correct": true }
+            { "id": "o1", "option": "a", "text": "'Alice'", "correct": true },
+            { "id": "o2", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "ocq1-02",
@@ -3970,20 +3902,20 @@ export const seedData = {
           "title": "Dynamic Property Bracket Bracket Access",
           "question": "const key = 'location';\nconst client = { meta: { location: 'NY' } };\nconsole.log(client.meta?.[key]);",
           "options": [
-            { "id": "o14", "option": "a", "text": "undefined", "correct": false },
-            { "id": "o13", "option": "b", "text": "'NY'", "correct": true }
+            { "id": "o13", "option": "a", "text": "'NY'", "correct": true },
+            { "id": "o14", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "ocq1-08",
           "title": "Combining Optional Chain and Nullish Coalescing",
           "question": "const user = { settings: null };\nconst theme = user.settings?.theme ?? 'light';\nconsole.log(theme);",
           "options": [
-            { "id": "o16", "option": "a", "text": "null", "correct": false },
-            { "id": "o15", "option": "b", "text": "'light'", "correct": true }
+            { "id": "o15", "option": "a", "text": "'light'", "correct": true },
+            { "id": "o16", "option": "b", "text": "null", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "ocq1-09",
@@ -4018,18 +3950,18 @@ export const seedData = {
           "title": "Basic Left-to-Right Execution without Bounds",
           "question": "const outcome = true || false && false;\nconsole.log(outcome);",
           "options": [
-            { "id": "o2", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o1", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o1", "option": "a", "text": "true", "correct": true },
+            { "id": "o2", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lcq1-02",
           "title": "Parentheses Explicit Logical Evaluation",
           "question": "const orderEligible = (false || true) && false;\nconsole.log(orderEligible);",
           "options": [
-            { "id": "o3", "option": "a", "text": "false", "correct": true, "selected": false },
-            { "id": "o4", "option": "b", "text": "true", "correct": false, "selected": false }
+            { "id": "o3", "option": "a", "text": "false", "correct": true },
+            { "id": "o4", "option": "b", "text": "true", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -4038,18 +3970,18 @@ export const seedData = {
           "title": "Precedence Challenge with Coupon and Totals",
           "question": "const hasCoupon = true;\nconst isVIP = false;\nconst total = 40;\nconst isEligible = hasCoupon || isVIP && total > 50;\nconsole.log(isEligible);",
           "options": [
-            { "id": "o6", "option": "a", "text": "false", "correct": false, "selected": false },
-            { "id": "o5", "option": "b", "text": "true", "correct": true, "selected": false }
+            { "id": "o5", "option": "a", "text": "true", "correct": true },
+            { "id": "o6", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lcq1-04",
           "title": "Enforced Parentheses Checking for Cart Rules",
           "question": "const hasCoupon = true;\nconst isVIP = false;\nconst total = 40;\nconst isEligible = (hasCoupon || isVIP) && total > 50;\nconsole.log(isEligible);",
           "options": [
-            { "id": "o7", "option": "a", "text": "false", "correct": true, "selected": false },
-            { "id": "o8", "option": "b", "text": "true", "correct": false, "selected": false }
+            { "id": "o7", "option": "a", "text": "false", "correct": true },
+            { "id": "o8", "option": "b", "text": "true", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -4058,18 +3990,18 @@ export const seedData = {
           "title": "Short-Circuit Function Execution on True Condition",
           "question": "let status = 'closed';\nconst openSystem = () => {\n  status = 'open';\n  return true;\n};\nconst trigger = true && openSystem();\nconsole.log(status);",
           "options": [
-            { "id": "o10", "option": "a", "text": "'closed'", "correct": false, "selected": false },
-            { "id": "o9", "option": "b", "text": "'open'", "correct": true, "selected": false }
+            { "id": "o9", "option": "a", "text": "'open'", "correct": true },
+            { "id": "o10", "option": "b", "text": "'closed'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lcq1-06",
           "title": "Short-Circuit Function Skipping on Falsy Base",
           "question": "let updateCount = 0;\nconst performUpdate = () => {\n  updateCount = updateCount + 1;\n  return true;\n};\nconst action = false && performUpdate();\nconsole.log(updateCount);",
           "options": [
-            { "id": "o11", "option": "a", "text": "0", "correct": true, "selected": false },
-            { "id": "o12", "option": "b", "text": "1", "correct": false, "selected": false }
+            { "id": "o11", "option": "a", "text": "0", "correct": true },
+            { "id": "o12", "option": "b", "text": "1", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -4078,18 +4010,18 @@ export const seedData = {
           "title": "Compound Evaluation with Return String Nodes",
           "question": "const response = 'Standard' && 'Premium' || 'Guest';\nconsole.log(response);",
           "options": [
-            { "id": "o14", "option": "a", "text": "'Guest'", "correct": false, "selected": false },
-            { "id": "o13", "option": "b", "text": "'Premium'", "correct": true, "selected": false }
+            { "id": "o13", "option": "a", "text": "'Premium'", "correct": true },
+            { "id": "o14", "option": "b", "text": "'Guest'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lcq1-08",
           "title": "Complex Truthy Check with Function Execution",
           "question": "let trackingFlag = false;\nconst logAction = () => {\n  trackingFlag = true;\n  return 'Logged';\n};\nconst access = (false || true) && logAction();\nconsole.log(trackingFlag);",
           "options": [
-            { "id": "o15", "option": "a", "text": "true", "correct": true, "selected": false },
-            { "id": "o16", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o15", "option": "a", "text": "true", "correct": true },
+            { "id": "o16", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         },
@@ -4098,18 +4030,18 @@ export const seedData = {
           "title": "Short-Circuit Evaluator via Numerical Zero Target",
           "question": "const points = 0;\nconst layout = points && 'Scoreboards' || 'No-Data';\nconsole.log(layout);",
           "options": [
-            { "id": "o18", "option": "a", "text": "0", "correct": false, "selected": false },
-            { "id": "o17", "option": "b", "text": "'No-Data'", "correct": true, "selected": false }
+            { "id": "o17", "option": "a", "text": "'No-Data'", "correct": true },
+            { "id": "o18", "option": "b", "text": "0", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "lcq1-10",
           "title": "Implicit Precedence Bounds with Fallback String Values",
           "question": "const currentMode = 'Main-Dashboard' || true && false;\nconsole.log(currentMode);",
           "options": [
-            { "id": "o19", "option": "a", "text": "'Main-Dashboard'", "correct": true, "selected": false },
-            { "id": "o20", "option": "b", "text": "false", "correct": false, "selected": false }
+            { "id": "o19", "option": "a", "text": "'Main-Dashboard'", "correct": true },
+            { "id": "o20", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "a"
         }
@@ -4120,9 +4052,8 @@ export const seedData = {
           "title": "E-Commerce Discount Criteria Validation Engine",
           "description": "Create a function named %verifyDiscountEligibility(order)% that accepts an order configuration target object parameter containing keys: %hasCouponCode% (boolean), %isVIPMember% (boolean), and %cartTotal% (number). Use grouped logical combinations to return %true% if the user has a coupon code OR is a VIP member, AND their cart total is greater than 50. Otherwise return %false%. Input example: %{ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }%.",
           "result": "%true%",
-          "solution": "function verifyDiscountEligibility(order) {\n  return (order.hasCouponCode || order.isVIPMember) && order.cartTotal > 50;\n}\nconsole.log(verifyDiscountEligibility({ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }));",
-          "done": false
-        }
+          "solution": "function verifyDiscountEligibility(order) {\n  return (order.hasCouponCode || order.isVIPMember) && order.cartTotal > 50;\n}\nconsole.log(verifyDiscountEligibility({ hasCouponCode: false, isVIPMember: true, cartTotal: 65 }));"
+        },
       ]
     },
     {
@@ -4464,6 +4395,7 @@ export const seedData = {
         {
           "id": "meq4-34",
           "title": "Nullish Coalescing Passing Undefined Context",
+          "let": "let defaultLogLevel;",
           "question": "let defaultLogLevel;\nconst appliedLevel = defaultLogLevel ?? 'warn';\nconsole.log(appliedLevel);",
           "options": [
             { "id": "o67", "option": "a", "text": "'warn'", "correct": true },
@@ -4738,49 +4670,70 @@ export const seedData = {
           "title": "Dynamic User Premium Access Formatter via Ternary",
           "description": "Create a function named %formatAccessLevel(isPremium)% that receives a boolean parameter. Use the ternary operator to return the string %'Premium Access'% if the parameter is %true%, otherwise return the string %'Standard Access'%. Input example: %true%.",
           "result": "%'Premium Access'%",
-          "solution": "function formatAccessLevel(isPremium: boolean): string {\n  return isPremium ? 'Premium Access' : 'Standard Access';\n}\nconsole.log(formatAccessLevel(true));"
+          "solution": "function formatAccessLevel(isPremium) {\n  return isPremium ? 'Premium Access' : 'Standard Access';\n}\nconsole.log(formatAccessLevel(true));"
         },
         {
           "id": "met4-02",
           "title": "API Analytics Delivery Guard with Logical AND",
           "description": "Create a function named %sendAnalytics(isAllowed, analyticsPayload)% that accepts a boolean allowance flag and a text string data payload. Use the logical AND operator to short-circuit and return the %analyticsPayload% if permission tracking is %true%, otherwise return %false%. Input example: %true, 'User-Click'%.",
           "result": "%'User-Click'%",
-          "solution": "function sendAnalytics(isAllowed: boolean, analyticsPayload: string): string | boolean {\n  return isAllowed && analyticsPayload;\n}\nconsole.log(sendAnalytics(true, 'User-Click'));"
+          "solution": "function sendAnalytics(isAllowed, analyticsPayload) {\n  return isAllowed && analyticsPayload;\n}\nconsole.log(sendAnalytics(true, 'User-Click'));"
         },
         {
           "id": "met4-03",
           "title": "Robust Profile Username Guard with Logical OR",
           "description": "Create a function named %resolveUsername(inputName)% that accepts a string input tracking variable. Use the logical OR operator to return the %inputName% if it is a truthy value, otherwise return the fallback string value %'Guest_User'%. Input example: %''%.",
           "result": "%'Guest_User'%",
-          "solution": "function resolveUsername(inputName: string): string {\n  return inputName || 'Guest_User';\n}\nconsole.log(resolveUsername(''));"
+          "solution": "function resolveUsername(inputName) {\n  return inputName || 'Guest_User';\n}\nconsole.log(resolveUsername(''));"
         },
         {
           "id": "met4-04",
           "title": "UI Progress Bar Zero Coordinate Guardian via Nullish Coalescing",
           "description": "Create a function named %resolvePositionOffset(configuredOffset)% that accepts a variable representing a custom layout coordinate which might be undefined, null, or a valid number. Use the nullish coalescing operator to return %configuredOffset% if it is not nullish, otherwise return a default value of %100%. Input example: %0%.",
           "result": "%0%",
-          "solution": "function resolvePositionOffset(configuredOffset: number | null | undefined): number {\n  return configuredOffset ?? 100;\n}\nconsole.log(resolvePositionOffset(0));"
+          "solution": "function resolvePositionOffset(configuredOffset) {\n  return configuredOffset ?? 100;\n}\nconsole.log(resolvePositionOffset(0));"
         },
         {
           "id": "met4-05",
           "title": "System Connectivity Alert Inverter via Logical NOT",
           "description": "Create a function named %invertConnectionStatus(isOffline)% that accepts a boolean connection status tracking variable. Use the logical NOT operator to return the inverted boolean representation of the input parameter. Input example: %false%.",
           "result": "%true%",
-          "solution": "function invertConnectionStatus(isOffline: boolean): boolean {\n  return !isOffline;\n}\nconsole.log(invertConnectionStatus(false));"
+          "solution": "function invertConnectionStatus(isOffline) {\n  return !isOffline;\n}\nconsole.log(invertConnectionStatus(false));"
         },
         {
           "id": "met4-06",
           "title": "Form Text Entry Existence Cast via Double NOT",
           "description": "Create a function named %hasTextContent(rawInputText)% that accepts a single parameter of any primitive data type. Use the double NOT operator to explicitly coerce and return its strict boolean flag representation. Input example: %'Welcome'%.",
           "result": "%true%",
-          "solution": "function hasTextContent(rawInputText: any): boolean {\n  return !!rawInputText;\n}\nconsole.log(hasTextContent('Welcome'));"
+          "solution": "function hasTextContent(rawInputText) {\n  return !!rawInputText;\n}\nconsole.log(hasTextContent('Welcome'));"
         },
         {
           "id": "met4-07",
           "title": "Nested Server Payload Postal Code Extractor via Optional Chaining",
-          "description": "Create a function named %extractPostalCode(customerProfile)% that accepts a customer profile object. Use optional chaining to safely return the nested postal code under %customerProfile.address.postalCode%. If the property is missing or nullish, it should naturally return %undefined%. Input example: %{ address: { postalCode: '1030' } }%.",
-          "result": "%'1030'%",
-          "solution": "interface CustomerProfile {\n  address?: {\n    postalCode?: string;\n  };\n}\n\nfunction extractPostalCode(customerProfile: CustomerProfile): string | undefined {\n  return customerProfile.address?.postalCode;\n}\nconsole.log(extractPostalCode({ address: { postalCode: '1030' } }));"
+          "description": "Create a function named %extractPostalCode(customerProfile)% that accepts a deeply nested customer configuration profile data structure object. Use optional chaining to safely drill down and extract the nested %zipCode% key property from deep inside the %billing.address% object path. Input example: %{ id: 40, billing: { address: { zipCode: '10115' } } }%.",
+          "result": "%'10115'%",
+          "solution": "function extractPostalCode(customerProfile) {\n  return customerProfile.billing?.address?.zipCode;\n}\nconsole.log(extractPostalCode({ id: 40, billing: { address: { zipCode: '10115' } } }));"
+        },
+        {
+          "id": "met4-08",
+          "title": "Guarded Contextual Plugin Property Verification",
+          "description": "Create a function named %checkPluginTermination(pluginExtension)% that accepts an object instance parameter tracking loaded extensions. Use optional chaining to extract the %status% code inside the nested %terminationConfig% path safely if it exists, returning its value. Input example: %{ terminationConfig: { status: 'Clean-Exit' } }%.",
+          "result": "%'Clean-Exit'%",
+          "solution": "function checkPluginTermination(pluginExtension) {\n  return pluginExtension.terminationConfig?.status;\n}\nconsole.log(checkPluginTermination({ terminationConfig: { status: 'Clean-Exit' } }));"
+        },
+        {
+          "id": "met4-09",
+          "title": "Deep Hybrid Application Cache Fallback Resolution Engine",
+          "description": "Create a function named %getAppTheme(deviceContext)% that accepts a complex nested layout environment object tracker. Use optional chaining mixed with the nullish coalescing operator to safely drill down to extract the %visuals.theme% property string parameter, falling back to return the string default %'dark-mode'% if the target path evaluates to null or undefined. Input example: %{ visuals: null }%.",
+          "result": "%'dark-mode'%",
+          "solution": "function getAppTheme(deviceContext) {\n  return deviceContext.visuals?.theme ?? 'dark-mode';\n}\nconsole.log(getAppTheme({ visuals: null }));"
+        },
+        {
+          "id": "met4-10",
+          "title": "Layered Multi-Tier Price Discount Resolver via Explicit Logic Blocks",
+          "description": "Create a function named %calculateLoyaltyTier(purchasePoints)% that accepts an explicit tracking count integer number. Use explicit if-else logic blocks to return the string score label %'Platinum'% if points are greater than or equal to 500, %'Gold'% if points are greater than or equal to 200, and %'Silver'% for any points tracking evaluation parameters less than 200. Input example: %250%.",
+          "result": "%'Gold'%",
+          "solution": "function calculateLoyaltyTier(purchasePoints) {\n  if (purchasePoints >= 500) {\n    return 'Platinum';\n  }\n  if (purchasePoints >= 200) {\n    return 'Gold';\n  }\n  return 'Silver';\n}\nconsole.log(calculateLoyaltyTier(250));"
         }
       ]
     },
@@ -4804,40 +4757,40 @@ export const seedData = {
           "title": "Conditional Property Injection",
           "question": "const users = [\n  { name: 'Ali', age: 17 },\n  { name: 'Lee', age: 23 }\n];\nconst updated = users.map(user => {\n  return {\n    ...user,\n    isAdult: user.age > 19 ? true : false\n  };\n});\nconsole.log(updated[0].isAdult);",
           "options": [
-            { "id": "o3", "option": "a", "text": "true", "correct": false },
-            { "id": "o4", "option": "b", "text": "false", "correct": true }
+            { "id": "o3", "option": "a", "text": "false", "correct": true },
+            { "id": "o4", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "maq1-03",
           "title": "Excluding Properties via Rest Operator",
           "question": "const users = [\n  { id: 1, name: 'Kofi', role: 'admin' }\n];\nconst sanitized = users.map(user => {\n  const { role, ...rest } = user;\n  return rest;\n});\nconsole.log(sanitized[0].role);",
           "options": [
-            { "id": "o5", "option": "a", "text": "undefined", "correct": true },
-            { "id": "o6", "option": "b", "text": "'admin'", "correct": false }
+            { "id": "o5", "option": "a", "text": "'admin'", "correct": false },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "maq1-04",
           "title": "Map Index Parameter Usage",
           "question": "const items = ['apple', 'banana'];\nconst result = items.map((item, index) => {\n  return { id: index + 1, name: item };\n});\nconsole.log(result[1].id);",
           "options": [
-            { "id": "o7", "option": "a", "text": "1", "correct": false },
-            { "id": "o8", "option": "b", "text": "2", "correct": true }
+            { "id": "o7", "option": "a", "text": "2", "correct": true },
+            { "id": "o8", "option": "b", "text": "1", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "maq1-05",
           "title": "Original Array Immutability",
           "question": "const nums = [1, 2];\nconst doubled = nums.map(n => n * 2);\nconsole.log(nums[0]);",
           "options": [
-            { "id": "o9", "option": "a", "text": "1", "correct": true },
-            { "id": "o10", "option": "b", "text": "2", "correct": false }
+            { "id": "o9", "option": "a", "text": "2", "correct": false },
+            { "id": "o10", "option": "b", "text": "1", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         }
       ],
       "tasks": [
@@ -4867,30 +4820,30 @@ export const seedData = {
           "title": "Data Extraction with Specific Criteria",
           "question": "const users = [\n  { id: 1, firstName: 'Ali', role: 'moderator' },\n  { id: 2, firstName: 'Lee', role: 'user' },\n  { id: 3, firstName: 'John', role: 'user' }\n];\nconst match = users.find(user => user.role === 'user');\nconsole.log(match.firstName);",
           "options": [
-            { "id": "o1", "option": "a", "text": "'Lee'", "correct": true },
-            { "id": "o2", "option": "b", "text": "'John'", "correct": false }
+            { "id": "o1", "option": "a", "text": "'John'", "correct": false },
+            { "id": "o2", "option": "b", "text": "'Lee'", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "ffq2-02",
           "title": "Result Array Length on Multiple Fits",
           "question": "const users = [\n  { firstName: 'Lee', age: 23 },\n  { firstName: 'Kofi', age: 42 },\n  { firstName: 'John', age: 22 }\n];\nconst adults = users.filter(user => user.age > 20);\nconsole.log(adults.length);",
           "options": [
-            { "id": "o3", "option": "a", "text": "1", "correct": false },
-            { "id": "o4", "option": "b", "text": "3", "correct": true }
+            { "id": "o3", "option": "a", "text": "3", "correct": true },
+            { "id": "o4", "option": "b", "text": "1", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "ffq2-03",
           "title": "Handling Destructured Missing Target",
           "question": "const users = [\n  { firstName: 'Ali', lastName: 'Khan' },\n  { firstName: 'Lee', lastName: 'Chen' }\n];\nconst person = users.find(({ lastName }) => lastName === 'Diallo');\nconsole.log(person);",
           "options": [
-            { "id": "o5", "option": "a", "text": "undefined", "correct": true },
-            { "id": "o6", "option": "b", "text": "[]", "correct": false }
+            { "id": "o5", "option": "a", "text": "[]", "correct": false },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "ffq2-04",
@@ -4919,16 +4872,14 @@ export const seedData = {
           "title": "Pinpoint Specific User Record",
           "description": "Create a function named %getTargetUser(usersArray, targetLastName)% that receives an array of user objects containing %firstName% and %lastName%. Use the %find% method to locate and return the full object of the first user with a matching %lastName%. Input example: %[{firstName: 'Ali', lastName: 'Khan'}, {firstName: 'Lee', lastName: 'Chen'}], 'Chen'%.",
           "result": "%{firstName: 'Lee', lastName: 'Chen'}%",
-          "solution": "function getTargetUser(usersArray, targetLastName) {\n  return usersArray.find(user => user.lastName === targetLastName);\n}\nconsole.log(getTargetUser([{firstName: 'Ali', lastName: 'Khan'}, {firstName: 'Lee', lastName: 'Chen'}], 'Chen'));",
-          "done": false
+          "solution": "function getTargetUser(usersArray, targetLastName) {\n  return usersArray.find(user => user.lastName === targetLastName);\n}\nconsole.log(getTargetUser([{firstName: 'Ali', lastName: 'Khan'}, {firstName: 'Lee', lastName: 'Chen'}], 'Chen'));"
         },
         {
           "id": "fft2-02",
           "title": "Filter Active Target Demographics",
           "description": "Create a function named %getUsersByRole(usersArray, targetRole)% that takes an array of user objects. Use the %filter% method to return a completely new array containing only those user objects whose %role% matches the %targetRole% string parameter. Input example: %[{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}], 'user'%.",
           "result": "%[{firstName: 'Lee', role: 'user'}]%",
-          "solution": "function getUsersByRole(usersArray, targetRole) {\n  return usersArray.filter(user => user.role === targetRole);\n}\nconsole.log(getUsersByRole([{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}], 'user'));",
-          "done": false
+          "solution": "function getUsersByRole(usersArray, targetRole) {\n  return usersArray.filter(user => user.role === targetRole);\n}\nconsole.log(getUsersByRole([{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}], 'user'));"
         }
       ]
     },
@@ -4942,10 +4893,10 @@ export const seedData = {
           "title": "Verifying Uniform Group Roles",
           "question": "const users = [\n  { firstName: 'Ali', role: 'user' },\n  { firstName: 'Lee', role: 'user' },\n  { firstName: 'Kofi', role: 'admin' }\n];\nconst checkingAll = users.every(user => user.role === 'user');\nconsole.log(checkingAll);",
           "options": [
-            { "id": "o1", "option": "a", "text": "true", "correct": false },
-            { "id": "o2", "option": "b", "text": "false", "correct": true }
+            { "id": "o1", "option": "a", "text": "false", "correct": true },
+            { "id": "o2", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "seq2-02",
@@ -4972,10 +4923,10 @@ export const seedData = {
           "title": "Strict Age Boundary Evaluation",
           "question": "const users = [\n  { firstName: 'Lee', age: 23 },\n  { firstName: 'John', age: 22 }\n];\nconst verifyingAges = users.every(user => user.age > 20);\nconsole.log(verifyingAges);",
           "options": [
-            { "id": "o7", "option": "a", "text": "true", "correct": true },
-            { "id": "o8", "option": "b", "text": "false", "correct": false }
+            { "id": "o7", "option": "a", "text": "false", "correct": false },
+            { "id": "o8", "option": "b", "text": "true", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         }
       ],
       "tasks": [
@@ -4984,24 +4935,21 @@ export const seedData = {
           "title": "Verify Premium Content Gate Access",
           "description": "Create a function named %hasModeratorAccess(usersArray)% that accepts an array of user objects. Use the %some% method to check if at least one individual in the group holds the %'moderator'% role. Return %true% if found, otherwise return %false%. Input example: %[{firstName: 'Lee', role: 'user'}, {firstName: 'Ali', role: 'moderator'}]%.",
           "result": "%true%",
-          "solution": "function hasModeratorAccess(usersArray) {\n  return usersArray.some(user => user.role === 'moderator');\n}\nconsole.log(hasModeratorAccess([{firstName: 'Lee', role: 'user'}, {firstName: 'Ali', role: 'moderator'}]));",
-          "done": false
+          "solution": "function hasModeratorAccess(usersArray) {\n  return usersArray.some(user => user.role === 'moderator');\n}\nconsole.log(hasModeratorAccess([{firstName: 'Lee', role: 'user'}, {firstName: 'Ali', role: 'moderator'}]));"
         },
         {
           "id": "set2-02",
           "title": "Validate Global Age Restriction Compliance",
           "description": "Create a function named %validateCompliance(usersArray)% that takes an array of user objects. Use the %every% method to determine if every single user in the array is at least %18% years old. Input example: %[{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]%.",
           "result": "%true%",
-          "solution": "function validateCompliance(usersArray) {\n  return usersArray.every(user => user.age >= 18);\n}\nconsole.log(validateCompliance([{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]));",
-          "done": false
+          "solution": "function validateCompliance(usersArray) {\n  return usersArray.every(user => user.age >= 18);\n}\nconsole.log(validateCompliance([{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]));"
         },
         {
           "id": "set2-03",
           "title": "Check for System Name Completeness",
           "description": "Create a function named %areProfilesComplete(usersArray)% that checks an array of user objects. Use the %every% method to confirm that all users have a valid %lastName% property (meaning the string is not empty). Input example: %[{firstName: 'Ali', lastName: 'Khan'}, {firstName: 'John', lastName: ''}]%.",
           "result": "%false%",
-          "solution": "function areProfilesComplete(usersArray) {\n  return usersArray.every(user => user.lastName !== '');\n}\nconsole.log(areProfilesComplete([{firstName: 'Ali', lastName: 'Khan'}, {firstName: 'John', lastName: ''}]));",
-          "done": false
+          "solution": "function areProfilesComplete(usersArray) {\n  return usersArray.every(user => user.lastName !== '');\n}\nconsole.log(areProfilesComplete([{firstName: 'Ali', lastName: 'Khan'}, {firstName: 'John', lastName: ''}]));"
         }
       ]
     },
@@ -5047,16 +4995,14 @@ export const seedData = {
           "title": "Restricted Area Access Controller",
           "description": "Create a function named %checkRolePermission(allowedRoles, currentRole)% that receives an array of strings representing %allowedRoles% and a single string %currentRole%. Use the array %includes% method to return %true% if the current role is allowed, otherwise return %false%. Input example: %['admin', 'moderator'], 'user'%.",
           "result": "%false%",
-          "solution": "function checkRolePermission(allowedRoles, currentRole) {\n  return allowedRoles.includes(currentRole);\n}\nconsole.log(checkRolePermission(['admin', 'moderator'], 'user'));",
-          "done": false
+          "solution": "function checkRolePermission(allowedRoles, currentRole) {\n  return allowedRoles.includes(currentRole);\n}\nconsole.log(checkRolePermission(['admin', 'moderator'], 'user'));"
         },
         {
           "id": "inct-02",
           "title": "Route Pattern Security Verification",
           "description": "Create a function named %isSecureRoute(urlPath)% that checks a string parameter. Use the string %includes% method to verify if the path contains the substring %'v2/admin'%. Return %true% if it does, and %false% if it doesn't. Input example: %'/api/v2/admin/dashboard'%.",
           "result": "%true%",
-          "solution": "function isSecureRoute(urlPath) {\n  return urlPath.includes('v2/admin');\n}\nconsole.log(isSecureRoute('/api/v2/admin/dashboard'));",
-          "done": false
+          "solution": "function isSecureRoute(urlPath) {\n  return urlPath.includes('v2/admin');\n}\nconsole.log(isSecureRoute('/api/v2/admin/dashboard'));"
         }
       ]
     },
@@ -5074,7 +5020,7 @@ export const seedData = {
             { "id": "o2", "option": "b", "text": "80", "correct": true }
           ],
           "correctAnswer": "b"
-        }
+        },
       ],
       "tasks": [
         {
@@ -5082,8 +5028,7 @@ export const seedData = {
           "title": "Calculate Total System Age",
           "description": "Create a function named %sumUserAges(usersArray)% that accepts an array of user objects. Use the %reduce% method with an initial value of %0% to compute and return the total sum of all users' %age% properties. Input example: %[{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]%.",
           "result": "%65%",
-          "solution": "function sumUserAges(usersArray) {\n  return usersArray.reduce((acc, user) => {\n    return acc + user.age;\n  }, 0);\n}\nconsole.log(sumUserAges([{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]));",
-          "done": false
+          "solution": "function sumUserAges(usersArray) {\n  return usersArray.reduce((acc, user) => {\n    return acc + user.age;\n  }, 0);\n}\nconsole.log(sumUserAges([{firstName: 'Lee', age: 23}, {firstName: 'Kofi', age: 42}]));"
         }
       ]
     },
@@ -5098,158 +5043,158 @@ export const seedData = {
           "title": "Map Shape Transformation Check",
           "question": "const users = [\n  { firstName: 'Ali', lastName: 'Khan' },\n  { firstName: 'Lee', lastName: 'Chen' }\n];\nconst payload = users.map(u => ({ name: `${u.firstName} ${u.lastName}` }));\nconsole.log(payload[1].name);",
           "options": [
-            { "id": "o1", "option": "a", "text": "undefined", "correct": false },
-            { "id": "o2", "option": "b", "text": "'Lee Chen'", "correct": true }
+            { "id": "o1", "option": "a", "text": "'Lee Chen'", "correct": true },
+            { "id": "o2", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-02",
           "title": "Find First Match Evaluation",
           "question": "const users = [\n  { firstName: 'Ali', age: 17 },\n  { firstName: 'Lee', age: 23 },\n  { firstName: 'John', age: 22 }\n];\nconst person = users.find(u => u.age > 20);\nconsole.log(person.firstName);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'Lee'", "correct": true },
-            { "id": "o4", "option": "b", "text": "'John'", "correct": false }
+            { "id": "o3", "option": "a", "text": "'John'", "correct": false },
+            { "id": "o4", "option": "b", "text": "'Lee'", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-03",
           "title": "Filter Non-Matching Elements",
           "question": "const users = [\n  { firstName: 'Ali', role: 'moderator' },\n  { firstName: 'Kofi', role: 'admin' }\n];\nconst matches = users.filter(u => u.role === 'user');\nconsole.log(matches.length);",
           "options": [
-            { "id": "o5", "option": "a", "text": "undefined", "correct": false },
-            { "id": "o6", "option": "b", "text": "0", "correct": true }
+            { "id": "o5", "option": "a", "text": "0", "correct": true },
+            { "id": "o6", "option": "b", "text": "undefined", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-04",
           "title": "Some Method Single Match Verification",
           "question": "const users = [\n  { firstName: 'Lee', age: 23 },\n  { firstName: 'Ali', age: 17 }\n];\nconst outcome = users.some(u => u.age < 18);\nconsole.log(outcome);",
           "options": [
-            { "id": "o7", "option": "a", "text": "true", "correct": true },
-            { "id": "o8", "option": "b", "text": "false", "correct": false }
+            { "id": "o7", "option": "a", "text": "false", "correct": false },
+            { "id": "o8", "option": "b", "text": "true", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-05",
           "title": "Every Method Uniformity Failure",
           "question": "const users = [\n  { firstName: 'Lee', role: 'user' },\n  { firstName: 'Kofi', role: 'admin' }\n];\nconst check = users.every(u => u.role === 'user');\nconsole.log(check);",
           "options": [
-            { "id": "o9", "option": "a", "text": "true", "correct": false },
-            { "id": "o10", "option": "b", "text": "false", "correct": true }
+            { "id": "o9", "option": "a", "text": "false", "correct": true },
+            { "id": "o10", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-06",
           "title": "Array Primitive Includes Check",
           "question": "const systems = ['Auth', 'Database', 'Storage'];\nconst hasCache = systems.includes('Cache');\nconsole.log(hasCache);",
           "options": [
-            { "id": "o11", "option": "a", "text": "false", "correct": true },
-            { "id": "o12", "option": "b", "text": "true", "correct": false }
+            { "id": "o11", "option": "a", "text": "true", "correct": false },
+            { "id": "o12", "option": "b", "text": "false", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-07",
           "title": "Map Conditional Age Property Injection",
           "question": "const profiles = [\n  { name: 'Ali', age: 17 },\n  { name: 'Kofi', age: 42 }\n];\nconst processed = profiles.map(p => ({ ...p, vip: p.age > 40 }));\nconsole.log(processed[0].vip);",
           "options": [
-            { "id": "o13", "option": "a", "text": "true", "correct": false },
-            { "id": "o14", "option": "b", "text": "false", "correct": true }
+            { "id": "o13", "option": "a", "text": "false", "correct": true },
+            { "id": "o14", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-08",
           "title": "Find Element No Match Result",
           "question": "const users = [{ firstName: 'Lee', role: 'user' }];\nconst res = users.find(u => u.role === 'admin');\nconsole.log(res);",
           "options": [
-            { "id": "o15", "option": "a", "text": "undefined", "correct": true },
-            { "id": "o16", "option": "b", "text": "null", "correct": false }
+            { "id": "o15", "option": "a", "text": "null", "correct": false },
+            { "id": "o16", "option": "b", "text": "undefined", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-09",
           "title": "Filter Extracting Sub-group Counts",
           "question": "const users = [\n  { name: 'Ali', role: 'user' },\n  { name: 'John', role: 'user' }\n];\nconst list = users.filter(u => u.role === 'user');\nconsole.log(list.length);",
           "options": [
-            { "id": "o17", "option": "a", "text": "1", "correct": false },
-            { "id": "o18", "option": "b", "text": "2", "correct": true }
+            { "id": "o17", "option": "a", "text": "2", "correct": true },
+            { "id": "o18", "option": "b", "text": "1", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-10",
           "title": "String Includes Case Sensitivity Rules",
           "question": "const alertMsg = 'CRITICAL: System over temperature';\nconst isCritical = alertMsg.includes('critical');\nconsole.log(isCritical);",
           "options": [
-            { "id": "o19", "option": "a", "text": "false", "correct": true },
-            { "id": "o20", "option": "b", "text": "true", "correct": false }
+            { "id": "o19", "option": "a", "text": "true", "correct": false },
+            { "id": "o20", "option": "b", "text": "false", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-11",
           "title": "Rest Destructuring and Property Removal",
           "question": "const collection = [\n  { id: 1, name: 'Ali', status: 'active' }\n];\nconst clean = collection.map(({ status, ...rest }) => rest);\nconsole.log(clean[0].status);",
           "options": [
-            { "id": "o21", "option": "a", "text": "'active'", "correct": false },
-            { "id": "o22", "option": "b", "text": "undefined", "correct": true }
+            { "id": "o21", "option": "a", "text": "undefined", "correct": true },
+            { "id": "o22", "option": "b", "text": "'active'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-12",
           "title": "Every Method Strict Age Verification",
           "question": "const accounts = [\n  { name: 'Lee', age: 20 },\n  { name: 'John', age: 19 }\n];\nconst verified = accounts.every(acc => acc.age >= 19);\nconsole.log(verified);",
           "options": [
-            { "id": "o23", "option": "a", "text": "true", "correct": true },
-            { "id": "o24", "option": "b", "text": "false", "correct": false }
+            { "id": "o23", "option": "a", "text": "false", "correct": false },
+            { "id": "o24", "option": "b", "text": "true", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-13",
           "title": "Some Method Conditional Search Match",
           "question": "const workers = [\n  { name: 'Kofi', dept: 'Engineering' },\n  { name: 'Ali', dept: 'Design' }\n];\nconst checkDept = workers.some(w => w.dept === 'Support');\nconsole.log(checkDept);",
           "options": [
-            { "id": "o25", "option": "a", "text": "true", "correct": false },
-            { "id": "o26", "option": "b", "text": "false", "correct": true }
+            { "id": "o25", "option": "a", "text": "false", "correct": true },
+            { "id": "o26", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-14",
           "title": "Map Array Index Argument Application",
           "question": "const list = [{ name: 'Lee' }, { name: 'Ali' }];\nconst targets = list.map((u, index) => ({ ...u, position: index }));\nconsole.log(targets[1].position);",
           "options": [
-            { "id": "o27", "option": "a", "text": "1", "correct": true },
-            { "id": "o28", "option": "b", "text": "2", "correct": false }
+            { "id": "o27", "option": "a", "text": "2", "correct": false },
+            { "id": "o28", "option": "b", "text": "1", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-15",
           "title": "Filter with Exact Id Match Return Shape",
           "question": "const nodes = [{ id: 101, label: 'NodeA' }];\nconst singleNode = nodes.filter(n => n.id === 101);\nconsole.log(Array.isArray(singleNode));",
           "options": [
-            { "id": "o29", "option": "a", "text": "false", "correct": false },
-            { "id": "o30", "option": "b", "text": "true", "correct": true }
+            { "id": "o29", "option": "a", "text": "true", "correct": true },
+            { "id": "o30", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-16",
           "title": "Array Includes FromIndex Offset Check",
           "question": "const tags = ['v1', 'v2', 'beta', 'prod'];\nconst hasV1 = tags.includes('v1');\nconsole.log(hasV1);",
           "options": [
-            { "id": "o31", "option": "a", "text": "false", "correct": false },
-            { "id": "o32", "option": "b", "text": "true", "correct": true }
+            { "id": "o31", "option": "a", "text": "true", "correct": true },
+            { "id": "o32", "option": "b", "text": "false", "correct": false }
           ],
           "correctAnswer": "b"
         },
@@ -5258,40 +5203,40 @@ export const seedData = {
           "title": "Find Destructured Field Filtering Match",
           "question": "const storage = [\n  { code: 'A1', qty: 5 },\n  { code: 'B2', qty: 0 }\n];\nconst outOfStock = storage.find(({ qty }) => qty === 0);\nconsole.log(outOfStock.code);",
           "options": [
-            { "id": "o33", "option": "a", "text": "'A1'", "correct": false },
-            { "id": "o34", "option": "b", "text": "'B2'", "correct": true }
+            { "id": "o33", "option": "a", "text": "'B2'", "correct": true },
+            { "id": "o34", "option": "b", "text": "'A1'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-18",
           "title": "String Includes Substring Trailing Parameter",
           "question": "const endpoint = '/v1/users/login';\nconst checksOut = endpoint.includes('v1/users');\nconsole.log(checksOut);",
           "options": [
-            { "id": "o35", "option": "a", "text": "true", "correct": true },
-            { "id": "o36", "option": "b", "text": "false", "correct": false }
+            { "id": "o35", "option": "a", "text": "false", "correct": false },
+            { "id": "o36", "option": "b", "text": "true", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-19",
           "title": "Every Validation vs Empty Array Context",
           "question": "const levels = [\n  { level: 3, verified: true },\n  { level: 5, verified: true }\n];\nconst checkStatus = levels.every(l => l.verified);\nconsole.log(checkStatus);",
           "options": [
-            { "id": "o37", "option": "a", "text": "false", "correct": false },
-            { "id": "o38", "option": "b", "text": "true", "correct": true }
+            { "id": "o37", "option": "a", "text": "true", "correct": true },
+            { "id": "o38", "option": "b", "text": "false", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-20",
           "title": "Some Method First Match Stopping Truth",
           "question": "const ranks = [{ tier: 1 }, { tier: 2 }, { tier: 3 }];\nconst isHighRank = ranks.some(r => r.tier > 1);\nconsole.log(isHighRank);",
           "options": [
-            { "id": "o39", "option": "a", "text": "true", "correct": true },
-            { "id": "o40", "option": "b", "text": "false", "correct": false }
+            { "id": "o39", "option": "a", "text": "false", "correct": false },
+            { "id": "o40", "option": "b", "text": "true", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         }
       ],
       "tasks": [
@@ -5300,160 +5245,140 @@ export const seedData = {
           "title": "Generate User Full Names List",
           "description": "Create a function named %buildFullNames(usersArray)% that takes an array of user objects containing %firstName% and %lastName%. Use the %map% method to return a new array of objects where each object contains a key %fullName% matching the layout: %'firstName lastName'%. Input example: %[{firstName: 'Ali', lastName: 'Khan'}]%.",
           "result": "%[{fullName: 'Ali Khan'}]%",
-          "solution": "function buildFullNames(usersArray) {\n  return usersArray.map(user => {\n    return { fullName: `${user.firstName} ${user.lastName}` };\n  });\n}\nconsole.log(buildFullNames([{firstName: 'Ali', lastName: 'Khan'}]));",
-          "done": false
+          "solution": "function buildFullNames(usersArray) {\n  return usersArray.map(user => {\n    return { fullName: `${user.firstName} ${user.lastName}` };\n  });\n}\nconsole.log(buildFullNames([{firstName: 'Ali', lastName: 'Khan'}]));"
         },
         {
           "id": "cmt-02",
           "title": "Locate Target Administrative Member",
           "description": "Create a function named %findAdminUser(usersArray)% that searches through an array of user objects. Use the %find% method to find and return the entire object of the first user whose %role% equals %'admin'%. Input example: %[{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}]%.",
           "result": "%{firstName: 'Kofi', role: 'admin'}%",
-          "solution": "function findAdminUser(usersArray) {\n  return usersArray.find(user => user.role === 'admin');\n}\nconsole.log(findAdminUser([{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}]));",
-          "done": false
+          "solution": "function findAdminUser(usersArray) {\n  return usersArray.find(user => user.role === 'admin');\n}\nconsole.log(findAdminUser([{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}]));"
         },
         {
           "id": "cmt-03",
           "title": "Isolate Underage Accounts Profile Group",
           "description": "Create a function named %extractMinors(usersArray)% that accepts an array of user objects. Use the %filter% method to filter and return a new array containing all user objects where %age% is less than %18%. Input example: %[{firstName: 'Ali', age: 17}, {firstName: 'Lee', age: 23}]%.",
           "result": "%[{firstName: 'Ali', age: 17}]%",
-          "solution": "function extractMinors(usersArray) {\n  return usersArray.filter(user => user.age < 18);\n}\nconsole.log(extractMinors([{firstName: 'Ali', age: 17}, {firstName: 'Lee', age: 23}]));",
-          "done": false
+          "solution": "function extractMinors(usersArray) {\n  return usersArray.filter(user => user.age < 18);\n}\nconsole.log(extractMinors([{firstName: 'Ali', age: 17}, {firstName: 'Lee', age: 23}]));"
         },
         {
           "id": "cmt-04",
           "title": "Verify Target Moderation Roles Presence",
           "description": "Create a function named %hasModerator(usersArray)% that looks inside an array of user objects. Use the %some% method to check if at least one user object has a %role% parameter that equals %'moderator'%. Return %true% or %false%. Input example: %[{firstName: 'John', role: 'user'}, {firstName: 'Ali', role: 'moderator'}]%.",
           "result": "%true%",
-          "solution": "function hasModerator(usersArray) {\n  return usersArray.some(user => user.role === 'moderator');\n}\nconsole.log(hasModerator([{firstName: 'John', role: 'user'}, {firstName: 'Ali', role: 'moderator'}]));",
-          "done": false
+          "solution": "function hasModerator(usersArray) {\n  return usersArray.some(user => user.role === 'moderator');\n}\nconsole.log(hasModerator([{firstName: 'John', role: 'user'}, {firstName: 'Ali', role: 'moderator'}]));"
         },
         {
           "id": "cmt-05",
           "title": "Check Universal Age Verification Gate",
           "description": "Create a function named %checkAllAdults(usersArray)% that checks an array of user objects. Use the %every% method to evaluate if every person's %age% property inside the array is greater than or equal to %18%. Input example: %[{firstName: 'Lee', age: 23}, {firstName: 'Ali', age: 17}]%.",
           "result": "%false%",
-          "solution": "function checkAllAdults(usersArray) {\n  return usersArray.every(user => user.age >= 18);\n}\nconsole.log(checkAllAdults([{firstName: 'Lee', age: 23}, {firstName: 'Ali', age: 17}]));",
-          "done": false
+          "solution": "function checkAllAdults(usersArray) {\n  return usersArray.every(user => user.age >= 18);\n}\nconsole.log(checkAllAdults([{firstName: 'Lee', age: 23}, {firstName: 'Ali', age: 17}]));"
         },
         {
           "id": "cmt-06",
           "title": "System Blacklisted Token Flag Checker",
           "description": "Create a function named %isRoleAllowed(allowedRoles, roleToFind)% that accepts an array of strings representing %allowedRoles% and a string parameter %roleToFind%. Use the array %includes% method to return %true% if the role exists in the configuration, otherwise return %false%. Input example: %['admin', 'moderator'], 'user'%.",
           "result": "%false%",
-          "solution": "function isRoleAllowed(allowedRoles, roleToFind) {\n  return allowedRoles.includes(roleToFind);\n}\nconsole.log(isRoleAllowed(['admin', 'moderator'], 'user'));",
-          "done": false
+          "solution": "function isRoleAllowed(allowedRoles, roleToFind) {\n  return allowedRoles.includes(roleToFind);\n}\nconsole.log(isRoleAllowed(['admin', 'moderator'], 'user'));"
         },
         {
           "id": "cmt-07",
           "title": "Strip Secure Properties with Reconstruction",
           "description": "Create a function named %stripRoles(usersArray)% that transforms an array of user objects. Use the %map% method alongside object rest parameters to return a new array where each object contains all parameters except the %role% parameter. Input example: %[{firstName: 'Lee', role: 'user'}]%.",
           "result": "%[{firstName: 'Lee'}]%",
-          "solution": "function stripRoles(usersArray) {\n  return usersArray.map(user => {\n    const { role, ...rest } = user;\n    return rest;\n  });\n}\nconsole.log(stripRoles([{firstName: 'Lee', role: 'user'}]));",
-          "done": false
+          "solution": "function stripRoles(usersArray) {\n  return usersArray.map(user => {\n    const { role, ...rest } = user;\n    return rest;\n  });\n}\nconsole.log(stripRoles([{firstName: 'Lee', role: 'user'}]));"
         },
         {
           "id": "cmt-08",
           "title": "Isolate First Inactive Object Match",
           "description": "Create a function named %findInactiveUser(usersArray)% that receives an array of user objects containing a boolean %isActive% value. Use the %find% method to track down and return the first user object who has an %isActive% parameter set to %false%. Input example: %[{name: 'John', isActive: true}, {name: 'Ali', isActive: false}]%.",
           "result": "%{name: 'Ali', isActive: false}%",
-          "solution": "function findInactiveUser(usersArray) {\n  return usersArray.find(user => user.isActive === false);\n}\nconsole.log(findInactiveUser([{name: 'John', isActive: true}, {name: 'Ali', isActive: false}]));",
-          "done": false
+          "solution": "function findInactiveUser(usersArray) {\n  return usersArray.find(user => user.isActive === false);\n}\nconsole.log(findInactiveUser([{name: 'John', isActive: true}, {name: 'Ali', isActive: false}]));"
         },
         {
           "id": "cmt-09",
           "title": "Collect Specific Department Staff Profiles",
           "description": "Create a function named %filterByRole(usersArray, targetRole)% that takes an array of user objects and a string configuration parameter. Use the %filter% method to produce a new array containing only individuals whose %role% property exactly equals %targetRole%. Input example: %[{name: 'Kofi', role: 'admin'}], 'admin'%.",
           "result": "%[{name: 'Kofi', role: 'admin'}]%",
-          "solution": "function filterByRole(usersArray, targetRole) {\n  return usersArray.filter(user => user.role === targetRole);\n}\nconsole.log(filterByRole([{name: 'Kofi', role: 'admin'}], 'admin'));",
-          "done": false
+          "solution": "function filterByRole(usersArray, targetRole) {\n  return usersArray.filter(user => user.role === targetRole);\n}\nconsole.log(filterByRole([{name: 'Kofi', role: 'admin'}], 'admin'));"
         },
         {
           "id": "cmt-10",
           "title": "Secure Route Signature Substring Match",
           "description": "Create a function named %detectAdminPath(urlPath)% that inspects a route path string. Use the string %includes% method to verify whether the string value has the pattern %'/admin/'% embedded inside it. Return %true% if it does, and %false% if it doesn't. Input example: %'/dashboard/admin/settings'%.",
           "result": "%true%",
-          "solution": "function detectAdminPath(urlPath) {\n  return urlPath.includes('/admin/');\n}\nconsole.log(detectAdminPath('/dashboard/admin/settings'));",
-          "done": false
+          "solution": "function detectAdminPath(urlPath) {\n  return urlPath.includes('/admin/');\n}\nconsole.log(detectAdminPath('/dashboard/admin/settings'));"
         },
         {
           "id": "cmt-11",
           "title": "Inject Title Strings Conditioned on Age",
           "description": "Create a function named %injectTitles(usersArray)% that maps over an array of user objects. Use the %map% method to return a new array of objects containing a %title% key. If the user's %age% property is greater than %19%, set %title% to %'Mr'%, otherwise set it to %null%. Input example: %[{firstName: 'Ali', age: 17}]%.",
           "result": "%[{firstName: 'Ali', age: 17, title: null}]%",
-          "solution": "function injectTitles(usersArray) {\n  return usersArray.map(user => {\n    return {\n      ...user,\n      title: user.age > 19 ? 'Mr' : null\n    };\n  });\n}\nconsole.log(injectTitles([{firstName: 'Ali', age: 17}]));",
-          "done": false
+          "solution": "function injectTitles(usersArray) {\n  return usersArray.map(user => {\n    return {\n      ...user,\n      title: user.age > 19 ? 'Mr' : null\n    };\n  });\n}\nconsole.log(injectTitles([{firstName: 'Ali', age: 17}]));"
         },
         {
           "id": "cmt-12",
           "title": "Locate Target User Profile via Key String",
           "description": "Create a function named %findUserByLastName(usersArray, targetLastName)% that cycles through an array of user objects. Use the %find% method to target and return the entire object of the first user with a matching %lastName% value. Input example: %[{firstName: 'Lee', lastName: 'Chen'}], 'Chen'%.",
           "result": "%{firstName: 'Lee', lastName: 'Chen'}%",
-          "solution": "function findUserByLastName(usersArray, targetLastName) {\n  return usersArray.find(user => user.lastName === targetLastName);\n}\nconsole.log(findUserByLastName([{firstName: 'Lee', lastName: 'Chen'}], 'Chen'));",
-          "done": false
+          "solution": "function findUserByLastName(usersArray, targetLastName) {\n  return usersArray.find(user => user.lastName === targetLastName);\n}\nconsole.log(findUserByLastName([{firstName: 'Lee', lastName: 'Chen'}], 'Chen'));"
         },
         {
           "id": "cmt-13",
           "title": "Filter Active Target Subscription Groups",
           "description": "Create a function named %getActiveSubscribers(usersArray)% that accepts an array of user objects with a boolean %isSubscribed% tag. Use the %filter% method to look through the elements and isolate a group where %isSubscribed% is explicitly %true%. Input example: %[{name: 'John', isSubscribed: true}, {name: 'Lee', isSubscribed: false}]%.",
           "result": "%[{name: 'John', isSubscribed: true}]%",
-          "solution": "function getActiveSubscribers(usersArray) {\n  return usersArray.filter(user => user.isSubscribed);\n}\nconsole.log(getActiveSubscribers([{name: 'John', isSubscribed: true}, {name: 'Lee', isSubscribed: false}]));",
-          "done": false
+          "solution": "function getActiveSubscribers(usersArray) {\n  return usersArray.filter(user => user.isSubscribed);\n}\nconsole.log(getActiveSubscribers([{name: 'John', isSubscribed: true}, {name: 'Lee', isSubscribed: false}]));"
         },
         {
           "id": "cmt-14",
           "title": "Detect Profile System Content Violations",
           "description": "Create a function named %hasBannedUsers(usersArray)% that searches an array of user objects. Use the %some% method to check if there is even a single account profile where the %status% attribute matches the value %'banned'%. Input example: %[{name: 'Kofi', status: 'active'}, {name: 'Ali', status: 'banned'}]%.",
           "result": "%true%",
-          "solution": "function hasBannedUsers(usersArray) {\n  return usersArray.some(user => user.status === 'banned');\n}\nconsole.log(hasBannedUsers([{name: 'Kofi', status: 'active'}, {name: 'Ali', status: 'banned'}]));",
-          "done": false
+          "solution": "function hasBannedUsers(usersArray) {\n  return usersArray.some(user => user.status === 'banned');\n}\nconsole.log(hasBannedUsers([{name: 'Kofi', status: 'active'}, {name: 'Ali', status: 'banned'}]));"
         },
         {
           "id": "cmt-15",
           "title": "Verify Profile Name Attribute Presence",
           "description": "Create a function named %validateNameCompleteness(usersArray)% that scans user records. Use the %every% method to double-check that every single user object has a valid %firstName% property that is not equal to an empty string (%''%). Input example: %[{firstName: 'Ali'}, {firstName: ''}]%.",
           "result": "%false%",
-          "solution": "function validateNameCompleteness(usersArray) {\n  return usersArray.every(user => user.firstName !== '');\n}\nconsole.log(validateNameCompleteness([{firstName: 'Ali'}, {firstName: ''}]));",
-          "done": false
+          "solution": "function validateNameCompleteness(usersArray) {\n  return usersArray.every(user => user.firstName !== '');\n}\nconsole.log(validateNameCompleteness([{firstName: 'Ali'}, {firstName: ''}]));"
         },
         {
           "id": "cmt-16",
           "title": "Audit Internal File Extention Flags",
           "description": "Create a function named %checkFileExtension(filename, targetExt)% that receives two string arguments. Use the string %includes% method to determine if the %filename% string incorporates the %targetExt% parameter configuration. Input example: %'backup_user_report.csv', '.csv'%.",
           "result": "%true%",
-          "solution": "function checkFileExtension(filename, targetExt) {\n  return filename.includes(targetExt);\n}\nconsole.log(checkFileExtension('backup_user_report.csv', '.csv'));",
-          "done": false
+          "solution": "function checkFileExtension(filename, targetExt) {\n  return filename.includes(targetExt);\n}\nconsole.log(checkFileExtension('backup_user_report.csv', '.csv'));"
         },
         {
           "id": "cmt-17",
           "title": "Attach Sequential Index Tag Parameters",
           "description": "Create a function named %appendUserIndices(usersArray)% that iterates over a user collection. Use the %map% method's secondary index tracking parameter to return a new array where each object retains all original features, but adds a field %uid% calculated as %index + 100%. Input example: %[{name: 'Ali'}]%.",
           "result": "%[{name: 'Ali', uid: 100}]%",
-          "solution": "function appendUserIndices(usersArray) {\n  return usersArray.map((user, index) => {\n    return { ...user, uid: index + 100 };\n  });\n}\nconsole.log(appendUserIndices([{name: 'Ali'}]));",
-          "done": false
+          "solution": "function appendUserIndices(usersArray) {\n  return usersArray.map((user, index) => {\n    return { ...user, uid: index + 100 };\n  });\n}\nconsole.log(appendUserIndices([{name: 'Ali'}]));"
         },
         {
           "id": "cmt-18",
           "title": "Find Element Matching Nested Fields",
           "description": "Create a function named %findUserByNestedId(usersArray, targetId)% that processes user objects with an internal metadata sub-object block: %{ name: 'Lee', meta: { id: 2 } }%. Use the %find% method to match and return the user matching %meta.id === targetId%. Input example: %[{name: 'Lee', meta: {id: 2}}], 2%.",
           "result": "%{name: 'Lee', meta: {id: 2}}%",
-          "solution": "function findUserByNestedId(usersArray, targetId) {\n  return usersArray.find(user => user.meta.id === targetId);\n}\nconsole.log(findUserByNestedId([{name: 'Lee', meta: {id: 2}}], 2));",
-          "done": false
+          "solution": "function findUserByNestedId(usersArray, targetId) {\n  return usersArray.find(user => user.meta.id === targetId);\n}\nconsole.log(findUserByNestedId([{name: 'Lee', meta: {id: 2}}], 2));"
         },
         {
           "id": "cmt-19",
           "title": "Isolate High Tier Premium Customer Profiles",
           "description": "Create a function named %getHighTierUsers(usersArray)% that reviews data records. Use the %filter% method to discover and extract a subset array comprising only users whose %tier% attribute is strictly greater than numerical rating %3%. Input example: %[{name: 'Kofi', tier: 4}, {name: 'John', tier: 2}]%.",
           "result": "%[{name: 'Kofi', tier: 4}]%",
-          "solution": "function getHighTierUsers(usersArray) {\n  return usersArray.filter(user => user.tier > 3);\n}\nconsole.log(getHighTierUsers([{name: 'Kofi', tier: 4}, {name: 'John', tier: 2}]));",
-          "done": false
+          "solution": "function getHighTierUsers(usersArray) {\n  return usersArray.filter(user => user.tier > 3);\n}\nconsole.log(getHighTierUsers([{name: 'Kofi', tier: 4}, {name: 'John', tier: 2}]));"
         },
         {
           "id": "cmt-20",
           "title": "Verify At Least One Admin Account Presence",
           "description": "Create a function named %hasGlobalAdmin(usersArray)% that reads user objects. Use the %some% method to certify if any user profile object has a %role% field set exactly to %'admin'%. Return %true% if an admin is present, and %false% if not. Input example: %[{name: 'John', role: 'user'}]%.",
           "result": "%false%",
-          "solution": "function hasGlobalAdmin(usersArray) {\n  return usersArray.some(user => user.role === 'admin');\n}\nconsole.log(hasGlobalAdmin([{name: 'John', role: 'user'}]));",
-          "done": false
+          "solution": "function hasGlobalAdmin(usersArray) {\n  return usersArray.some(user => user.role === 'admin');\n}\nconsole.log(hasGlobalAdmin([{name: 'John', role: 'user'}]));"
         }
       ]
     },
