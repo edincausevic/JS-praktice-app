@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { _GL } from "../globals/global";
 
-const CodeQuestion = ({title, description, result, solution, done, markAsDone}) => {
+const CodeQuestion = ({title, description, result, solution, done, markAsDone, unmarkAsDone}) => {
 
   const [isSolutionVisible, setIsSolutionVisible] = useState(false)
 
@@ -21,7 +21,9 @@ const CodeQuestion = ({title, description, result, solution, done, markAsDone}) 
             className="reveal-btn challenge-reveal" >🔍 {isSolutionVisible ? 'Hide' : "Reveal"} Solution</button>
             {console.log(done)}
             <div>
-              {!done ? <button  className="reveal-btn challenge-reveal" onClick={markAsDone}>Mark as Done</button> : <button  className="reveal-btn challenge-reveal" onClick={() => markAsDone(title)}>Undone</button>}
+              {!done ? 
+                <button  className="reveal-btn challenge-reveal" onClick={markAsDone}>Mark as Done</button> : 
+                <button  className="reveal-btn challenge-reveal" onClick={unmarkAsDone}>Undone</button>}
             </div>
         </div>
         <div className="" >

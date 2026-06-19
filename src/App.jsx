@@ -141,6 +141,32 @@ function App() {
     setStats(getStats())
   }
 
+  const handleUnmarkAsDone = (title, selectedExercise) => {
+
+    const updatedSelectedExercise = {
+      ...selectedExercise,
+      tasks: selectedExercise.tasks.map(task => {
+        if(task.title === title) return {...task, done: false}
+        return task
+      })
+    }
+
+    const courseDataWithMarkedTask = {
+      ...courseData,
+      allExercises: courseData.allExercises.map(exercise => {
+        if(exercise.id === updatedSelectedExercise.id) return updatedSelectedExercise
+        return exercise
+      })
+    }
+    setCourseData(courseDataWithMarkedTask)
+    setSelectedExercise(updatedSelectedExercise);
+
+    // save on the server
+    saveDB(courseDataWithMarkedTask)
+
+    setStats(getStats())
+  }
+
   return (
     <>
       <MainNav data={courseData.allExercises} displayExercise={displayQuestions}/>
@@ -178,7 +204,11 @@ function App() {
             </h2>
 
             {selectedExercise?.tasks.map(task => {
-              return <CodeQuestion key={task.id} {...task} markAsDone={() => handleMarkAsDone(task.title, selectedExercise)}/>
+              return <CodeQuestion 
+                key={task.id} 
+                {...task} 
+                unmarkAsDone = {() => handleUnmarkAsDone(task.title, selectedExercise)}
+                markAsDone={() => handleMarkAsDone(task.title, selectedExercise)}/>
             })}
             
 
