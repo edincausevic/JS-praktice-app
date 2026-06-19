@@ -23,7 +23,14 @@ const CodeQuestion = ({title, description, result, solution, done, markAsDone, u
             <div>
               {!done ? 
                 <button  className="reveal-btn challenge-reveal" onClick={markAsDone}>Mark as Done</button> : 
-                <button  className="reveal-btn challenge-reveal" onClick={unmarkAsDone}>Undone</button>}
+                <div className="flex justify-between">
+                    <span 
+                      className="reveal-btn challenge-reveal mr-2"
+                      style={{marginRight:'5px', borderColor: '#22c55e', background: '#22c55e20', cursor: 'default'}}>
+                      DONE
+                    </span>  
+                  <button  className="reveal-btn challenge-reveal" onClick={unmarkAsDone}>Undone</button>
+                </div>}
             </div>
         </div>
         <div className="" >
