@@ -16,6 +16,7 @@ function App() {
     const tasksTotal = allData.allExercises.reduce((n, e) => { return n + e.tasks.length}, 0)
     let totalCorrect = 0;
     let totalFalse = 0;
+    let totalTasksDone = 0;
 
     allData.allExercises.forEach((section) => {
       section.questions.forEach((question) => {
@@ -29,8 +30,11 @@ function App() {
 
         if (userGotItRight) totalCorrect++;
         if(userGotItWrong) totalFalse++
-        
       });
+
+      section.tasks.forEach(task => {
+        if(task.done) totalTasksDone++
+      })
     });
 
     return {
@@ -38,7 +42,7 @@ function App() {
       correctQuestions: totalCorrect,
       incorrectQuestions: totalFalse,
       numOfAssignments: tasksTotal,
-      assignmentsDone: 1,
+      assignmentsDone: totalTasksDone,
     }
   }
 
@@ -110,7 +114,32 @@ function App() {
     window.location.reload()
   }
 
+  const handleMarkAsDone = (title, selectedExercise) => {
 
+    const updatedSelectedExercise = {
+      ...selectedExercise,
+      tasks: selectedExercise.tasks.map(task => {
+        if(task.title === title) return {...task, done: true}
+        return task
+      })
+    }
+
+
+    const courseDataWithMarkedTask = {
+      ...courseData,
+      allExercises: courseData.allExercises.map(exercise => {
+        if(exercise.id === updatedSelectedExercise.id) return updatedSelectedExercise
+        return exercise
+      })
+    }
+    setCourseData(courseDataWithMarkedTask)
+    setSelectedExercise(updatedSelectedExercise);
+
+    // save on the server
+    saveDB(courseDataWithMarkedTask)
+
+    setStats(getStats())
+  }
 
   return (
     <>
@@ -149,9 +178,7 @@ function App() {
             </h2>
 
             {selectedExercise?.tasks.map(task => {
-            console.log('task: ', task);
-            
-              return <CodeQuestion key={task.id} {...task}/>
+              return <CodeQuestion key={task.id} {...task} markAsDone={() => handleMarkAsDone(task.title, selectedExercise)}/>
             })}
             
 
