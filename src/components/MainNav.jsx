@@ -10,7 +10,7 @@ const MainNav = ({displayExercise, data}) => {
           <h2>📘 JavaScript Drills </h2>
         </div>
         <div className="course-link">
-          <a href="https://example.com/js-course" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
+          <a href="https://www.udemy.com/course/draft/7221015/?referralCode=6963EBB03103EBCEF1F8" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
           <span><img style={{height: '15px'}} src={UdemyLogo}/></span> 
           Go to JS Course</a>
           <a 
