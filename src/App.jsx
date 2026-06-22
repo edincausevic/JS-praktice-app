@@ -9,7 +9,11 @@ import Welcome from "./components/Welcome"
 function App() {
   initDB()
 
-  const getStats = () => {
+  const [selectedExercise, setSelectedExercise] = useState(null)
+  const [courseData, setCourseData] = useState(getDB())
+  const [stats, setStats] = useState(getStats())
+
+  function getStats() {
     const allData = getDB()
 
     const questionsTotal = allData.allExercises.reduce((n, e) => { return n + e.questions.length}, 0)
@@ -46,11 +50,6 @@ function App() {
     }
   }
 
-  const [selectedExercise, setSelectedExercise] = useState(null)
-  const [courseData, setCourseData] = useState(getDB())
-  const [stats, setStats] = useState(getStats())
-
-  
   const displayQuestions = (exerciseData) => {
     setSelectedExercise(exerciseData)
   }
@@ -167,6 +166,39 @@ function App() {
     setStats(getStats())
   }
 
+  const handleReset = () => {
+    const exerciseID = selectedExercise.id;
+
+    const resetedData = {
+      ...selectedExercise,
+        questions: selectedExercise.questions.map(question => ({
+          ...question,
+          options: question.options.map(option => ({
+            ...option,
+            selected: false
+          }))
+        })),
+        tasks: selectedExercise.tasks.map(task => ({...task, done: false}))
+    }
+    
+   
+    const newData = {
+      ...courseData,
+      allExercises: courseData.allExercises.map(exercise => {
+        if(exercise.id === exerciseID) return resetedData
+        return exercise
+      })
+    }
+
+    setCourseData(newData)
+    setSelectedExercise(resetedData);
+
+    // // save on the server
+    saveDB(newData)
+
+    setStats(getStats())
+  }
+
   return (
     <>
       <MainNav data={courseData.allExercises} displayExercise={displayQuestions}/>
@@ -189,7 +221,7 @@ function App() {
 
             <div className="content-header">
                 <h1 className="page-title">🧠 JavaScript Drills</h1>
-                <button className="left-reset-btn" id="leftSideResetBtn"><span>↻</span> Reset all</button>
+                <button className="left-reset-btn" onClick={() => handleReset()}><span>↻</span> Reset </button>
             </div>
 
 

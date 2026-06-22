@@ -20,7 +20,7 @@ const Header = ({onResetBtnClick, stats}) => {
                 <strong>/ {stats?.numOfAssignments}</strong></div>
         </div>
         <div></div>
-        <button onClick={onResetBtnClick}  className="reset-btn" id="resetAllBtn"><span>↻</span> reset all exercises</button>
+        <button onClick={onResetBtnClick}  className="reset-btn" id="resetAllBtn"><span>↻</span> Reset all exercises</button>
     </header>
 )
 }

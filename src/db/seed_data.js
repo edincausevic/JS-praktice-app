@@ -771,7 +771,7 @@ export const seedData = {
     },
     {
       "id": "milestone-foundations-01",
-      "title": "- MILESTONE EXERCISES S1 -",
+      "title": "- MILESTONE EXERCISES S2 -",
       "milestone": true,
       "videoID": "20",
       "questions": [
@@ -1780,7 +1780,7 @@ export const seedData = {
     },
     {
       "id": "milestone-logic-functions-02",
-      "title": "- MILESTONE EXERCISES S2 -",
+      "title": "- MILESTONE EXERCISES S3 -",
       "milestone": true,
       "videoID": "30",
       "questions": [
@@ -2868,7 +2868,7 @@ export const seedData = {
     },
     {
       "id": "milestone-exercises-03",
-      "title": "- MILESTONE EXERCISES S3 -",
+      "title": "- MILESTONE EXERCISES S4 -",
       "milestone": true,
       "videoID": "40",
       "questions": [
@@ -4127,7 +4127,7 @@ export const seedData = {
     },
     {
       "id": "milestone-exercises-04-updated",
-      "title": "- MILESTONE EXERCISES S4 -",
+      "title": "- MILESTONE EXERCISES S5 -",
       "videoID": "48",
       "milestone": true,
       "questions": [
@@ -5089,7 +5089,7 @@ export const seedData = {
     },
     {
       "id": "array-methods-mastery-01",
-      "title": "- MILESTONE EXERCISES S5 -",
+      "title": "- MILESTONE EXERCISES S6 -",
       "videoID": "54",
       "milestone": true,
       "questions": [

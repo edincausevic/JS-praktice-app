@@ -19,7 +19,7 @@ const CodeQuestion = ({title, description, result, solution, done, markAsDone, u
             <button 
             onClick={() => setIsSolutionVisible(!isSolutionVisible)}
             className="reveal-btn challenge-reveal" >🔍 {isSolutionVisible ? 'Hide' : "Reveal"} Solution</button>
-            {console.log(done)}
+   
             <div>
               {!done ? 
                 <button  className="reveal-btn challenge-reveal" onClick={markAsDone}>Mark as done</button> : 
