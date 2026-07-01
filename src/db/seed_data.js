@@ -1,6 +1,6 @@
 export const seedData = {
   id: 114,
-  version: '1.1',
+  version: '1.9',
   allExercises: [
     {
       "id": "let-section-101",
@@ -290,6 +290,18 @@ export const seedData = {
             { "id": "opt-s18", "option": "b", "text": "Double quotes (\"\")", "correct": false, "selected": false },
             { "id": "opt-s19", "option": "c", "text": "Backticks (``)", "correct": true, "selected": false },
             { "id": "opt-s20", "option": "d", "text": "None of the above", "correct": false, "selected": false }
+          ],
+          "correctAnswer": "c"
+        },
+        {
+          "id": "q-str-006",
+          "title": "Quotes Inside Quotes",
+          "question": "Which approach avoids syntax errors without using an escape backslash (\\)?",
+          "options": [
+            { "id": "opt-s21", "option": "a", "text": "console.log('The sign read 'Open'.');", "correct": false, "selected": false },
+            { "id": "opt-s22", "option": "b", "text": "console.log(\"The sign read \"Open\".\");", "correct": false, "selected": false },
+            { "id": "opt-s23", "option": "c", "text": "console.log('The sign read \"Open\".');", "correct": true, "selected": false },
+            { "id": "opt-s24", "option": "d", "text": "console.log(The sign read 'Open'.)", "correct": false, "selected": false }
           ],
           "correctAnswer": "c"
         }
@@ -3733,6 +3745,20 @@ export const seedData = {
           "description": "Create a function named %displayScore(score)% that accepts a variable that might be null, undefined, or a number. Use the nullish coalescing operator to return %score% if it is not nullish, otherwise return a default number fallback of %0%. Input example: %0%.",
           "result": "%0%",
           "solution": "function displayScore(score) {\n  return score ?? 0;\n}\nconsole.log(displayScore(0));"
+        },
+        {
+          "id": "ont1-03",
+          "title": "User Profile Form Name Preference",
+          "description": "Create a function named %getDisplayName(nickname)% that accepts a parameter representing a custom username. Use the logical OR operator to return %nickname% if it is truthy, otherwise fallback to the generic string %'Guest'%. Input example: %'Speedy'%.",
+          "result": "%'Speedy'%",
+          "solution": "function getDisplayName(nickname) {\n  return nickname || 'Guest';\n}\nconsole.log(getDisplayName('Speedy'));"
+        },
+        {
+          "id": "ont1-04",
+          "title": "E-Commerce Items Per Page Default",
+          "description": "Create a function named %getPageSize(customSize)% that checks a user choice. Use the nullish coalescing operator to return %customSize% if it is not nullish, otherwise return a default fallback number of %25%. Input example: %undefined%.",
+          "result": "%25%",
+          "solution": "function getPageSize(customSize) {\n  return customSize ?? 25;\n}\nconsole.log(getPageSize(undefined));"
         }
       ]
     },
@@ -4854,6 +4880,27 @@ export const seedData = {
           "description": "Create a function named %removeSystemRoles(usersArray)% that takes an array of user objects. Use the %map% method along with object restructuring/rest syntax to return a new array of objects containing all original properties except the %role% property. Input example: %[{id: 1, name: 'Lee', role: 'user'}]%.",
           "result": "%[{id: 1, name: 'Lee'}]%",
           "solution": "function removeSystemRoles(usersArray) {\n  return usersArray.map(user => {\n    const { role, ...rest } = user;\n    return rest;\n  });\n}\nconsole.log(removeSystemRoles([{id: 1, name: 'Lee', role: 'user'}]));"
+        },
+        {
+          "id": "mat1-03",
+          "title": "Calculate Store Price Markups",
+          "description": "Create a function named %applyMarkup(pricesArray)% that accepts an array of numbers representing prices. Use the %map% method to transform the list into a new array where each price is multiplied by %1.2% (representing a 20% markup). Input example: %[10, 20, 30]%.",
+          "result": "%[12, 24, 36]%",
+          "solution": "function applyMarkup(pricesArray) {\n  return pricesArray.map(price => price * 1.2);\n}\nconsole.log(applyMarkup([10, 20, 30]));"
+        },
+        {
+          "id": "mat1-04",
+          "title": "Generate Indexed Database Key Entries",
+          "description": "Create a function named %addDBKeys(itemsArray)% that accepts an array of strings. Use the %map% method and its %index% parameter to return a new array of objects. Each object must contain an %id% key matching its index position, and a %value% key containing the original string. Input example: %['A', 'B']%.",
+          "result": "%[{id: 0, value: 'A'}, {id: 1, value: 'B'}]%",
+          "solution": "function addDBKeys(itemsArray) {\n  return itemsArray.map((item, index) => {\n    return { id: index, value: item };\n  });\n}\nconsole.log(addDBKeys(['A', 'B']));"
+        },
+        {
+          "id": "mat1-05",
+          "title": "Inject Inventory Status Flags",
+          "description": "Create a function named %verifyStockLevel(productsArray)% that takes an array of objects containing product %name% and %stock% numbers. Use the %map% method to return a copy of the objects with an appended boolean key %isAvailable% set to %true% if stock is greater than %0%, otherwise %false%. Input example: %[{name: 'Pen', stock: 0}]%.",
+          "result": "%[{name: 'Pen', stock: 0, isAvailable: false}]%",
+          "solution": "function verifyStockLevel(productsArray) {\n  return productsArray.map(product => {\n    return {\n      ...product,\n      isAvailable: product.stock > 0\n    };\n  });\n}\nconsole.log(verifyStockLevel([{name: 'Pen', stock: 0}]));"
         }
       ]
     },
@@ -4928,6 +4975,22 @@ export const seedData = {
           "description": "Create a function named %getUsersByRole(usersArray, targetRole)% that takes an array of user objects. Use the %filter% method to return a completely new array containing only those user objects whose %role% matches the %targetRole% string parameter. Input example: %[{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}], 'user'%.",
           "result": "%[{firstName: 'Lee', role: 'user'}]%",
           "solution": "function getUsersByRole(usersArray, targetRole) {\n  return usersArray.filter(user => user.role === targetRole);\n}\nconsole.log(getUsersByRole([{firstName: 'Lee', role: 'user'}, {firstName: 'Kofi', role: 'admin'}], 'user'));",
+          "done": false
+        },
+        {
+          "id": "fft2-03",
+          "title": "Find Element by Unique ID",
+          "description": "Create a function named %findProductById(productsArray, idToFind)% that accepts an array of product objects and an ID number. Use the %find% method to retrieve the product object that matches the requested ID. Input example: %[{id: 101, name: 'Laptop'}, {id: 102, name: 'Phone'}], 102%.",
+          "result": "%{id: 102, name: 'Phone'}%",
+          "solution": "function findProductById(productsArray, idToFind) {\n  return productsArray.find(product => product.id === idToFind);\n}\nconsole.log(findProductById([{id: 101, name: 'Laptop'}, {id: 102, name: 'Phone'}], 102));",
+          "done": false
+        },
+        {
+          "id": "fft2-04",
+          "title": "Filter Premium Numeric Subsets",
+          "description": "Create a function named %getHighPrices(pricesArray, threshold)% that accepts an array of numbers and a threshold number. Use the %filter% method to return a new array containing only the numbers that are strictly greater than the %threshold%. Input example: %[10, 50, 80, 100], 60%.",
+          "result": "%[80, 100]%",
+          "solution": "function getHighPrices(pricesArray, threshold) {\n  return pricesArray.filter(price => price > threshold);\n}\nconsole.log(getHighPrices([10, 50, 80, 100], 60));",
           "done": false
         }
       ]
@@ -5108,10 +5171,10 @@ export const seedData = {
           "title": "Find First Match Evaluation",
           "question": "const users = [\n  { firstName: 'Ali', age: 17 },\n  { firstName: 'Lee', age: 23 },\n  { firstName: 'John', age: 22 }\n];\nconst person = users.find(u => u.age > 20);\nconsole.log(person.firstName);",
           "options": [
-            { "id": "o3", "option": "a", "text": "'Lee'", "correct": true },
-            { "id": "o4", "option": "b", "text": "'John'", "correct": false }
+            { "id": "o4", "option": "a", "text": "'John'", "correct": false },
+            { "id": "o3", "option": "b", "text": "'Lee'", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-03",
@@ -5138,20 +5201,20 @@ export const seedData = {
           "title": "Every Method Uniformity Failure",
           "question": "const users = [\n  { firstName: 'Lee', role: 'user' },\n  { firstName: 'Kofi', role: 'admin' }\n];\nconst check = users.every(u => u.role === 'user');\nconsole.log(check);",
           "options": [
-            { "id": "o9", "option": "a", "text": "true", "correct": false },
-            { "id": "o10", "option": "b", "text": "false", "correct": true }
+            { "id": "o10", "option": "a", "text": "false", "correct": true },
+            { "id": "o9", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-06",
           "title": "Array Primitive Includes Check",
           "question": "const systems = ['Auth', 'Database', 'Storage'];\nconst hasCache = systems.includes('Cache');\nconsole.log(hasCache);",
           "options": [
-            { "id": "o11", "option": "a", "text": "false", "correct": true },
-            { "id": "o12", "option": "b", "text": "true", "correct": false }
+            { "id": "o12", "option": "a", "text": "true", "correct": false },
+            { "id": "o11", "option": "b", "text": "false", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-07",
@@ -5178,10 +5241,10 @@ export const seedData = {
           "title": "Filter Extracting Sub-group Counts",
           "question": "const users = [\n  { name: 'Ali', role: 'user' },\n  { name: 'John', role: 'user' }\n];\nconst list = users.filter(u => u.role === 'user');\nconsole.log(list.length);",
           "options": [
-            { "id": "o17", "option": "a", "text": "1", "correct": false },
-            { "id": "o18", "option": "b", "text": "2", "correct": true }
+            { "id": "o18", "option": "a", "text": "2", "correct": true },
+            { "id": "o17", "option": "b", "text": "1", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-10",
@@ -5218,10 +5281,10 @@ export const seedData = {
           "title": "Some Method Conditional Search Match",
           "question": "const workers = [\n  { name: 'Kofi', dept: 'Engineering' },\n  { name: 'Ali', dept: 'Design' }\n];\nconst checkDept = workers.some(w => w.dept === 'Support');\nconsole.log(checkDept);",
           "options": [
-            { "id": "o25", "option": "a", "text": "true", "correct": false },
-            { "id": "o26", "option": "b", "text": "false", "correct": true }
+            { "id": "o26", "option": "a", "text": "false", "correct": true },
+            { "id": "o25", "option": "b", "text": "true", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-14",
@@ -5258,20 +5321,20 @@ export const seedData = {
           "title": "Find Destructured Field Filtering Match",
           "question": "const storage = [\n  { code: 'A1', qty: 5 },\n  { code: 'B2', qty: 0 }\n];\nconst outOfStock = storage.find(({ qty }) => qty === 0);\nconsole.log(outOfStock.code);",
           "options": [
-            { "id": "o33", "option": "a", "text": "'A1'", "correct": false },
-            { "id": "o34", "option": "b", "text": "'B2'", "correct": true }
+            { "id": "o34", "option": "a", "text": "'B2'", "correct": true },
+            { "id": "o33", "option": "b", "text": "'A1'", "correct": false }
           ],
-          "correctAnswer": "b"
+          "correctAnswer": "a"
         },
         {
           "id": "cmq-18",
           "title": "String Includes Substring Trailing Parameter",
           "question": "const endpoint = '/v1/users/login';\nconst checksOut = endpoint.includes('v1/users');\nconsole.log(checksOut);",
           "options": [
-            { "id": "o35", "option": "a", "text": "true", "correct": true },
-            { "id": "o36", "option": "b", "text": "false", "correct": false }
+            { "id": "o36", "option": "a", "text": "false", "correct": false },
+            { "id": "o35", "option": "b", "text": "true", "correct": true }
           ],
-          "correctAnswer": "a"
+          "correctAnswer": "b"
         },
         {
           "id": "cmq-19",

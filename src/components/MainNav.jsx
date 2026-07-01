@@ -3,6 +3,7 @@ import UdemyLogo from "../assets/udemy_logo.png"
 
 const MainNav = ({displayExercise, data}) => {
   const [activeLinkId, setActiveLinkId] = useState()
+  let videoId = 7
 
   return (
     <nav className="left-menu">
@@ -10,7 +11,7 @@ const MainNav = ({displayExercise, data}) => {
           <h2>📘 JavaScript Drills </h2>
         </div>
         <div className="course-link">
-          <a href="https://www.udemy.com/course/draft/7221015/?referralCode=6963EBB03103EBCEF1F8" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
+          <a href="https://www.udemy.com/course/modern-javascript-es6-for-react-nextjs-vue-nodejs/?referralCode=6963EBB03103EBCEF1F8" target="_blank" rel="noopener" style={{marginRight: '7px'}}>
           <span><img style={{height: '15px'}} src={UdemyLogo}/></span> 
           Go to JS Course</a>
           <a 
@@ -33,20 +34,30 @@ const MainNav = ({displayExercise, data}) => {
         </div>
         <ul className="exercise-list" >
           <h2 className="pl-2 font-bold">Udemy Videos</h2>
-          {data?.map((listItem) => (
-            <li 
-              className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 
-              key={listItem.id} 
-              onClick={() => {
-                setActiveLinkId(listItem.id)
-                displayExercise(listItem)
-              }}>
-              <a href="#"><i style={{color: listItem.milestone ? '#f37a7a' : '#38bdf8'}}>{listItem.videoID} </i> 
-              {listItem.title} 
-              {/* <span className="status-dot" ></span> */}
-              </a>
-            </li>
-          ))}
+          {data?.map((listItem) => {
+            
+            // skip one number for call to review video
+            if(listItem.id === 'logical-not-01') {videoId = videoId + 2} 
+            else {
+              videoId++
+            }
+
+            return (
+              <li 
+                className={`exercise-item ${activeLinkId === listItem.id ? 'active-exercise' : ''}`} 
+                key={listItem.id} 
+                onClick={() => {
+                  setActiveLinkId(listItem.id)
+                  displayExercise(listItem)
+                }}>
+                <a href="#">
+                  <i style={{color: listItem.milestone ? '#f37a7a' : '#38bdf8'}}>{videoId} </i> 
+                {listItem.title} 
+                {/* <span className="status-dot" ></span> */}
+                </a>
+              </li>
+            )
+          })}
           {/* <li className="exercise-item" style={{marginTop: '12px', borderTop: '1px solid #1e2b3f', paddingTop: '8px'}}><a href="#challenge1"><i>⚡</i> Reverse string</a></li>
           <li className="exercise-item"><a href="#challenge2"><i>⚡</i> Filter even</a></li>
           <li className="exercise-item"><a href="#challenge3"><i>⚡</i> Delay log</a></li> */}
